@@ -1,5 +1,7 @@
 # Arminia
 
+## Introduction
+
 Arminia is in early development and most of the functionality is complete, however the main content or Model consisting of geometric constructions and math paper walkthroughs have not been added. 
 
 The following features are functioning:
@@ -15,3 +17,4 @@ The following features are not fully functioning:
 - persistent rewards
 
 
+## Acknowledgements

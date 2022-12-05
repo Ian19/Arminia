@@ -1,0 +1,134 @@
+.fa-user {
+    position: relative;
+    color: #ACB0DE;
+    font-size: 1.1vw;
+    padding-top: 0.2vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#A_menuIcon {
+    width: 1.2vw;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#A_userContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    cursor: pointer;
+}
+
+#A_userIcon {
+    width: 67.3%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#A_loginIcon {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 4vw;
+    position: relative;
+    color: #ACB0DE;
+    font-size: 0.5vw;
+    padding: 0.2vw 0.5vw;
+    top: 0.1vw;
+    border: 1px solid #473380;
+    /* margin-right: 1vw; */
+    letter-spacing: 0.04vw;
+    border-radius: 5px;
+    cursor: pointer !important;
+    /* cursor: default !important; */
+    z-index: 1;
+    text-align: center;
+}
+
+#A_notification {
+    position: absolute;
+    font-size: 1.1vw;;
+    color: gold;
+    transform: translate(0.4vw, 0.4vw);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.A_sideBarBtnSpan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 10vw;
+    right: 0px;
+    margin-top: 0.7vw;
+    gap: 0.8vw;
+}
+
+.A_sidebar {
+    position: absolute;
+    width: 7.9vw;
+    height: 100%;
+    right: -9vw;
+    margin-top: 1.6vw;
+    transition: 0.4s;
+    border-radius: 6px;
+}
+
+.A_sideBarBtnLabel {
+    display: flex;
+    font-size: 1.5vw;
+    color: #ACB0DE;
+    font-weight: 200;
+    /* margin-left: 1.1vw; */
+}
+
+#A_sideBarBtn {
+    display: none;
+}
+
+#A_sideBarBtn:checked~.A_sidebar {
+    right: -1vw;
+}
+
+.A_sidebarRow {
+    display: flex;
+}
+
+.A_sidebar label {
+    color: #ACB0DE;
+    /* cursor: default; */
+}
+
+.A_sidebarGrid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.33vw;
+    margin-top: 1.3vw;
+}
+
+.A_sidebarTitle {
+    text-align: left;
+    color: var(--yellow1);
+    margin-bottom: 0.2vw;
+    font-size: 0.6vw;
+    margin-left: 1.6vw;
+}
+
+.A_sidebarSubTitle {
+    text-align: center;
+    color: var(--yellow1);
+    font-size: 0.6vw;
+    margin-top: 0.7vw;
+}
+
+#A_sidebarConstruction {
+    /* display: none; */
+    /* opacity: 0; */
+}
+
+#A_sidebarGroupHologram {
+    display: none;
+}

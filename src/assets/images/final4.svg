@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- This file is part of Arminia.
+
+    Arminia is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Arminia is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="355"
+    height="80" viewBox="0 0 160 45">
+
+     <!-- viewBox="0 50 270 110" preserveAspectRatio="xMinYMin meet" -->
+
+    <defs>
+        <radialGradient id="softEdge" r="44%">
+            <stop stop-color="white" offset="50%" />
+            <stop stop-color="black" offset="100%" />
+        </radialGradient>
+
+        <linearGradient id="shine_1_" gradientUnits="userSpaceOnUse" x1="-24.3" y1="11.8" x2="20.3" y2="28">
+            <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0" />
+            <stop offset="0.2" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+            <stop offset="0.25" style="stop-color:#FFFFFF;stop-opacity:0.0" />
+            <stop offset="0.4" style="stop-color:#FFFFFF;stop-opacity:0.85" />
+            <stop offset="0.45" style="stop-color:#FFFFFF" />
+            <stop offset="0.55" style="stop-color:#FFFFFF" />
+            <stop offset="0.58" style="stop-color:#FFFFFF;stop-opacity:0.85" />
+            <stop offset="0.75" style="stop-color:#FFFFFF;stop-opacity:9.62e-004" />
+            <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0" />
+            <animate id="shineAnimation1" attributeName="x1" begin="0s;shineAnimation1.end + 4s" dur="4s" from="-24.3"
+                to="145.7" restart="always" />
+            <animate id="shineAnimation2" attributeName="x2" begin="0s;shineAnimation2.end + 4s" dur="4s" from="10.3"
+                to="190.3" restart="always" />
+        </linearGradient>
+
+        <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="gold" stdDeviation="1.5" /> <!-- blur -->
+            <feOffset dx="0" dy="0" result="offsetblur" /> <!-- offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="1.5" /> <!-- opacity -->
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode /> <!-- offset blurred image -->
+                <feMergeNode in="SourceGraphic" /> <!-- target filter element -->
+            </feMerge>
+        </filter>
+
+        <clipPath id="clipPath1">
+            <use xlink:href="#arminiaText1" overflow="visible" />
+        </clipPath>
+
+        <mask id="softEdgeMask">
+            <ellipse transform="rotate(20)" transfrom-origin="50% 50%" style="transform-box: fill-box;" cx="10" cy="20"
+                rx="15" ry="50" fill="url(#softEdge)">
+                <animate id="outerGlowAnimation" attributeName="cx" begin="0s;shineAnimation1.end + 4s" dur="4s"
+                    from="10" to="190" restart="always" />
+            </ellipse>
+        </mask>
+
+        <radialGradient id="glintGradient" cx="60.666" cy="60.6665" r="60.6663" gradientUnits="userSpaceOnUse">
+            <stop offset="0" style="stop-color:#FFF;stop-opacity:1" />
+            <stop offset="0.5" style="stop-color:#FFD700;stop-opacity:0.1" />
+            <stop offset="1" style="stop-color:#FFD700;stop-opacity:0.0" />
+        </radialGradient>
+
+        <polygon id="glintPolygon" filter="blur(3px)" transform="scale(0.5)" opacity="0.5" fill="url(#glintGradient)"
+            points="121.332,57.385 69.213,57.127 105.885,20.09 101.242,15.447 64.207,52.118 
+                            63.948,0 57.383,0 57.125,52.118 20.09,15.448 15.447,20.09 52.119,57.127 0,57.385 0,63.95 52.117,64.208 15.447,101.243 
+                            20.09,105.885 57.125,69.215 57.383,121.333 63.948,121.333 64.207,69.215 101.242,105.886 105.885,101.243 69.215,64.208 
+                            121.332,63.95 " />
+
+        <text id="arminiaText1" fill="gold" font-size="24">
+            <tspan x="10" y="30" font-family="'Cinzel Decorative'" font-size="33" letter-spacing="2">A</tspan>
+            <tspan x="36" y="30" font-family="Cinzel" letter-spacing="3">R</tspan>
+            <tspan x="55.3" y="30" font-family="'Cinzel Decorative'" letter-spacing="2">M</tspan>
+            <tspan x="80.6" y="30" font-family="Cinzel" letter-spacing="5">I</tspan>
+            <tspan x="93.8" y="30" font-family="'Cinzel Decorative'" letter-spacing="3">N</tspan>
+            <tspan x="117.8" y="30" font-family="Cinzel" letter-spacing="3">I</tspan>
+            <tspan x="129.5" y="30" font-family="'Cinzel Decorative'" letter-spacing="2">A</tspan>
+        </text>
+    </defs>
+
+    <!-- ////////////////////////////////////////////   Outer Glow   ///////////////////////////////////////////// -->
+
+    <use xlink:href="#arminiaText1" fill-opacity="1" filter="url(#dropshadow)" mask="url(#softEdgeMask)"></use>
+
+    <!-- //////////////////////////////////////////////   Text   ///////////////////////////////////////////////// -->
+
+    <use xlink:href="#arminiaText1" fill-opacity="1"></use>
+
+    <!-- /////////////////////////////////////////////   Shine   ////////////////////////////////////////////// -->
+
+    <rect x="0" y="0" id="shine" fill="url(#shine_1_)" clip-path="url(#clipPath1)" width="400" height="40" />
+
+    <!-- /////////////////////////////////////////////   Glints   ////////////////////////////////////////////// -->
+
+    <use x="-9" y="-21" xlink:href="#glintPolygon" fill-opacity="0">
+        <animate id="glintOpacityAnimation1" attributeName="fill-opacity" begin="0.2s;shineAnimation1.end + 4.2s"
+            values="0;1;0" dur="0.5s" restart="always" fill="freeze" />
+
+        <animateTransform id="glintRotationAnimation1" attributeName="transform" type="rotate"
+            begin="0.2s;shineAnimation1.end + 4.2s" values="0 21.33325 9.33325; 90 21.33325 9.33325" dur="0.5s"
+            restart="always" fill="freeze" />
+    </use>
+
+    <use x="86" y="3" xlink:href="#glintPolygon" fill-opacity="0">
+        <animate id="glintAnimation2" attributeName="fill-opacity" begin="2.5s;shineAnimation1.end + 6.5s"
+            values="0;1;0" dur="0.5s" restart="always" fill="freeze"></animate>
+
+        <animateTransform id="glintRotationAnimation2" attributeName="transform" type="rotate"
+            begin="2.5s;shineAnimation1.end + 6.5s" values="0 116.33325 33.33325; 90 116.33325 33.33325" dur="0.5s"
+            restart="always" fill="freeze" />
+    </use>
+</svg>

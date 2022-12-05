@@ -1,0 +1,62 @@
+.A_cbContainer {
+    position: relative;
+    margin-left: 0.6vw;
+    display: inline-block;
+}
+
+.A_cbLabel {
+    position: relative;
+    cursor: default;
+}
+
+.A_cbLabel input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.A_labelText {
+    position: relative;
+    color: #ACB0DE;
+    font-size: 0.5vw;
+    margin-left: 0.35vw;
+    cursor: default;
+}
+
+.A_labelText:hover {
+    /* cursor: pointer; */
+}
+
+.icon-box {
+    width: 0.7vw;
+    height: 0.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 0 0 0 0;
+    opacity: 100;
+    color: var(--color1);
+}
+
+.fa-check {
+    font-size: 0.4vw;
+    margin-bottom: -0.03vw;
+    opacity: 0;
+}
+
+.A_cbLabel input[type="checkbox"]:checked~.icon-box {
+    border: 1px solid;
+    color: var(--color1);
+}
+
+.A_cbLabel input[type="checkbox"]:checked~.icon-box .fa {
+    opacity: 100;
+    color: var(--color1);    
+}
+
+.A_tick {
+    width: 80%;
+}

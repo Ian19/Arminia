@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1187.375px" height="1231.438px" viewBox="-187.375 -56.882 1187.375 1231.438" id="A_vesicaLarge" >
+
+	<defs>
+		<filter id="glow_animated">
+			<!-- blur the text at different levels-->	
+			<feGaussianBlur in="SourceGraphic" result="blur1">
+				<animate attributeName="stdDeviation" values="0;5;0"  dur="1.5s" repeatCount="indefinite"/>
+			</feGaussianBlur>
+			<feGaussianBlur in="SourceGraphic" result="blur2">
+				<animate attributeName="stdDeviation" values="0;10;0"  dur="1.5s" repeatCount="indefinite"/>
+			</feGaussianBlur>
+			<feGaussianBlur in="SourceGraphic" result="blur3">
+				<animate attributeName="stdDeviation" values="0;20;0"  dur="1.5s" repeatCount="indefinite"/>
+			</feGaussianBlur>
+			<feGaussianBlur in="SourceGraphic" result="blur4">
+				<animate attributeName="stdDeviation" values="0;30;0"  dur="1.5s" repeatCount="indefinite"/>
+			</feGaussianBlur>
+
+			<!-- merge all the blurs except for the first one -->
+			<feMerge result="blur-merged">
+				<feMergeNode in="blur2"/>
+				<feMergeNode in="blur3"/>
+				<feMergeNode in="blur4"/>
+			</feMerge>
+
+			<!-- recolour the merged blurs 9966ff -->
+			<feColorMatrix result="colorBlur" in="blur-merged" type="matrix"
+					values="0.45 0   0   0   0
+							0   0.21  0   0   0
+							0   0   0.99  0   0
+							0   0   0   1   0 "/>
+							
+			<feMerge>
+				<!-- largest blurs coloured red -->
+				<feMergeNode in="colorBlur"/>      	
+
+				<!--  smallest blur left white -->      			
+				<feMergeNode in="blur1"/> 
+
+				<!-- original white text -->      
+				<feMergeNode in="SourceGraphic"/>  					
+			</feMerge>
+		</filter>
+		
+		<filter id="glow">
+			<!-- blur the text at different levels-->	
+			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1"/>
+			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2"/>
+			<feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur3"/>
+			<feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur4"/>
+
+			<!-- merge all the blurs except for the first one -->
+			<feMerge result="blur-merged">
+				<feMergeNode in="blur2"/>
+				<feMergeNode in="blur3"/>
+				<feMergeNode in="blur4"/>
+			</feMerge>
+
+			<!-- recolour the merged blurs 9966ff -->
+			<feColorMatrix result="colorBlur" in="blur-merged" type="matrix"
+					values="0.45 0   0   0   0
+							0   0.21  0   0   0
+							0   0   0.99  0   0
+							0   0   0   1   0 "/>
+							
+			<feMerge>
+				<!-- largest blurs coloured red -->
+				<feMergeNode in="colorBlur"/>      	
+
+				<!--  smallest blur left white -->      			
+				<feMergeNode in="blur1"/> 
+
+				<!-- original white text -->      
+				<feMergeNode in="SourceGraphic"/>  					
+			</feMerge>
+		</filter>
+	</defs>
+
+	<g id="A_step1" filter="url(#glow)" >	
+
+		<!-- <animate attributeName="fill-opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" /> -->
+		<!-- <animate attributeName="stroke-width" values="2;4;2" dur="1.5s" repeatCount="indefinite" /> -->
+		<!-- <animate attributeName="stroke-opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" /> -->
+
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="739.369" r="361.063"/>
+
+		<text transform="matrix(1 0 0 1 227.1875 453.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">c</text>
+		
+	</g>
+
+	<!-- <g id="A_step2" filter="url(#glow_animated)">	 -->
+	<g id="A_step2" filter="url(#glow)">	
+
+		<!-- <animate attributeName="fill-opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" />
+		<animate attributeName="stroke-width" values="2;4;2" dur="1.5s" repeatCount="indefinite" />
+		<animate attributeName="stroke-opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" /> -->
+
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="406.313" y1="378.306" x2="406.313" y2="739.369" />
+
+		<circle  fill="none" stroke="none" stroke-opacity="0" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="378.306" r="361.063"/>
+
+		<text transform="matrix(1 0 0 1 413.1123 368.3848)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">B</text>
+
+		<text transform="matrix(1 0 0 1 416.7124 727.4922)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">A</text>
+
+		<path fill="#FFFFFF" d="M412.313,378.306c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.314,2.687-6,6-6l0,0
+			C409.626,372.306,412.313,374.992,412.313,378.306L412.313,378.306z"/>
+
+		<path fill="#FFFFFF" d="M412.313,739.369c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.314,2.687-6,6-6l0,0
+			C409.626,733.369,412.313,736.055,412.313,739.369L412.313,739.369z"/>
+
+		<text transform="matrix(1 0 0 1 421.8877 558.8379)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">f</text>		
+
+	</g>	
+
+	<g id="A_step3" filter="url(#glow)">			
+
+		<text transform="matrix(1 0 0 1 189.1875 124.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">d</text>
+
+		<circle  fill="none" stroke="#FFFFFF" stroke-opacity="1" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="378.306" r="361.063"/>
+
+	</g>
+
+	<!-- <script type="text/javascript">
+		<![CDATA[
+			var svg = document.getElementById('Layer_3');
+			console.log(svg);
+			console.log(1 < 2);
+		]]>
+	</script> -->
+
+</svg>

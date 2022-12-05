@@ -1,0 +1,245 @@
+#testPage {
+    margin-right: 20px;
+}
+
+#skillIntroText {
+    line-height: 1.4;
+    margin-bottom: 0.7vw;
+    /* margin-right: 10px; */
+    /* margin-top: 0.8vw; */
+    font-size: 0.7vw;
+    text-align: center;
+    color: #acb0de;
+}
+
+#A_skillsContainer {
+    width: 100%;    
+    height: 100%;    
+    /* height: 65vh;     */
+    /* margin: 0 10px 0 0; */
+    pointer-events: none;
+}
+
+#A_svgContainer {
+    border: 3px solid #5e489d67;
+    /* border: 2px solid #47338067; */
+    /* border: 2px solid #473380; */
+    border-radius: 12px;
+    width: 100%;
+    /* height: 100%; */
+    height: 60vh;
+    pointer-events: auto;
+    overflow: hidden;
+}
+
+#Layer_1 {
+    width: 100%;
+    height: 100%;
+}
+
+#A_SkillTextTitle {
+    margin: 5px 0 0 10px;
+    /* color: rgb(125, 92, 185); */
+    color: #BC67FF;
+    font-size: 16px;
+    font-variant-caps: all-small-caps;
+    position: absolute;    
+}
+
+#A_SkillTextTitleSub {
+    font-size: 13px;
+}
+
+#A_mouseMovementIcon {
+    margin: 10px 20px 0 0;
+    position: absolute;
+    opacity: 0.4;
+    right: 0px;
+}
+
+#A_mouse_movement {
+    width: 40px;
+}
+
+.A_mouseZoomIcon {
+    margin: 70px 20px 0 0;
+    position: absolute;
+    opacity: 0.4;
+    right: 0px;
+}
+
+#A_mouse_zoom {
+    width: 40px;
+}
+
+#A_skillSelectText{
+    font-size: 0.65vw;
+    text-align: center; 
+    font-weight: normal; 
+    font-style: italic;
+    color: var(--yellow1);
+    margin: 25px 0 3px 0;
+}
+
+#A_detailImage {
+    width: 80%;
+    height: auto;    
+}
+
+#A_detailTitle {
+    margin-top: -3px;
+    padding-right: 2px;
+    color: var(--yellow1);
+    font-family: 'Cinzel';
+    font-size: 0.95vw;
+    letter-spacing: 1px;    
+    font-variant-caps: normal;
+}
+
+#A_skillDifficulty {    
+    margin-top: 0.2vw;
+    /* color: #acb0de; */
+    color: lightyellow;
+    font-size: 0.65vw;
+    letter-spacing: 0.04vw;
+    font-variant-caps: all-small-caps;
+}
+
+#A_detailRequirement {
+    margin-top: 0.3vw;
+    color: #BC67FF;
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    letter-spacing: 0.04vw;
+    font-variant-caps: all-small-caps;
+}
+
+.flex-container {
+    display: flex;
+    text-align: center;
+}
+
+.A_detailsButton {
+    position: relative;
+    margin-top: 0.7vw;
+    width: 7.5vw;
+    padding: 0.4vw;
+    border-radius: 4px;
+    border: 1px solid #473380;
+    transition: 0.5s;  
+    overflow: hidden;
+    cursor: pointer;
+    background: #4733803b;
+}
+
+.A_detailsButtonText {
+    font-weight: bold;
+    color: var(--yellow1);
+    font-family: 'Verdana';
+    font-variant-caps: normal;
+    font-size: 0.85vw;
+    letter-spacing: 0.05vw;
+}
+
+.A_detailsButton:hover {    
+    color: var(--yellow1);
+    background: #473380ab;
+    border: 1px solid #8064cc;
+    animation: animate 1.25s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0px #5f4a99;
+    }
+    50% {
+        box-shadow: 0 0 14px 0px #5f4a99;
+    }
+    100% {
+        box-shadow: 0 0 0 0px #5f4a99;
+    }
+}
+
+.A_detailsButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: 0.5s;
+}
+
+.A_detailsButton:hover::before {
+    left: 100%;
+}
+
+.A_detailOverview {
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 1.4;
+    font-size: 100%;    
+    font-size: 0.7vw;
+    text-align: justify;
+    color: #acb0de;
+}
+
+#A_detailQuote {
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    text-align: justify;
+    font-style: italic;
+    margin-top: 14px;
+    line-height: 1.4;
+    color: #acb0de;
+    line-height: 1.5;
+} 
+
+#A_detailQuotee {
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    text-align: right;
+    font-style: italic;
+    line-height: 1.5;
+    color: #acb0de;
+} 
+
+.A_detailGrid {
+    margin-top: 0.9vw;
+    /* margin-right: 15px; */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: .5fr .8fr .01fr .08fr 1.1fr;
+    grid-template-columns: .5fr .8fr .01fr .08fr 1.1fr;
+    
+}
+
+.A_detailGrid .A_item {
+    display: flex; 
+}
+
+.A_column1 .A_item {
+    justify-content:center;
+}
+
+.A_column2 .A_item {
+    padding-right: 10px;
+    padding-top: 5px;
+    line-height: normal;
+    flex-direction: column;
+}
+
+.A_column3, .A_column4 {
+    border: 1px solid #47338060; 
+    width: 1px;
+    height: 100%;    
+}
+ 
+.A_column5 .A_item {
+    flex-direction: column;    
+}
+
+.A_item {
+    flex-grow: 1;
+}

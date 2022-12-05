@@ -1,0 +1,90 @@
+#A_stepsContainer {
+    color: #acb0dee3;
+    font-size: 0.75vw;
+    width: 100%;
+    padding-top: min(2vw, 20px);
+    /* padding-top: min(1vw, 10px); */
+    height: 31%;
+}
+
+#A_stepsCount {
+    color: var(--yellow1);
+    padding: .4vw .4vw .4vw 1.2vw;
+    background-color: #563a9933;
+    border-radius: 4px;
+}
+
+#A_stepsBodyContainer {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+#Container {
+    position: absolute;
+    display: none;
+    left: 47%;
+    width: 43%;
+    top: 2.2vw;
+    height: 84%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#SubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#A_stepsImageTitle {
+    color: gold;
+    margin-bottom: 11;
+    font-family: cinzel;
+    font-size: 1.6vw;
+    letter-spacing: 1.3px;
+}
+
+#A_stepsImageDifficulty {    
+    margin-top: 4px;
+    color: lightyellow;
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    letter-spacing: 1px;
+    font-variant-caps: all-small-caps;
+}
+
+#A_stepsImageRequirement {    
+    margin-top: 4px;
+    color: #BC67FF;
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    letter-spacing: 1px;
+    font-variant-caps: all-small-caps;    
+}
+
+#A_stepsImageDefinition {    
+    font-style: normal;
+    font-size: 0.7vw;
+    text-align: center;  
+    color: #acb0dee3;
+    /* margin: 6px 0 35px; */
+    margin-top: 13px;
+    padding: 0 70px;
+}
+
+#A_longSwish {
+    /* margin-top: -0.2vw; */
+    margin-bottom: 0.1vw;
+    width: 23vw;
+}
+
+#A_stepsHeaderSwish {
+    margin-top: 0.7vw;
+    width: 13vw;
+}
+
+
+
+
+

@@ -1,0 +1,90 @@
+.A_64Tetra3DSize1 {
+    width: 100%;    
+}
+
+.A_64Tetra3DSize2 {
+    width: 80%;    
+}
+
+.A_64Tetra3DSize3 {
+    width: 70%;    
+}
+
+.A_64Tetra3D {
+   display: default;
+}
+
+.A_64Tetra3DContainer {
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: start;
+}
+
+.A_64Tetra3DContainer1 {
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+}
+
+.A_64Tetra3DContainer2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: start;
+}
+
+.A_64Tetra3DContainer3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+}
+
+/* #A_64Tetra3DContainer > div:nth-child(n+9):not(:nth-child(n+13)) {
+    margin-top: 10vw;
+  } */
+
+.A_64TetraNodeTitle {
+    font-family: 'Cinzel';
+    font-size: 0.7vw;
+    letter-spacing: 1px;
+    font-variant-caps: normal;
+    text-align: center;
+    color: var(--yellow1);
+    margin: 0 0.6vw;
+}
+
+.A_64TetraNodeSteps {
+    font-family: Verdana;
+    font-size: 0.65vw;
+    letter-spacing: 0.04vw;
+    font-variant-caps: all-small-caps;
+    text-align: center;
+    color: lightyellow;
+}
+
+.A_64TetraGridTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.A_64TetraText {
+    font-size: 0.75vw;
+    color: var(--yellow1);
+    font-family: Verdana;
+}
+
+#A_64TetraGridTitle {
+    grid-column-start: 1;
+    grid-column-end: 5;  
+}
+
+#A_64TetraView1 {
+    grid-column-start: 2;
+    grid-column-end: 3;  
+}
+

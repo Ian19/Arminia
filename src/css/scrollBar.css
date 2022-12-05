@@ -1,0 +1,28 @@
+.A_scroll2, .A_scroll3, .A_overviewScroll {
+    font-family: Verdana;
+    width: 100.5%;
+    font-size: 0.7vw;
+    color: #acb0dee3;
+    padding-right: 28px;
+    /* padding-left: 20px; */
+    /* margin-bottom: 0.8vw; */
+    /* border: 1px solid red; */
+    height: 104%;
+}
+
+.os-theme-dark.custom-class>.os-scrollbar>.os-scrollbar-track {
+    background-color: rgba(68, 48, 136, 0.144);
+}
+
+.os-theme-dark.custom-class>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background-color: #563a9949;
+}
+
+.os-theme-dark.custom-class>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
+    max-height: 50%;
+    min-height: 30px;
+}
+
+.os-theme-dark.custom-class>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle:hover {
+    cursor: pointer;
+}

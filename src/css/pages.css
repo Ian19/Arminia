@@ -1,0 +1,63 @@
+.A_pageIn {
+    animation: transitionIn 1s linear forwards;
+}
+
+.A_pageOut {
+    animation: transitionOut 1s linear forwards;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes transitionOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#A_homePage {
+    /* height: 87vh; */
+    display: block;
+    position: absolute;
+    opacity: 1;
+}
+
+#A_proxyView {
+    height: 87vh;
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+
+#A_64TetraView {
+    height: 77vh;
+    width: 100%;
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+}
+
+#A_metatronView {
+    height: 87vh;
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+
+#A_musicView {
+    height: 87vh;
+    display: none;
+    position: absolute;
+    opacity: 0;
+} 

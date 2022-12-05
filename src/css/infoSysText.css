@@ -1,0 +1,52 @@
+#A_InfoSysHintText {
+    color: #acb0dee3;
+    position: absolute;
+    font-size: 0.55vw;
+    top: 21px;
+    left: 46.5%;
+}
+
+#A_InfoSysHintBullets {
+    margin: 0.3vw 0 0 0.4vw;
+    line-height: 0.7vw;
+}
+
+#A_infoSysMenuTitle {
+    font-weight: bold;
+}
+
+#A_infoSysInfo {
+    color: #acb0dee3;
+    position: absolute;
+    font-size: 0.55vw;
+    top: 21px;
+    left: 46.5%;
+}
+
+#A_infoSysTitle {
+    color: #ffe86d;
+    font-family: 'Cinzel';
+    font-size: 0.70vw;
+    letter-spacing: 0.05vw;    
+    font-variant-caps: normal;
+}
+
+#A_infoSysDifficulty {    
+    margin-top: 0.1vw;
+    /* color: #acb0de; */
+    color: lightyellow;
+    font-size: 0.55vw;
+    letter-spacing: 0.04vw;
+    font-variant-caps: all-small-caps;
+}
+
+#A_infoSysOverview {    
+    margin-top: 0.2vw;
+    color: #acb0de;
+    /* color: lightyellow; */
+    font-size: 0.45vw;
+    letter-spacing: 0.03vw;
+    font-style: italic;
+    /* font-variant-caps: all-small-caps; */
+}
+

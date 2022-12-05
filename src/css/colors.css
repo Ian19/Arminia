@@ -1,0 +1,13 @@
+:root {
+    --primary: #4e17a5;
+    --secondary: #cfa9f3;
+    --dark: #212121;
+    --light: #F3F3F3;
+    --yellow1: rgb(238, 219, 113);
+    --yellow1: #ffe86d;
+    --color1: rgba(172, 176, 222, 0.808);
+    --color2: rgba(172, 176, 222, 0.2);
+    --color4: rgba(204, 205, 224, 0.89);
+    --color5: #473380b9;
+    --color6: #acb0de;    
+}

@@ -1,0 +1,47 @@
+#A_profilePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    border: 4px solid #190d38;
+    border-radius: 5px;
+    background-color: #050111;
+    margin: 4% auto;
+    /* width: 40%; */
+    width: 55%;
+    height: 43vw;    
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+    padding: 0.2vw 1.3vw 0.7vw;
+}
+
+.A_profileScroll {
+    width: 100%;
+    padding: 1.3vw;
+}
+
+#A_ProfileTitle {
+    /* color: lightyellow; */
+    /* color: gold; */
+    padding-top: 0.8vw;
+    font-size: 1.5vw;
+    display: inline-block;
+    margin-bottom: 1vw;
+
+    color: #ffe86d;
+    font-family: 'Cinzel';
+    /* font-size: 0.70vw; */
+    letter-spacing: 0.05vw;    
+    font-variant-caps: normal;
+}
+
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.A_profileBody {
+    font-size: 0.7vw;
+    color: #acb0de;
+    text-align: justify;    
+}

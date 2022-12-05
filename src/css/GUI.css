@@ -1,0 +1,50 @@
+.A_GUIContainer {
+    position: absolute;
+    flex-direction: column;
+    width: 42vw;
+    height: 80vh;
+    left: 2.6vw;
+    padding-top: 1%;
+    /* border: 1px solid purple; */
+}
+
+#A_title {
+    width: 15vw;
+    cursor: pointer;
+}
+
+#A_swish {
+    margin-top: -0.2vw;
+    width: 15vw;
+}
+
+.A_titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    align-items: center;
+    margin-bottom: 0.6vw;
+}
+
+.A_header1 {
+    font-size: 0.75vw;
+    color: rgb(238, 219, 113);
+}
+
+#A_pageBody {
+    font-size: 0.7vw;
+    color: #acb0de;
+    text-align: justify;
+}
+
+a:link {
+    color: lightyellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+    
+a:visited {
+    color: lightyellow;
+    background-color: transparent;
+    text-decoration: none;
+}

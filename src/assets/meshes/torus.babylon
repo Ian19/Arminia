@@ -1,0 +1,5 @@
+{"producer":{"name":"Blender","version":"2.93.1","exporter_version":"2.93.1","file":"torus.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
+"cameras":[{"name":"Camera","id":"Camera","position":[7.3589,4.9583,-6.9258],"rotation":[0.4615,-0.8149,0],"fov":0.6911,"minZ":0.1,"maxZ":100,"ellipsoid":[0.2,0.9,0.2],"type":"UniversalCamera"}],"activeCameraID":"Camera",
+"lights":[{"name":"Light","id":"Light","type":0,"position":[4.0762,5.9039,1.0055],"range":40,"intensityMode":0,"intensity":1,"diffuse":[1,1,1],"specular":[1,1,1],"radius":0.1}]
+}

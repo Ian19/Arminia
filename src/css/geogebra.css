@@ -1,0 +1,60 @@
+/* .A_GUIContainer {
+    position: absolute;
+    flex-direction: column;
+    width: 42vw;
+    height: 100vh;
+    left: 2.6vw;
+    padding-top: 1.5%;
+} */
+
+.scaleContainerClass {
+    display: inline-block;
+    width: 48% !important; 
+    /* border: 1px solid yellow; */
+}
+
+.appletStyle {
+    left: 2px;
+    box-sizing: border-box !important;    
+    padding: 0 !important;
+    border-color: transparent;
+    border-radius: 4px !important;    
+    background-color: transparent !important;
+}
+
+.A_graphing {
+    border-width: 0px !important;
+    outline: 2px solid #563a9949 !important;    
+}
+
+.A_cas {
+    border-width: 1px !important;
+    outline: 6px solid #af91f4db !important;  
+}
+
+#A_geobebraView {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    /* border: 1px solid green; */
+}
+
+#A_subGeoView {
+    position: relative;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#A_geogebraIntroText {
+    padding-bottom: 0.8vw;
+    font-size: 0.7vw;
+    text-align: center;
+    color: #acb0dee3;
+    font-family: 'Verdana';
+}
+
+.GeoGebraFrame .toolbarPanel {
+    /* toolbarPanel covers login -- Default 100 */
+    z-index: 0 !important;
+}
+

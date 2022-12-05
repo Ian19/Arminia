@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+
+	<defs>
+
+		<filter id="dropshadow" height="130%">
+			<feGaussianBlur in="gold" stdDeviation="3.5" /> <!-- blur -->
+			<feOffset dx="0" dy="0" result="offsetblur" /> <!-- offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="2.5" /> <!-- opacity -->
+			</feComponentTransfer>
+			<feMerge>
+				<feMergeNode /> <!-- offset blurred image -->
+				<feMergeNode in="SourceGraphic" /> <!-- target filter element -->
+			</feMerge>
+		</filter>
+
+	</defs>
+
+	<!-- <g filter="url(#dropshadow)"> -->
+	<g>
+
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="250" cy="177.187" r="145.625" />
+		<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="250" cy="322.813" r="145.625" />
+
+	</g>
+
+</svg>

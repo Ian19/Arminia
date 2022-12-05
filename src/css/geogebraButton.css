@@ -1,0 +1,83 @@
+.A_geoMenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.9vw;
+}
+
+.A_geoMenu2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.9vw;
+    align-items: center;
+
+}
+
+.A_pageInfo {
+    display: inline;
+}
+
+.A_btnContainer {
+    display: flex;
+    text-align: center;
+    margin: 0 0.3vw;
+}
+
+.A_btnContainer2 {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    margin: 0.7vw 0.3vw 0 0.1vw;
+    gap: 0.5vw;
+}
+
+#A_backToSkillsBtn {
+    /* margin: 1vw -0.3vw 0 -0.3vw; */
+    /* border: 2px solid #563a9949 !important;     */
+    /* width: 4.4vw !important;   */
+}
+
+#A_backToSkillsBtn:hover {
+    border: 2px solid #563a99a1 !important;      
+}
+
+.A_geogebraButton {
+
+    /* stop text highlighting */
+    user-select: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+
+
+    position: relative;
+    color: #acb0dee3;
+    font-family: 'Verdana';
+    font-variant-caps:normal;    
+    width: 7.4vw;
+    padding: 0.4vw;
+    border-radius: 4px;
+    font-size: 0.55vw;
+    letter-spacing: 0.05vw;
+    border: 1px solid #473380;
+    transition: 0.4s;  
+    overflow: hidden;
+    cursor: pointer;
+    background: #4733803b;
+}
+
+.A_geogebraButton:hover {    
+    color: white !important;
+    border: 1px solid #8064cc !important;
+    background: #8c6fdd3b;
+}
+
+.A_pdfFlexContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#A_pdfRender {
+    border: 6px solid #af91f4db;
+    border-radius: 6px;
+    width: 100%;
+}

@@ -42,7 +42,7 @@
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "completed": false,
-                "unlocked": true,
+                "unlocked": false,
                 "unlocksSkills": [1],
                 "requirement": "(NO REQUIREMENT)",
                 "overview": "A circle is a set of points on a plane that are equidistant from the circle's central point.",

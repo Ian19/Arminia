@@ -240,11 +240,11 @@
 
         // console.log(game.scene.debugLayer);
 
-        game.scene.debugLayer.show({
-            overlay: true,
-            handleResize: true,
-            embedMode: true
-        });
+        // game.scene.debugLayer.show({
+        //     overlay: true,
+        //     handleResize: true,
+        //     embedMode: true
+        // });
 
     };
 

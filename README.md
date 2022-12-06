@@ -28,7 +28,7 @@ https://arminia.com.au/
 
 ## Acknowledgements
 
-Arminia uses the following open source GitHub projects:
+Arminia uses the following GitHub projects:
 - [Babylon.js](https://github.com/BabylonJS)
 - [Geogebra](https://github.com/geogebra/geogebra)
 - [d3](https://github.com/d3/d3)

@@ -17,10 +17,11 @@ The following features are functioning:
 - user accounts
 - general website functionality and theme
 
-The following features are not fully functioning:
+The following features are either not functioning or incomplete:
 - persistent skill tracking
 - persistent achievements
 - persistent rewards
+- documentation
 
 ## Website
 

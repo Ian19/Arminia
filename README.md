@@ -25,7 +25,7 @@ The following features are not fully functioning:
 
 ## Acknowledgements
 
-Arminia uses the following open source projects:
+Arminia uses the following open source GitHub projects:
 - [Babylon.js](https://github.com/BabylonJS)
 - [Geogebra](https://github.com/geogebra/geogebra)
 - [d3](https://github.com/d3/d3)
@@ -34,4 +34,13 @@ Arminia uses the following open source projects:
 - [pdf.js](https://github.com/mozilla/pdf.js/)
 - [embla-carousel](https://github.com/davidjerleke/embla-carousel)
 - [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars)
+
+
+## License
+
+[GNU General Public License](http://www.gnu.org/licenses/)
+
+Copyright 2022, Ian Hicks, GNU 3.0 or later
+
+
 

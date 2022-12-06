@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Arminia](https://arminia.com.au/) is a 3D interactive educational game and website that explores the construction of the universal geometry of the 13 information systems of the Fruit of Life. The construction of geometry is done with Geogebra, which is used as an online straight edge and compass. The straight edge and compass is a tool that can reveal the powerful relationships of geometry, line and number. When a construction is built, the user will be rewarded with achievements, art and the instructions to build the construction with a real straight edge and compass.
+[Arminia](https://arminia.com.au/) is a 3D interactive educational game and website that explores the construction of the universal geometry of the 13 information systems of the Fruit of Life. The construction of geometry is done with [Geogebra](https://www.geogebra.org/), which is used as an online straight edge and compass. The straight edge and compass is a tool that can reveal the powerful relationships of geometry, line and number. When a construction is built, the user will be rewarded with achievements, art and the instructions to build the construction with a real straight edge and compass.
 
 To help users better understand new and cutting edge math papers, Arminia integrates the Computation Algebra System of Geogebra to step through each mathematical equation.
 
@@ -24,3 +24,14 @@ The following features are not fully functioning:
 
 
 ## Acknowledgements
+
+Arminia uses the following open source projects:
+- [Babylon.js](https://github.com/BabylonJS)
+- [Geogebra](https://github.com/geogebra/geogebra)
+- [d3](https://github.com/d3/d3)
+- [KaTeX](https://github.com/KaTeX/KaTeX)
+- [jquery](https://github.com/jquery/jquery)
+- [pdf.js](https://github.com/mozilla/pdf.js/)
+- [embla-carousel](https://github.com/davidjerleke/embla-carousel)
+- [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars)
+

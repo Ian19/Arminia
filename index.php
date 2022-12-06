@@ -690,8 +690,8 @@
                 <div id="A_SkillTextTitle">
                     SKILL TREE
                     <div id="A_SkillTextTitleSub">
-                        LEVEL: 2 <br>
-                        COMPLETED: 2 <br>
+                        LEVEL: 0 <br>
+                        COMPLETED: 0 <br>
                         INCOMPLETE: 216
                     </div>
                 </div>

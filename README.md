@@ -18,7 +18,7 @@ The following features are functioning:
 - general website functionality and theme
 
 The following content is available:
-- The 64 Tetrahedron Grid Information Sysem has content and can be access through the 3D Viewer
+- The 64 Tetrahedron Grid Information Sysem has content and can be accessed through the 3D Viewer
 - The Vesica Piscis Skill is complete and can be accessed through the 2D Skill Viewer
 - The Schwarzschild Proton Paper by Nassim Harramein is 25% complete with the CAS
 

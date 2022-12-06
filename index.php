@@ -515,16 +515,14 @@
             </div>
 
             <div id="A_titleText">
-                Arminia is best viewed in Firefox
+                Arminia is best viewed in Firefox<br>for its clear SVG rendering
             </div>
             
             
             <div id="A_licenseText">
                 Copyright 2022, Ian Hicks
-                <br>
-                
+                <br>                
                 <a href="url">http://www.gnu.org/licenses/</a>
-
                 <br><br>
                 GitHub Repository
                 <br>
@@ -532,8 +530,6 @@
             </div>
 
         </div>
-
-
 
         <script>
         $(document).ready(function() {

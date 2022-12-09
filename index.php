@@ -526,7 +526,10 @@
                 <br><br>
                 Contact
                 <br>
-                admin@arminia.com.au
+                <!-- admin@arminia.com.au -->
+
+                <a href="mailto:admin@arminia.com.au">admin@arminia.com.au</a>
+
                 <br><br>
                 GitHub Repository
                 <br>
@@ -1442,9 +1445,9 @@
 
                     At the center of the torus is space or singularity.
 
-                    Each tetrahedron of the prime star tetrahedron represents a polarity of the coriolis effect.
+                    Each IVM of the prime star tetrahedron represents a polarity of the coriolis effect.
 
-                    When they come together to form the vector equilibrium, the double torus and the singularity are
+                    When they come together to form the vector equilibrium at the centre, the double torus and the singularity are
                     produced.
 
                     All of Creation then emerges from within this singularity.
@@ -1473,7 +1476,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                        The Isotropic Vector Matrix
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1481,7 +1484,7 @@
                     </div>
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            The IVM and it's dual IVM
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1505,7 +1508,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus View 1
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1514,7 +1517,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus View 2
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1523,7 +1526,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus View 3
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1543,7 +1546,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus<br>with Spheres View 1
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1552,7 +1555,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus<br>with Spheres View 2
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1561,7 +1564,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Double Torus<br>with Spheres View 3
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1579,7 +1582,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Torus
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1588,7 +1591,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Torus with Spheres
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1597,7 +1600,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Combined Torus<br>with Spheres View 1
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1616,7 +1619,7 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Combined Torus<br>with Spheres View 2
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
@@ -1625,14 +1628,14 @@
 
                     <div>
                         <div class="A_64TetraNodeTitle">
-                            Tree of Life
+                            Genesis Pattern
                         </div>
                         <div class="A_64TetraNodeSteps">
                             MEDIUM | 31 STEPS
                         </div>
                     </div>
 
-                </div><br>
+                </div><br><br>
 
 
                 <div class="A_header1">The Schwarzschild Proton</div>

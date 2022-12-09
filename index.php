@@ -524,6 +524,10 @@
                 <br>                
                 <a href="url">http://www.gnu.org/licenses/</a>
                 <br><br>
+                Contact
+                <br>
+                admin@arminia.com.au
+                <br><br>
                 GitHub Repository
                 <br>
                 <a href="url">https://github.com/Ian19/Arminia</a>

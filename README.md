@@ -27,6 +27,7 @@ The following features are either not functioning or incomplete:
 - persistent achievements
 - persistent rewards
 - documentation
+- some skill tree constructions and Information Systems i.e. Music, Enneagram and Holofractalgraphic Fruit of Life
 
 ## Website
 

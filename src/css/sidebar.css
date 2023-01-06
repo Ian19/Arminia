@@ -59,10 +59,10 @@
 .A_sideBarBtnSpan {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: absolute;
     width: 10vw;
-    right: 0px;
+    right: 0.7vw;
     margin-top: 0.7vw;
     gap: 0.8vw;
 }

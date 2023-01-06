@@ -27,6 +27,7 @@ The following features are either not functioning or incomplete:
 - persistent achievements
 - persistent rewards
 - documentation
+- some skill tree constructions and Information Systems i.e. Music, Enneagram and Holofractalgraphic Fruit of Life
 
 ## Website
 
@@ -49,7 +50,7 @@ Arminia uses the following GitHub projects:
 
 [GNU General Public License](http://www.gnu.org/licenses/)
 
-Copyright 2022, Ian Hicks, GNU 3.0 or later
+Copyright 2022, Ian Hicks, GNU GPL 3.0 or later
 
 
 

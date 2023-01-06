@@ -1,25 +1,21 @@
-<?php
+<!-- Copyright 2022 Ian Hicks
 
-    // Copyright 2022 Ian Hicks
+This file is part of Arminia.
 
-    // This file is part of Arminia.
+Arminia is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    // Arminia is free software: you can redistribute it and/or modify
-    // it under the terms of the GNU General Public License as published by
-    // the Free Software Foundation, either version 3 of the License, or
-    // (at your option) any later version.
+Arminia is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    // Arminia is distributed in the hope that it will be useful,
-    // but WITHOUT ANY WARRANTY; without even the implied warranty of
-    // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    // GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with Arminia.  If not, see <http://www.gnu.org/licenses/>. 
+-->
 
-    // You should have received a copy of the GNU General Public License
-    // along with Arminia.  If not, see <http://www.gnu.org/licenses/>. 
-
-    require "action.php";
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -538,124 +534,6 @@
 
         </div>
 
-        <script>
-        $(document).ready(function() {
-
-            var password = $("#pass")[0];
-            var confirm_password = $("#cpass")[0];
-
-            function validatePassword() {
-                if (password.value != confirm_password.value) {
-                    confirm_password.setCustomValidity("Passwords Don't Match");
-                } else {
-                    confirm_password.setCustomValidity('');
-                }
-            }
-
-            password.onchange = validatePassword;
-            confirm_password.onkeyup = validatePassword;
-
-            $("#A_registerLink").click(function() {
-                $("#A_loginBox").hide();
-                $("#A_registerBox").css("display", "flex");
-            });
-
-            $("#A_loginLink").click(function() {
-                $("#A_registerBox").hide();
-                $("#A_loginBox").css("display", "flex");
-            });
-
-            $("#A_resetLink").click(function() {
-                $("#A_loginBox").hide();
-                $("#A_resetBox").css("display", "flex");
-            });
-
-            $("#A_backLink").click(function() {
-                $("#A_resetBox").hide();
-                $("#A_loginBox").css("display", "flex");
-            });
-
-            $("#A_registerBtn").click(function(e) {
-
-                if (document.getElementById("A_registerForm").checkValidity()) {
-                    e.preventDefault();
-                    // $("#loader").show();
-
-                    $.ajax({
-                        url: "action.php",
-                        method: "post",
-                        data: $("#A_registerForm").serialize() + "&action=register",
-                        success: function(response) {
-                            $("#A_registerMsgBox").show();
-                            $(".A_loginRsultMsg").text(response);
-                            // $("#loader").hide();
-                        }
-                    });
-                }
-                return true;
-            });
-
-            $("#A_loginBtn").click(function(e) {
-
-                if (document.getElementById("A_loginForm").checkValidity()) {
-                    e.preventDefault();
-                    // $("#loader").show();
-
-                    $.ajax({
-                        url: "action.php",
-                        method: "post",
-                        data: $("#A_loginForm").serialize() + "&action=login",
-                        success: function(response) {
-
-                            if (response === "ok") {
-
-                                // console.log("ok");
-                                document.activeElement.blur();
-                                $("#usernameBox").val("");
-                                $("#passBox").val("");
-
-                                $("#A_simpleModal").css("display", "none");
-                                $("#A_loginIcon").text("LOG OUT");
-
-                            } else {
-
-                                // console.log("BAD");
-                                // console.log(response);
-                                $("#A_loginMsgBox").show();
-                                $(".A_loginRsultMsg").text(response);
-
-                                // $("#loader").hide();
-
-                            }
-                        }
-                    });
-                }
-                return true;
-            });
-
-            $("#A_resetBtn").click(function(e) {
-
-                if (document.getElementById("A_resetForm").checkValidity()) {
-                    e.preventDefault();
-                    // $("#loader").show();
-
-                    $.ajax({
-                        url: "action.php",
-                        method: "post",
-                        data: $("#A_resetForm").serialize() + "&action=forgot",
-                        success: function(response) {
-                            // console.log(response);
-                            $("#A_resetMsgBox").show();
-                            $(".A_loginRsultMsg").text(response);
-                            // $("#loader").hide();
-                        }
-                    });
-                }
-                return true;
-            });
-
-        });
-        </script>
 
     </div>
 
@@ -1874,18 +1752,6 @@
     <div>
         <input type="checkbox" id="A_sideBarBtn" checked="checked">
         <span class="A_sideBarBtnSpan">
-
-            <?php
-if (isset($_SESSION['id'])) {
-    ?>
-
-            <span data-target="#myModal" role="button" data-toggle="modal" id="A_loginIcon">LOG OUT</span>
-
-            <?php } else {?>
-
-            <span data-target="#myModal" role="button" data-toggle="modal" id="A_loginIcon">LOG IN</span>
-
-            <?php }?>
 
             <div id="A_userContainer">
                 <img id="A_userIcon" src="src/assets/images/user.svg" alt="">

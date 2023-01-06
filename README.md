@@ -14,7 +14,6 @@ The following features are functioning:
 - 3D viewer UI
 - 2D viewer and skill tree UI
 - Geogebra integration with constructions and math papers
-- user accounts
 - general website functionality and theme
 
 The following geometry and science content is available:

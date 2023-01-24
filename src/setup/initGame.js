@@ -108,7 +108,6 @@
 
         ///////////////////////////////////////////  GENERAL  ////////////////////////////////////////////// 
 
-        // Arminia.mathJaxConfig();
         Arminia.loadHomePage();
         Arminia.createSettingsPanel(game);
         Arminia.geogebra(game);

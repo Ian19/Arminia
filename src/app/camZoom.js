@@ -125,7 +125,6 @@
                         let selectedInfoSystem = {};
                         let edgesRenderingMeshes = [];
 
-                        // _this.game.animatePageIn("A_proxyView");
                         // _this.game.animatePageIn("A_64TetraView");
                         // _this.game.animatePageOut("A_homePage");
 
@@ -186,7 +185,7 @@
                                 _this.game.nav = "A_metatronView";
                                 _this.game.animatePageIn(_this.game.nav);
                                 _this.game.animatePageOut("A_homePage");
-                                Arminia.loadMetatronPage();
+                                // Arminia.loadMetatronPage();
 
                                 /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
 
@@ -229,7 +228,7 @@
                                 _this.game.nav = "A_musicView";
                                 _this.game.animatePageIn(_this.game.nav);
                                 _this.game.animatePageOut("A_homePage");
-                                Arminia.loadMusicPage();
+                                // Arminia.loadMusicPage();
 
                                 ////////////////////////////////  MATERIALS FADE OUT INIT  /////////////////////////////////
 
@@ -326,14 +325,8 @@
 
                             _this.game.animatePageIn("A_homePage");
                             _this.game.animatePageOut(_this.game.nav);
-                            // _this.game.animatePageOut("A_proxyView");
 
-                            _this.game.nav = "home";
-
-                            // document.getElementById('A_proxyView').style.opacity = "1";
-                            // document.getElementById('A_proxyView').style.display = "block";                            
-                            // document.getElementById('A_proxyView').classList.remove("A_pageIn");
-                            // document.getElementById('A_proxyView').classList.add("A_pageOut");                            
+                            _this.game.nav = "home";                         
 
                             // document.getElementById('A_homePage').style.opacity = "0";
                             // document.getElementById('A_homePage').style.display = "block";

@@ -19,6 +19,29 @@
 
     var setupPages = function (game) {
 
+
+        ////////////////////  64Tetraview Schwarzschild Proton Button setup  /////////////////////////
+
+        Arminia.equationData(game);
+
+        $(document).on('click', '#A_protonBtnID', function () {
+
+            // temporary until more papers are added
+            game.skills.selectedSkill = game.skills.equationData[0];
+
+            console.log("A_protonBtnID click");
+
+            game.geogebra.parameters.appName = "suite";
+            game.geogebra.parameters.filename = "src/assets/geogebra/testCAS3.ggb";
+            game.geogebra.parameters.showAlgebraInput = true;
+            game.geogebra.parameters.showToolBar = false;
+
+            Arminia.geogebraBtnClick(game, "A_64TetraView", "#A_protonBtnID");
+
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
         function animationEnd(evt) {
 
             // console.log("myfunc1 END");
@@ -62,7 +85,6 @@
         element.addEventListener("oanimationend", animationEnd, false);
         element.addEventListener("MSAnimationEnd", animationEnd, false);
 
-        // element = document.getElementById('A_proxyView');
         // element.addEventListener("webkitAnimationEnd", animationEnd, false);
         // element.addEventListener("animationend", animationEnd, false);
         // element.addEventListener("oanimationend", animationEnd, false);

@@ -108,15 +108,12 @@
 
         ///////////////////////////////////////////  GENERAL  ////////////////////////////////////////////// 
 
-        // Arminia.loadHomePage();
         Arminia.createSettingsPanel(game);
         Arminia.geogebra(game);
         Arminia.skills(game);
         Arminia.modal();
         Arminia.setupPages(game);
-        // Arminia.load64TetraPage(game);
         // Arminia.initEmbla();
-
 
 
         ///////////////////////////////////////////////  INIT SFX  //////////////////////////////////////////// 

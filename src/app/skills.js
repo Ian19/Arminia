@@ -179,14 +179,8 @@
                 $("#A_skillDifficulty").text(skill.difficulty);
                 $("#A_detailRequirement").text(skill.requirement);
 
-
                 // KATEX
                 $(".A_detailOverview").html(skill.overview);
-
-                // MATHJAX
-                // $(".A_detailOverview").text(skill.overview);
-                // MathJax.Hub.Queue(["Typeset", MathJax.Hub, ".A_detailOverview"]);
-
 
                 $("#A_detailQuote").text(skill.quote);
                 $("#A_detailQuotee").text(skill.quotee);

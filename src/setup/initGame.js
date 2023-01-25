@@ -142,45 +142,6 @@
         //////////////////////////////////////////  NEW CODE HERE  /////////////////////////////////////// 
         //////////////////////////////////////////////////////////////////////////////////////////////////
 
-        const minorStrokeOut = "2";
-        const majorStrokeOut = "8";
-
-
-        const majorStrokeOver = "10";
-        const minorStrokeOver = "4";
-
-
-        Array.from(document.getElementsByClassName("A_64Tetra3D")).forEach(
-            function (element, index) {
-
-                // console.log("onmouseover");
-                // console.log(index);
-
-                element.onload = function () {
-
-                    let t = this.contentDocument;
-
-                    t.getElementById("fruit").setAttributeNS(null, "stroke-width", minorStrokeOut);
-                    t.getElementById("sixtyFour").setAttributeNS(null, "stroke-width", majorStrokeOut);
-
-                    this.contentDocument.getElementById("hexagon").onmouseover = function () {
-
-                        // console.log("onmouseover");
-
-                        t.getElementById("fruit").setAttributeNS(null, "stroke-width", minorStrokeOver);
-                        t.getElementById("sixtyFour").setAttributeNS(null, "stroke-width", majorStrokeOver);
-                        this.setAttributeNS(null, "stroke-width", majorStrokeOver);
-                    };
-
-                    this.contentDocument.getElementById("hexagon").onmouseout = function () {
-
-                        t.getElementById("fruit").setAttributeNS(null, "stroke-width", minorStrokeOut);
-                        t.getElementById("sixtyFour").setAttributeNS(null, "stroke-width", majorStrokeOut);
-                        this.setAttributeNS(null, "stroke-width", majorStrokeOut);
-                    };
-                }
-            }
-        );
 
 
         // localStorage.setItem('name', 'bob');
@@ -198,8 +159,6 @@
 
         //Arminia.fresnelGUI(game);
         //Arminia.fresnelGUI2(game);
-
-        // console.log(game.scene.debugLayer);
 
         // game.scene.debugLayer.show({
         //     overlay: true,

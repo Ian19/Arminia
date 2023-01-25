@@ -105,6 +105,7 @@
         Arminia.dust(game);
         Arminia.lightrays(game);
         Arminia.orbs(game, 10);
+        Arminia.audio(game);
 
         ///////////////////////////////////////////  GENERAL  ////////////////////////////////////////////// 
 
@@ -114,20 +115,6 @@
         Arminia.modal();
         Arminia.setupPages(game);
         // Arminia.initEmbla();
-
-
-        ///////////////////////////////////////////////  INIT SFX  //////////////////////////////////////////// 
-
-        var volume = 0.7;
-        var playbackRate = 0.5;
-
-        var slideSoft = new BABYLON.Sound("gunshot", "src/assets/audio/Slide_Soft_00.wav", game.scene, null, {
-            playbackRate: playbackRate,
-            volume: volume
-        });
-
-        game.audio = {};
-        game.audio.slideSoft = slideSoft;
 
         //////////////////////////////////////////  INIT SCROLLBARS  ///////////////////////////////////////          
 
@@ -194,30 +181,6 @@
                 }
             }
         );
-
-        // var defaultSVG = 'src/assets/images/constants/treeVariableG.svg';
-        // $.get(defaultSVG, function (data) {
-
-        //     var svg = data.documentElement;
-        //     var s = new XMLSerializer().serializeToString(svg);
-        //     var encodedData = 'data: image/svg+xml;base64,' + window.btoa(s);
-
-        //     var meshPBR = new BABYLON.StandardMaterial('meshPBR', game.scene);
-        //     meshPBR.emissiveTexture = BABYLON.Texture.LoadFromDataString('data', encodedData, game.scene);
-        //     meshPBR.emissiveTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
-        //     meshPBR.emissiveTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
-        //     meshPBR.emissiveTexture.hasAlpha = true;
-        //     meshPBR.alphaMode = BABYLON.Engine.ALPHA_ONEONE;
-        //     meshPBR.alpha = 0.99;
-
-        //     var plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 3, height: 3 }, game.scene);
-        //     plane.layerMask = 1;
-        //     plane.position = new BABYLON.Vector3(-3, 3.5, 0);
-        //     plane.rotation.y = 180 * Math.PI / 180;
-        //     plane.material = meshPBR;
-        // });
-
-
 
 
         // localStorage.setItem('name', 'bob');

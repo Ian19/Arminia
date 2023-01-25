@@ -17,18 +17,23 @@
 
 (function () {
 
-    var orbs = function (num) {
+    var orbs = function (game, num) {
 
         var splinePoints = 4;
         var betweenPoints = 10;
         const frameRate = 10;
-        var animationGroupArray = [];
+
+        game.animationGroupArray = [];
+
+        game.spriteManagerFlare =  new BABYLON.SpriteManager("flareManager", "src/assets/textures/spark.png", num, { width: 256, height: 256 });
+        // const spriteManagerFlare = new BABYLON.SpriteManager("flareManager", "src/assets/textures/spark.png", num, { width: 256, height: 256 });
+
+        game.spriteManagerFlare.layerMask = 2;
 
         var slowest = 0.0007;
         var slower = 0.007;
         var slow = 0.007;
         var fast = 0.01;
-
 
         // var slowest = 0.0000007;
         // var slower = 0.000007;
@@ -61,10 +66,7 @@
             } else if (x > 0.66) {
                 return slow;
             }
-        }
-
-        const spriteManagerFlare = new BABYLON.SpriteManager("flareManager", "src/assets/textures/spark.png", num, { width: 256, height: 256 });
-        spriteManagerFlare.layerMask = 2;
+        }        
 
         for (var n = 1; n <= num; n++) {
 
@@ -72,7 +74,7 @@
             var ySlide = new BABYLON.Animation("ySlide", "position.y", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             var zSlide = new BABYLON.Animation("ySlide", "position.z", frameRate, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
 
-            const spark = new BABYLON.Sprite("spark", spriteManagerFlare);
+            const spark = new BABYLON.Sprite("spark", game.spriteManagerFlare);
             // spark.width = randRange(1, 9) / 3;
             spark.width = randRange(2, 3);
             spark.height = spark.width;
@@ -153,15 +155,13 @@
             animationGroup.addTargetedAnimation(xSlide, spark);
             animationGroup.addTargetedAnimation(ySlide, spark);
             animationGroup.addTargetedAnimation(zSlide, spark);
-            // animationGroup.speedRatio = 0.02;
-            animationGroup.speedRatio = 0.009;
-            // animationGroup.speedRatio = 2;
-            // animationGroup.speedRatio = 0.007;
 
-            animationGroupArray.push(animationGroup);
+            animationGroup.speedRatio = 0.009;            
+
+            game.animationGroupArray.push(animationGroup);
         }
 
-        animationGroupArray.forEach((ag) => {
+        game.animationGroupArray.forEach((ag) => {
             ag.play(true);
         });
 

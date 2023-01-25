@@ -104,7 +104,7 @@
         Arminia.fog(game);
         Arminia.dust(game);
         Arminia.lightrays(game);
-        Arminia.orbs(10);
+        Arminia.orbs(game, 10);
 
         ///////////////////////////////////////////  GENERAL  ////////////////////////////////////////////// 
 
@@ -238,11 +238,11 @@
 
         // console.log(game.scene.debugLayer);
 
-        // game.scene.debugLayer.show({
-        //     overlay: true,
-        //     handleResize: true,
-        //     embedMode: true
-        // });
+        game.scene.debugLayer.show({
+            overlay: true,
+            handleResize: true,
+            embedMode: true
+        });
 
     };
 

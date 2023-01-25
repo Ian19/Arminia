@@ -178,6 +178,29 @@
                 game.infoSystem1.doubleTorus.setEnabled(false);
             }
         }
+        
+        checkbox13.onclick = function () {
+            if (checkbox13.checked == true) {
+                // show and play orb animations
+                game.spriteManagerFlare.children.forEach((mySprite) => {
+                    mySprite.isVisible = true;
+                });
+
+                game.animationGroupArray.forEach((ag) => {
+                    ag.play(true);
+                });
+
+            } else {
+                // hide and stop orb animations
+                game.animationGroupArray.forEach((ag) => {
+                    ag.stop();
+                });
+
+                game.spriteManagerFlare.children.forEach((mySprite) => {
+                    mySprite.isVisible = false;
+                });
+            }
+        }
 
         const labels = document.getElementsByClassName('A_lbl');
         const cbs = document.getElementsByClassName('A_cb');

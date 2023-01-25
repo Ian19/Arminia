@@ -23,62 +23,18 @@
             $("#A_simpleModal").hide();
         });
 
-        $("#A_loginIcon").click(function() {
-            if ($("#A_loginIcon").text() === "LOG IN") {
-                $("#A_profilePage").hide();
-                $("#A_loginMsgBox").hide();
-                $("#A_registerBox").hide();
-                $("#A_resetBox").hide();
-                $("#A_info").hide();
-                $("#A_loginBox").css("display", "flex");
-                $("#A_simpleModal").show();
-            } else {                
-                var action = "log out";  
-                $.ajax({  
-                    url:"action.php",  
-                    method:"POST",  
-                    data:{action: action},  
-                    success:function() { 
-                        $("#A_loginIcon").text("LOG IN");
-                    } 
-                });
-            }
-        });
+        $("#A_userIcon").click(function() {   
 
-        $("#A_userIcon, #A_notification").click(function() {   
-            
-            if ($("#A_loginIcon").text() === "LOG IN") {
-                $("#A_ProfileTitle").text("USERNAME");
-            } else {
-                var action = "get name";  
-                $.ajax({  
-                    url:"action.php",  
-                    method:"POST",  
-                    data:{action: action},  
-                    success:function(response) { 
-                        $("#A_ProfileTitle").text(response);
-                    } 
-                });
-            }
+            // $("#A_ProfileTitle").text("USERNAME");
 
-            $("#A_loginMsgBox").hide();
-            $("#A_registerBox").hide();
-            $("#A_resetBox").hide();
-            $("#A_loginBox").hide();
             $("#A_info").hide();
             $("#A_profilePage").show();
             $("#A_simpleModal").show();
         });
 
 
-        $("#A_title").click(function() {   
+        $("#A_title").click(function() {          
 
-            console.log("clicked title!!");
-            
-            $("#A_loginMsgBox").hide();
-            $("#A_registerBox").hide();
-            $("#A_resetBox").hide();
-            $("#A_loginBox").hide();
             $("#A_profilePage").hide();
             $("#A_info").show();
             $("#A_simpleModal").show();

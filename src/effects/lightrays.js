@@ -19,14 +19,16 @@
 
     var lightrays = function (game) {
 
-        var lightRayPlane = BABYLON.MeshBuilder.CreatePlane("lightRayPlane", { width: 36.6, size: 50, tileSize: 1 }, game.scene);
-        lightRayPlane.rotation.y = 180 * Math.PI / 180;
-        lightRayPlane.rotation.z = 180 * Math.PI / 180;
-        lightRayPlane.layerMask = 2;
-        lightRayPlane.visibility = 0.15;
+        // var lightRayPlane = BABYLON.MeshBuilder.CreatePlane("lightRayPlane", { width: 36.6, size: 50, tileSize: 1 }, game.scene);
+        game.lightRayPlane = BABYLON.MeshBuilder.CreatePlane("lightRayPlane", { width: 36.6, size: 50, tileSize: 1 }, game.scene);
+
+        game.lightRayPlane.rotation.y = 180 * Math.PI / 180;
+        game.lightRayPlane.rotation.z = 180 * Math.PI / 180;
+        game.lightRayPlane.layerMask = 2;
+        game.lightRayPlane.visibility = 0.15;
     
         var shaderMaterial = game.scene.getMaterialByName("lightRayMat");
-        lightRayPlane.material = shaderMaterial;
+        game.lightRayPlane.material = shaderMaterial;
         var time = 0;
     
         game.scene.registerBeforeRender(function () {    

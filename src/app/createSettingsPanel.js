@@ -202,6 +202,14 @@
             }
         }
 
+        checkbox14.onclick = function () {
+            if (checkbox14.checked == true) {
+                game.lightRayPlane.setEnabled(true);
+            } else {
+                game.lightRayPlane.setEnabled(false);
+            }
+        }
+
         const labels = document.getElementsByClassName('A_lbl');
         const cbs = document.getElementsByClassName('A_cb');
         const iconBoxes = document.getElementsByClassName('icon-box');

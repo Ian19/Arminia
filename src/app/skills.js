@@ -290,7 +290,8 @@
             // game.geogebra.parameters.appName = "graphing";
             game.geogebra.parameters.appName = "classic";
             // game.geogebra.parameters.appName = "suite";
-            game.geogebra.parameters.filename = "/arminia/src/assets/geogebra/file_900x1000.ggb";
+            // game.geogebra.parameters.filename = "/arminia/src/assets/geogebra/file_900x1000.ggb";
+            game.geogebra.parameters.filename = "/src/assets/geogebra/file_900x1000.ggb";
             // game.geogebra.parameters.filename = "/src/assets/geogebra/file_900x1000.ggb";
             game.geogebra.parameters.showAlgebraInput = false;
             game.geogebra.parameters.showToolBar = true;

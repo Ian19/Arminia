@@ -54,8 +54,6 @@
             from = e.target;
         }
 
-
-
     };
 
     if (window.Arminia === undefined) {

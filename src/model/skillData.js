@@ -84,7 +84,7 @@
                 "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
                 "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow.svg",
                 // "stepsImage2": "src/assets/images/skills/details/test.svg",
-                "name": "The Vesica Picsis",
+                "name": "The Vesica Piscis",
                 "difficulty": "EASY  |  3 STEPS",
                 "completed": false,
                 "unlocked": true,

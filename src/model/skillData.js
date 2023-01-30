@@ -32,7 +32,7 @@
                 "id": 1,
                 "material_id": "ybm744ww",
                 "steps": [["circle c, Circle(A, 1)"]],
-                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to <b>1</b>.")],
+                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to <b>1</b> and with center at point <b>A</b>.")],
                 "d3Data": ["hexStatus1Circle", "Complete1Circle"],
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",

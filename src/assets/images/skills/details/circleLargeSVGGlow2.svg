@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="A_vesicaLarge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="804.188px" height="791.064px" viewBox="0 343.219 804.188 791.064"
+	 enable-background="new 0 343.219 804.188 791.064" xml:space="preserve">
+
+	<filter  id="glow">
+
+		<!--  blur the text at different levels -->
+		<feGaussianBlur  result="blur1" stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur  result="blur2" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur  result="blur3" stdDeviation="20" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur  result="blur4" stdDeviation="30" in="SourceGraphic"></feGaussianBlur>
+
+		<!--  merge all the blurs except for the first one  -->
+		<feMerge  result="blur-merged">
+			<feMergeNode  in="blur2"></feMergeNode>
+			<feMergeNode  in="blur3"></feMergeNode>
+			<feMergeNode  in="blur4"></feMergeNode>
+		</feMerge>
+
+		<!--  recolour the merged blurs 9966ff  -->
+		
+		<feColorMatrix  type="matrix" result="colorBlur" in="blur-merged" values="
+			0.45 0   0   0   0
+			0   0.21  0   0   0          
+			0   0   0.99  0   0          
+			0   0   0   1   0 ">
+		</feColorMatrix>
+
+		<feMerge>
+			<feMergeNode  in="colorBlur"></feMergeNode>
+			<!--  largest blurs coloured red  -->
+			<feMergeNode  in="blur1"></feMergeNode>
+			<!--   smallest blur left white  -->
+			<feMergeNode  in="SourceGraphic"></feMergeNode>
+			<!--  original white text  -->
+		</feMerge>
+		
+	</filter>
+
+	<g id="A_SVGSteps" filter="url(#glow)">
+
+		<g id="A_SVGStep1">
+			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="739.369" r="361.063"/>
+			<text class="A_verbose" transform="matrix(1 0 0 1 227.1875 453.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">c</text>
+		</g>
+
+	</g>
+
+</svg>

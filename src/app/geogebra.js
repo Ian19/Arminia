@@ -447,6 +447,9 @@
                     // console.log("Geogebra Output: " + strState);
 
                     // console.log(stepsArray); 
+                    // console.log(test); 
+                    // console.log(stepsLength); 
+                    // console.log(steps); 
 
                     // Check if geogebra object exists in model skillData steps by building multidimension test array
                     for (let j = 0; j < stepsLength; j++) {

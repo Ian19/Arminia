@@ -149,10 +149,6 @@
 
 
 
-        // game.scene.registerBeforeRender(function () {
-        //     game.infoSystem1.doubleTorus.rotation.y += 0.005;
-        // });
-
 
 
         ///////////////////////////////////////////  DEBUG  //////////////////////////////////////////////

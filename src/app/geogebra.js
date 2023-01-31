@@ -368,6 +368,13 @@
                             $("#A_stepsProgress").css("width", "100%");
                             $("#A_stepsValue").text(stepsProgress.style.width);
 
+
+                            // set completed skill to 1 in local storage
+                            let lsName = "Skill" + game.skills.selectedSkill.name.replace(/ /g,'');                            
+                            localStorage.setItem(lsName, '1');
+                            game.skills.selectedSkill.completed = "true";
+
+
                         } else {
                             // step complete, but final step NOT reached
 

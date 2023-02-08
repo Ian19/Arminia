@@ -18,7 +18,7 @@ The following features are functioning:
 
 The following geometry and science content is available:
 - The 64 Tetrahedron Grid Information Sysem has content and can be accessed through the 3D Viewer
-- The Vesica Piscis Skill is complete and can be accessed through the 2D Skill Viewer
+- The Circle and Vesica Piscis Skills are complete and can be accessed through the 2D Skill Viewer
 - The Schwarzschild Proton Paper by Nassim Harramein is 25% complete with the CAS
 
 The following features are either not functioning or incomplete:

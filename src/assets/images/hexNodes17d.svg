@@ -10521,30 +10521,30 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 			</g>
 		</g>
 		<g id="Circle1">
-			<g id="hexStatus1Circle_1_">
+			<g id="hexStatus1Circle">
 				<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="521.173,740.212 475.791,714.015 475.793,661.615 
 					521.173,635.416 566.545,661.615 566.548,714.013 				"/>
 				<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="521.173,740.212 475.791,714.015 
 					475.793,661.615 521.173,635.416 566.545,661.615 566.548,714.013 				"/>
 			</g>
-			<g id="Complete1Circle_2_">
+			<g id="Complete1Circle">
 				<path fill="none" stroke="#FFFFFF" stroke-width="0.6" d="M521.169,662.753c13.844,0,25.057,11.219,25.057,25.063
 					c0,13.842-11.213,25.063-25.057,25.063c-13.84,0-25.061-11.223-25.061-25.063C496.11,673.972,507.33,662.753,521.169,662.753z"
 					/>
 				<circle fill="#FFFFFF" cx="521.171" cy="687.813" r="1.132"/>
 			</g>
 			
-				<polygon id="hexHover1_x5F_Circle_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+				<polygon id="hexHover1_Circle" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 				521.173,740.212 475.791,714.015 475.793,661.615 521.173,635.416 566.545,661.615 566.548,714.013 			"/>
 		</g>
 		<g id="Vesica1">
-			<g id="hexStatus2Vesica_2_">
+			<g id="hexStatus2Vesica">
 				<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="521.165,582.921 475.786,556.723 475.785,504.324 
 					521.164,478.123 566.538,504.324 566.538,556.723 				"/>
 				<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="521.165,582.921 475.786,556.723 
 					475.785,504.324 521.164,478.123 566.538,504.324 566.538,556.723 				"/>
 			</g>
-			<g id="Complete2Vesica_1_">
+			<g id="Complete2Vesica">
 				<path fill="none" stroke="#FFFFFF" stroke-width="0.6" d="M544.65,542.951c0,12.938-10.482,23.418-23.402,23.418
 					c-12.938,0-23.421-10.479-23.421-23.418c0-12.939,10.483-23.438,23.421-23.438C534.168,519.514,544.65,530.01,544.65,542.951z"
 					/>
@@ -10557,13 +10557,13 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 		</g>
 		<g id="_x33_Roots">
 			<g id="Roots1">
-				<g id="hexStatus23Roots1_2_">
+				<g id="hexStatus23Roots1">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="385.033,661.615 339.651,635.416 339.652,583.014 
 						385.033,556.815 430.412,583.014 430.413,635.416 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="385.033,661.615 339.651,635.416 
 						339.652,583.014 385.033,556.815 430.412,583.014 430.413,635.416 					"/>
 				</g>
-				<g id="Complete23Roots1_1_">
+				<g id="Complete23Roots1">
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.5" d="M409.976,621.693c0,13.771-11.175,24.938-24.938,24.938
 						c-13.789,0-24.961-11.168-24.961-24.938c0-13.788,11.172-24.953,24.961-24.953
 						C398.801,596.737,409.976,607.908,409.976,621.693z"/>
@@ -10580,17 +10580,17 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 					<line fill="none" stroke="#FFFFFF" stroke-width="0.5" x1="385.032" y1="621.689" x2="409.976" y2="596.742"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_3Roots1_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2Roots1" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					385.033,661.615 339.651,635.416 339.652,583.014 385.033,556.815 430.412,583.014 430.413,635.416 				"/>
 			</g>
 			<g id="_x33_RootsPolygon">
-				<g id="hexStatus23Roots2_4_">
+				<g id="hexStatus23Roots2">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="248.889,583.007 203.508,556.809 203.51,504.408 
 						248.89,478.208 294.27,504.408 294.271,556.807 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="248.889,583.007 203.508,556.809 
 						203.51,504.408 248.89,478.208 294.27,504.408 294.271,556.807 					"/>
 				</g>
-				<g id="Complete23Roots2_6_">
+				<g id="Complete23Roots2">
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-miterlimit="10" d="M268.24,557.253
 						c-6.173,10.688-19.841,14.351-30.521,8.185c-10.694-6.176-14.36-19.842-8.189-30.521c6.177-10.695,19.844-14.354,30.539-8.18
 						C270.745,532.893,274.411,546.561,268.24,557.253z"/>
@@ -10614,17 +10614,17 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						230.68,505.503 248.889,492.53 267.078,505.498 					"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_3Roots2_7_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover23Roots2" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					248.889,583.007 203.508,556.809 203.51,504.408 248.89,478.208 294.27,504.408 294.271,556.807 				"/>
 			</g>
 			<g id="polygon_generate">
-				<g id="hexStatus23Roots2_3_">
+				<g id="hexStatus23Roots2">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="248.893,425.818 203.511,399.621 203.512,347.218 
 						248.895,321.018 294.273,347.22 294.275,399.619 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="248.893,425.818 203.511,399.621 
 						203.512,347.218 248.895,321.018 294.273,347.22 294.275,399.619 					"/>
 				</g>
-				<g id="Complete23Roots2_1_">
+				<g id="Complete23Roots2">
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.5" d="M262.155,404.014c-4.231,7.332-13.605,9.84-20.932,5.614
 						c-7.335-4.235-9.848-13.608-5.616-20.938c4.235-7.336,13.607-9.846,20.942-5.604
 						C263.876,387.307,266.39,396.68,262.155,404.014z"/>
@@ -10650,19 +10650,19 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						228.784,344.917 241.187,335.908 256.515,335.908 268.916,344.917 273.652,359.495 268.916,374.073 256.515,383.083 					"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_3Roots2_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2Roots2" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					248.893,425.818 203.511,399.621 203.512,347.218 248.895,321.018 294.273,347.22 294.275,399.619 				"/>
 			</g>
 		</g>
 		<g id="Lucifer">
-			<g id="lucifer1_1_">
-				<g id="hexStatus2Luc1_1_">
+			<g id="lucifer1">
+				<g id="hexStatus2Luc1">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="657.311,661.615 611.932,635.416 611.932,583.014 
 						657.311,556.815 702.692,583.016 702.69,635.416 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="657.311,661.615 611.932,635.416 
 						611.932,583.014 657.311,556.815 702.692,583.016 702.69,635.416 					"/>
 				</g>
-				<g id="Complete2Luc1_2_">
+				<g id="Complete2Luc1">
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.7" d="M677.537,620.005c0,11.135-9.021,20.152-20.138,20.152
 						c-11.146,0-20.157-9.021-20.157-20.152c0-11.133,9.021-20.166,20.157-20.166C668.517,599.844,677.537,608.875,677.537,620.005z
 						"/>
@@ -10677,17 +10677,17 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_Luc1_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2Luc1" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					657.311,661.615 611.932,635.416 611.932,583.014 657.311,556.815 702.692,583.016 702.69,635.416 				"/>
 			</g>
-			<g id="lucifer2_1_">
-				<g id="hexStatus2Luc2_1_">
+			<g id="lucifer2">
+				<g id="hexStatus2Luc2">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="838.819,556.808 793.44,583.005 748.063,556.81 
 						748.063,504.41 793.44,478.208 838.819,504.41 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="838.819,556.808 793.44,583.005 
 						748.063,556.81 748.063,504.41 793.44,478.208 838.819,504.41 					"/>
 				</g>
-				<g id="Complete2Luc2_2_">
+				<g id="Complete2Luc2">
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.7" d="M810.308,539.044c0,9.313-7.553,16.865-16.854,16.865
 						c-9.318,0-16.876-7.563-16.876-16.865c0-9.32,7.554-16.875,16.876-16.875C802.754,522.171,810.308,529.726,810.308,539.044z"/>
 					<path fill="none" stroke="#FFFFFF" stroke-width="0.7" d="M810.314,522.176c0,9.313-7.563,16.864-16.862,16.864
@@ -10706,11 +10706,11 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						c-9.32,0-16.878-7.555-16.878-16.854c0-9.316,7.554-16.87,16.878-16.87C817.377,530.61,824.929,538.164,824.929,547.48z"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_Luc2_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2_x5F_Luc2" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					838.827,556.815 793.449,583.015 748.063,556.81 748.063,504.41 793.44,478.208 838.819,504.41 				"/>
 			</g>
-			<g id="lucifer3_1_">
-				<g id="hexStatus2Luc3_1_">
+			<g id="lucifer3">
+				<g id="hexStatus2Luc3">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="793.449,425.82 748.069,399.619 748.067,347.218 
 						793.447,321.018 838.827,347.218 838.829,399.621 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="793.449,425.82 748.069,399.619 
@@ -10752,10 +10752,10 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_Luc3_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2_x5F_Luc3" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					793.449,425.82 748.069,399.619 748.067,347.218 793.447,321.018 838.827,347.218 838.829,399.621 				"/>
 			</g>
-			<g id="lucifer4_1_">
+			<g id="lucifer4">
 				<g id="hexStatus2Luc4_2_">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="793.447,268.62 748.067,242.419 748.067,190.02 
 						793.447,163.819 838.827,190.02 838.827,242.419 					"/>
@@ -10837,7 +10837,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						C808.58,184.23,813.354,189.002,813.354,194.895z"/>
 				</g>
 				
-					<polygon id="hexHover2_x5F_Luc4_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover2_x5F_Luc4" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					793.447,268.62 748.067,242.419 748.067,190.02 793.447,163.819 838.827,190.02 838.827,242.419 				"/>
 			</g>
 		</g>
@@ -10915,7 +10915,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 				<polygon id="hexHoverTetractys" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 				657.309,190.019 611.93,163.819 611.93,111.42 657.309,85.22 702.688,111.42 702.688,163.819 			"/>
 		</g>
-		<g id="leonardosKey_1_">
+		<g id="leonardosKey">
 			<g id="hexStatusLeo">
 				<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="521.171,111.423 475.79,85.222 475.791,32.821 
 					521.17,6.622 566.541,32.822 566.543,85.223 				"/>
@@ -10956,7 +10956,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 		</g>
 		<g id="folGeometry">
 			<g id="Triquetra">
-				<g id="hexStatus3Triquetra_2_">
+				<g id="hexStatus3Triquetra">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="657.309,504.416 611.928,478.219 611.929,425.817 
 						657.308,399.617 702.688,425.819 702.688,478.217 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="657.309,504.416 611.928,478.219 
@@ -10986,7 +10986,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						C656.453,428.367,667.044,438.953,667.044,452.022z"/>
 				</g>
 				
-					<polygon id="hexHover3_x5F_Triquetra_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover3Triquetra" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					657.309,504.416 611.928,478.219 611.929,425.817 657.308,399.617 702.688,425.819 702.688,478.217 				"/>
 			</g>
 			<g id="Genesis">
@@ -11020,7 +11020,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						C666.9,277.455,674.675,285.225,674.675,294.82z"/>
 				</g>
 				
-					<polygon id="hexHover4_x5F_Genesis_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover4_x5F_Genesis" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					657.308,347.218 611.929,321.018 611.93,268.621 657.309,242.419 702.688,268.621 702.688,321.018 				"/>
 			</g>
 			<g id="egg">
@@ -11083,7 +11083,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						339.65,111.42 385.031,85.22 430.409,111.42 430.411,163.82 					"/>
 				</g>
 				<g id="CompleteFOLUnseal">
-					<g id="rotation_1_3_">
+					<g id="rotation_1">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M396.886,137.19
 							c0,6.564-5.313,11.885-11.882,11.885c-6.563,0-11.889-5.319-11.889-11.885c0-6.568,5.324-11.888,11.889-11.888
 							C391.563,125.301,396.886,130.622,396.886,137.19z"/>
@@ -11106,7 +11106,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 							c0,6.563-5.322,11.884-11.881,11.884c-6.566,0-11.89-5.32-11.89-11.884c0-6.569,5.313-11.888,11.89-11.888
 							C381.268,131.246,386.59,136.564,386.59,143.133z"/>
 					</g>
-					<g id="rotation_2_3_">
+					<g id="rotation_2">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M386.59,119.361
 							c0,6.565-5.322,11.885-11.881,11.885c-6.566,0-11.89-5.319-11.89-11.885c0-6.568,5.313-11.888,11.89-11.888
 							C381.268,107.472,386.59,112.792,386.59,119.361z"/>
@@ -11126,7 +11126,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 							c0,6.565-5.313,11.885-11.88,11.885c-6.563,0-11.89-5.319-11.89-11.885c0-6.568,5.322-11.888,11.89-11.888
 							C401.858,107.472,407.182,112.792,407.182,119.361z"/>
 					</g>
-					<g id="rotation_3_4_">
+					<g id="rotation_3">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M396.886,113.417
 							c0,6.564-5.313,11.884-11.882,11.884c-6.563,0-11.889-5.319-11.889-11.884c0-6.569,5.324-11.89,11.889-11.89
 							C391.563,101.53,396.886,106.848,396.886,113.417z"/>
@@ -11146,7 +11146,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 							c0,6.564-5.313,11.882-11.881,11.882c-6.563,0-11.89-5.318-11.89-11.882c0-6.569,5.322-11.889,11.89-11.889
 							C412.156,113.416,417.479,118.736,417.479,125.305z"/>
 					</g>
-					<g id="rotation_4_3_">
+					<g id="rotation_4">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M385.002,101.535
 							c1.011,1.746,1.587,3.776,1.587,5.94c0,6.565-5.322,11.885-11.88,11.885c-4.399,0-8.243-2.388-10.299-5.938"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M374.707,107.476
@@ -11172,7 +11172,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M364.423,160.94
 							c2.063-3.542,5.896-5.924,10.287-5.924c6.563,0,11.881,5.32,11.881,11.888c0,2.146-0.563,4.157-1.563,5.896"/>
 					</g>
-					<g id="rotation_5_3_">
+					<g id="rotation_5">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M395.301,107.472
 							c-2.056,3.553-5.896,5.943-10.293,5.943c-4.396,0-8.25-2.394-10.305-5.95"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M374.705,107.481
@@ -11198,7 +11198,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M405.598,113.416
 							c-4.396,0-8.229-2.391-10.301-5.941"/>
 					</g>
-					<g id="rotation_6_3_">
+					<g id="rotation_6">
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M385.002,101.535
 							c-2.056,3.551-5.895,5.938-10.29,5.938"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M364.412,113.415
@@ -11224,7 +11224,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						<path fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" d="M395.305,107.472
 							c-4.396,0-8.229-2.386-10.295-5.935"/>
 					</g>
-					<g id="borders_3_">
+					<g id="borders">
 						<circle fill="none" stroke="#FFFFFF" stroke-width="0.4" stroke-miterlimit="10" cx="385.029" cy="137.193" r="35.619"/>
 					</g>
 				</g>
@@ -11233,7 +11233,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 					385.03,190.021 339.649,163.821 339.65,111.42 385.031,85.22 430.409,111.42 430.411,163.82 				"/>
 			</g>
 			<g id="sealedFOL">
-				<g id="hexStatus9FOLSeal_2_">
+				<g id="hexStatus9FOLSeal">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="248.895,268.62 203.513,242.417 203.514,190.018 
 						248.896,163.816 294.274,190.018 294.275,242.417 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="248.895,268.62 203.513,242.417 

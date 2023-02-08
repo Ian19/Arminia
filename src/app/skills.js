@@ -72,6 +72,9 @@
                 .style("stroke-opacity", 0)
                 .on("mousedown", mousedown1)
                 .on("mouseover", function (d, i) {
+
+                    // console.log(this, d, i);
+
                     mouseover1(this, d, i);
                 })
                 .on("mouseout", mouseout1);
@@ -81,6 +84,11 @@
             function mouseover1(t, d, i) {
                 // console.log(t, d, i);
                 d3.select(t).style("stroke-opacity", 1);
+
+                d3.select(t).style("stroke", "white");
+
+
+                // console.log(i);
                 updateSkillsDetail(i);
             }
 
@@ -173,7 +181,7 @@
 
                 // $("#A_detailGridID").css("display", "grid");
                 $("#A_detailGridID").css("opacity", "1");
-                
+
                 $("#A_detailImage").attr("src", skill.url);
                 $("#A_detailTitle").text(skill.name);
                 $("#A_skillDifficulty").text(skill.difficulty);
@@ -234,16 +242,48 @@
 
                 g.select("#" + detailsData.d3Data[0])
                     .style("stroke-opacity", 1)
-                    .style("fill-opacity", 1);
+                    .style("fill-opacity", 1)
+                    // change stroke color to indicate completed skill of second child node
+                    .select("polygon:nth-child(2)")
+                    .style("stroke", "#66CCCC");
+
 
                 g.select("#" + detailsData.d3Data[1])
                     .selectAll("image")
                     .style("visibility", "visible");
             }
 
+            function setSkillsUnlocked(unlockedSkills) {
+
+                // iterate through all unlocked skills and set unlocked and apply skill tree changes
+                unlockedSkills.forEach(function (element) {
+
+                    game.skills.skillData.forEach(function (skill) {
+
+                        if (element == skill.id) {
+
+                            // check if skill is completed
+                            if (skill.completed != true) {
+
+                                skill.unlocked = true;
+
+                                g.select("#" + skill.d3Data[0])
+                                    .style("stroke-opacity", 1)
+                                    .style("fill-opacity", 1)
+                                    // change stroke color to indicate completed skill of second child node
+                                    .select("polygon:nth-child(2)")
+                                    .style("stroke", "#EAEAF1");
+
+                            }
+                        }
+                    });
+                });
+            }
+
             setAllSkillsIncomplete();
 
             game.setSkillComplete = setSkillComplete;
+            game.setSkillsUnlocked = setSkillsUnlocked;
 
             // start with circle selected            
             let newSkillData = game.skills.skillData[0];
@@ -279,8 +319,56 @@
             // d3.select(this).selectAll("polygon, path") 
             // g.selectAll("[id *= 'available']")
 
-        });
-        
+
+            // unlock circle for Skill Tree
+            g.select("#" + game.skills.skillData[0].d3Data[0])
+                .style("stroke-opacity", 1)
+                .style("fill-opacity", 1)
+                // change stroke color to indicate completed skill of second child node
+                .select("polygon:nth-child(2)")
+                // .style("stroke", "#9999FF");
+                .style("stroke", "#EAEAF1");
+
+            /////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////// LOCAL STORAGE INIT ////////////////////////////////////
+            ///////// RETREIVE LOCAL STORAGE DATA AND APPLY TO SKILLDATA AND SKILL TREE /////////
+            /////////////////////////////////////////////////////////////////////////////////////
+
+            if (localStorage.getItem('ArminiaSkills') != '') {
+
+                if (localStorage.getItem('ArminiaSkills') == null) {
+
+                    localStorage.setItem('ArminiaSkills', '');
+
+                } else {
+
+                    // assign local storage as a comma separated array
+                    let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+
+                    // iterate through local storage data and apply to skillData and skill tree
+                    localStorageArray.forEach(function (element) {
+
+                        game.skills.skillData.forEach(function (skill) {
+
+                            if (element == skill.id) {
+
+                                skill.completed = true;
+                                skill.unlocked = true;
+                                game.setSkillComplete(skill);
+                                game.setSkillsUnlocked(skill.unlocksSkills);
+
+                            }
+                        });
+                    });
+                }
+            }
+
+            /////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////
+
+        }); // END OF d3.xml()
+
         // let skillCheck = game.skills.selectedSkill;
 
         $(document).on('click', '#A_detailBtn', function () {
@@ -296,7 +384,7 @@
             // game.geogebra.parameters.showMenuBar = true;
 
 
-            Arminia.geogebraBtnClick(game, "A_homePage","#A_detailBtn");
+            Arminia.geogebraBtnClick(game, "A_homePage", "#A_detailBtn");
 
         });
 

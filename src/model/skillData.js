@@ -29,7 +29,7 @@
 
         game.skills.skillData = [
             {
-                "id": 1,
+                "id": 0,
                 "material_id": "ybm744ww",
                 "steps": [["circle c, Circle(A, 1)"]],
                 "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to <b>1</b> and with center at point <b>A</b>.")],
@@ -73,7 +73,7 @@
                     </span>
                 `         
             }, {
-                "id": 2,
+                "id": 1,
                 "material_id": "ybm744ww",
                 "steps": [["point A, ", "circle c, Circle(A, 1)"], ["point B, Point(c)", "segment f, Segment(A, B)"], ["circle d, Circle(B, A)"]],
                 "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to 1 and with center at point <b>A</b>."), addNbsp("Draw Segment f from point A to point B"), addNbsp(" Draw Circle <b>d</b> through point A with center at point B")],
@@ -87,8 +87,8 @@
                 "name": "The Vesica Piscis",
                 "difficulty": "EASY  |  3 STEPS",
                 "completed": false,
-                "unlocked": true,
-                "unlocksSkills": [2],
+                "unlocked": false,
+                "unlocksSkills": [2,5,11],
                 "requirement": "(REQUIRES THE CIRCLE)",
                 "overview": "The Vesica Piscis is formed by the intersection of two circles with the same radius, intersecting in such a way that the centre of each circle lies on the circumference of the other.",
                 "quote": '"...the geometric image through which light was created."',
@@ -139,7 +139,8 @@
                 `
             },
             {
-                "id": 3,
+                "id": 2,
+                "d3Data": ["hexStatus23Roots1", "Complete23Roots1"],
                 "selected": false,
                 "url": "src/assets/images/skills/3-roots.png",
                 "name": "Three Sacred Roots 1",
@@ -147,6 +148,7 @@
                 "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 // "overview": "The three sacred roots are \$ \\sqrt{2} \$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
                 "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ". They are irrational functions describing core concepts of geometry.",
                 "quote": "...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation...",
@@ -175,7 +177,7 @@
                 </span>`
             },
             {
-                "id": 4,
+                "id": 3,
                 "selected": false,
                 "url": "src/assets/images/skills/3_sacred_roots2.png",
                 "name": "Three Sacred Roots 2",
@@ -183,6 +185,7 @@
                 "requirement": "(REQUIRES Three Sacred Roots 1)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 // "overview": "The three sacred roots are \$ \\sqrt{2} \a$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
                 "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ". They are irrational functions describing core concepts of geometry.",
                 "quote": '"...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation..."',
@@ -211,17 +214,20 @@
                 </span>`
             },
             {
-                "id": 5,
+
+                "id": 4,
                 "selected": false,
-                "url": "src/assets/images/skills/triquetra.png",
-                "name": "The Triquetra",
-                "difficulty": "EASY  |  9 STEPS",
-                "requirement": "(REQUIRES VESICA PISCIS)",
+                "url": "src/assets/images/skills/3_sacred_roots2.png",
+                "name": "Three Sacred Roots 3",
+                "difficulty": "EASY  |  17 STEPS",
+                "requirement": "(REQUIRES Three Sacred Roots 2)",
                 "completed": false,
                 "unlocked": false,
-                "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle. It is the 2nd motion of the Genesis Pattern.",
-                "quote": '"...At that moment a huge amount of information was created."',
-                "quotee": "Drunvalo Melchizedek",
+                "unlocksSkills": [],
+                // "overview": "The three sacred roots are \$ \\sqrt{2} \a$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
+                "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ". They are irrational functions describing core concepts of geometry.",
+                "quote": '"...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation..."',
+                "quotee": "Robert Lawlor",
                 "geoDetailBody": `                
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
@@ -244,15 +250,55 @@
                     recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
                     praesentium consequatur consectetur eum expedita?
                 </span>`
+
+
+
+                // "id": 5,
+                // "selected": false,
+                // "url": "src/assets/images/skills/triquetra.png",
+                // "name": "The Triquetra",
+                // "difficulty": "EASY  |  9 STEPS",
+                // "requirement": "(REQUIRES VESICA PISCIS)",
+                // "completed": false,
+                // "unlocked": false,
+                // "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle. It is the 2nd motion of the Genesis Pattern.",
+                // "quote": '"...At that moment a huge amount of information was created."',
+                // "quotee": "Drunvalo Melchizedek",
+                // "geoDetailBody": `                
+                // <span>
+                //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                //     porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                //     deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                //     ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                //     necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                //     Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                //     vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                //     provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                //     excepturi nulla adipisci, et dolores doloribus tempore.
+                // </span><br><br>
+                // <span>
+                //     Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                //     consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                //     debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                //     Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                //     incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                //     alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                //     recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                //     praesentium consequatur consectetur eum expedita?
+                // </span>`
+
+
             }, {
-                "id": 6,
+                "id": 5,
+                "d3Data": ["hexStatus2Luc1", "Complete2Luc1"],
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "1",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
@@ -279,26 +325,41 @@
                     praesentium consequatur consectetur eum expedita?
                 </span>`
             }, {
-                "id": 7,
+                "id": 6,
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "2",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
+                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
+                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
+                "quotee": "Proclus"
+            }, {
+                "id": 7,
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
+                "name": "3",
+                "difficulty": "EASY  |  1 STEP",
+                "requirement": "(NO REQUIREMENT)",
+                "completed": false,
+                "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             }, {
                 "id": 8,
-                "selected": false,
+                "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "4",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
@@ -306,11 +367,12 @@
                 "id": 9,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "5",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
@@ -318,58 +380,83 @@
                 "id": 10,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "6",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             }, {
                 "id": 11,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "(NO REQUIREMENT)",
+                "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
+                "url": "src/assets/images/skills/triquetra.png",
+                "name": "The Triquetra",
+                "difficulty": "EASY  |  9 STEPS",
+                "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
                 "unlocked": false,
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "unlocksSkills": [],
+                "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle. It is the 2nd motion of the Genesis Pattern.",
+                "quote": '"...At that moment a huge amount of information was created."',
+                "quotee": "Drunvalo Melchizedek",
+                "geoDetailBody": `                
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                    excepturi nulla adipisci, et dolores doloribus tempore.
+                </span><br><br>
+                <span>
+                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                    praesentium consequatur consectetur eum expedita?
+                </span>`
             }, {
                 "id": 12,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "8",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
-            }, {
-                "id": 13,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             },
             {
+                "id": 13,
+                "selected": false,                
+                "url": "src/assets/images/skills/circle.svg",
+                "name": "9",
+                "difficulty": "EASY  |  1 STEP",
+                "requirement": "REQUIRES VESICA PISCIS",
+                "completed": false,
+                "unlocked": false,
+                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
+                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
+                "quotee": "Proclus"
+            }, {
                 "id": 14,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "THE TRIQUETRA",
+                "name": "10",
                 "difficulty": "EASY  |  1 STEP",
-                "requirement": "REQUIRES VESICA PISCIS",
+                "requirement": "REQUIRES THE TRIQUETRA",
                 "completed": false,
                 "unlocked": false,
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
@@ -379,19 +466,7 @@
                 "id": 15,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "REQUIRES THE TRIQUETRA",
-                "completed": false,
-                "unlocked": false,
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
-            }, {
-                "id": 16,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "11",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -403,7 +478,7 @@
                 "id": 17,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "The Circle",
+                "name": "12",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -415,7 +490,7 @@
                 "id": 18,
                 "selected": false,                
                 "url": "src/assets/images/skills/circle.svg",                
-                "name": "The Circle",
+                "name": "13",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,

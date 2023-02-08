@@ -62,7 +62,7 @@
         game.infoSystem1.tetrahedronGrid1 = new Arminia.TetrahedronGrid(game);
         game.infoSystem1.FruitOfLife = new Arminia.FruitOfLife(game, "FruitOfLife1", game.infoSystem1);
         game.infoSystem1.THGLines2D = new Arminia.THGLines2D(game, "THG2DLines");
-        
+
         game.infoSystem1.doubleTorus = new Arminia.DoubleTorus(game, "torusMesh1");
         game.infoSystem1.doubleTorus.setEnabled(false);
 
@@ -144,12 +144,22 @@
 
 
 
-        // localStorage.setItem('name', 'bob');
+
+
+       
 
 
 
 
 
+
+        // Object.keys(localStorage).forEach(function (key) {
+
+        //     console.log(localStorage.getItem(key));
+
+        // });
+
+        
 
         ///////////////////////////////////////////  DEBUG  //////////////////////////////////////////////
 

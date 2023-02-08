@@ -368,12 +368,22 @@
                             $("#A_stepsProgress").css("width", "100%");
                             $("#A_stepsValue").text(stepsProgress.style.width);
 
-
-                            // set completed skill to 1 in local storage
-                            let lsName = "Skill" + game.skills.selectedSkill.name.replace(/ /g,'');                            
-                            localStorage.setItem(lsName, '1');
                             game.skills.selectedSkill.completed = "true";
 
+                            if (localStorage.getItem('ArminiaSkills') == '') {
+    
+                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));                
+                
+                            } else {
+                
+                                let lsTest = localStorage.getItem('ArminiaSkills');                
+                                lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);                    
+                                localStorage.setItem('ArminiaSkills', lsTest);
+                
+                            }
+
+                            game.setSkillComplete(game.skills.selectedSkill);
+                            game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
 
                         } else {
                             // step complete, but final step NOT reached

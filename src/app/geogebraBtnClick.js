@@ -30,6 +30,11 @@
             if (game.skills.lastSkill == game.skills.selectedSkill) {
 
                 // console.log("DUPLICATE SKILLS...AVOIDING REINJECTION skillCheck == game.skills.selectedSkill");
+
+                console.log(game.nav);
+
+                Arminia.setGUI(game);
+
                 game.main.setEnabled(false);
                 game.animatePageIn("A_geobebraView");
                 game.animatePageOut(outPage);
@@ -39,8 +44,6 @@
                 // Check if this is the first time applet has been loaded
 
                 if (typeof ggbApplet === "undefined") {
-
-
 
                     // console.log("NEW APPLET LOADING...game.applet == undefined");
                     game.skills.lastSkill = game.skills.selectedSkill;

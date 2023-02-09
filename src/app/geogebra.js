@@ -487,7 +487,7 @@
                     strCommand = api.getCommandString(strName);
                     strState = strType + " " + strName + ", " + strCommand;
 
-                    console.log("Geogebra Output: " + strState);
+                    // console.log("Geogebra Output: " + strState);
 
                     // console.log(stepsArray); 
                     // console.log(test); 

@@ -391,14 +391,32 @@
                 "quotee": "Proclus"
             }, {
                 "id": 11,
+
+
+                "steps": [["point A, ", "circle c, Circle(A, 1)"], ["point B, Point(c)", "segment f, Segment(A, B)"], ["circle d, Circle(B, A)"]],
+                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to 1 and with center at point <b>A</b>."), addNbsp("Draw Segment f from point A to point B"), addNbsp(" Draw Circle <b>d</b> through point A with center at point B")],
+                "selected": false,
+                "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
+                "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow.svg",
+
+
                 "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
                 "url": "src/assets/images/skills/triquetra.png",
+                "url2": "src/assets/images/skills/triquetra.png",
                 "name": "The Triquetra",
                 "difficulty": "EASY  |  9 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
                 "unlocked": false,
                 "unlocksSkills": [],
+
+
+
+
+
+
+
+
                 "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle. It is the 2nd motion of the Genesis Pattern.",
                 "quote": '"...At that moment a huge amount of information was created."',
                 "quotee": "Drunvalo Melchizedek",

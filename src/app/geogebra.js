@@ -368,6 +368,10 @@
                             $("#A_stepsProgress").css("width", "100%");
                             $("#A_stepsValue").text(stepsProgress.style.width);
 
+                            /////////////////////////////////////////////////////////////////////////////
+                            //////////////////////  LOCAL STORAGE OPERATIONS ////////////////////////////
+                            /////////////////////////////////////////////////////////////////////////////
+
                             game.skills.selectedSkill.completed = "true";
 
                             if (localStorage.getItem('ArminiaSkills') == '') {
@@ -375,15 +379,37 @@
                                 localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));                
                 
                             } else {
-                
-                                let lsTest = localStorage.getItem('ArminiaSkills');                
-                                lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);                    
-                                localStorage.setItem('ArminiaSkills', lsTest);
+                                            
+                                let lsTest = localStorage.getItem('ArminiaSkills');   
+                                // [0,1,2,5,11]    
+
+                                let duplicate = false;
+
+                                for (let i = 0; i <  lsTest.length; i++) {
+
+                                    if (lsTest[i] == game.skills.selectedSkill.id) {
+
+                                        duplicate = true;
+                                        break;
+                                    }
+                                }
+
+                                if (!duplicate) {
+
+                                    lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);    
+
+                                    localStorage.setItem('ArminiaSkills', lsTest);
+                                }
+
                 
                             }
 
                             game.setSkillComplete(game.skills.selectedSkill);
                             game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
+
+                            /////////////////////////////////////////////////////////////////////////////
+                            /////////////////////////////////////////////////////////////////////////////
+                            /////////////////////////////////////////////////////////////////////////////
 
                         } else {
                             // step complete, but final step NOT reached
@@ -461,7 +487,7 @@
                     strCommand = api.getCommandString(strName);
                     strState = strType + " " + strName + ", " + strCommand;
 
-                    // console.log("Geogebra Output: " + strState);
+                    console.log("Geogebra Output: " + strState);
 
                     // console.log(stepsArray); 
                     // console.log(test); 

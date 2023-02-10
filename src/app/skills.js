@@ -82,13 +82,12 @@
             svg.call(zoom);
 
             function mouseover1(t, d, i) {
+                
                 // console.log(t, d, i);
                 d3.select(t).style("stroke-opacity", 1);
 
                 d3.select(t).style("stroke", "white");
 
-
-                // console.log(i);
                 updateSkillsDetail(i);
             }
 
@@ -108,7 +107,15 @@
                     updateSkillsDetail(oldSelectedSkillData);
 
                     if (!i.selected) {
+
+                        // console.log("mouseout!!");
+
                         d3.select(this).style("stroke-opacity", 0);
+                    } else {
+
+                        d3.select(this).style("stroke", "#ECDB7A");
+
+                        
                     }
                 }
             }

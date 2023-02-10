@@ -31,7 +31,7 @@
 
                 // console.log("DUPLICATE SKILLS...AVOIDING REINJECTION skillCheck == game.skills.selectedSkill");
 
-                console.log(game.nav);
+                // console.log(game.nav);
 
                 Arminia.setGUI(game);
 

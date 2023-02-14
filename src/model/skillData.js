@@ -87,7 +87,7 @@
                     ['text text1, AB=BD=1'],
                     ['text text2, BE=\\frac{1}{2}'],
                     ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
-                    ['text text4, CD=\\sqrt{3}']],
+                    ['text text4, CD=2×ED=\\sqrt{3}']],
 
                 "stepsText": 
                     [addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
@@ -98,10 +98,10 @@
                     addNbsp("Draw Segment CD."),
                     addNbsp("Select the Intersect tool and create Point E at the intersection of BA and CD."),
                     addNbsp("Draw Segment BD."),
-                    addNbsp("Select the Text tool and and enter 'AB=BD=1'"),
-                    addNbsp("Select the Text tool and and enter 'BE=\\frac{1}{2}'"),
-                    addNbsp("Select the Text tool and and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"),
-                    addNbsp("Select the Text tool and and enter 'CD=\\sqrt{3}'")],
+                    addNbsp("Select the Text tool and enter 'AB=BD=1'"),
+                    addNbsp("Select the Text tool and enter 'BE=\\frac{1}{2}'"),
+                    addNbsp("Select the Text tool and using the Pythagorean Theorem we enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"),
+                    addNbsp("Select the Text tool and enter 'CD=2×ED=\\sqrt{3}'")],
 
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "selected": false,

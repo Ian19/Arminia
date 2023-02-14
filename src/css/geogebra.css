@@ -56,5 +56,39 @@
 .GeoGebraFrame .toolbarPanel {
     /* toolbarPanel covers login -- Default 100 */
     z-index: 0 !important;
+    background-color: #442f91b3 !important;
 }
 
+/* toolbar bottom border color */
+.GeoGebraFrame .toolbarPanelNorth {
+    border-bottom: 0px solid #623cd269   !important;
+    border-top: 2px solid #623cd269   !important;
+    border-right: 2px solid #623cd269   !important;
+    border-left: 2px solid #623cd269   !important;
+    border: 2px solid #623cd269 !important;
+}
+
+/* button color */
+.GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button{
+    /* background-color: #dcd6ff !important; */
+    background-color: #ebe8ff !important;
+    /* border: 0px !important; */
+}
+
+/* button border color isSelected="false"*/
+.GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button[isSelected="false"] {
+    border-color: #0204797d !important;
+}
+
+/* button border color isSelected="true"*/
+.GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button[isSelected="true"] {
+    border: 2px solid red !important;
+}
+
+.GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button:hover[isSelected="false"][isMobile="false"] {    
+    border-color: white  !important;
+}
+
+.GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button:focus[isSelected="false"][isMobile="false"] {    
+    border-color: white  !important;
+}

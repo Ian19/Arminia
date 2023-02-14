@@ -71,12 +71,38 @@
                         recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
                         praesentium consequatur consectetur eum expedita?
                     </span>
-                `         
+                `
             }, {
                 "id": 1,
                 "material_id": "ybm744ww",
-                "steps": [["point A, ", "circle c, Circle(A, 1)"], ["point B, Point(c)", "segment f, Segment(A, B)"], ["circle d, Circle(B, A)"]],
-                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to 1 and with center at point <b>A</b>."), addNbsp("Draw Segment f from point A to point B"), addNbsp(" Draw Circle <b>d</b> through point A with center at point B")],
+                "steps": 
+                    [["point A, ", "circle c, Circle(A, 1)"], 
+                    ["point B, Point(c)", "segment f, Segment(A, B)"], 
+                    ["circle d, Circle(B, A)"], 
+                    ["point C, Intersect(c, d, 1)"], 
+                    ["point D, Intersect(c, d, 2)"], 
+                    ["segment g, Segment(C, D)"],
+                    ["point E, Intersect(f, g)"],                    
+                    ["segment h, Segment(B, D)"],
+                    ['text text1, AB=BD=1'],
+                    ['text text2, BE=\\frac{1}{2}'],
+                    ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
+                    ['text text4, CD=\\sqrt{3}']],
+
+                "stepsText": 
+                    [addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
+                    addNbsp("Select the Intersect tool and create Point C at the right-most intersection of the 2 circles."),
+                    addNbsp("Select the Intersect tool and create Point D at the left-most intersection of the 2 circles."),
+                    addNbsp("Draw Segment CD."),
+                    addNbsp("Select the Intersect tool and create Point E at the intersection of BA and CD."),
+                    addNbsp("Draw Segment BD."),
+                    addNbsp("Select the Text tool and and enter 'AB=BD=1'"),
+                    addNbsp("Select the Text tool and and enter 'BE=\\frac{1}{2}'"),
+                    addNbsp("Select the Text tool and and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"),
+                    addNbsp("Select the Text tool and and enter 'CD=\\sqrt{3}'")],
+
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "selected": false,
                 "url": "src/assets/images/skills/vesica_piscis.png",
@@ -88,7 +114,7 @@
                 "difficulty": "EASY  |  3 STEPS",
                 "completed": false,
                 "unlocked": false,
-                "unlocksSkills": [2,5,11],
+                "unlocksSkills": [2, 5, 11],
                 "requirement": "(REQUIRES THE CIRCLE)",
                 "overview": "The Vesica Piscis is formed by the intersection of two circles with the same radius, intersecting in such a way that the centre of each circle lies on the circumference of the other.",
                 "quote": '"...the geometric image through which light was created."',
@@ -352,7 +378,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 8,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "4",
                 "difficulty": "EASY  |  1 STEP",
@@ -365,7 +391,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 9,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "5",
                 "difficulty": "EASY  |  1 STEP",
@@ -378,7 +404,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 10,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "6",
                 "difficulty": "EASY  |  1 STEP",
@@ -444,7 +470,7 @@
                 </span>`
             }, {
                 "id": 12,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "8",
                 "difficulty": "EASY  |  1 STEP",
@@ -458,7 +484,7 @@
             },
             {
                 "id": 13,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "9",
                 "difficulty": "EASY  |  1 STEP",
@@ -470,7 +496,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 14,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "10",
                 "difficulty": "EASY  |  1 STEP",
@@ -482,7 +508,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 15,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "11",
                 "difficulty": "EASY  |  1 STEP",
@@ -494,7 +520,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 17,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "12",
                 "difficulty": "EASY  |  1 STEP",
@@ -506,8 +532,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 18,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "13",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -518,8 +544,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 19,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -530,8 +556,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 20,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -542,8 +568,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 21,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -554,7 +580,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 22,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -566,7 +592,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 23,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -578,7 +604,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 24,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -590,8 +616,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 25,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -602,8 +628,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 26,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -614,8 +640,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 27,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -626,8 +652,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 28,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -639,8 +665,8 @@
             },
             {
                 "id": 29,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -651,8 +677,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 30,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -663,7 +689,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 31,
-                "selected": false,                
+                "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -675,8 +701,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 32,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -687,8 +713,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 33,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -699,8 +725,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 34,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -711,8 +737,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 35,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -724,8 +750,8 @@
             },
             {
                 "id": 36,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -737,8 +763,8 @@
             },
             {
                 "id": 37,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -749,8 +775,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 38,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -762,8 +788,8 @@
             },
             {
                 "id": 39,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -774,8 +800,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 40,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -786,8 +812,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 41,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -798,8 +824,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 42,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -810,8 +836,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 43,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -822,8 +848,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 44,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -834,8 +860,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 45,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -846,8 +872,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 46,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -858,8 +884,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 47,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -870,8 +896,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 48,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -882,8 +908,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 49,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -894,8 +920,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 50,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -906,8 +932,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 51,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -918,8 +944,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 52,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -930,8 +956,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 53,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -942,8 +968,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 54,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -954,8 +980,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 55,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -966,8 +992,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 56,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -978,8 +1004,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 57,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -990,8 +1016,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 58,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1002,8 +1028,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 59,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1014,8 +1040,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 60,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1026,8 +1052,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 61,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1038,8 +1064,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 62,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1050,8 +1076,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 63,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1062,8 +1088,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 64,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1074,8 +1100,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 65,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1086,8 +1112,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 65,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1098,8 +1124,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 66,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1110,8 +1136,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 67,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1122,8 +1148,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 68,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1134,8 +1160,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 69,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1146,8 +1172,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 70,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1158,8 +1184,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 71,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1170,8 +1196,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 72,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1182,8 +1208,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 73,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1194,8 +1220,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 74,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1206,8 +1232,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 75,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1218,8 +1244,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 76,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1230,8 +1256,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 77,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1242,8 +1268,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 78,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1254,8 +1280,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 79,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1266,8 +1292,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 80,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1278,8 +1304,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 81,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1290,8 +1316,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 82,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1302,8 +1328,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 83,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -1314,8 +1340,8 @@
                 "quotee": "Proclus"
             }, {
                 "id": 84,
-                "selected": false,                
-                "url": "src/assets/images/skills/circle.svg",                
+                "selected": false,
+                "url": "src/assets/images/skills/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",

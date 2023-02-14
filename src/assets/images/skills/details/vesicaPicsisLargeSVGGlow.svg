@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1187.375px" height="1231.438px" viewBox="-187.375 -56.882 1187.375 1231.438" id="A_vesicaLarge"> 
+	width="1187.375px" height="1231.438px" viewBox="0 0 1187.375 1231.438" id="A_vesicaLarge"
+	enable-background="new 0 0 1187.375 1231.438" xml:space="preserve">
 
-	<defs>		
+	<defs>
 		<filter id="glow">
-			<!-- blur the text at different levels-->	
-			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1"/>
-			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2"/>
-			<feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur3"/>
-			<feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur4"/>
+			<!-- blur the text at different levels-->
+			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1" />
+			<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2" />
+			<feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur3" />
+			<feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur4" />
 
 			<!-- merge all the blurs except for the first one -->
 			<feMerge result="blur-merged">
-				<feMergeNode in="blur2"/>
-				<feMergeNode in="blur3"/>
-				<feMergeNode in="blur4"/>
+				<feMergeNode in="blur2" />
+				<feMergeNode in="blur3" />
+				<feMergeNode in="blur4" />
 			</feMerge>
 
 			<!-- recolour the merged blurs 9966ff -->
-			<feColorMatrix 	result="colorBlur" 
-							in="blur-merged"
-							type="matrix"
-							values="0.45 0   0   0   0
+			<feColorMatrix result="colorBlur" in="blur-merged" type="matrix" values="0.45 0   0   0   0
 									0   0.21  0   0   0
 									0   0   0.99  0   0
-									0   0   0   1   0 "/>
-							
-			<feMerge>				
-				<feMergeNode in="colorBlur"/> <!-- largest blurs coloured red -->				     			
-				<feMergeNode in="blur1"/> <!--  smallest blur left white -->				    
-				<feMergeNode in="SourceGraphic"/>  <!-- original white text -->  					
+									0   0   0   1   0 " />
+
+			<feMerge>
+				<feMergeNode in="colorBlur" /> <!-- largest blurs coloured red -->
+				<feMergeNode in="blur1" /> <!--  smallest blur left white -->
+				<feMergeNode in="SourceGraphic" /> <!-- original white text -->
 			</feMerge>
 
 		</filter>
@@ -39,30 +37,113 @@
 	<g id="A_SVGSteps" filter="url(#glow)">
 
 		<g id="A_SVGStep1">
-			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="739.369" r="361.063"/>
-			<text class="A_verbose" transform="matrix(1 0 0 1 227.1875 453.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">c</text>		
+			<text class="A_verbose" transform="matrix(1 0 0 1 414.7124 727.4922)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">A</text>
+			<circle id="pointA" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313"
+				cy="739.369" r="361.063" />
+			<path fill="#FFFFFF" d="M412.313,739.369c0,3.313-2.687,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.314,2.688-6,6-6l0,0
+				C409.626,733.369,412.313,736.055,412.313,739.369L412.313,739.369z" />
 		</g>
 
 		<g id="A_SVGStep2">
-			<circle  fill="none" stroke="none" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="378.306" r="361.063"/>
 
-			<g class="A_verbose">
-				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="406.313" y1="378.306" x2="406.313" y2="739.369" />			
-				<text transform="matrix(1 0 0 1 413.1123 368.3848)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">B</text>
-				<text transform="matrix(1 0 0 1 416.7124 727.4922)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">A</text>
-				<text transform="matrix(1 0 0 1 421.8877 558.8379)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">f</text>
-				<path fill="#FFFFFF" d="M412.313,378.306c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.314,2.687-6,6-6l0,0
-					C409.626,372.306,412.313,374.992,412.313,378.306L412.313,378.306z"/>
-				<path fill="#FFFFFF" d="M412.313,739.369c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.314,2.687-6,6-6l0,0
-					C409.626,733.369,412.313,736.055,412.313,739.369L412.313,739.369z"/>
-			</g>	
-		</g>	
+			<text class="A_verbose" transform="matrix(1 0 0 1 401.7124 363.6846)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">B</text>
 
-		<g id="A_SVGStep3" >
-			<text class="A_verbose" transform="matrix(1 0 0 1 189.1875 124.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">d</text>
-			<circle  fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="378.306" r="361.063"/>
+			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="406.313" y1="378.306"
+				x2="406.313" y2="739.369" />
+			<path fill="#FFFFFF" d="M412.313,378.306c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.314,2.688-6,6-6l0,0
+				C409.626,372.306,412.313,374.992,412.313,378.306L412.313,378.306z" />
+
 		</g>
-	</g>
 
+		<g id="A_SVGStep3">
+
+			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="378.306"
+				r="361.063" />
+
+		</g>
+
+		<g id="A_SVGStep4">
+
+			<path fill="#FFFFFF" d="M99.557,558.838c0,3.314-2.687,6-6,6l0,0c-3.313,0-6-2.686-6-6l0,0c0-3.313,2.688-6,6-6l0,0
+				C96.87,552.838,99.557,555.524,99.557,558.838L99.557,558.838z" />
+			<text class="A_verbose" transform="matrix(1 0 0 1 60.1875 565.8374)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">C</text>
+
+		</g>
+
+		<g id="A_SVGStep5">
+
+			<path fill="#FFFFFF" d="M725.068,558.838c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.687-6-6l0,0c0-3.313,2.688-6,6-6l0,0
+				C722.382,552.838,725.068,555.523,725.068,558.838L725.068,558.838z" />
+			<text class="A_verbose" transform="matrix(1 0 0 1 735.1875 564.8374)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">D</text>
+
+		</g>
+
+		<g id="A_SVGStep6">
+
+			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="93.557" y1="558.838"
+				x2="719.068" y2="558.838" />
+
+		</g>
+
+		<g id="A_SVGStep7">
+
+			<path fill="#FFFFFF" d="M412.313,558.838c0,3.313-2.687,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.314,2.688-6,6-6l0,0
+				C409.626,552.838,412.313,555.523,412.313,558.838L412.313,558.838z" />
+			<text class="A_verbose" transform="matrix(1 0 0 1 418.3125 545.8374)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">E</text>
+
+		</g>
+
+		<g id="A_SVGStep8">
+			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="406.313" y1="378.306"
+				x2="719.068" y2="558.838" />
+		</g>
+
+		<g id="A_SVGStep9" class="A_verbose">
+			<text  transform="matrix(1 0 0 1 807.668 497.8374)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">AB=BD=1</text>
+		</g>
+
+		<g id="A_SVGStep10" class="A_verbose">
+			<text  transform="matrix(1 0 0 1 807.668 551.8374)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">BE=½</text>
+		</g>
+
+		<g id="A_SVGStep11" class="A_verbose">
+
+			<text transform="matrix(1 0 0 1 807.668 605.8374)">
+				<tspan x="0" y="0" fill="#FFFFFF" font-family="'Verdana'" font-size="25">ED=</tspan>
+				<tspan x="55.529" y="0" fill="#FFFFFF" font-family="'Verdana'" font-size="36">√‾‾‾‾‾</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 891.668 605.8369)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">BD</text>
+			<text transform="matrix(0.583 0 0 0.583 928.0693 597.5117)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">2 </text>
+			<text transform="matrix(1 0 0 1 942.459 605.8369)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">-BE</text>
+			<text transform="matrix(0.583 0 0 0.583 995.5479 597.5117)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">2 </text>
+			<text transform="matrix(1 0 0 1 1009.9375 605.8369)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">=</text>
+			<g>
+				<text transform="matrix(1 0 0 1 1038.1875 587.3374)" fill="#FFFFFF" font-family="'Verdana'"
+					font-size="25">√3</text>
+				<text transform="matrix(1 0 0 1 1038.1875 605.3374)" fill="#FFFFFF" font-family="'Verdana'"
+					font-size="25" letter-spacing="-6">——</text>
+				<text transform="matrix(1 0 0 1 1051.1875 626.3379)" fill="#FFFFFF" font-family="'Verdana'"
+					font-size="25">2</text>
+			</g>
+
+		</g>
+
+		<g id="A_SVGStep12" class="A_verbose">
+			<text transform="matrix(1 0 0 1 807.668 662.3398)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="25">CD=√3</text>
+		</g>
+
+	</g>
 
 </svg>

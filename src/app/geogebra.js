@@ -21,8 +21,7 @@
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
-            "borderColor": "#FFFFFF",
-            "showToolBarHelp": false
+            "borderColor": "#FFFFFF"
         };
 
         parameters.appletOnLoad = function (api) {
@@ -31,6 +30,7 @@
 
             // settings for CAS or graphing 
             if (parameters.appName == "classic") {
+            // if (parameters.appName == "geometry") {
 
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
@@ -139,6 +139,7 @@
                 svgObject = document.getElementById('A_stepsImage').contentDocument;
 
                 if (parameters.appName == "classic") {
+                // if (parameters.appName == "geometry") {
                     addAnimateTags(0, 1);
                 } else {
 
@@ -326,6 +327,7 @@
                     if (stepsArray[j] == 0) {
 
                         if (parameters.appName == "classic") {
+                        // if (parameters.appName == "geometry") {
                             removeAllAnimateTags();
                             addAnimateTags(j, 1);
                         } else {
@@ -353,6 +355,7 @@
 
                             // final step has been reached
                             if (parameters.appName == "classic") {
+                            // if (parameters.appName == "geometry") {
                                 removeAllAnimateTags();
                             } else {
 
@@ -415,6 +418,7 @@
                             // step complete, but final step NOT reached
 
                             if (parameters.appName == "classic") {
+                            // if (parameters.appName == "geometry") {
                                 removeAllAnimateTags();
                                 addAnimateTags(j, 2);
                             }
@@ -485,9 +489,27 @@
                     strName = api.getObjectName(i);
                     strType = api.getObjectType(strName);
                     strCommand = api.getCommandString(strName);
+
+                    staticTextValue = api.getValueString(strName);
+
+                    // console.log(staticTextValue);
+
+                    if (strType == "text") {
+
+                        strCommand = api.getValueString(strName);
+
+                    } else {
+
+                        strCommand = api.getCommandString(strName);
+
+                    }
+
+
                     strState = strType + " " + strName + ", " + strCommand;
 
-                    // console.log("Geogebra Output: " + strState);
+
+
+                    console.log("Geogebra Output: " + strState);
 
                     // console.log(stepsArray); 
                     // console.log(test); 
@@ -586,6 +608,7 @@
             // $("#A_stepsBackgroundImage").css("display", "none");
 
             if (parameters.appName == "classic") {
+            // if (parameters.appName == "geometry") {
                 game.nav = "home";
                 // Arminia.setGUI(game);                  
                 game.animatePageOut("A_geobebraView");

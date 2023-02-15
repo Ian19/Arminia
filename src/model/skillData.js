@@ -31,8 +31,25 @@
             {
                 "id": 0,
                 "material_id": "ybm744ww",
-                "steps": [["circle c, Circle(A, 1)"]],
-                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to <b>1</b> and with center at point <b>A</b>.")],
+
+                // "steps": [["circle c, Circle(A, 1)"]],
+
+                "steps": [
+                    ["point A, ", "circle c, Circle(A, 1)"],            
+                    ["point B, Point(c)", "segment f, Segment(A, B)"],
+                    ['text text1, AB=1']
+                ],
+
+                // "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to <b>1</b> and with center at point <b>A</b>.")],
+
+                "stepsText": [
+
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"),   
+                    addNbsp("Select the Text tool and enter 'AB=1'")             
+                
+                ],
+
                 "d3Data": ["hexStatus1Circle", "Complete1Circle"],
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
@@ -40,7 +57,7 @@
                 "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
                 "stepsImage2": "src/assets/images/skills/details/circleLargeSVGGlow2.svg",
                 "name": "The Circle",
-                "difficulty": "EASY  |  1 STEP",
+                "difficulty": "EASY  |  3 STEPS",
                 "completed": false,
                 "unlocked": true,
                 "unlocksSkills": [1],
@@ -75,8 +92,8 @@
             }, {
                 "id": 1,
                 "material_id": "ybm744ww",
-                "steps": 
-                    [["point A, ", "circle c, Circle(A, 1)"], 
+                "steps": [
+                    ["point A, ", "circle c, Circle(A, 1)"], 
                     ["point B, Point(c)", "segment f, Segment(A, B)"], 
                     ["circle d, Circle(B, A)"], 
                     ["point C, Intersect(c, d, 1)"], 
@@ -87,10 +104,11 @@
                     ['text text1, AB=BD=1'],
                     ['text text2, BE=\\frac{1}{2}'],
                     ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
-                    ['text text4, CD=2×ED=\\sqrt{3}']],
+                    ['text text4, CD=2×ED=\\sqrt{3}']
+                ],
 
-                "stepsText": 
-                    [addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
+                "stepsText": [                    
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
                     addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
                     addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
                     addNbsp("Select the Intersect tool and create Point C at the right-most intersection of the 2 circles."),
@@ -98,10 +116,13 @@
                     addNbsp("Draw Segment CD."),
                     addNbsp("Select the Intersect tool and create Point E at the intersection of BA and CD."),
                     addNbsp("Draw Segment BD."),
-                    addNbsp("Select the Text tool and enter 'AB=BD=1'"),
-                    addNbsp("Select the Text tool and enter 'BE=\\frac{1}{2}'"),
-                    addNbsp("Select the Text tool and using the Pythagorean Theorem we enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"),
-                    addNbsp("Select the Text tool and enter 'CD=2×ED=\\sqrt{3}'")],
+                    addNbsp("AB=BD=1. Select the Text tool and enter 'AB=BD=1'"),
+                    addNbsp(katex.renderToString("BE=\\frac{1}{2}") + ". Select the Text tool and enter 'BE=\\frac{1}{2}'"),
+                    addNbsp("Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") +                     
+                        " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"), 
+                    addNbsp(katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + 
+                        ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}'. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.)")
+                ],
 
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "selected": false,
@@ -111,7 +132,7 @@
                 "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow.svg",
                 // "stepsImage2": "src/assets/images/skills/details/test.svg",
                 "name": "The Vesica Piscis",
-                "difficulty": "EASY  |  3 STEPS",
+                "difficulty": "EASY  |  12 STEPS",
                 "completed": false,
                 "unlocked": false,
                 "unlocksSkills": [2, 5, 11],

@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="A_vesicaLarge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="804.188px" height="791.064px" viewBox="0 343.219 804.188 791.064"
-	 enable-background="new 0 343.219 804.188 791.064" xml:space="preserve">
+<svg version="1.1" id="A_vesicaLarge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0px" y="0px" width="966.594px" height="791.064px" viewBox="0 0 966.594 791.064"
+	enable-background="new 0 0 966.594 791.064" xml:space="preserve">
 
-	<filter  id="glow">
+	<filter id="glow">
 		<!--  blur the text at different levels -->
-		<feGaussianBlur  result="blur1" stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
-		<feGaussianBlur  result="blur2" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
-		<feGaussianBlur  result="blur3" stdDeviation="20" in="SourceGraphic"></feGaussianBlur>
-		<feGaussianBlur  result="blur4" stdDeviation="30" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur result="blur1" stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur result="blur2" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur result="blur3" stdDeviation="20" in="SourceGraphic"></feGaussianBlur>
+		<feGaussianBlur result="blur4" stdDeviation="30" in="SourceGraphic"></feGaussianBlur>
 		<!--  merge all the blurs except for the first one  -->
-		<feMerge  result="blur-merged">
-			<feMergeNode  in="blur2"></feMergeNode>
-			<feMergeNode  in="blur3"></feMergeNode>
-			<feMergeNode  in="blur4"></feMergeNode>
+		<feMerge result="blur-merged">
+			<feMergeNode in="blur2"></feMergeNode>
+			<feMergeNode in="blur3"></feMergeNode>
+			<feMergeNode in="blur4"></feMergeNode>
 		</feMerge>
 		<!--  recolour the merged blurs 9966ff  -->
-		
-			<feColorMatrix  type="matrix" result="colorBlur" in="blur-merged" values="0.45 0   0   0   0          0   0.21  0   0   0          0   0   0.99  0   0          0   0   0   1   0 ">
-			</feColorMatrix>
+
+		<feColorMatrix type="matrix" result="colorBlur" in="blur-merged"
+			values="0.45 0   0   0   0          0   0.21  0   0   0          0   0   0.99  0   0          0   0   0   1   0 ">
+		</feColorMatrix>
 		<feMerge>
-			<feMergeNode  in="colorBlur"></feMergeNode>
+			<feMergeNode in="colorBlur"></feMergeNode>
 			<!--  largest blurs coloured red  -->
-			<feMergeNode  in="blur1"></feMergeNode>
+			<feMergeNode in="blur1"></feMergeNode>
 			<!--   smallest blur left white  -->
-			<feMergeNode  in="SourceGraphic"></feMergeNode>
+			<feMergeNode in="SourceGraphic"></feMergeNode>
 			<!--  original white text  -->
 		</feMerge>
 	</filter>
@@ -35,15 +36,30 @@
 
 		<g id="A_SVGStep1">
 
-			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313" cy="739.369" r="361.063"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="402.094" cy="395.532"
+				r="361.063" />
+			<text class="A_verbose" transform="matrix(1 0 0 1 411.0938 386.124)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="35">A</text>
 
-			<g class="A_verbose">
+			<path fill="#FFFFFF" d="M408.094,395.532c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.314,2.688-6,6-6l0,0
+				C405.406,389.532,408.094,392.218,408.094,395.532L408.094,395.532z" />
 
-				<text transform="matrix(1 0 0 1 227.1875 453.2188)" fill="#FFFFFF" font-family="'Verdana'" font-size="25">c</text>
-				<text transform="matrix(1 0 0 1 415.313 729.9609)" fill="#FFFFFF" font-family="'Verdana'" font-size="15">A</text>
-				<path fill="#FFFFFF" d="M412.313,739.369c0,3.313-2.687,6-6,6l0,0c-3.313,0-6-2.687-6-6l0,0c0-3.314,2.688-6,6-6l0,0C409.626,733.369,412.313,736.055,412.313,739.369L412.313,739.369z"/>
-			</g>
+		</g>
 
+		<g id="A_SVGStep2">
+
+			<path fill="#FFFFFF" d="M769.156,395.532c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.314,2.688-6,6-6l0,0
+				C766.469,389.532,769.156,392.218,769.156,395.532L769.156,395.532z" />
+			<text class="A_verbose" transform="matrix(1 0 0 1 726.0938 386.124)" fill="#FFFFFF" font-family="'Verdana'"
+				font-size="35">B</text>
+
+			<line fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="402.094" y1="395.532"
+				x2="763.156" y2="395.532" />
+
+		</g>
+
+		<g id="A_SVGStep3">
+			<text class="A_verbose" transform="matrix(1 0 0 1 811 327)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">AB=1</text>
 		</g>
 
 	</g>

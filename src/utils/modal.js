@@ -23,14 +23,14 @@
             $("#A_simpleModal").hide();
         });
 
-        $("#A_userIcon").click(function() {   
+        // $("#A_userIcon").click(function() {   
 
-            // $("#A_ProfileTitle").text("USERNAME");
+        //     // $("#A_ProfileTitle").text("USERNAME");
 
-            $("#A_info").hide();
-            $("#A_profilePage").show();
-            $("#A_simpleModal").show();
-        });
+        //     $("#A_info").hide();
+        //     $("#A_profilePage").show();
+        //     $("#A_simpleModal").show();
+        // });
 
 
         $("#A_title").click(function() {          

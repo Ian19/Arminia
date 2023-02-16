@@ -43,7 +43,7 @@
 #A_64TetraView {
     height: 77vh;
     width: 100%;
-    /* display: none; */
+    display: none;
     position: absolute;
     opacity: 0;
 }

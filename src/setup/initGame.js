@@ -126,8 +126,8 @@
         //         autoHide: "move"
         //     }
         // });
-
-        OverlayScrollbars(document.querySelector('.A_scroll2, A_scroll3'), {
+        
+        const osInstance = OverlayScrollbars(document.querySelector('.A_scroll2, A_scroll3'), {
             className: "os-theme-dark custom-class",
             scrollbars: {
                 clickScrolling: true,
@@ -136,7 +136,16 @@
             }
         });
 
-        // osInstance.getElements().host.classList.add('os-host-flexbox');
+        // OverlayScrollbars(document.querySelector('.A_scroll2, A_scroll3'), {
+        //     className: "os-theme-dark custom-class",
+        //     scrollbars: {
+        //         clickScrolling: true,
+        //         dragScrolling: true,
+        //         autoHide: "move"
+        //     }
+        // });
+
+        osInstance.getElements().host.classList.add('os-host-flexbox');
 
         //////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////  NEW CODE HERE  /////////////////////////////////////// 

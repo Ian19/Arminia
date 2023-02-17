@@ -111,8 +111,8 @@
                     addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
                     addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
                     addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
-                    addNbsp("Select the Intersect tool and create Point C at the right-most intersection of the 2 circles."),
-                    addNbsp("Select the Intersect tool and create Point D at the left-most intersection of the 2 circles."),
+                    addNbsp("Select the Intersect tool and create Point C at the left-most intersection of the 2 circles."),
+                    addNbsp("Select the Intersect tool and create Point D at the right-most intersection of the 2 circles."),
                     addNbsp("Draw Segment CD."),
                     addNbsp("Select the Intersect tool and create Point E at the intersection of BA and CD."),
                     addNbsp("Draw Segment BD."),
@@ -135,7 +135,7 @@
                 "difficulty": "EASY  |  12 STEPS",
                 "completed": false,
                 "unlocked": false,
-                "unlocksSkills": [2, 5, 11],
+                "unlocksSkills": [11],
                 "requirement": "(REQUIRES THE CIRCLE)",
                 "overview": "The Vesica Piscis is formed by the intersection of two circles with the same radius, intersecting in such a way that the centre of each circle lies on the circumference of the other.",
                 "quote": '"...the geometric image through which light was created."',
@@ -438,32 +438,57 @@
                 "quotee": "Proclus"
             }, {
                 "id": 11,
+                "steps": [
+                    ["point A, ", "circle c, Circle(A, 1)"], 
+                    ["point B, Point(c)", "segment f, Segment(A, B)"], 
+                    ["circle d, Circle(B, A)"],
+                    ["point C, Intersect(c, d, 1)"],
+                    ["point D, Intersect(c, d, 2)"],
 
+                    ["segment g, Segment(C, B)"],
+                    ["segment h, Segment(C, A)"],
 
-                "steps": [["point A, ", "circle c, Circle(A, 1)"], ["point B, Point(c)", "segment f, Segment(A, B)"], ["circle d, Circle(B, A)"]],
-                "stepsText": [addNbsp("Draw Circle <b>c</b> with radius equal to 1 and with center at point <b>A</b>."), addNbsp("Draw Segment f from point A to point B"), addNbsp(" Draw Circle <b>d</b> through point A with center at point B")],
+                    ["circle e, Circle(C, B)"],
+                    ["point E, Intersect(d, e, 2)"],
+                    ["point F, Intersect(c, e, 2)"],
+                    ["segment i, Segment(E, D)"],
+                    ["segment j, Segment(D, F)"],
+                    ["segment k, Segment(E, F)"]
+                ],
+
+                "stepsText": [
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
+
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
+                    
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
+                    addNbsp("Select the Intersect tool and create Point C at the left-most intersection of the 2 circles."),
+                    addNbsp("Select the Intersect tool and create Point D at the right-most intersection of the 2 circles."),
+
+                    addNbsp("Select the Segment tool and draw a Segment CB"), 
+                    addNbsp("Select the Segment tool and draw a Segment CA"), 
+
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center C and radius CB."),
+
+                    addNbsp("Select the Intersect tool and create Point E at the intersection of Circle with Center B and with Circle with Center C."),
+                    addNbsp("Select the Intersect tool and create Point F at the intersection of Circle with Center C and with Circle with Center A."),
+                    addNbsp("Select the Segment tool and draw Segment ED."),
+                    addNbsp("Select the Segment tool and draw Segment DF."),
+                    addNbsp("Select the Segment tool and draw Segment EF.")               
+                ],
+
                 "selected": false,
                 "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow.svg",
-
-
+                "stepsImage2": "src/assets/images/skills/details/triquetraLargeSVGGlow.svg",
                 "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
                 "url": "src/assets/images/skills/triquetra.png",
                 "url2": "src/assets/images/skills/triquetra.png",
                 "name": "The Triquetra",
-                "difficulty": "EASY  |  9 STEPS",
+                "difficulty": "EASY  |  13 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
                 "unlocked": false,
                 "unlocksSkills": [],
-
-
-
-
-
-
-
-
                 "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle. It is the 2nd motion of the Genesis Pattern.",
                 "quote": '"...At that moment a huge amount of information was created."',
                 "quotee": "Drunvalo Melchizedek",

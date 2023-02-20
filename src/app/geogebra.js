@@ -378,9 +378,9 @@
                             game.skills.selectedSkill.completed = "true";
 
                             if (localStorage.getItem('ArminiaSkills') == '') {
-    
-                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));                
-                
+
+                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id)); 
+
                             } else {
                                             
                                 let lsTest = localStorage.getItem('ArminiaSkills');   
@@ -389,9 +389,7 @@
                                 let duplicate = false;
 
                                 for (let i = 0; i <  lsTest.length; i++) {
-
                                     if (lsTest[i] == game.skills.selectedSkill.id) {
-
                                         duplicate = true;
                                         break;
                                     }
@@ -399,12 +397,9 @@
 
                                 if (!duplicate) {
 
-                                    lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);    
-
+                                    lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
                                     localStorage.setItem('ArminiaSkills', lsTest);
-                                }
-
-                
+                                }                
                             }
 
                             game.setSkillComplete(game.skills.selectedSkill);
@@ -495,19 +490,12 @@
                     // console.log(staticTextValue);
 
                     if (strType == "text") {
-
                         strCommand = api.getValueString(strName);
-
                     } else {
-
                         strCommand = api.getCommandString(strName);
-
                     }
 
-
                     strState = strType + " " + strName + ", " + strCommand;
-
-
 
                     console.log("Geogebra Output: " + strState);
 
@@ -637,8 +625,12 @@
             ["n = V_{p} / v_{pl}"],
             ["m_{p} = 2.1800 * 10.000^-5.0000"],
             ["R_{p2} = m_{p} n"],
-            ["circle d, Circle(B, A)"]
-
+            ["R_{s} = r_{p}"],
+            ["G = 6.6700 * 10.000^-8.0000"],
+            ["c = 2.9900 * 10.000^10.000"],
+            ["M = (R_{s} * c^2.0000) / (2.0000G)"],
+            ["R_{m} = (M / R_{p}) * 100.00"],
+            ["R_{m} = (M / R_{p}) * 100.00"]
         ];
 
         let cheatNum = 0;

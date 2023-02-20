@@ -43,7 +43,12 @@
                      ["symbolic n, V_{p} / v_{pl}"],
                      ["symbolic m_{p}, 2.1800 * 10.000^-5.0000"],
                      ["symbolic R_{p2}, m_{p} n"],
-                     ["circle d, Circle(B, A)"]
+                     ["symbolic R_{s}, r_{p}"],
+                     ["symbolic G, 6.6700 * 10.000^-8.0000"],
+                     ["symbolic c, 2.9900 * 10.000^10.000"],
+                     ["symbolic M, (R_{s} c^2.0000) / (2.0000G)"],
+                     ["symbolic R_{m}, M / R_{p} * 100.00"],
+                     ["symbolic R_{m}, M / R_{p} * 100.00"]
 
                 ],
 
@@ -69,7 +74,12 @@
                     addNbsp("Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}") ),
                     addNbsp("Enter " + katex.renderToString("R_p2 = m_p \\times n") ),
 
-                    addNbsp(" Draw Circle <b>d</b> through point A with center at point B")
+                    addNbsp("Enter " + katex.renderToString("R_s = r_p") ),
+                    addNbsp("Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}") ),
+                    addNbsp("Enter " + katex.renderToString("c = 2.99 \\times 10^{10}") ),
+                    addNbsp("Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}") ),
+                    addNbsp("Enter " + katex.renderToString("R_m = \\frac M R_p \\times 100") ),
+                    addNbsp("Enter " + katex.renderToString("R_m = \\frac M R_p \\times 100") )
 
                 ],
 

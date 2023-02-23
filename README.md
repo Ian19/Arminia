@@ -15,14 +15,14 @@ The following features are functioning:
 - 2D viewer and skill tree UI
 - Geogebra integration with constructions and math papers
 - general website functionality and theme
+- persistent skill tracking
 
 The following geometry and science content is available:
 - The 64 Tetrahedron Grid Information Sysem has content and can be accessed through the 3D Viewer
-- The Circle and Vesica Piscis Skills are complete and can be accessed through the 2D Skill Viewer
-- The Schwarzschild Proton Paper by Nassim Harramein is 25% complete with the CAS
+- The Circle, Vesica Piscis and The Triquetra Skills are complete and can be accessed through the 2D Skill Viewer
+- The Schwarzschild Proton Paper by Nassim Harramein is 90% complete with the CAS
 
 The following features are either not functioning or incomplete:
-- persistent skill tracking
 - persistent achievements
 - persistent rewards
 - documentation

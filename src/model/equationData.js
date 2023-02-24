@@ -63,7 +63,6 @@
                     ["symbolic q_{2}, 1.6020 * 10.000^-19.000"],
                     ["symbolic F_{c}, (Kc q_{1} q_{2}) / r_{m}^2.0000"],
                     ["symbolic F_{d}, F_{c} * 10.000^5.0000"],
-                    ["symbolic F_{t}, V_{c} + F_{d}"],
                     ["symbolic F_{t}, V_{c} + F_{d}"]
 
                 ],
@@ -111,7 +110,6 @@
                     addNbsp("Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}")),
                     addNbsp("Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}")),
                     addNbsp("Enter " + katex.renderToString("F_d = F_c \\times 10^{5}")),
-                    addNbsp("Enter " + katex.renderToString("F_t = V_c + F_d")),
                     addNbsp("Enter " + katex.renderToString("F_t = V_c + F_d"))
 
                 ],

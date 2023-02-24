@@ -351,7 +351,7 @@
                         // Test if final step has been reached
                         if (j == stepsLength - 1) {
 
-                            // console.log("2");
+                            console.log("stepsLength : " + stepsLength);
 
                             // final step has been reached
                             if (parameters.appName == "classic") {
@@ -359,11 +359,14 @@
                                 removeAllAnimateTags();
                             } else {
 
-                                var el = svgObject2.getElementById("step1Black");
+                                var el = svgObject2.getElementById("step30Black");
                                 el.setAttributeNS(null, 'display', "none");
 
-                                var el2 = svgObject2.getElementById("step1White");
+                                var el2 = svgObject2.getElementById("step30White");
                                 el2.setAttributeNS(null, 'display', "inline");
+
+                                // remove steps image from screen and display completed paper
+                                $("#A_stepsImage").attr("data", "");
                             }
 
                             $("#A_stepsCount").html("Steps Complete (" + `${j + 1}` + " of " + stepsLength.toString() + ")");
@@ -497,7 +500,7 @@
 
                     strState = strType + " " + strName + ", " + strCommand;
 
-                    console.log("Geogebra Output: " + strState);
+                    // console.log("Geogebra Output: " + strState);
 
                     // console.log(stepsArray); 
                     // console.log(test); 
@@ -645,16 +648,19 @@
             ["q_{2} = 1.602 * 10.000^-19.0000"], 
             ["F_{c} = (Kc q_{1} q_{2}) / r_{m}^2.0000"], 
             ["F_{d} = F_{c} * 10.000^5.0000"], 
-            ["F_{t} = V_{c} + F_{d}"], 
-            ["F_{t} = V_{c} + F_{d}"] 
+            ["F_{t} = V_{c} + F_{d}"]
 
         ];
 
         let cheatNum = 0;
 
         $("#A_cheatBtnID").click(function () {
-            ggbApplet.evalCommand(cheatSteps[cheatNum]);
-            cheatNum++;
+
+            if (cheatNum < cheatSteps.length) {
+                ggbApplet.evalCommand(cheatSteps[cheatNum]);
+                cheatNum++;
+            }
+
         });
 
     };

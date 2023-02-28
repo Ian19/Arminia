@@ -24,10 +24,9 @@
             $(btn).text("LOADING");            
             game.nav = "skill";
 
-            // console.log("game.skills.selectedSkill.unlocked");
-
             // Check for new skill to avoid duplicate applet reinjection
-            if (game.skills.lastSkill == game.skills.selectedSkill) {
+            // TEMP FIX TO FORCE CONSTANT INJECTION
+            if ("null" === "not null") {
 
                 // console.log("DUPLICATE SKILLS...AVOIDING REINJECTION skillCheck == game.skills.selectedSkill");
 
@@ -46,7 +45,7 @@
                 if (typeof ggbApplet === "undefined") {
 
                     // console.log("NEW APPLET LOADING...game.applet == undefined");
-                    game.skills.lastSkill = game.skills.selectedSkill;
+                    // game.skills.lastSkill = game.skills.selectedSkill;
                     game.applet = {};
                     game.applet = new GGBApplet('6.0', game.geogebra.parameters);
 
@@ -56,7 +55,7 @@
 
                 } else {
 
-                    game.skills.lastSkill = game.skills.selectedSkill;
+                    // game.skills.lastSkill = game.skills.selectedSkill;
                     // console.log("REMOVING OLD APPLET...game.applet != undefined");
                     ggbApplet.remove();
                     document.getElementById('applet_container').innerHTML = "";

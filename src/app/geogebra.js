@@ -40,15 +40,20 @@
 
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
-                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);                
+                $("#A_stepsBackgroundImage").css("display", "none");
+                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);
+
 
             } else {
 
+                // A_stepsImage
+
+                $("#A_stepsImage").css("display", "none");
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
 
-                // $("#A_startCASBtn").show();
+                $("#A_startCASBtn").show();
 
-                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {                    
+                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
 
                     var svgNode = data.documentElement;
                     const obj = $('#A_stepsBackgroundImage')[0];
@@ -67,6 +72,9 @@
                     const xMargin = 2000;
                     const yMargin = 1500;
 
+                    // const xMargin = 0;
+                    // const yMargin = 0;
+
                     const worldTopLeft = [
                         skillsBox.x - xMargin,
                         skillsBox.y - yMargin
@@ -79,7 +87,7 @@
 
                     zoom = d3.zoom()
                         .scaleExtent([1, 10])
-                        .translateExtent([worldTopLeft, worldBottomRight])
+                        // .translateExtent([worldTopLeft, worldBottomRight])
                         .on("zoom", zoomed);
 
                     var g = svg.select('g');
@@ -90,14 +98,14 @@
                         g.attr("transform", transform);
                     }
 
-                    const el3 = document.querySelector('#step1White');
-                    const bbox1 = el3.getBBox();
-
                     $("#A_startCASBtn").click(function () {
 
                         ready = true;
                         $("#A_cheatBtnID").show();
                         $("#A_startCASBtn").hide();
+
+                        const el3 = document.querySelector('#step1White');
+                        const bbox1 = el3.getBBox();
 
                         let midX = bbox1.x + (bbox1.width / 2);
                         let midY = bbox1.y + (bbox1.height / 2);
@@ -124,14 +132,12 @@
 
                         const el3 = document.querySelector('#step1White');
                         const bbox1 = el3.getBBox();
-                    }                    
+                    }
 
                 });
 
                 $(".appletStyle").addClass("A_cas");
                 game.animatePageOut("A_64TetraView");
-                
-                
 
             }
 
@@ -220,8 +226,10 @@
                 svgObject = document.getElementById('A_stepsImage').contentDocument;
 
                 if (parameters.appName == "classic") {
-                    // if (parameters.appName == "geometry") {
+
+                    removeAllAnimateTags();
                     addAnimateTags(0, 1);
+
                 } else {
 
                     // svgObject2 = document.getElementById('A_stepsBackgroundImage').contentDocument;
@@ -406,7 +414,6 @@
 
                         if (parameters.appName == "classic") {
 
-                            // if (parameters.appName == "geometry") {
                             removeAllAnimateTags();
                             addAnimateTags(j, 1);
 
@@ -431,7 +438,6 @@
 
                             // final step has been reached
                             if (parameters.appName == "classic") {
-                                // if (parameters.appName == "geometry") {
                                 removeAllAnimateTags();
                             } else {
 
@@ -583,70 +589,74 @@
 
             function updateWorkbook() {
 
+                // stop CAS access until startt button clicked
                 if (ready) {
 
+                    let objNumber = api.getObjectNumber();
+                    let strName, strType, strState, strCommand;
+                    stepsArray = [];
 
-                }
-
-                let objNumber = api.getObjectNumber();
-                let strName, strType, strState, strCommand;
-                stepsArray = [];
-
-                // Init stepsArray so that each element equals 1, which is the 'correct step' state
-                for (let j = 0; j <= stepsLength - 1; j++) {
-                    stepsArray.push(1);
-                }
-
-                // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
-                // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
-                let test = [];
-                for (let n = 0; n < stepsLength; n++) {
-                    test[n] = [];
-                    for (let m = 0; m < steps[n].length; m++) {
-                        test[n].push(0);
+                    // Init stepsArray so that each element equals 1, which is the 'correct step' state
+                    for (let j = 0; j <= stepsLength - 1; j++) {
+                        stepsArray.push(1);
                     }
-                }
 
-                // Begin main construction steps testing by iterating through all the objects in Geogebra
-                for (let i = 0; i < objNumber; i++) {
+                    // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
+                    // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
+                    let test = [];
+                    for (let n = 0; n < stepsLength; n++) {
+                        test[n] = [];
+                        for (let m = 0; m < steps[n].length; m++) {
+                            test[n].push(0);
+                        }
+                    }
 
-                    // Get first object and put in String 'strState
-                    strName = api.getObjectName(i);
-                    strType = api.getObjectType(strName);
-                    strCommand = api.getCommandString(strName);
+                    // Begin main construction steps testing by iterating through all the objects in Geogebra
+                    for (let i = 0; i < objNumber; i++) {
 
-                    if (strType == "text") {
-                        strCommand = api.getValueString(strName);
-                    } else {
+                        // Get first object and put in String 'strState
+                        strName = api.getObjectName(i);
+                        strType = api.getObjectType(strName);
                         strCommand = api.getCommandString(strName);
-                    }
 
-                    strState = strType + " " + strName + ", " + strCommand;
+                        if (strType == "text") {
+                            strCommand = api.getValueString(strName);
+                        } else {
+                            strCommand = api.getCommandString(strName);
+                        }
 
-                    // Check if geogebra object exists in model skillData steps by building multidimension test array
-                    for (let j = 0; j < stepsLength; j++) {
-                        for (let k = 0; k < steps[j].length; k++) {
+                        strState = strType + " " + strName + ", " + strCommand;
 
-                            if (strState == steps[j][k]) {
-                                // Correct Step!                             
-                                test[j][k] = 1;
+                        // console.log(strState);
+
+                        // Check if geogebra object exists in model skillData steps by building multidimension test array
+                        for (let j = 0; j < stepsLength; j++) {
+                            for (let k = 0; k < steps[j].length; k++) {
+
+                                if (strState == steps[j][k]) {
+                                    // Correct Step!  
+
+                                    // console.log("Correct Step!");
+
+                                    test[j][k] = 1;
+                                }
                             }
                         }
                     }
-                }
 
-                // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
-                for (let i = 0; i < test.length; i++) {
-                    for (let j = 0; j < test[i].length; j++) {
-                        if (test[i][j] == 0) {
-                            stepsArray[i] = 0;
-                            break;
+                    // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
+                    for (let i = 0; i < test.length; i++) {
+                        for (let j = 0; j < test[i].length; j++) {
+                            if (test[i][j] == 0) {
+                                stepsArray[i] = 0;
+                                break;
+                            }
                         }
                     }
-                }
 
-                // update the stepper
-                buildStepsView();
+                    // update the stepper
+                    buildStepsView();
+                }
             }
             api.registerAddListener(updateWorkbook);
             api.registerClientListener(updateWorkbook);
@@ -708,11 +718,27 @@
             if (parameters.appName == "classic") {
                 // if (parameters.appName == "geometry") {
                 game.nav = "home";
-                // Arminia.setGUI(game);                  
+                // Arminia.setGUI(game);   
+                
+                // $("#A_stepsImage").attr("data", "");
+
+                d3.select(game.skills.selectedSkill.elementID).remove();
+                // const myNode = document.getElementById("A_stepsImage");
+                // myNode.innerHTML = '';
+
+                // console.log( myNode.innerHTML);
+                
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");
 
             } else {
+
+                $("#A_stepsImage").css("display", "initial");
+                $("#A_startCASBtn").hide();
+
+                // tmp fix because only 1 paper available
+                d3.select("#A_schwarzsPPaper").remove();
+
                 game.nav = "A_64TetraView";
                 // Arminia.setGUI(game);                  
                 game.animatePageOut("A_geobebraView");

@@ -40,6 +40,10 @@
     border: 2px solid #563a99a1 !important;      
 }
 
+#A_startCASBtn {
+    display: none;      
+}
+
 .A_geogebraButton {
 
     /* stop text highlighting */

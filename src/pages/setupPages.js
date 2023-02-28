@@ -67,7 +67,10 @@
         $(document).on('click', '#A_protonBtnID', function () {
 
             // temporary until more papers are added
+            game.skills.lastSkill = game.skills.selectedSkill;
             game.skills.selectedSkill = game.skills.equationData[0];
+
+            // game.skills.lastSkill = game.skills.selectedSkill;
 
             // console.log("A_protonBtnID click");
 

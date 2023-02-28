@@ -30,6 +30,7 @@
         game.skills.skillData = [
             {
                 "id": 0,
+                "elementID": "#A_circleLargeSVGGlow2",
                 "material_id": "ybm744ww",
 
                 // "steps": [["circle c, Circle(A, 1)"]],
@@ -91,6 +92,7 @@
                 `
             }, {
                 "id": 1,
+                "elementID": "#A_vesicaPicsisLargeSVGGlow",
                 "material_id": "ybm744ww",
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"], 
@@ -438,6 +440,7 @@
                 "quotee": "Proclus"
             }, {
                 "id": 11,
+                "elementID": "A_triquetraLargeSVGGlow",
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"], 
                     ["point B, Point(c)", "segment f, Segment(A, B)"], 

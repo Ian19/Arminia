@@ -201,6 +201,7 @@
                             oldSelectedSkillSVG = null;
                             oldSelectedSkillData = null;
                             skillSelected = false;
+
                             game.skills.selectedSkill = null;
 
                         } else {
@@ -212,6 +213,9 @@
 
                             newSkillData.selected = true;
                             skillSelected = true;
+
+                            game.skills.lastSkill = game.skills.selectedSkill;
+
                             game.skills.selectedSkill = newSkillData;
 
                         }
@@ -227,12 +231,18 @@
                         updateSkills(this, newSkillData);
                         // show detail
                         updateSkillsDetail(newSkillData);
+
+                        game.skills.lastSkill = game.skills.selectedSkill;
+
                         game.skills.selectedSkill = newSkillData;
 
                     }
                 } else {
                     // no skill selected, select new skill
                     updateSkills(this, newSkillData);
+
+                    game.skills.lastSkill = game.skills.selectedSkill;
+
                     game.skills.selectedSkill = newSkillData;
                 }
             }
@@ -442,6 +452,13 @@
             game.geogebra.parameters.showToolBarHelp = true;
 
             // game.geogebra.parameters.showMenuBar = true;
+
+            if (game.skills.selectedSkill.name == "The Schwarzschild Proton") {
+
+                game.skills.selectedSkill = game.skills.lastSkill;
+
+                console.log(game.skills.selectedSkill.name);
+            }
 
 
             Arminia.geogebraBtnClick(game, "A_homePage", "#A_detailBtn");

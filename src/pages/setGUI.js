@@ -23,7 +23,7 @@
         switch (game.nav) {
             case "home":
                 $("#A_overviewContainer").css("display", "none");
-                $("#A_stepsBackgroundImage").css("display", "none");
+                $("#A_stepsBackgroundImage").css("display", "none");                
                 $("#A_sysHintContainer").show();
                 $("#A_sidebarConstruction").hide();
                 $("#A_sidebarGroupHologram").hide();

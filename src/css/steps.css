@@ -2,7 +2,7 @@
     color: #acb0dee3;
     font-size: 0.75vw;
     width: 100%;
-    padding-top: min(2vw, 20px);
+    /* padding-top: min(2vw, 20px); */
     /* padding-top: min(1vw, 10px); */
     height: 31%;
 }

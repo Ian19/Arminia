@@ -16,9 +16,10 @@
 }
 
 #A_stepsBackgroundImage {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     width: 100%;
-    margin-top: 1.3vh;
+    /* margin-top: 1.3vh; */
     /* height: 26vw; */
     /* height: 100%; */
     /* width: 100%; */    

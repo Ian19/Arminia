@@ -48,7 +48,7 @@
 
                 // $("#A_startCASBtn").show();
 
-                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
+                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {                    
 
                     var svgNode = data.documentElement;
                     const obj = $('#A_stepsBackgroundImage')[0];

@@ -57,10 +57,6 @@
     right: 0px;
 }
 
-#A_mouse_movement {
-    width: 40px;
-}
-
 .A_mouseZoomIcon {
     margin: 70px 20px 0 0;
     position: absolute;
@@ -68,9 +64,15 @@
     right: 0px;
 }
 
+#A_mouse_movement {
+    width: 40px;
+}
+
 #A_mouse_zoom {
     width: 40px;
 }
+
+
 
 #A_skillSelectText{
     font-size: 0.65vw;

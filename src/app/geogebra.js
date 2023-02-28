@@ -27,30 +27,111 @@
         parameters.appletOnLoad = function (api) {
 
             Arminia.setGUI(game);
+            let svg;
+            let zoom;
+            let ready = false;
+
+            $("#A_cheatBtnID").hide();
 
             // settings for CAS or graphing 
             if (parameters.appName == "classic") {
-            // if (parameters.appName == "geometry") {
+
+                ready = true;
 
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
-                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);
+                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);                
 
-                $("#A_cheatBtnID").hide();
+            } else {
 
-            } else {                
-
-                // console.log(game.skills.selectedSkill.stepsImage2);
-
-                $("#A_stepsImage").css("width", "70%");
-                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2 + "1.svg");
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
 
-                $("#A_stepsBackgroundImage").attr("data", game.skills.selectedSkill.stepsBackgroundImage);
+                // $("#A_startCASBtn").show();
+
+                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
+
+                    var svgNode = data.documentElement;
+                    const obj = $('#A_stepsBackgroundImage')[0];
+                    obj.appendChild(svgNode);
+
+                    svg = d3.select('#A_schwarzsPPaper');
+
+                    d3.select('#step1Black')
+                        .style("display", "none");
+
+                    d3.select('#step1White')
+                        .style("display", "inline");
+
+                    const skillsBox = svg.node().getBBox();
+
+                    const xMargin = 2000;
+                    const yMargin = 1500;
+
+                    const worldTopLeft = [
+                        skillsBox.x - xMargin,
+                        skillsBox.y - yMargin
+                    ];
+
+                    const worldBottomRight = [
+                        skillsBox.x + skillsBox.width + xMargin,
+                        skillsBox.y + skillsBox.height + yMargin
+                    ];
+
+                    zoom = d3.zoom()
+                        .scaleExtent([1, 10])
+                        .translateExtent([worldTopLeft, worldBottomRight])
+                        .on("zoom", zoomed);
+
+                    var g = svg.select('g');
+
+                    svg.call(zoom);
+
+                    function zoomed({ transform }) {
+                        g.attr("transform", transform);
+                    }
+
+                    const el3 = document.querySelector('#step1White');
+                    const bbox1 = el3.getBBox();
+
+                    $("#A_startCASBtn").click(function () {
+
+                        ready = true;
+                        $("#A_cheatBtnID").show();
+                        $("#A_startCASBtn").hide();
+
+                        let midX = bbox1.x + (bbox1.width / 2);
+                        let midY = bbox1.y + (bbox1.height / 2);
+
+                        svg.transition()
+                            .duration(750)
+                            .call(zoom.translateTo, midX, midY)
+                            .on("end", myCallback);
+
+                    });
+
+                    function myCallback() {
+
+                        const el3 = document.querySelector('#step1White');
+                        const bbox1 = el3.getBBox();
+
+                        svg.transition()
+                            .duration(750)
+                            .call(zoom.scaleTo, 3)
+                            .on("end", myCallback2);
+                    }
+
+                    function myCallback2() {
+
+                        const el3 = document.querySelector('#step1White');
+                        const bbox1 = el3.getBBox();
+                    }                    
+
+                });
+
                 $(".appletStyle").addClass("A_cas");
                 game.animatePageOut("A_64TetraView");
-
-                $("#A_cheatBtnID").show();
+                
+                
 
             }
 
@@ -134,12 +215,12 @@
                 }
             };
 
-            // let svgObject2;
+            // let svgObject2;            
             document.getElementById('A_stepsImage').onload = function () {
                 svgObject = document.getElementById('A_stepsImage').contentDocument;
 
                 if (parameters.appName == "classic") {
-                // if (parameters.appName == "geometry") {
+                    // if (parameters.appName == "geometry") {
                     addAnimateTags(0, 1);
                 } else {
 
@@ -149,7 +230,6 @@
 
                     // var el2 = svgObject2.getElementById("step1White");
                     // el2.setAttributeNS(null, 'display', "inline");
-
                 }
             };
 
@@ -181,15 +261,13 @@
 
 
             // temporary for schwarzschild paper demo
-            if (parameters.appName == "suite") {                
+            if (parameters.appName == "suite") {
 
                 $("#A_prevPage").click(function () {
-                    // console.log("prev btn clicked!");
                     showPrevPage();
                 });
 
                 $("#A_nextPage").click(function () {
-                    // console.log("next btn clicked!");
                     showNextPage();
                 });
 
@@ -228,8 +306,6 @@
 
                         // Scaled Viewport
                         // var desiredWidth = w - 20;
-                        // console.log(w);
-                        // console.log(desiredWidth);
 
                         // var viewport = page.getViewport({ scale: 1, });
                         // var scale = w / viewport.width;
@@ -315,6 +391,8 @@
 
             function buildStepsView() {
 
+                let gotK = false;
+
                 svgObject2 = document.getElementById('A_stepsBackgroundImage').contentDocument;
 
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
@@ -327,17 +405,17 @@
                     if (stepsArray[j] == 0) {
 
                         if (parameters.appName == "classic") {
-                        // if (parameters.appName == "geometry") {
+
+                            // if (parameters.appName == "geometry") {
                             removeAllAnimateTags();
                             addAnimateTags(j, 1);
+
                         } else {
 
-                            // console.log("1");
-                            // console.log(j);
-
                             if (j == 0) {
-                                game.skills.selectedSkill.stepsImage2 = game.skills.selectedSkill.stepsImageBackup;
-                                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2 + "1.svg");
+                                // commented as of paperZoom
+                                // game.skills.selectedSkill.stepsImage2 = game.skills.selectedSkill.stepsImageBackup;
+                                // $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2 + "1.svg");
                             }
                         }
 
@@ -351,22 +429,27 @@
                         // Test if final step has been reached
                         if (j == stepsLength - 1) {
 
-                            console.log("stepsLength : " + stepsLength);
-
                             // final step has been reached
                             if (parameters.appName == "classic") {
-                            // if (parameters.appName == "geometry") {
+                                // if (parameters.appName == "geometry") {
                                 removeAllAnimateTags();
                             } else {
 
-                                var el = svgObject2.getElementById("step30Black");
-                                el.setAttributeNS(null, 'display', "none");
+                                let el = document.getElementById("A_schwarzsPPaper");
+                                let svgWidth = el.width.baseVal.value;
+                                let svgHeight = el.height.baseVal.value;
 
-                                var el2 = svgObject2.getElementById("step30White");
-                                el2.setAttributeNS(null, 'display', "inline");
+                                function myCallback4() {
 
-                                // remove steps image from screen and display completed paper
-                                $("#A_stepsImage").attr("data", "");
+                                    svg.transition()
+                                        .duration(750)
+                                        .call(zoom.translateTo, 0.5 * svgWidth, 0.5 * svgHeight);
+                                }
+
+                                svg.transition()
+                                    .duration(750)
+                                    .call(zoom.scaleTo, 1)
+                                    .on("end", myCallback4);
                             }
 
                             $("#A_stepsCount").html("Steps Complete (" + `${j + 1}` + " of " + stepsLength.toString() + ")");
@@ -382,16 +465,16 @@
 
                             if (localStorage.getItem('ArminiaSkills') == '') {
 
-                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id)); 
+                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));
 
                             } else {
-                                            
-                                let lsTest = localStorage.getItem('ArminiaSkills');   
+
+                                let lsTest = localStorage.getItem('ArminiaSkills');
                                 // [0,1,2,5,11]    
 
                                 let duplicate = false;
 
-                                for (let i = 0; i <  lsTest.length; i++) {
+                                for (let i = 0; i < lsTest.length; i++) {
                                     if (lsTest[i] == game.skills.selectedSkill.id) {
                                         duplicate = true;
                                         break;
@@ -402,7 +485,7 @@
 
                                     lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
                                     localStorage.setItem('ArminiaSkills', lsTest);
-                                }                
+                                }
                             }
 
                             game.setSkillComplete(game.skills.selectedSkill);
@@ -416,35 +499,77 @@
                             // step complete, but final step NOT reached
 
                             if (parameters.appName == "classic") {
-                            // if (parameters.appName == "geometry") {
                                 removeAllAnimateTags();
                                 addAnimateTags(j, 2);
                             }
 
                             if (parameters.appName == "suite") {
 
-                                // console.clear();
-                                // console.log("3");                                
+                                // commented as of paperZoom
+                                // let s = j + 1;
+                                let s = j + 2;
 
-                                let s = j + 1;
-                                var el = svgObject2.getElementById("step" + s.toString() + "Black");
+                                d3.select("#step" + s.toString() + "Black")
+                                    .style("display", "none");
 
-                                el.setAttributeNS(null, 'display', "none");
+                                d3.select("#step" + s.toString() + "White")
+                                    .style("display", "inline");
 
-                                // console.log("step" + s.toString() + "Black");
-                                // console.log(el);
 
-                                var el2 = svgObject2.getElementById("step" + s.toString() + "White");
+                                game.skills.selectedSkill.elements.forEach(function (element) {
 
-                                el2.setAttributeNS(null, 'display', "inline");
-                                // console.log(el2);
+                                    if (element.num == s) {
 
-                                let t = j + 2;
+                                        if (element.type == "divider") {
 
-                                // console.log(game.skills.selectedSkill.stepsImage2 + t.toString() + ".svg");
+                                            d3.select("#divider" + s.toString() + "Black")
+                                                .style("stroke", "white");
 
-                                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2 + t.toString() + ".svg");
+                                        } else {
 
+                                            d3.select("#text" + s.toString() + "Black")
+                                                .style("display", "none");
+
+                                            d3.select("#text" + s.toString() + "White")
+                                                .style("display", "inline");
+
+                                        }
+                                    }
+                                });
+
+                                let stepElement = document.getElementById("step" + s.toString() + "White");
+                                const stepBox = stepElement.getBBox();
+
+                                let midX = stepBox.x + (stepBox.width / 2);
+                                let midY = stepBox.y + (stepBox.height / 2);
+
+                                function myCallback3() {
+
+                                    svg.transition()
+                                        .duration(750)
+                                        .call(zoom.scaleTo, 3);
+                                }
+
+                                svg.transition()
+                                    .duration(750)
+                                    .call(zoom.translateTo, midX, midY)
+                                    .on("end", myCallback3);
+
+
+                                // if (!gotK) {
+                                //     let k;
+                                //     for (k = 1; k <= stepsArray.length - 1; k++) {
+                                //         if (stepsArray[k] == 0) {
+                                //             gotK = true;
+                                //             let num = rectArray[k].y;
+                                //             let x = (num * 3000) / 1000;
+                                //             svg.transition()
+                                //                 .duration(750)
+                                //                 .call(zoom.transform, d3.zoomIdentity.translate(0, -x).scale(2.5));
+                                //             break;
+                                //         }
+                                //     }
+                                // }
                             }
 
                             $("#A_stepsCount").html("Steps " + `${j + 2}` + " of " + stepsLength.toString());
@@ -458,8 +583,10 @@
 
             function updateWorkbook() {
 
-                // console.log("Entered updateWorkbook");
-                // console.clear();
+                if (ready) {
+
+
+                }
 
                 let objNumber = api.getObjectNumber();
                 let strName, strType, strState, strCommand;
@@ -488,10 +615,6 @@
                     strType = api.getObjectType(strName);
                     strCommand = api.getCommandString(strName);
 
-                    staticTextValue = api.getValueString(strName);
-
-                    // console.log(staticTextValue);
-
                     if (strType == "text") {
                         strCommand = api.getValueString(strName);
                     } else {
@@ -500,27 +623,12 @@
 
                     strState = strType + " " + strName + ", " + strCommand;
 
-                    // console.log("Geogebra Output: " + strState);
-
-                    // console.log(stepsArray); 
-                    // console.log(test); 
-                    // console.log(stepsLength); 
-                    // console.log(steps); 
-
                     // Check if geogebra object exists in model skillData steps by building multidimension test array
                     for (let j = 0; j < stepsLength; j++) {
                         for (let k = 0; k < steps[j].length; k++) {
 
-                            // console.log(j);
-                            // console.log(k);
-
-
-                            // console.log("Geogebra Input: " + steps[j][k]);
-
                             if (strState == steps[j][k]) {
-                                // Correct Step!  
-                                // console.log(strState);                              
-                                // console.log("Correct Step!");                              
+                                // Correct Step!                             
                                 test[j][k] = 1;
                             }
                         }
@@ -537,7 +645,6 @@
                     }
                 }
 
-                // console.log(test);
                 // update the stepper
                 buildStepsView();
             }
@@ -599,7 +706,7 @@
             // $("#A_stepsBackgroundImage").css("display", "none");
 
             if (parameters.appName == "classic") {
-            // if (parameters.appName == "geometry") {
+                // if (parameters.appName == "geometry") {
                 game.nav = "home";
                 // Arminia.setGUI(game);                  
                 game.animatePageOut("A_geobebraView");
@@ -644,10 +751,10 @@
             ["V_{c} = V_{r} / r"],
             ["r_{m} = r / 100.000"],
             ["Kc = 8.9880 * 10.000^9.0000"],
-            ["q_{1} = 1.602 * 10.000^-19.0000"], 
-            ["q_{2} = 1.602 * 10.000^-19.0000"], 
-            ["F_{c} = (Kc q_{1} q_{2}) / r_{m}^2.0000"], 
-            ["F_{d} = F_{c} * 10.000^5.0000"], 
+            ["q_{1} = 1.602 * 10.000^-19.0000"],
+            ["q_{2} = 1.602 * 10.000^-19.0000"],
+            ["F_{c} = (Kc q_{1} q_{2}) / r_{m}^2.0000"],
+            ["F_{d} = F_{c} * 10.000^5.0000"],
             ["F_{t} = V_{c} + F_{d}"]
 
         ];

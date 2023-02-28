@@ -29,7 +29,7 @@
 
         game.skills.equationData = [
             {
-                "id": 1,
+                "id": 85,
                 "material_id": "ybm744ww",
 
                 "steps": [
@@ -115,6 +115,25 @@
                 ],
 
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
+                "elements": [
+                    {
+                        "num": 9,
+                        "type": "divider"
+                    },
+                    {
+                        "num": 14,
+                        "type": "divider"
+                    },
+                    {
+                        "num": 20,
+                        "type": "divider"
+                    },
+                    {
+                        "num": 21,
+                        "type": "text"
+                    }
+                ],
+
                 "selected": false,
                 "url": "src/assets/images/skills/vesica_piscis.png",
                 "url2": "src/assets/images/skills/vesicaPicsisLarge.svg",

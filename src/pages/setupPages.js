@@ -69,7 +69,7 @@
             // temporary until more papers are added
             game.skills.selectedSkill = game.skills.equationData[0];
 
-            console.log("A_protonBtnID click");
+            // console.log("A_protonBtnID click");
 
             game.geogebra.parameters.appName = "suite";
             game.geogebra.parameters.filename = "src/assets/geogebra/testCAS3.ggb";

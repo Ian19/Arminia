@@ -49,7 +49,12 @@
 
             const skillsBox = svg.node().getBBox();
             const margin = -150;
-            const worldTopLeft = [skillsBox.x - margin, skillsBox.y - margin];
+
+            const worldTopLeft = [
+                skillsBox.x - margin,
+                skillsBox.y - margin
+            ];
+
             const worldBottomRight = [
                 skillsBox.x + skillsBox.width + margin,
                 skillsBox.y + skillsBox.height + margin
@@ -81,8 +86,57 @@
 
             svg.call(zoom);
 
+            function zoomed({ transform }) {
+                g.attr("transform", transform);
+            }
+
+            // $(document).on('click', '#A_zoomInBtn', function () {
+            //     console.log("A_zoomInBtn click");
+
+            //     svg.transition()
+            //         .call(zoom.scaleBy, 2);
+            // });
+
+            // $(document).on('click', '#A_zoomOutBtn', function () {
+            //     console.log("A_zoomOutBtn click");
+
+            //     svg.transition()
+            //         .call(zoom.scaleBy, 0.5);
+            // });
+
+            // $(document).on('click', '#A_resetZoomBtn', function () {
+            //     console.log("A_resetZoomBtn click");
+
+            //     svg.transition()
+            //         .call(zoom.scaleTo, 1);
+            // });
+
+            // $(document).on('click', '#A_panLeftBtn', function () {
+            //     console.log("A_panLeftBtn click");
+
+            //     svg.transition()
+            //         .call(zoom.translateBy, 50, 0);
+            // });
+
+            // $(document).on('click', '#A_panRightBtn', function () {
+            //     console.log("A_panRightBtn click");
+
+            //     svg.transition()
+            //         .call(zoom.translateBy, -50, 0);
+            // });
+
+            // $(document).on('click', '#A_CenterBtn', function () {
+            //     let el = document.getElementById("Layer_1");
+            //     let svgWidth = el.width.baseVal.value;
+            //     let svgHeight = el.height.baseVal.value;
+
+            //     svg.transition()
+            //         .call(zoom.translateTo, 0.5 * svgWidth, 0.5 * svgHeight);                    
+            // });
+
+
             function mouseover1(t, d, i) {
-                
+
                 // console.log(t, d, i);
                 d3.select(t).style("stroke-opacity", 1);
 
@@ -115,7 +169,7 @@
 
                         d3.select(this).style("stroke", "#ECDB7A");
 
-                        
+
                     }
                 }
             }
@@ -216,10 +270,6 @@
                     .style("fill-opacity", 0.5)
                     .transition()
                     .style("fill-opacity", 0.01);
-            }
-
-            function zoomed({ transform }) {
-                g.attr("transform", transform);
             }
 
             function setAllSkillsIncomplete() {
@@ -390,7 +440,7 @@
             game.geogebra.parameters.showAlgebraInput = false;
             game.geogebra.parameters.showToolBar = true;
             game.geogebra.parameters.showToolBarHelp = true;
-            
+
             // game.geogebra.parameters.showMenuBar = true;
 
 

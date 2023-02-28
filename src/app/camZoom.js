@@ -297,7 +297,7 @@
                             });
 
                             /////////////////////////////////////////   AUDIO SLIDE SOFT
-                            _this.game.audio.slideSoft.play();
+                            // _this.game.audio.slideSoft.play();
 
                             //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
 
@@ -397,7 +397,7 @@
                                 } else fruitFadeObj.fruitSpheresFade(_this.game);
                             });
 
-                            _this.game.audio.slideSoft.play();
+                            // _this.game.audio.slideSoft.play();
 
                             //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
 

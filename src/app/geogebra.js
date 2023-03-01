@@ -43,7 +43,6 @@
                 $("#A_stepsBackgroundImage").css("display", "none");
                 $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);
 
-
             } else {
 
                 // A_stepsImage
@@ -155,73 +154,9 @@
             $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
             $("#A_stepsProgress").css("width", "0%");
 
-            // blink checkbox
-            checkbox7.onclick = function () {
-                removeAllAnimateTags();
-                updateWorkbook();
-            }
-
-            // verbose checkbox
-            checkbox8.onclick = function () {
-
-                if (checkbox8.checked == true) {
-
-                    svgObject = document.getElementById('A_stepsImage').contentDocument;
-                    var el = svgObject.getElementsByClassName("A_verbose");
-                    for (var i = 0; i < el.length; i++) {
-                        var currentEl = el[i];
-                        currentEl.setAttributeNS(null, 'visibility', "visible");
-                    }
-
-                } else {
-
-                    svgObject = document.getElementById('A_stepsImage').contentDocument;
-                    var el = svgObject.getElementsByClassName("A_verbose");
-
-                    for (var i = 0; i < el.length; i++) {
-                        var currentEl = el[i];
-                        currentEl.setAttributeNS(null, 'visibility', "hidden");
-                    }
-                }
-            }
-
             ///////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////// add and or remove blinking animation to svg file ////////////////////
 
-            let svgObject;
-            function removeAllAnimateTags() {
-                let A_SVGSteps = svgObject.getElementById('A_SVGSteps');
-                var element = A_SVGSteps.getElementsByTagName("animate"), index;
-
-                for (index = element.length - 1; index >= 0; index--) {
-                    element[index].parentNode.removeChild(element[index]);
-                }
-            };
-
-            function addAnimateTags(j, n) {
-
-                if ($("#checkbox7").prop("checked") == true) {
-
-                    let A_SVGStep = svgObject.getElementById('A_SVGStep' + `${j + n}`);
-                    let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-                    let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-
-                    animationElement1.setAttributeNS(null, 'attributeName', "stroke-opacity");
-                    animationElement1.setAttributeNS(null, 'values', "0;1;0");
-                    animationElement1.setAttributeNS(null, 'dur', "1.5s");
-                    animationElement1.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                    animationElement2.setAttributeNS(null, 'attributeName', "fill-opacity");
-                    animationElement2.setAttributeNS(null, 'values', "0;1;0");
-                    animationElement2.setAttributeNS(null, 'dur', "1.5s");
-                    animationElement2.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                    A_SVGStep.appendChild(animationElement1);
-                    A_SVGStep.appendChild(animationElement2);
-                }
-            };
-
-            // let svgObject2;            
             document.getElementById('A_stepsImage').onload = function () {
                 svgObject = document.getElementById('A_stepsImage').contentDocument;
 
@@ -393,15 +328,12 @@
             ///////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////  STEPPER //////////////////////////////////////////
 
-            let svgObject2;
             let stepsArray = [];
             const stepsProgress = $("#A_stepsProgress")[0];
 
             function buildStepsView() {
 
-                let gotK = false;
-
-                svgObject2 = document.getElementById('A_stepsBackgroundImage').contentDocument;
+                // let gotK = false;
 
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
 
@@ -590,6 +522,7 @@
             function updateWorkbook() {
 
                 // stop CAS access until startt button clicked
+
                 if (ready) {
 
                     let objNumber = api.getObjectNumber();
@@ -626,7 +559,6 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-
                         // console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
@@ -634,10 +566,7 @@
                             for (let k = 0; k < steps[j].length; k++) {
 
                                 if (strState == steps[j][k]) {
-                                    // Correct Step!  
-
                                     // console.log("Correct Step!");
-
                                     test[j][k] = 1;
                                 }
                             }
@@ -663,6 +592,68 @@
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
+
+        let svgObject;
+        function removeAllAnimateTags() {
+
+            let A_SVGSteps = svgObject.getElementById('A_SVGSteps');
+            var element = A_SVGSteps.getElementsByTagName("animate"), index;
+
+            for (index = element.length - 1; index >= 0; index--) {
+                element[index].parentNode.removeChild(element[index]);
+            }
+        };
+
+        function addAnimateTags(j, n) {
+
+            if ($("#checkbox7").prop("checked") == true) {
+
+                let A_SVGStep = svgObject.getElementById('A_SVGStep' + `${j + n}`);
+                let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+                let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+
+                animationElement1.setAttributeNS(null, 'attributeName', "stroke-opacity");
+                animationElement1.setAttributeNS(null, 'values', "0;1;0");
+                animationElement1.setAttributeNS(null, 'dur', "1.5s");
+                animationElement1.setAttributeNS(null, 'repeatCount', "indefinite");
+
+                animationElement2.setAttributeNS(null, 'attributeName', "fill-opacity");
+                animationElement2.setAttributeNS(null, 'values', "0;1;0");
+                animationElement2.setAttributeNS(null, 'dur', "1.5s");
+                animationElement2.setAttributeNS(null, 'repeatCount', "indefinite");
+
+                A_SVGStep.appendChild(animationElement1);
+                A_SVGStep.appendChild(animationElement2);
+            }
+        };
+
+        // blink checkbox
+        checkbox7.onclick = function () {
+            removeAllAnimateTags();
+            updateWorkbook();
+        }
+
+        // verbose checkbox
+        checkbox8.onclick = function () {
+
+            if (checkbox8.checked == true) {
+
+                var el = svgObject.getElementsByClassName("A_verbose");
+
+                for (var i = 0; i < el.length; i++) {
+                    var currentEl = el[i];
+                    currentEl.setAttributeNS(null, 'visibility', "visible");
+                }
+
+            } else {
+                var el = svgObject.getElementsByClassName("A_verbose");
+
+                for (var i = 0; i < el.length; i++) {
+                    var currentEl = el[i];
+                    currentEl.setAttributeNS(null, 'visibility', "hidden");
+                }
+            }
+        }
 
         game.geogebra = {};
         game.geogebra.parameters = {};
@@ -700,12 +691,9 @@
                     autoHide: "move"
                 }
             });
-
         });
 
-
         $("#A_backToSkillsBtn").click(function () {
-
 
             // $("#A_overviewContainer").css("display", "none");
             // $(".scaleContainerClass").css("display", "inline-block");
@@ -719,15 +707,9 @@
                 // if (parameters.appName == "geometry") {
                 game.nav = "home";
                 // Arminia.setGUI(game);   
-                
-                // $("#A_stepsImage").attr("data", "");
 
-                d3.select(game.skills.selectedSkill.elementID).remove();
-                // const myNode = document.getElementById("A_stepsImage");
-                // myNode.innerHTML = '';
+                removeAllAnimateTags();
 
-                // console.log( myNode.innerHTML);
-                
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");
 
@@ -747,7 +729,6 @@
 
             }
             game.main.setEnabled(true);
-
         });
 
         const cheatSteps = [

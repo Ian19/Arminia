@@ -60,6 +60,8 @@
 
                     svg = d3.select('#A_schwarzsPPaper');
 
+                    svg.style("width", "100%").style("height", "100%").style("display", "block");
+
                     d3.select('#step1Black')
                         .style("display", "none");
 

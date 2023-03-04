@@ -270,14 +270,14 @@
             this.line1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOverTrigger,
                 function () {
                     // game.FruitOfLife1.fruitSpheresGlow();
-                    console.log("OnPointerOverTrigger");
+                    // console.log("OnPointerOverTrigger");
                 })
             );
 
             this.line1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOutTrigger,
                 function () {
                     // game.FruitOfLife1.fruitSpheresFade();
-                    console.log("OnPointerOutTrigger");
+                    // console.log("OnPointerOutTrigger");
                 })
             );
 

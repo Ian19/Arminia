@@ -40,7 +40,7 @@
 
                 new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOverTrigger, function (ev) {
 
-                    console.log("OnPointerOverTrigger");
+                    // console.log("OnPointerOverTrigger");
 
                     fruit.fruitSpheresGlow(game);
 
@@ -50,7 +50,7 @@
             treeActionManager.registerAction(
                 new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOutTrigger, function (ev) {
 
-                    console.log("OnPointerOutTrigger");
+                    // console.log("OnPointerOutTrigger");
 
                     fruit.fruitSpheresFade(game);
 
@@ -60,7 +60,7 @@
             treeActionManager.registerAction(
                 new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function (ev) {
 
-                    console.log("OnPickTrigger");
+                    // console.log("OnPickTrigger");
 
                     console.log(ev.meshUnderPointer.id);
 

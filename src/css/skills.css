@@ -41,13 +41,15 @@
     margin: 5px 0 0 10px;
     /* color: rgb(125, 92, 185); */
     color: #BC67FF;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 0.9vw;
     font-variant-caps: all-small-caps;
     position: absolute;    
 }
 
 #A_SkillTextTitleSub {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 0.7vw;
 }
 
 #A_mouseMovementIcon {

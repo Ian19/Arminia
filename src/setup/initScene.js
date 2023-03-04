@@ -60,14 +60,10 @@
         game.scene.activeCameras = [game.camera, game.camera2];
         game.scene.cameraToUseForPointers = game.camera;
 
+        game.camera.inputs.attached.pointers.buttons = [0];
 
-
-        // console.log(game.camera.inputs.attached.pointers.buttons = [0]);
-        // console.log(game.camera.inputs.attached['pointers]']);
-
-        game.camera.inputs.attached.pointers.buttons = [0]
-
-        // game.camera.inputs.attached['mouse'].buttons = [0];
+        game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
+        game.camera.inputs.attached.pointers.multiTouchPanning = false;
 
         // var defaultPipeline = new BABYLON.DefaultRenderingPipeline("default1", true, game.scene, [game.camera]);
         // defaultPipeline.imageProcessingEnabled = false;

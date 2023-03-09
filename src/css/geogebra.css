@@ -1,19 +1,13 @@
-/* .A_GUIContainer {
-    position: absolute;
-    flex-direction: column;
-    width: 42vw;
-    height: 100vh;
-    left: 2.6vw;
-    padding-top: 1.5%;
-} */
 
 .scaleContainerClass {
     display: inline-block;
     width: 48% !important; 
-    /* border: 1px solid yellow; */
 }
 
 .appletStyle {
+    position: relative;
+    height: 100%;
+    bottom: 0px;
     left: 2px;
     box-sizing: border-box !important;    
     padding: 0 !important;
@@ -30,13 +24,6 @@
 .A_cas {
     border-width: 1px !important;
     outline: 6px solid #af91f4db !important;  
-}
-
-#A_geobebraView {
-    display: none;
-    height: 100%;
-    opacity: 0;
-    /* border: 1px solid green; */
 }
 
 #A_subGeoView {

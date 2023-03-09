@@ -38,8 +38,9 @@
         game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
 
 
-        game.camera.orthoTop = 23.6;
-        resetWindow(game.camera);
+        // game.camera.orthoTop = 23.6;
+
+        // resetWindow(game.camera);
         game.camera.checkCollisions = false;
         game.camera.panningSensibility = 100;
         game.camera.alpha = 90 * Math.PI / 180;
@@ -65,6 +66,11 @@
         game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
         game.camera.inputs.attached.pointers.multiTouchPanning = false;
 
+
+        game.camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED;
+
+        // console.log(game.camera.fovMode);
+
         // var defaultPipeline = new BABYLON.DefaultRenderingPipeline("default1", true, game.scene, [game.camera]);
         // defaultPipeline.imageProcessingEnabled = false;
         // defaultPipeline.samples = 5;
@@ -88,13 +94,49 @@
             }
         });
 
+        // function resetWindow(cam) {
+        //     let ratio = (window.innerWidth) / window.innerHeight;
+        //     let zoom = cam.orthoTop;
+        //     let newWidth = zoom * ratio;
+        //     cam.orthoLeft = -Math.abs(newWidth);
+        //     cam.orthoRight = newWidth;
+        //     cam.orthoBottom = -Math.abs(zoom);
+
+        //     console.log("window.innerWidth: " + window.innerWidth);
+        //     console.log("window.innerHeight: " + window.innerHeight);
+        //     console.log("ratio: " + ratio);
+        //     console.log("zoom: " + zoom);
+        //     console.log("newWidth: " + newWidth);
+        //     console.log("orthoLeft: " + cam.orthoLeft);
+        //     console.log("orthoRight: " + cam.orthoRight);
+        //     console.log("orthoBottom: " + cam.orthoBottom);
+        // }
+
+        // game.camera.orthoTop = 23.6;
+        game.camera.orthoRight = 45;
+        game.camera2.orthoRight = 45;
+        resetWindow(game.camera);
+        resetWindow(game.camera2);
+        
         function resetWindow(cam) {
+
             let ratio = (window.innerWidth) / window.innerHeight;
-            let zoom = cam.orthoTop;
-            let newWidth = zoom * ratio;
-            cam.orthoLeft = -Math.abs(newWidth);
-            cam.orthoRight = newWidth;
-            cam.orthoBottom = -Math.abs(zoom);
+            let zoom = cam.orthoRight;            
+            cam.orthoLeft = -cam.orthoRight;
+            let newWidth = zoom / ratio;
+            cam.orthoTop = Math.abs(newWidth);
+            cam.orthoBottom = -newWidth;            
+
+            // console.log("window.innerWidth: " + window.innerWidth);
+            // console.log("window.innerHeight: " + window.innerHeight);
+            // console.log("ratio: " + ratio);
+            // console.log("zoom: " + zoom);
+            // console.log("newWidth: " + newWidth);
+            // console.log("orthoTop: " + cam.orthoTop);
+            // console.log("orthoLeft: " + cam.orthoLeft);
+            // console.log("orthoRight: " + cam.orthoRight);
+            // console.log("orthoBottom: " + cam.orthoBottom);
+
         }
 
         window.addEventListener("resize", function() {

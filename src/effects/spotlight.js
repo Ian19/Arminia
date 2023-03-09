@@ -25,7 +25,8 @@
         spotLightMat.opacityTexture = new BABYLON.Texture("src/assets/textures/glow.png", game.scene);
         spotLightMat.alpha = 0.25;
 
-        game.spotLightplane = BABYLON.MeshBuilder.CreatePlane("spotLightplane", { width: 55, height: 60 }, game.scene);
+        // game.spotLightplane = BABYLON.MeshBuilder.CreatePlane("spotLightplane", { width: 55, height: 60 }, game.scene);
+        game.spotLightplane = BABYLON.MeshBuilder.CreatePlane("spotLightplane", { width: 55, height: 100 }, game.scene);
         game.spotLightplane.rotation.y = 180 * Math.PI / 180;
         game.spotLightplane.layerMask = 2;
         game.spotLightplane.material = spotLightMat;

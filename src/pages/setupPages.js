@@ -147,15 +147,36 @@
 
         function animatePageOut(id) {
 
-            document.getElementById(id).classList.remove("A_pageIn");
-            document.getElementById(id).style.display = "block";
+            if (id == "A_homePage") {
+
+                document.getElementById(id).style.display = "flex";
+
+            } else {
+
+                document.getElementById(id).style.display = "block";
+
+            }
+
+            document.getElementById(id).classList.remove("A_pageIn"); 
+            document.getElementById(id).style.display = "flex";           
             document.getElementById(id).classList.add("A_pageOut");
         }
 
         function animatePageIn(id) {
 
+            if (id == "A_homePage") {
+
+                document.getElementById(id).style.display = "flex";
+
+            } else {
+
+                document.getElementById(id).style.display = "block";
+
+            }
+
             document.getElementById(id).classList.remove("A_pageOut");
-            document.getElementById(id).style.display = "block";
+            // document.getElementById(id).style.display = "block";
+            // document.getElementById(id).style.display = "flex";
             document.getElementById(id).classList.add("A_pageIn");
         }
 

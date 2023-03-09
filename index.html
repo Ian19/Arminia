@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <!-- Copyright 2022 Ian Hicks
 
@@ -83,9 +81,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- //////////////////   END KATEX  ////////////////// -->
 
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&dummy=.js">
-        </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&dummy=.js"></script> -->
 
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
@@ -448,25 +444,13 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
     <canvas id="A_gameCanvas"></canvas>
 
-    <!-- GUI -->
-    <div class="A_GUIContainer">
+    <!-- PAGES -->
+        <div class="A_page" id="A_homePage">
 
-        <div class="A_titleContainer">
-            <!-- <span id="spanClick"> -->
-            <img src="src/assets/images/final4.svg" alt="" id="A_title">
-            <!-- </span> -->
-
-            <img src="src/assets/images/swish1.svg" alt="" id="A_swish">
-        </div>
-
-
-        <div id="A_homePage">
-
-            <!-- <div id="skillIntroText">
-                Explore Reality using the sacred geometry of the Information Systems of the Fruit of Life.<br>
-                Track your progress with the Skill Tree and unlock more complex geometric constructions and scientific
-                papers.<br>
-            </div> -->
+            <div class="A_titleContainer">
+                <img src="src/assets/images/final4.svg" alt="" class="A_title">
+                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+            </div>
 
             <div id="skillIntroText">
                 Track your progress with the Skill Tree and unlock more complex geometric constructions and scientific
@@ -496,7 +480,8 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
             </div>
 
-            <div id="A_skillSelectText">No Skill Selected. Select a Skill and press Start to begin.</div>
+            <div id="A_skillSelectText">No Skill Selected. Select a Skill and press Start to begin.
+            </div>
 
             <div class="A_detailGrid" id="A_detailGridID">
 
@@ -530,10 +515,14 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     </div>
                 </div>
             </div>
-
-
         </div>
-        <div id="A_64TetraView" class="A_scroll2">
+
+        <div class="A_page A_scroll" id="A_64TetraView">
+
+            <div class="A_titleContainer">
+                <img src="src/assets/images/final4.svg" alt="" class="A_title">
+                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+            </div>
 
             <div class="A_header1">The 64 Tertrahedron Grid</div>
             <br>
@@ -1218,8 +1207,16 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                 </div>
             </div>
         </div>
-        <div id="A_metatronView">
+
+        <div class="A_page" id="A_metatronView">
+
+            <div class="A_titleContainer">
+                <img src="src/assets/images/final4.svg" alt="" class="A_title">
+                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+            </div>
+
             <div class="A_header1">Metatron's Cube</div>
+
             <br>
             <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
                 our
@@ -1227,10 +1224,17 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                 geometry and mathematical ratios, harmonics and
                 proportion are also found in music, light, cosmology.
             </div>
-
         </div>
-        <div id="A_musicView">
+
+        <div class="A_page" id="A_musicView">
+
+            <div class="A_titleContainer">
+                <img src="src/assets/images/final4.svg" alt="" class="A_title">
+                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+            </div>
+
             <div class="A_header1">Music</div>
+
             <br>
             <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
                 our
@@ -1240,7 +1244,12 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
             </div>
         </div>
 
-        <div id="A_geobebraView">
+        <div class="A_page" id="A_geobebraView">
+
+            <div class="A_titleContainer">
+                <img src="src/assets/images/final4.svg" alt="" class="A_title">
+                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+            </div>
 
             <div id="A_subHeaderFlex">
 
@@ -1279,11 +1288,11 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     <div>
                         <img id="A_geoDetailImage" src="" alt=""></img>
                         <div id="A_geoDetailTitle"></div>
-                        <p id="test1">THE FLOWER OF LIFE SERIES</p>
+                        <!-- <p id="test1">THE FLOWER OF LIFE SERIES</p> -->
                         <br>
                         <span id="A_geoDifficulty"></span>
-                        <img src="src/assets/images/skills/minis/genesisMini.svg" id="A_geoMmini1" alt=""></img>
-                        <img src="src/assets/images/skills/minis/sacredRootsMini.svg" id="A_geoMini2" alt=""></img>
+                        <!-- <img src="src/assets/images/skills/minis/genesisMini.svg" id="A_geoMmini1" alt=""></img>
+                        <img src="src/assets/images/skills/minis/sacredRootsMini.svg" id="A_geoMini2" alt=""></img> -->
                         <div id="A_geoDetailRequirement"></div>
                         <br>
                         <div id="A_geoDetailQuote"></div><br>
@@ -1379,11 +1388,13 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                         <img src="src/assets/images/mouse_zoom.png" id="A_mouse_zoom2"></img>
                     </div> -->
 
-                    <object id="A_stepsBackgroundImage" > </object>
+                    <object id="A_stepsBackgroundImage"> </object>
                     <!-- <object id="A_stepsBackgroundImage" type="image/svg+xml"> </object> -->
 
-                    <object id="A_stepsImage"></object>
-                    <!-- <object id="A_stepsImage" type="image/svg+xml"> </object> -->
+                    <div id="A_StepsImageCenter">
+                        <object id="A_stepsImage"></object>
+                        <!-- <object id="A_stepsImage" type="image/svg+xml"> </object> -->
+                    </div>  
 
                     <div id="A_stepsDivider"></div>
 
@@ -1413,7 +1424,6 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                 <span class="A_geogebraButton" id="A_cheatBtnID">TEST CAS</span>
             </div>
         </div>
-    </div>
 
     <!-- InfoSysHintText -->
     <div id="A_sysHintContainer">

@@ -29,8 +29,8 @@
 			<!--  original white text  -->
 		</feMerge>
 	</filter>
-
-	<g id="A_SVGSteps" filter="url(#glow)">
+<!-- filter="url(#glow)" -->
+	<g id="A_SVGSteps" >
 
 		<g id="A_SVGStep1">
 

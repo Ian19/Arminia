@@ -1,13 +1,16 @@
-.A_scroll2, .A_scroll3, .A_overviewScroll {
+.A_scroll, .A_overviewScroll {
     font-family: Verdana;
     width: 100.5%;
     font-size: 0.7vw;
     color: #acb0dee3;
-    padding-right: 28px;
+    padding-right: 1.3vw;
+
+
+
     /* padding-left: 20px; */
     /* margin-bottom: 0.8vw; */
     /* border: 1px solid red; */
-    height: 104%;
+    /* height: 104%; */
 }
 
 .os-theme-dark.custom-class>.os-scrollbar>.os-scrollbar-track {

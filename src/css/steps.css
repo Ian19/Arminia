@@ -4,13 +4,13 @@
     width: 100%;
     /* padding-top: min(2vw, 20px); */
     /* padding-top: min(1vw, 10px); */
-    height: 31%;
+    /* height: 31%; */
 }
 
 #A_stepsCount {
     color: var(--yellow1);
     padding: .4vw .4vw .4vw 1.2vw;
-    background-color: #563a9933;
+    background-color: #563a995c;
     border-radius: 4px;
 }
 

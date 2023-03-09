@@ -41,15 +41,34 @@
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
                 $("#A_stepsBackgroundImage").css("display", "none");
-                $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2);
+
+                console.log(game.skills.selectedSkill.stepsImage2);
+
+
+                ////////////////////////////////////////////////////////////////////////////////////////////
+                // The reason why object content doesn't refresh is that removing value from data attribute 
+                // doesn't clear document created by object element in the window. If the origin is different 
+                // (i.e. opening files in the window) you don't have access to contents of that window because 
+                // of security reason. So removing entire tag makes sense and recreate again whenever needed.
+
+                var object = document.getElementById("A_stepsImage");
+                object.setAttribute('data', game.skills.selectedSkill.stepsImage2);
+
+                var clone = object.cloneNode(true);
+                var parent = object.parentNode;
+
+                parent.removeChild(object );
+                parent.appendChild(clone );
+
+                ////////////////////////////////////////////////////////////////////////////////////////////
+
 
             } else {
 
-                // A_stepsImage
-
                 $("#A_stepsImage").css("display", "none");
+                $("#A_StepsImageCenter").css("display", "none");
+                
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
-
                 $("#A_startCASBtn").show();
 
                 d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
@@ -68,27 +87,8 @@
                     d3.select('#step1White')
                         .style("display", "inline");
 
-                    const skillsBox = svg.node().getBBox();
-
-                    const xMargin = 2000;
-                    const yMargin = 1500;
-
-                    // const xMargin = 0;
-                    // const yMargin = 0;
-
-                    const worldTopLeft = [
-                        skillsBox.x - xMargin,
-                        skillsBox.y - yMargin
-                    ];
-
-                    const worldBottomRight = [
-                        skillsBox.x + skillsBox.width + xMargin,
-                        skillsBox.y + skillsBox.height + yMargin
-                    ];
-
                     zoom = d3.zoom()
                         .scaleExtent([1, 10])
-                        // .translateExtent([worldTopLeft, worldBottomRight])
                         .on("zoom", zoomed);
 
                     var g = svg.select('g');
@@ -160,22 +160,11 @@
             ///////////////////// add and or remove blinking animation to svg file ////////////////////
 
             document.getElementById('A_stepsImage').onload = function () {
+
                 svgObject = document.getElementById('A_stepsImage').contentDocument;
+                removeAllAnimateTags();
+                addAnimateTags(0, 1);
 
-                if (parameters.appName == "classic") {
-
-                    removeAllAnimateTags();
-                    addAnimateTags(0, 1);
-
-                } else {
-
-                    // svgObject2 = document.getElementById('A_stepsBackgroundImage').contentDocument;
-                    // // var el = svgObject2.getElementById("step1Black");
-                    // // el.setAttributeNS(null, 'visibility', "hidden");
-
-                    // var el2 = svgObject2.getElementById("step1White");
-                    // el2.setAttributeNS(null, 'display', "inline");
-                }
             };
 
             ///////////////////////////////////////////////////////////////////////////////////////////
@@ -706,9 +695,8 @@
             // $("#A_stepsBackgroundImage").css("display", "none");
 
             if (parameters.appName == "classic") {
-                // if (parameters.appName == "geometry") {
                 game.nav = "home";
-                // Arminia.setGUI(game);   
+                // Arminia.setGUI(game);
 
                 removeAllAnimateTags();
 
@@ -717,7 +705,8 @@
 
             } else {
 
-                $("#A_stepsImage").css("display", "initial");
+                $("#A_stepsImage").css("display", "block");
+                $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startCASBtn").hide();
 
                 // tmp fix because only 1 paper available

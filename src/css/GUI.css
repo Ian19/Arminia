@@ -1,30 +1,30 @@
-.A_GUIContainer {
+/* .A_GUIContainer {
     position: absolute;
-    flex-direction: column;
     width: 42vw;
-    height: 80vh;
     left: 2.6vw;
     padding-top: 1%;
-    /* border: 1px solid purple; */
+    height: 100vh;
+    bottom: 0px;
+} */
+
+.A_titleContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    align-items: center;
+    margin: 0.6vw 0;
 }
 
-#A_title {
+.A_title {
     width: 15vw;
     cursor: pointer;
     /* font-family: cinzel; */
 }
 
-#A_swish {
+.A_swish {
     margin-top: -0.2vw;
     width: 15vw;
-}
-
-.A_titleContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;    
-    align-items: center;
-    margin-bottom: 0.6vw;
 }
 
 .A_header1 {
@@ -36,6 +36,7 @@
     font-size: 0.7vw;
     color: #acb0de;
     text-align: justify;
+    padding-right: 1.3vw;
 }
 
 a:link {

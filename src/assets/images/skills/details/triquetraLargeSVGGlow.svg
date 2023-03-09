@@ -31,8 +31,8 @@
 			<!--  original white text  -->
 		</feMerge>
 	</filter>
-
-	<g id="A_SVGSteps" filter="url(#glow)">
+<!-- filter="url(#glow)" -->
+	<g id="A_SVGSteps" >
 
 		<g id="A_SVGStep1">
 			<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="483.013" cy="512.633"

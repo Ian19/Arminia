@@ -118,16 +118,8 @@
 
         //////////////////////////////////////////  INIT SCROLLBARS  ///////////////////////////////////////          
 
-        // const osInstance = OverlayScrollbars(document.querySelector('.A_profileScroll'), {
-        //     className: "os-theme-dark custom-class",
-        //     scrollbars: {
-        //         clickScrolling: true,
-        //         dragScrolling: true,
-        //         autoHide: "move"
-        //     }
-        // });
         
-        const osInstance = OverlayScrollbars(document.querySelector('.A_scroll2, A_scroll3'), {
+        const osInstance = OverlayScrollbars(document.querySelector('.A_scroll'), {
             className: "os-theme-dark custom-class",
             scrollbars: {
                 clickScrolling: true,
@@ -135,15 +127,6 @@
                 autoHide: "move"
             }
         });
-
-        // OverlayScrollbars(document.querySelector('.A_scroll2, A_scroll3'), {
-        //     className: "os-theme-dark custom-class",
-        //     scrollbars: {
-        //         clickScrolling: true,
-        //         dragScrolling: true,
-        //         autoHide: "move"
-        //     }
-        // });
 
         osInstance.getElements().host.classList.add('os-host-flexbox');
 

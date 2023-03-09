@@ -33,10 +33,10 @@
 
 		</filter>
 	</defs>
+<!-- filter="url(#glow)" -->
+	<g id="A_SVGSteps" >
 
-	<g id="A_SVGSteps" filter="url(#glow)">
-
-		<g id="A_SVGStep1">
+		<g id="A_SVGStep1" >
 			<text class="A_verbose" transform="matrix(1 0 0 1 414.7124 727.4922)" fill="#FFFFFF" font-family="'Verdana'"
 				font-size="25">A</text>
 			<circle id="pointA" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="406.313"

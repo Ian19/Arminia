@@ -64,25 +64,59 @@
 
             const initCamZoom = function (zoomTo, targetFrom1, targetTo1, targetFrom2, targetTo2) {
 
-                function getOrtho(top, value) {
+                // function getOrtho(top, value) {
+                function getOrtho(right, value) {
+
+                    // let ratio2 = window.innerWidth / window.innerHeight;
+                    // let zoom = cam.orthoRight;            
+                    // cam.orthoLeft = -cam.orthoRight;
+                    // let newWidth = zoom / ratio2;
+                    // cam.orthoTop = Math.abs(newWidth);
+                    // cam.orthoBottom = -newWidth;   
+
                     let ratio = window.innerWidth / window.innerHeight;
-                    let pos2 = -Math.abs(top * ratio);
-                    let pos3 = top * ratio;
+                    let pos2 = -Math.abs(right / ratio);
+                    let pos3 = right / ratio;
 
                     switch (value) {
-                        case "orthoRight":
+                        case "orthoTop":
                             return pos3;
-                        case "orthoLeft":
+                        case "orthoBottom":
                             return pos2;
                         default:
                             break;
                     }
+
+                    // let ratio = window.innerWidth / window.innerHeight;
+                    // let pos2 = -Math.abs(top * ratio);
+                    // let pos3 = top * ratio;
+                    
+                    // switch (value) {
+                    //     case "orthoRight":
+                    //         return pos3;
+                    //     case "orthoLeft":
+                    //         return pos2;
+                    //     default:
+                    //         break;
+                    // }
                 }
                 // Zoom
-                let keys1 = [{ frame: 0, value: _this.camera.orthoTop }, { frame: 100, value: zoomTo }];
-                let keys2 = [{ frame: 0, value: -_this.camera.orthoTop }, { frame: 100, value: -zoomTo }];
-                let keys3 = [{ frame: 0, value: getOrtho(_this.camera.orthoTop, "orthoRight") }, { frame: 100, value: getOrtho(zoomTo, "orthoRight") }];
-                let keys4 = [{ frame: 0, value: getOrtho(_this.camera.orthoTop, "orthoLeft") }, { frame: 100, value: getOrtho(zoomTo, "orthoLeft") }];
+                // let keys1 = [{ frame: 0, value: _this.camera.orthoTop }, { frame: 100, value: zoomTo }];
+                // let keys2 = [{ frame: 0, value: -_this.camera.orthoTop }, { frame: 100, value: -zoomTo }];                
+                // let keys3 = [{ frame: 0, value: getOrtho(_this.camera.orthoTop, "orthoRight") }, { frame: 100, value: getOrtho(zoomTo, "orthoRight") }];
+                // let keys4 = [{ frame: 0, value: getOrtho(_this.camera.orthoTop, "orthoLeft") }, { frame: 100, value: getOrtho(zoomTo, "orthoLeft") }];
+                
+                let keys1 = [{ frame: 0, value: _this.camera.orthoRight }, { frame: 100, value: zoomTo }];
+                let keys2 = [{ frame: 0, value: -_this.camera.orthoRight }, { frame: 100, value: -zoomTo }];                
+                let keys3 = [{ frame: 0, value: getOrtho(_this.camera.orthoRight, "orthoTop") }, { frame: 100, value: getOrtho(zoomTo,"orthoTop") }];
+                let keys4 = [{ frame: 0, value: getOrtho(_this.camera.orthoRight, "orthoBottom") }, { frame: 100, value: getOrtho(zoomTo,"orthoBottom")}];
+                
+                _this.orthoRightAnimation.setKeys(keys1);
+                _this.orthoLeftAnimation.setKeys(keys2);
+                _this.orthoTopAnimation.setKeys(keys3);
+                _this.orthoBottomAnimation.setKeys(keys4);
+
+
                 // realign camera
                 let keys5 = [{ frame: 0, value: targetFrom2 }, { frame: 100, value: targetTo2 }];
                 let keys6 = [{ frame: 0, value: Math.PI / 2 }, { frame: 100, value: Math.PI / 2 }];
@@ -93,10 +127,10 @@
                 //let keys8 = [{ frame: 0, value: _this.bgCamera.alpha }, { frame: 100, value: Math.PI / 2 }];
                 //let keys9 = [{ frame: 0, value: _this.bgCamera.beta }, { frame: 100, value: Math.PI / 2 }];
 
-                _this.orthoTopAnimation.setKeys(keys1);
-                _this.orthoBottomAnimation.setKeys(keys2);
-                _this.orthoRightAnimation.setKeys(keys3);
-                _this.orthoLeftAnimation.setKeys(keys4);
+                // _this.orthoTopAnimation.setKeys(keys1);
+                // _this.orthoBottomAnimation.setKeys(keys2);
+                // _this.orthoRightAnimation.setKeys(keys3);
+                // _this.orthoLeftAnimation.setKeys(keys4);
                 _this.targetAnimation.setKeys(keys5);
                 _this.alphaAnimation.setKeys(keys6);
                 _this.betaAnimation.setKeys(keys6);
@@ -107,8 +141,12 @@
                 //_this.bgBetaAnimation.setKeys(keys9); 
 
                 _this.camera.animations = [
-                    _this.orthoTopAnimation, _this.orthoBottomAnimation, _this.orthoRightAnimation, _this.orthoLeftAnimation,
-                    _this.targetAnimation, _this.alphaAnimation, _this.radiusAnimation, _this.betaAnimation, _this.offsetAnimation
+                    _this.orthoTopAnimation, 
+                    _this.orthoBottomAnimation, 
+                    _this.orthoRightAnimation, 
+                    _this.orthoLeftAnimation,
+                    _this.targetAnimation, 
+                    _this.alphaAnimation, _this.radiusAnimation, _this.betaAnimation, _this.offsetAnimation
                 ];
             };
 
@@ -271,7 +309,7 @@
                             ///////////////////////////////////////////////////////////////////////////////////////////////
 
                             // initCamZoom(5.3, new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0), new BABYLON.Vector2(3.5, 0), BABYLON.Vector3.Zero(), selectedInfoSystem.position);
-                            initCamZoom(5.3, new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0), new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0), BABYLON.Vector3.Zero(), _this.game.selectedInfoSystem.position);
+                            initCamZoom(10.3, new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0), new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0), BABYLON.Vector3.Zero(), _this.game.selectedInfoSystem.position);
 
                             // camera animations
                             _this.camera.flyToPosition(new BABYLON.Vector3(0, 0, 12.9), new BABYLON.Vector3(0, 0, 0), _this.game.scene);
@@ -360,6 +398,7 @@
                             ////////////////////////////
 
                             initCamZoom(23, new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0), new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0), _this.camera.target, BABYLON.Vector3.Zero());
+                            initCamZoom(45, new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0), new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0), _this.camera.target, BABYLON.Vector3.Zero());
 
                             //////////////////////////////////  CAMERA ANIMATIONS
 

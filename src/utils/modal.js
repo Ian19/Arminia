@@ -33,7 +33,9 @@
         // });
 
 
-        $("#A_title").click(function() {          
+        $("#A_titleClick").click(function() {  
+            
+            console.log("A_title click");
 
             $("#A_profilePage").hide();
             $("#A_info").show();

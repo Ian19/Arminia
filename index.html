@@ -47,6 +47,18 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
         integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous">
         </script>
 
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cinzel Decorative'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cinzel'>
+    <style>
+        .CinzelDecorative {
+            font-family: 'Cinzel Decorative'
+        }
+
+        .Cinzel {
+            font-family: 'Cinzel'
+        }
+    </style>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             renderMathInElement(document.body, {
@@ -91,7 +103,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 
-    <link type="text/css" href="src/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <link type="text/css" href="src/css/OverlayScrollbars.min.css" rel="stylesheet">
     <link rel='stylesheet' href='src/css/geogebra.css'>
     <link rel='stylesheet' href='src/css/main.css'>
     <link rel='stylesheet' href='src/css/GUI.css'>
@@ -109,14 +121,14 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
     <link rel='stylesheet' href='src/css/loginBox.css'>
     <link rel='stylesheet' href='src/css/profile.css'>
     <link rel="stylesheet" href="src/css/embla.css">
-    <link rel="stylesheet" href="src/css/card.css" />
-    <link rel="stylesheet" href="src/css/colors.css" />
-    <link rel="stylesheet" href="src/css/musicPlayer.css" />
-    <link rel="stylesheet" href="src/css/buttons.css" />
-    <link rel="stylesheet" href="src/css/pdfViewer.css" />
-    <link rel="stylesheet" href="src/css/pages.css" />
-    <link rel="stylesheet" href="src/css/myKatexFont.css" />
-    <link rel="stylesheet" href="src/css/64TetraPage.css" />
+    <link rel="stylesheet" href="src/css/card.css">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/musicPlayer.css">
+    <link rel="stylesheet" href="src/css/buttons.css">
+    <link rel="stylesheet" href="src/css/pdfViewer.css">
+    <link rel="stylesheet" href="src/css/pages.css">
+    <link rel="stylesheet" href="src/css/myKatexFont.css">
+    <link rel="stylesheet" href="src/css/64TetraPage.css">
 
     <!-- GameObject.js needs to be first in order -->
     <script src="src/app/GameObject.js"></script>
@@ -445,942 +457,942 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
     <canvas id="A_gameCanvas"></canvas>
 
     <!-- PAGES -->
-        <div class="A_page" id="A_homePage">
+    <div class="A_page" id="A_homePage">
 
-            <div class="A_titleContainer">
-                <img src="src/assets/images/final4.svg" alt="" class="A_title">
-                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        <div class="A_titleContainer">
+            <img src="src/assets/images/final4.svg" alt="" class="A_title">
+            <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        </div>
+
+        <div id="skillIntroText">
+            Track your progress with the Skill Tree and unlock more complex geometric constructions and scientific
+            papers.<br>
+        </div>
+
+        <div id="A_skillsContainer">
+
+            <div id="A_svgContainer"></div>
+
+            <div id="A_SkillTextTitle">
+                SKILL TREE
+                <div id="A_SkillTextTitleSub">
+                    LEVEL: 0 <br>
+                    COMPLETED: 0 <br>
+                    INCOMPLETE: 85
+                </div>
             </div>
 
-            <div id="skillIntroText">
-                Track your progress with the Skill Tree and unlock more complex geometric constructions and scientific
-                papers.<br>
+            <div id="A_mouseMovementIcon">
+                <img src="src/assets/images/mouse_movement.png" id="A_mouse_movement"></img>
             </div>
 
-            <div id="A_skillsContainer">
-
-                <div id="A_svgContainer"></div>
-
-                <div id="A_SkillTextTitle">
-                    SKILL TREE
-                    <div id="A_SkillTextTitleSub">
-                        LEVEL: 0 <br>
-                        COMPLETED: 0 <br>
-                        INCOMPLETE: 85
-                    </div>
-                </div>
-
-                <div id="A_mouseMovementIcon">
-                    <img src="src/assets/images/mouse_movement.png" id="A_mouse_movement"></img>
-                </div>
-
-                <div class="A_mouseZoomIcon">
-                    <img src="src/assets/images/mouse_zoom.png" id="A_mouse_zoom"></img>
-                </div>
-
+            <div class="A_mouseZoomIcon">
+                <img src="src/assets/images/mouse_zoom.png" id="A_mouse_zoom"></img>
             </div>
 
-            <div id="A_skillSelectText">No Skill Selected. Select a Skill and press Start to begin.
+        </div>
+
+        <div id="A_skillSelectText">No Skill Selected. Select a Skill and press Start to begin.
+        </div>
+
+        <div class="A_detailGrid" id="A_detailGridID">
+
+            <div class="A_column1">
+                <div class="A_item">
+                    <img id="A_detailImage" src="" alt=""></img>
+                </div>
             </div>
 
-            <div class="A_detailGrid" id="A_detailGridID">
+            <div class="A_column2">
+                <div class="A_item">
+                    <div id="A_detailTitle"></div>
+                    <div class="A_Difficulty" id="A_skillDifficulty"></div>
+                    <div id="A_detailRequirement"></div>
 
-                <div class="A_column1">
-                    <div class="A_item">
-                        <img id="A_detailImage" src="" alt=""></img>
+                    <div class="flex-container">
+                        <span class="A_detailsButton A_detailsButtonText" id="A_detailBtn">START</span>
                     </div>
+
                 </div>
+            </div>
 
-                <div class="A_column2">
-                    <div class="A_item">
-                        <div id="A_detailTitle"></div>
-                        <div class="A_Difficulty" id="A_skillDifficulty"></div>
-                        <div id="A_detailRequirement"></div>
+            <div class="A_column3" id="A_col3"></div>
+            <div class="A_column4" id="A_col4"></div>
 
-                        <div class="flex-container">
-                            <span class="A_detailsButton A_detailsButtonText" id="A_detailBtn">START</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="A_column3" id="A_col3"></div>
-                <div class="A_column4" id="A_col4"></div>
-
-                <div class="A_column5">
-                    <div class="A_item">
-                        <div display="inline" class="A_detailOverview" id="katexTest1"></div>
-                        <div id="A_detailQuote"></div>
-                        <div id="A_detailQuotee"></div>
-                    </div>
+            <div class="A_column5">
+                <div class="A_item">
+                    <div display="inline" class="A_detailOverview" id="katexTest1"></div>
+                    <div id="A_detailQuote"></div>
+                    <div id="A_detailQuotee"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="A_page A_scroll" id="A_64TetraView">
+    <div class="A_page A_scroll" id="A_64TetraView">
 
-            <div class="A_titleContainer">
-                <img src="src/assets/images/final4.svg" alt="" class="A_title">
-                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        <div class="A_titleContainer">
+            <img src="src/assets/images/final4.svg" alt="" class="A_title">
+            <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        </div>
+
+        <div class="A_header1">The 64 Tertrahedron Grid</div>
+        <br>
+        <div id="A_pageBody">
+            <p style="text-indent: 25px;">
+
+                Developed by Nassim Harramein, the 64 Tetrahedron Grid is theorised to describe the structure of
+                space or the vacuum.
+
+                It is the core concept of a Grand Unified Theory between quantum theory and with Einstein's general
+                theory of relativity.
+
+                The 64 Tetrahedron Grid is an evolution of the Vector Equilibrium - Isotropic Vector Matrix system
+                brought forward by Buckminster Fuller.
+
+                However if differs to this system in that a dual IVM is added so that a balance in polarity is
+                produced.
+
+            </p>
+
+            <div class="A_64Tetra3DContainer3">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DViewIVM.svg"></object>
+
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DViewIVMDual.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DViewVE.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Isotropic Vector Matrix
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The IVM and it's dual IVM
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Vector Equilibrium
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="A_header1">The 64 Tertrahedron Grid</div>
+            <br><br>
+
+            <p style="text-indent: 25px;">
+                We begin with Buckminster Fuller's synergistic geometry and his Vector Equilibrium (VE),
+                representing the Universe and consisting of 8 inward pointing tetrahedrons.
+
+                This is a non-polarised state of equilibrium representing the dynamic of energy going towards the
+                singularity at the center.
+
+                By adding a dual outward pointing tetrahedron, we begin the process of polarising the VE.
+
+                Doing this for all eight tetrahedrons results in the 64 Tetrahedron Grid.
+
+            </p><br>
+
+
+            <div class="A_64Tetra3DContainer3">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraInwardVE.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraPolarisedVE.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3D8StarFill2.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Inward Pointing Non-polarised VE
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        VE with 1 outward pointing dual Tetrahedron
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Polarised VE with 8 dual Tetrahedrons
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="A_64Tetra3DContainer">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView1.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView2.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView3.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView4.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 1 3D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 66 STEPS
+                    </div><br><br>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 2 3D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 62 STEPS
+                    </div><br><br>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 3 3D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div><br><br>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 4 3D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 35 STEPS
+                    </div><br><br>
+                </div>
+
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DFull.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView2Full.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView3Full.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DView4.svg"></object>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 1 2D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 51 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 2 2D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 3 2D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        View 4 2D
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <p style="text-indent: 25px;">
+                The 64 Tetrahedron Grid now has a balance of polarity in the following ways:
+
+                The first way is that there are 32 upward pointing and 32 downward pointing terahedrons.
+
+                The second way is that we have 8 outward pointing and 8 inward pointing tetrahedrons
+
+                representing the contracting (gravitational) and expanding (radiational) dynamics.
+
+                These 16 tetrahedrons are twice the size of the other 64 tetrahedra and form 8 Star tetrahedrons and
+                1 prime star tetrahedron.
+
+            </p>
+
+            <div class="A_64Tetra3DContainer2">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3D8StarFill2.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3D8Stars.svg"></object>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Prime Star Tetrahedron
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        8 Star Tetrahedrons
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <p style="text-indent: 25px;">
+
+                The 64 Tetrahedron Grid is a 3D fractal strutcure that grows or divides by octaves, meaning it
+                doubles or halves its volume.
+
+                It defines the divisions of space which form the boundaries of all structures from infinetly large
+                to infinetly small.
+
+                This would suggest that it is negative space which defines boundaries, rather than the positive
+                space.
+
+            </p>
+
+            <div class="A_64Tetra3DContainer2">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-gridUniverse3.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-gridOctaveVE.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Fruit of Life<br>Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Vector Equilibrium<br>Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="A_64Tetra3DContainer3">
+
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraSphere.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraTetra.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraCube.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Sphere Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div><br><br>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Tetrahedron Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div><br><br>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Cube Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div><br><br>
+                </div>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraOcta.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraIco.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraDodec.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Octahedron<br>Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Icosahedron<br>Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Dodecahedron<br>Octave Division
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <p style="text-indent: 25px;">
+
+                If space is shaped like a vector equilibrium which is capable of dividing to the
+                planck scale,
+
+                then this would suggest the infinite density of a singularity at it's center.
+
+                These mini-black holes exisitng at the quantum level would then be the source of all gravity.
+
+                This idea is further supported by the balance of inward (gravitational) and outward (radiational)
+                pointing tetrahedral dynamics,
+
+                forming the boundary of the event horizon.
+
+                With the vector equilibrium structure, all forces are cancelled out, producing what appears as
+                "empty" space.
+
+            </p><br>
+
+            <div class="A_64Tetra3DContainer3">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraTree1.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraTreeExpanded.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraTreeContracted.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Tree of Life
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        8 Star Tetrahedrons<br>
+                        radiating Outwards
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        8 Star Tetrahedrons<br>
+                        Compressed Inwards
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        HARD | 55 STEPS
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+            <p style="text-indent: 25px;">
+
+                When the gyroscopic effect (torque and the coriolis effect) is added to General Relativity, the
+                black hole is no longer shaped like a sphere, but like a double torus.
+
+                At the center of the torus is space or singularity.
+
+                Each IVM of the prime star tetrahedron represents a polarity of the coriolis effect.
+
+                When they come together to form the vector equilibrium at the centre, the double torus and the
+                singularity are
+                produced.
+
+                All of Creation then emerges from within this singularity.
+
+            </p>
+
+            <div class="A_64Tetra3DContainer3">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraVETorus.svg "></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DViewIVMSphere.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64-tetra-grid3DViewIVMDualSpheres.svg"></object>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        VE Torus
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The Isotropic Vector Matrix
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        The IVM and it's dual IVM
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+            </div><br>
+
+
+            <div class="A_64Tetra3DContainer3">
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraView2DoubleTorus.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView1DoubleTorus.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraView2DoubleTorus2.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus View 1
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus View 2
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus View 3
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraView2DoubleTorusCircles.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView1DoubleTorusCircles.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64TetraView2DoubleTorusCircles.svg"></object>
+
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus<br>with Spheres View 1
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus<br>with Spheres View 2
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Double Torus<br>with Spheres View 3
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView27Nest.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView27NestCircles.svg"></object>
+
+                <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView2FullTorus2.svg"></object>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Torus
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Torus with Spheres
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Combined Torus<br>with Spheres View 1
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="A_64Tetra3DContainer2">
+
+                <object style="width: 50%;" class="A_64Tetra3D" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView2FullTorus3.svg"></object>
+
+                <object style="width: 50%;" class="A_64Tetra3D" type="image/svg+xml"
+                    data="src/assets/images/skills/64Tetra3DView2FullTorus.svg"></object>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Combined Torus<br>with Spheres View 2
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+                <div>
+                    <div class="A_64TetraNodeTitle">
+                        Genesis Pattern
+                    </div>
+                    <div class="A_64TetraNodeSteps">
+                        MEDIUM | 31 STEPS
+                    </div>
+                </div>
+
+            </div><br><br>
+
+
+            <div class="A_header1">The Schwarzschild Proton</div>
             <br>
-            <div id="A_pageBody">
-                <p style="text-indent: 25px;">
+            <p style="text-indent: 25px;">
 
-                    Developed by Nassim Harramein, the 64 Tetrahedron Grid is theorised to describe the structure of
-                    space or the vacuum.
+                Nassim Haramein's paper "The Schwarzschild Proton" presents a new solution for the mass of the
+                proton that is much heavier than that which the standard model predicts. While the standard proton
+                has a mass
 
-                    It is the core concept of a Grand Unified Theory between quantum theory and with Einstein's general
-                    theory of relativity.
+                <span id="tex64Tetra1">
+                    <script>
+                        katex.render(" 10^{-24}", $("#tex64Tetra1")[0])
+                    </script>
+                </span>
 
-                    The 64 Tetrahedron Grid is an evolution of the Vector Equilibrium - Isotropic Vector Matrix system
-                    brought forward by Buckminster Fuller.
+                grams the proton that Nassim Haramein's equations describe have a mass of
 
-                    However if differs to this system in that a dual IVM is added so that a balance in polarity is
-                    produced.
+                <span id="tex64Tetra2">
+                    <script>
+                        katex.render(" 10^{14}", $("#tex64Tetra2")[0]);
+                    </script>
+                </span>
 
-                </p>
+                grams - a difference of 38 orders of magnitude.
+            </p>
+            <br><br>
+            <div class="protonflex-container">
+                <span class="A_protonButton A_protonButtonText" id="A_protonBtnID">THE SCHWARZSCHILD PROTON</span>
+            </div>
+        </div>
+    </div>
 
-                <div class="A_64Tetra3DContainer3">
+    <div class="A_page" id="A_metatronView">
 
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DViewIVM.svg"></object>
+        <div class="A_titleContainer">
+            <img src="src/assets/images/final4.svg" alt="" class="A_title">
+            <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        </div>
 
+        <div class="A_header1">Metatron's Cube</div>
 
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DViewIVMDual.svg"></object>
+        <br>
+        <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
+            our
+            reality, most often seen in sacred architecture and sacred art. The basic belief is that
+            geometry and mathematical ratios, harmonics and
+            proportion are also found in music, light, cosmology.
+        </div>
+    </div>
 
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DViewVE.svg"></object>
+    <div class="A_page" id="A_musicView">
 
+        <div class="A_titleContainer">
+            <img src="src/assets/images/final4.svg" alt="" class="A_title">
+            <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        </div>
 
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Isotropic Vector Matrix
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
+        <div class="A_header1">Music</div>
+
+        <br>
+        <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
+            our
+            reality, most often seen in sacred architecture and sacred art. The basic belief is that
+            geometry and mathematical ratios, harmonics and
+            proportion are also found in music, light, cosmology.
+        </div>
+    </div>
+
+    <div class="A_page" id="A_geobebraView">
+
+        <div class="A_titleContainer">
+            <img src="src/assets/images/final4.svg" alt="" class="A_title">
+            <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
+        </div>
+
+        <div id="A_subHeaderFlex">
+
+            <div id="A_subHeader">
+
+                <div class="A_geoMenu">
+                    <div class="A_btnContainer">
+                        <span class="A_geogebraButton" id="A_constructionBtn">CONSTRUCTION</span>
                     </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The IVM and it's dual IVM
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Vector Equilibrium
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <br><br>
-
-                <p style="text-indent: 25px;">
-                    We begin with Buckminster Fuller's synergistic geometry and his Vector Equilibrium (VE),
-                    representing the Universe and consisting of 8 inward pointing tetrahedrons.
-
-                    This is a non-polarised state of equilibrium representing the dynamic of energy going towards the
-                    singularity at the center.
-
-                    By adding a dual outward pointing tetrahedron, we begin the process of polarising the VE.
-
-                    Doing this for all eight tetrahedrons results in the 64 Tetrahedron Grid.
-
-                </p><br>
-
-
-                <div class="A_64Tetra3DContainer3">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraInwardVE.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraPolarisedVE.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3D8StarFill2.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Inward Pointing Non-polarised VE
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            VE with 1 outward pointing dual Tetrahedron
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Polarised VE with 8 dual Tetrahedrons
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
+                    <div class="A_btnContainer">
+                        <span class="A_geogebraButton" id="A_overviewBtn">OVERVIEW</span>
                     </div>
                 </div>
 
-                <br><br>
-
-                <div class="A_64Tetra3DContainer">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView1.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView2.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView3.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView4.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 1 3D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 66 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 2 3D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 62 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 3 3D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 4 3D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 35 STEPS
-                        </div><br><br>
-                    </div>
-
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DFull.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView2Full.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView3Full.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize1" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DView4.svg"></object>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 1 2D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 51 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 2 2D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 3 2D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            View 4 2D
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
+                <div id="A_geogebraIntroText">
+                    Complete the Construction Steps to move on to the next challenge.<br>
                 </div>
 
-                <br><br>
+            </div>
 
-                <p style="text-indent: 25px;">
-                    The 64 Tetrahedron Grid now has a balance of polarity in the following ways:
+            <div id="A_stepsHeaderFlex">
 
-                    The first way is that there are 32 upward pointing and 32 downward pointing terahedrons.
-
-                    The second way is that we have 8 outward pointing and 8 inward pointing tetrahedrons
-
-                    representing the contracting (gravitational) and expanding (radiational) dynamics.
-
-                    These 16 tetrahedrons are twice the size of the other 64 tetrahedra and form 8 Star tetrahedrons and
-                    1 prime star tetrahedron.
-
-                </p>
-
-                <div class="A_64Tetra3DContainer2">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3D8StarFill2.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3D8Stars.svg"></object>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Prime Star Tetrahedron
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            8 Star Tetrahedrons
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-                </div>
-
-                <br><br>
-
-                <p style="text-indent: 25px;">
-
-                    The 64 Tetrahedron Grid is a 3D fractal strutcure that grows or divides by octaves, meaning it
-                    doubles or halves its volume.
-
-                    It defines the divisions of space which form the boundaries of all structures from infinetly large
-                    to infinetly small.
-
-                    This would suggest that it is negative space which defines boundaries, rather than the positive
-                    space.
-
-                </p>
-
-                <div class="A_64Tetra3DContainer2">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-gridUniverse3.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize3" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-gridOctaveVE.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Fruit of Life<br>Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Vector Equilibrium<br>Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-
-                <div class="A_64Tetra3DContainer3">
-
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraSphere.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraTetra.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraCube.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Sphere Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Tetrahedron Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Cube Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div><br><br>
-                    </div>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraOcta.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraIco.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraDodec.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Octahedron<br>Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Icosahedron<br>Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Dodecahedron<br>Octave Division
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-                </div>
-
-                <br><br>
-
-                <p style="text-indent: 25px;">
-
-                    If space is shaped like a vector equilibrium which is capable of dividing to the
-                    planck scale,
-
-                    then this would suggest the infinite density of a singularity at it's center.
-
-                    These mini-black holes exisitng at the quantum level would then be the source of all gravity.
-
-                    This idea is further supported by the balance of inward (gravitational) and outward (radiational)
-                    pointing tetrahedral dynamics,
-
-                    forming the boundary of the event horizon.
-
-                    With the vector equilibrium structure, all forces are cancelled out, producing what appears as
-                    "empty" space.
-
-                </p><br>
-
-                <div class="A_64Tetra3DContainer3">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraTree1.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraTreeExpanded.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraTreeContracted.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Tree of Life
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            8 Star Tetrahedrons<br>
-                            radiating Outwards
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            8 Star Tetrahedrons<br>
-                            Compressed Inwards
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            HARD | 55 STEPS
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-
-
-                <p style="text-indent: 25px;">
-
-                    When the gyroscopic effect (torque and the coriolis effect) is added to General Relativity, the
-                    black hole is no longer shaped like a sphere, but like a double torus.
-
-                    At the center of the torus is space or singularity.
-
-                    Each IVM of the prime star tetrahedron represents a polarity of the coriolis effect.
-
-                    When they come together to form the vector equilibrium at the centre, the double torus and the
-                    singularity are
-                    produced.
-
-                    All of Creation then emerges from within this singularity.
-
-                </p>
-
-                <div class="A_64Tetra3DContainer3">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraVETorus.svg "></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DViewIVMSphere.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64-tetra-grid3DViewIVMDualSpheres.svg"></object>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            VE Torus
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The Isotropic Vector Matrix
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            The IVM and it's dual IVM
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                </div><br>
-
-
-                <div class="A_64Tetra3DContainer3">
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraView2DoubleTorus.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView1DoubleTorus.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraView2DoubleTorus2.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus View 1
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus View 2
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus View 3
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraView2DoubleTorusCircles.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView1DoubleTorusCircles.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64TetraView2DoubleTorusCircles.svg"></object>
-
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus<br>with Spheres View 1
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus<br>with Spheres View 2
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Double Torus<br>with Spheres View 3
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView27Nest.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView27NestCircles.svg"></object>
-
-                    <object class="A_64Tetra3D A_64Tetra3DSize2" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView2FullTorus2.svg"></object>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Torus
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Torus with Spheres
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Combined Torus<br>with Spheres View 1
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="A_64Tetra3DContainer2">
-
-                    <object style="width: 50%;" class="A_64Tetra3D" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView2FullTorus3.svg"></object>
-
-                    <object style="width: 50%;" class="A_64Tetra3D" type="image/svg+xml"
-                        data="src/assets/images/skills/64Tetra3DView2FullTorus.svg"></object>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Combined Torus<br>with Spheres View 2
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="A_64TetraNodeTitle">
-                            Genesis Pattern
-                        </div>
-                        <div class="A_64TetraNodeSteps">
-                            MEDIUM | 31 STEPS
-                        </div>
-                    </div>
-
-                </div><br><br>
-
-
-                <div class="A_header1">The Schwarzschild Proton</div>
-                <br>
-                <p style="text-indent: 25px;">
-
-                    Nassim Haramein's paper "The Schwarzschild Proton" presents a new solution for the mass of the
-                    proton that is much heavier than that which the standard model predicts. While the standard proton
-                    has a mass
-
-                    <span id="tex64Tetra1">
-                        <script>
-                            katex.render(" 10^{-24}", $("#tex64Tetra1")[0])
-                        </script>
-                    </span>
-
-                    grams the proton that Nassim Haramein's equations describe have a mass of
-
-                    <span id="tex64Tetra2">
-                        <script>
-                            katex.render(" 10^{14}", $("#tex64Tetra2")[0]);
-                        </script>
-                    </span>
-
-                    grams - a difference of 38 orders of magnitude.
-                </p>
-                <br><br>
-                <div class="protonflex-container">
-                    <span class="A_protonButton A_protonButtonText" id="A_protonBtnID">THE SCHWARZSCHILD PROTON</span>
-                </div>
+                <div id="A_stepsImageTitle"></div>
+                <div id="A_stepsImageDifficulty"></div>
+                <div id="A_stepsImageDefinition"></div>
+                <img src="src/assets/images/swish1.svg" alt="" id="A_stepsHeaderSwish">
             </div>
         </div>
 
-        <div class="A_page" id="A_metatronView">
+        <div id="A_sharedContainer">
 
-            <div class="A_titleContainer">
-                <img src="src/assets/images/final4.svg" alt="" class="A_title">
-                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
-            </div>
+            <div id="applet_container" class="scaleContainerClass"></div>
 
-            <div class="A_header1">Metatron's Cube</div>
+            <div id="A_overviewContainer" class="A_overviewScroll">
 
-            <br>
-            <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
-                our
-                reality, most often seen in sacred architecture and sacred art. The basic belief is that
-                geometry and mathematical ratios, harmonics and
-                proportion are also found in music, light, cosmology.
-            </div>
-        </div>
-
-        <div class="A_page" id="A_musicView">
-
-            <div class="A_titleContainer">
-                <img src="src/assets/images/final4.svg" alt="" class="A_title">
-                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
-            </div>
-
-            <div class="A_header1">Music</div>
-
-            <br>
-            <div id="A_pageBody">Sacred geometry involves sacred universal patterns used in the design of everything in
-                our
-                reality, most often seen in sacred architecture and sacred art. The basic belief is that
-                geometry and mathematical ratios, harmonics and
-                proportion are also found in music, light, cosmology.
-            </div>
-        </div>
-
-        <div class="A_page" id="A_geobebraView">
-
-            <div class="A_titleContainer">
-                <img src="src/assets/images/final4.svg" alt="" class="A_title">
-                <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
-            </div>
-
-            <div id="A_subHeaderFlex">
-
-                <div id="A_subHeader">
-
-                    <div class="A_geoMenu">
-                        <div class="A_btnContainer">
-                            <span class="A_geogebraButton" id="A_constructionBtn">CONSTRUCTION</span>
-                        </div>
-                        <div class="A_btnContainer">
-                            <span class="A_geogebraButton" id="A_overviewBtn">OVERVIEW</span>
-                        </div>
-                    </div>
-
-                    <div id="A_geogebraIntroText">
-                        Complete the Construction Steps to move on to the next challenge.<br>
-                    </div>
-
-                </div>
-
-                <div id="A_stepsHeaderFlex">
-
-                    <div id="A_stepsImageTitle"></div>
-                    <div id="A_stepsImageDifficulty"></div>
-                    <div id="A_stepsImageDefinition"></div>
-                    <img src="src/assets/images/swish1.svg" alt="" id="A_stepsHeaderSwish">
-                </div>
-            </div>
-
-            <div id="A_sharedContainer">
-
-                <div id="applet_container" class="scaleContainerClass"></div>
-
-                <div id="A_overviewContainer" class="A_overviewScroll">
-
-                    <div>
-                        <img id="A_geoDetailImage" src="" alt=""></img>
-                        <div id="A_geoDetailTitle"></div>
-                        <!-- <p id="test1">THE FLOWER OF LIFE SERIES</p> -->
-                        <br>
-                        <span id="A_geoDifficulty"></span>
-                        <!-- <img src="src/assets/images/skills/minis/genesisMini.svg" id="A_geoMmini1" alt=""></img>
+                <div>
+                    <img id="A_geoDetailImage" src="" alt=""></img>
+                    <div id="A_geoDetailTitle"></div>
+                    <!-- <p id="test1">THE FLOWER OF LIFE SERIES</p> -->
+                    <br>
+                    <span id="A_geoDifficulty"></span>
+                    <!-- <img src="src/assets/images/skills/minis/genesisMini.svg" id="A_geoMmini1" alt=""></img>
                         <img src="src/assets/images/skills/minis/sacredRootsMini.svg" id="A_geoMini2" alt=""></img> -->
-                        <div id="A_geoDetailRequirement"></div>
-                        <br>
-                        <div id="A_geoDetailQuote"></div><br>
-                        <div id="A_geoDetailQuotee"></div>
-                        <br><br>
-                        <div id="A_geoDetailDefinition"></div>
-                        <br>
-                    </div>
-
-                    <div class="A_geoDetailBody" id="A_geoDetailBody2">
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                            porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                            deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                            ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                            necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                            Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                            vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                            provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                            excepturi nulla adipisci, et dolores doloribus tempore.
-                        </span>
-                        <br>
-                        <br>
-                        <span>
-                            Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                            consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                            debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                            Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                            incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                            alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                            recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                            praesentium consequatur consectetur eum expedita?
-                        </span>
-                        <br>
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                            porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                            deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                            ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                            necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                            Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                            vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                            provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                            excepturi nulla adipisci, et dolores doloribus tempore.
-                        </span>
-                        <br>
-                        <br>
-                        <span>
-                            Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                            consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                            debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                            Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                            incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                            alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                            recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                            praesentium consequatur consectetur eum expedita?
-                        </span>
-                        <br>
-                        <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                            porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                            deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                            ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                            necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                            Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                            vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                            provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                            excepturi nulla adipisci, et dolores doloribus tempore.
-                        </span>
-                        <br>
-                        <br>
-                        <span>
-                            Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                            consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                            debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                            Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                            incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                            alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                            recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                            praesentium consequatur consectetur eum expedita?
-                        </span>
-                        <br>
-                    </div>
+                    <div id="A_geoDetailRequirement"></div>
+                    <br>
+                    <div id="A_geoDetailQuote"></div><br>
+                    <div id="A_geoDetailQuotee"></div>
+                    <br><br>
+                    <div id="A_geoDetailDefinition"></div>
+                    <br>
                 </div>
 
-                <div id="A_stepsImageFlex">
+                <div class="A_geoDetailBody" id="A_geoDetailBody2">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                        excepturi nulla adipisci, et dolores doloribus tempore.
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                        praesentium consequatur consectetur eum expedita?
+                    </span>
+                    <br>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                        excepturi nulla adipisci, et dolores doloribus tempore.
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                        praesentium consequatur consectetur eum expedita?
+                    </span>
+                    <br>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                        excepturi nulla adipisci, et dolores doloribus tempore.
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                        praesentium consequatur consectetur eum expedita?
+                    </span>
+                    <br>
+                </div>
+            </div>
 
-                    <!-- <div class="A_mouseMovementIcon">
+            <div id="A_stepsImageFlex">
+
+                <!-- <div class="A_mouseMovementIcon">
                         <img src="src/assets/images/mouse_movement.png" id="A_mouse_movement2"></img>
                     </div>
     
@@ -1388,42 +1400,42 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                         <img src="src/assets/images/mouse_zoom.png" id="A_mouse_zoom2"></img>
                     </div> -->
 
-                    <object id="A_stepsBackgroundImage"> </object>
-                    <!-- <object id="A_stepsBackgroundImage" type="image/svg+xml"> </object> -->
+                <object id="A_stepsBackgroundImage"> </object>
+                <!-- <object id="A_stepsBackgroundImage" type="image/svg+xml"> </object> -->
 
-                    <div id="A_StepsImageCenter">
-                        <object id="A_stepsImage"></object>
-                        <!-- <object id="A_stepsImage" type="image/svg+xml"> </object> -->
-                    </div>  
+                <div id="A_StepsImageCenter">
+                    <object id="A_stepsImage"></object>
+                    <!-- <object id="A_stepsImage" type="image/svg+xml"> </object> -->
+                </div>
 
-                    <div id="A_stepsDivider"></div>
+                <div id="A_stepsDivider"></div>
 
-                    <div id="A_stepsContainer">
+                <div id="A_stepsContainer">
 
-                        <div id="A_stepsCount"></div>
-                        <div id="A_stepsBodyContainer">
-                            <div id="A_stepsBody"></div>
-                        </div>
-
-                        <div id="A_stepsBarContainer">
-                            <div id="A_steps">
-                                <div id="A_stepsPercent">
-                                    <div id="A_stepsProgress"></div>
-                                </div>
-                                <span id="A_stepsValue"></span>
-                            </div>
-                        </div>
-
+                    <div id="A_stepsCount"></div>
+                    <div id="A_stepsBodyContainer">
+                        <div id="A_stepsBody"></div>
                     </div>
+
+                    <div id="A_stepsBarContainer">
+                        <div id="A_steps">
+                            <div id="A_stepsPercent">
+                                <div id="A_stepsProgress"></div>
+                            </div>
+                            <span id="A_stepsValue"></span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="A_btnContainer2">
-                <span class="A_geogebraButton" id="A_backToSkillsBtn">BACK</span>
-                <span class="A_geogebraButton" id="A_startCASBtn">START</span>
-                <span class="A_geogebraButton" id="A_cheatBtnID">TEST CAS</span>
-            </div>
         </div>
+
+        <div class="A_btnContainer2">
+            <span class="A_geogebraButton" id="A_backToSkillsBtn">BACK</span>
+            <span class="A_geogebraButton" id="A_startCASBtn">START</span>
+            <span class="A_geogebraButton" id="A_cheatBtnID">TEST CAS</span>
+        </div>
+    </div>
 
     <!-- InfoSysHintText -->
     <div id="A_sysHintContainer">
@@ -1479,7 +1491,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     </div>
                     <div class="A_sidebarRow">
                         <div class="A_cbContainer">
-                            <label class="A_cbLabel" id="lblTest">
+                            <label class="A_cbLabel">
                                 <input type="checkbox" id="checkbox5" class="A_cb" checked="checked">
                                 <span class="icon-box" id="iconBox5">
                                     <object id="tick5" class="fa fa-check A_tick" data="src/assets/images/tick3.svg"
@@ -1491,7 +1503,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     </div>
                     <div class="A_sidebarRow">
                         <div class="A_cbContainer">
-                            <label class="A_cbLabel" id="lblTest">
+                            <label class="A_cbLabel">
                                 <input type="checkbox" id="checkbox6" class="A_cb" checked="checked">
                                 <span class="icon-box" id="iconBox6">
                                     <object id="tick6" class="fa fa-check A_tick" data="src/assets/images/tick3.svg"
@@ -1505,7 +1517,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
                     <div class="A_sidebarRow">
                         <div class="A_cbContainer">
-                            <label class="A_cbLabel" id="lblTest">
+                            <label class="A_cbLabel">
                                 <input type="checkbox" id="checkbox13" class="A_cb" checked="checked">
                                 <span class="icon-box" id="iconBox13">
                                     <object id="tick13" class="fa fa-check A_tick" data="src/assets/images/tick3.svg"
@@ -1518,7 +1530,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
                     <div class="A_sidebarRow">
                         <div class="A_cbContainer">
-                            <label class="A_cbLabel" id="lblTest">
+                            <label class="A_cbLabel">
                                 <input type="checkbox" id="checkbox14" class="A_cb" checked="checked">
                                 <span class="icon-box" id="iconBox14">
                                     <object id="tick14" class="fa fa-check A_tick" data="src/assets/images/tick3.svg"
@@ -1534,7 +1546,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
                     <div class="A_sidebarRow">
                         <div class="A_cbContainer">
-                            <label class="A_cbLabel" id="lblTest">
+                            <label class="A_cbLabel">
                                 <input type="checkbox" id="checkbox10" class="A_cb">
                                 <span class="icon-box" id="iconBox10">
                                     <object id="tick10" class="fa fa-check A_tick" data="src/assets/images/tick3.svg"

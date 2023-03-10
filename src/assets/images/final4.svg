@@ -18,6 +18,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="355"  height="80" viewBox="0 0 160 45">
 
     <defs>
+        <style>            
+            @import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative");
+            @import url("https://fonts.googleapis.com/css?family=Cinzel");
+        </style>
+
         <radialGradient id="softEdge" r="44%">
             <stop stop-color="white" offset="50%" />
             <stop stop-color="black" offset="100%" />
@@ -54,13 +59,14 @@
         <clipPath id="clipPath1">
             <!-- <use href="#arminiaText1" overflow="visible" /> -->
             <text id="arminiaText1" fill="gold" font-size="24">
-            <tspan x="10" y="30" font-family="'Cinzel Decorative'" font-size="33" letter-spacing="2">A</tspan>
-            <tspan x="36" y="30" font-family="Cinzel" letter-spacing="3">R</tspan>
-            <tspan x="55.3" y="30" font-family="'Cinzel Decorative'" letter-spacing="2">M</tspan>
-            <tspan x="80.6" y="30" font-family="Cinzel" letter-spacing="5">I</tspan>
-            <tspan x="93.8" y="30" font-family="'Cinzel Decorative'" letter-spacing="3">N</tspan>
-            <tspan x="117.8" y="30" font-family="Cinzel" letter-spacing="3">I</tspan>
-            <tspan x="129.5" y="30" font-family="'Cinzel Decorative'" letter-spacing="2">A</tspan>
+            <tspan font-family="'Cinzel Decorative'" x="10" y="30" font-size="33" letter-spacing="2">A</tspan>
+            <tspan font-family="'Cinzel'" x="36" y="30" letter-spacing="3">R</tspan>
+            <tspan font-family="'Cinzel Decorative'" x="55.3" y="30" letter-spacing="2">M</tspan>
+            <tspan font-family="'Cinzel'" x="80.6" y="30" letter-spacing="5">I</tspan>
+            <tspan font-family="'Cinzel Decorative'" x="93.8" y="30" letter-spacing="3">N</tspan>
+            <tspan font-family="'Cinzel'" x="117.8" y="30" letter-spacing="3">I</tspan>
+            <tspan font-family="'Cinzel Decorative'" x="129.5" y="30" letter-spacing="2">A</tspan>            
+
         </text>
         </clipPath>
 
@@ -82,7 +88,7 @@
                             20.09,105.885 57.125,69.215 57.383,121.333 63.948,121.333 64.207,69.215 101.242,105.886 105.885,101.243 69.215,64.208 
                             121.332,63.95 " />
 
-    </defs>
+    </defs>    
 
     <!-- ////////////////////////////////////////////   Outer Glow   ///////////////////////////////////////////// -->
 

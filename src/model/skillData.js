@@ -131,7 +131,7 @@
                 "url": "src/assets/images/skills/vesica_piscis.svg",
                 "url2": "src/assets/images/skills/vesica_piscis.svg",
                 "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow.svg",
+                "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow5.svg",
                 // "stepsImage2": "src/assets/images/skills/details/test.svg",
                 "name": "The Vesica Piscis",
                 "difficulty": "EASY  |  12 STEPS",

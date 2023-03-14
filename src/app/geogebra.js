@@ -42,8 +42,8 @@
                 $(".appletStyle").addClass("A_graphing");
                 $("#A_stepsBackgroundImage").css("display", "none");
 
-                console.log(game.skills.selectedSkill.stepsImage2);
-
+                $(".A_mouseMovementIcon").hide();
+                $(".A_mouseZoomIcon").hide();
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 // The reason why object content doesn't refresh is that removing value from data attribute 
@@ -74,7 +74,7 @@
                 $(".A_mouseMovementIcon").show();
                 $(".A_mouseZoomIcon").show();
 
-                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
+                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton5.svg").then(data => {
 
                     var svgNode = data.documentElement;
                     const obj = $('#A_stepsBackgroundImage')[0];

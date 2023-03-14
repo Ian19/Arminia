@@ -140,7 +140,7 @@
                 "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
                 "stepsImage2": "src/assets/images/papers/schwarzschildproton/step",
                 "stepsImageBackup": "src/assets/images/papers/schwarzschildproton/step",
-                "stepsBackgroundImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton3.svg",
+                "stepsBackgroundImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton5.svg",
                 "name": "The Schwarzschild Proton",
                 "difficulty": "HARD  |  31 STEPS",
                 "completed": false,

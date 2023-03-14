@@ -8,7 +8,7 @@ To help users better understand new and cutting edge math papers, Arminia integr
 
 ## Status
 
-Arminia is in early development and most of the functionality is complete, however the main content or model consisting of geometric constructions and math paper walkthroughs have not been added. 
+Arminia is in early development and most of the functionality is complete, however the main content or model, consisting of geometric constructions and math paper walkthroughs have not been added. 
 
 The following features are functioning:
 - 3D viewer UI

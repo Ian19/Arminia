@@ -65,7 +65,7 @@
 
 .A_mouseIcon {
     position: absolute;
-    opacity: 0.4;
+    opacity: 0.8;
     right: 0px;
     z-index: 1;
 }

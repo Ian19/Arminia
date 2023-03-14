@@ -61,11 +61,15 @@
     font-size: 0.7vw;
 }
 
-#A_mouseMovementIcon {
+.A_mouseMovementIcon {
     margin: 10px 20px 0 0;
     position: absolute;
     opacity: 0.4;
     right: 0px;
+}
+
+.A_mouse_movement {
+    width: 40px;
 }
 
 .A_mouseZoomIcon {
@@ -75,11 +79,7 @@
     right: 0px;
 }
 
-#A_mouse_movement {
-    width: 40px;
-}
-
-#A_mouse_zoom {
+.A_mouse_zoom {
     width: 40px;
 }
 

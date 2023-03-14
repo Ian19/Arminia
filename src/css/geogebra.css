@@ -1,7 +1,8 @@
 
 .scaleContainerClass {
     display: inline-block;
-    width: 48% !important; 
+    /* width: 48% !important;  */
+    width: 42vw !important; 
 }
 
 .appletStyle {

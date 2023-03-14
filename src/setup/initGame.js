@@ -138,20 +138,6 @@
 
         // Arminia.papers(game);
 
-
-
-        // console.log();
-
-        screen.orientation.lock("landscape")
-            .then(() => {
-                console.log("locked to landscape");
-            })
-            .catch((error) => {
-                console.log("screen orientation error: " + error);
-            });
-
-        // screen.lockOrientation("landscape");
-
         // Object.keys(localStorage).forEach(function (key) {
 
         //     console.log(localStorage.getItem(key));

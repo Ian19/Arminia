@@ -42,8 +42,7 @@
                 $(".appletStyle").addClass("A_graphing");
                 $("#A_stepsBackgroundImage").css("display", "none");
 
-                $(".A_mouseMovementIcon").hide();
-                $(".A_mouseZoomIcon").hide();
+                $(".A_mouseIconPaper").hide();
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 // The reason why object content doesn't refresh is that removing value from data attribute 
@@ -62,7 +61,6 @@
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
 
-
             } else {
 
                 $("#A_stepsImage").css("display", "none");
@@ -71,8 +69,7 @@
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
                 $("#A_startCASBtn").show();
 
-                $(".A_mouseMovementIcon").show();
-                $(".A_mouseZoomIcon").show();
+                $(".A_mouseIconPaper").show();
 
                 d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton5.svg").then(data => {
 
@@ -711,8 +708,8 @@
                 $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startCASBtn").hide();
-                $(".A_mouseMovementIcon").hide();
-                $(".A_mouseZoomIcon").hide();
+                
+                $(".A_mouseIconPaper").hide();
 
                 // tmp fix because only 1 paper available
                 d3.select("#A_schwarzsPPaper").remove();

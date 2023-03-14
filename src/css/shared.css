@@ -8,7 +8,9 @@
 }
 
 #A_stepsImage {
+    position: relative;
     height: 26vw;
+    /* height: 100%; */
     z-index: 1;
 }
 

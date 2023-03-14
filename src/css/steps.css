@@ -5,6 +5,17 @@
     /* padding-top: min(2vw, 20px); */
     /* padding-top: min(1vw, 10px); */
     /* height: 31%; */
+
+    /* position: relative;
+    bottom: 0px; */
+    position: relative;
+}
+
+#A_stepsBody {
+
+    /* font-size: 0.9vw !important;
+    line-height: 1.4 !important; */
+
 }
 
 #A_stepsCount {

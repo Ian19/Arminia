@@ -43,45 +43,79 @@
 #Layer_1 {
     width: 100%;
     height: 100%;
-    /* display: block; */
 }
 
 #A_SkillTextTitle {
     margin: 5px 0 0 10px;
-    /* color: rgb(125, 92, 185); */
     color: #BC67FF;
-    /* font-size: 16px; */
     font-size: 0.9vw;
     font-variant-caps: all-small-caps;
     position: absolute;    
 }
 
 #A_SkillTextTitleSub {
-    /* font-size: 13px; */
     font-size: 0.7vw;
+}
+
+
+
+
+
+
+
+.A_mouseIcon {
+    position: absolute;
+    opacity: 0.4;
+    right: 0px;
+    z-index: 1;
 }
 
 .A_mouseMovementIcon {
     margin: 10px 20px 0 0;
-    position: absolute;
-    opacity: 0.4;
-    right: 0px;
-}
-
-.A_mouse_movement {
-    width: 40px;
 }
 
 .A_mouseZoomIcon {
     margin: 70px 20px 0 0;
-    position: absolute;
-    opacity: 0.4;
-    right: 0px;
 }
 
-.A_mouse_zoom {
+.A_mouseIconImage {
     width: 40px;
 }
+
+.A_mouseIconPaper {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #A_detailImage {
     width: 80%;

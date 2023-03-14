@@ -69,20 +69,15 @@
 
                 "stepsText": [
 
-                    addNbsp("To find the quantity of the density of the vacuum available in the volume of a proton with radius "
-                        + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
-                        + " Fm, we begin with the Planck density given as "
-                        + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
-                        + " Type p_v = 5.166 * 10^93 into the Algebra Input Bar and press Enter. Press the "
-                        + katex.renderToString("\\approx") + " button after each step."),
+                    addNbsp("Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
+                        + " (Hint: Enter 'p_v = 5.166 * 10^93'. Press the "
+                        + katex.renderToString("\\approx") + " button after each step.)"),
 
-                    addNbsp("We use the radius of the proton to calculate its volume. Enter "
-                        + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
-                        + " (hint: type r_p = 1.321 * 10^-13)"),
+                    addNbsp("Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
+                        + " (hint: Enter 'r_p = 1.321 * 10^-13')"),
 
-                    addNbsp("We now have everything we need to calculate the vacuum density of the proton. Enter "
-                        + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
-                        + " (hint: type V_p = 4 / 3 * r_p^3 * pi)"),
+                    addNbsp("Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
+                        + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')"),
 
                     addNbsp("Enter " + katex.renderToString("R_p = p_v V_p")),
                     addNbsp("Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}")),

@@ -71,6 +71,9 @@
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
                 $("#A_startCASBtn").show();
 
+                $(".A_mouseMovementIcon").show();
+                $(".A_mouseZoomIcon").show();
+
                 d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton4.svg").then(data => {
 
                     var svgNode = data.documentElement;
@@ -708,6 +711,8 @@
                 $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startCASBtn").hide();
+                $(".A_mouseMovementIcon").hide();
+                $(".A_mouseZoomIcon").hide();
 
                 // tmp fix because only 1 paper available
                 d3.select("#A_schwarzsPPaper").remove();

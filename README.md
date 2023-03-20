@@ -27,7 +27,7 @@ The following geometry constructions are complete:
 - The Genesis Pattern
 
 The following peer reviewed scientiffic papers are complete in the CAS:
-- The Schwarzschild Proton Paper by Nassim Harramein is complete and can be stepped through the CAS
+- The Schwarzschild Proton Paper by Nassim Harramein
 
 The following features are either not functioning or incomplete:
 - persistent achievements

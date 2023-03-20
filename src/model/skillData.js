@@ -542,7 +542,7 @@
                 "requirement": "The Triquetra",
                 "completed": false,
                 "unlocked": false,
-                "unlocksSkills": [13],
+                "unlocksSkills": [],
                 "overview": "Consisting of 6 equal circles intersecting the circumference of a similar central circle. This represents the first motions of creation.",
                 "quote": '"...and He rested on the seventh day from all his work."',
                 "quotee": "Genesis 2:2"

@@ -116,8 +116,7 @@
         Arminia.setupPages(game);
         // Arminia.initEmbla();
 
-        //////////////////////////////////////////  INIT SCROLLBARS  ///////////////////////////////////////          
-
+        //////////////////////////////////////////  INIT SCROLLBARS  ///////////////////////////////////////
 
         const osInstance = OverlayScrollbars(document.querySelector('.A_scroll'), {
             className: "os-theme-dark custom-class",
@@ -135,14 +134,12 @@
         //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-        // Arminia.papers(game);
-
         // Object.keys(localStorage).forEach(function (key) {
-
         //     console.log(localStorage.getItem(key));
-
         // });
+
+
+
 
 
 

@@ -36,7 +36,7 @@
                 // "steps": [["circle c, Circle(A, 1)"]],
 
                 "steps": [
-                    ["point A, ", "circle c, Circle(A, 1)"],            
+                    ["point A, ", "circle c, Circle(A, 1)"],
                     ["point B, Point(c)", "segment f, Segment(A, B)"],
                     ['text text1, AB=1']
                 ],
@@ -45,10 +45,10 @@
 
                 "stepsText": [
 
-                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
-                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"),   
-                    addNbsp("Select the Text tool and enter 'AB=1'")             
-                
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."),
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"),
+                    addNbsp("Select the Text tool and enter 'AB=1'")
+
                 ],
 
                 "d3Data": ["hexStatus1Circle", "Complete1Circle"],
@@ -95,13 +95,13 @@
                 "elementID": "#A_vesicaPicsisLargeSVGGlow",
                 "material_id": "ybm744ww",
                 "steps": [
-                    ["point A, ", "circle c, Circle(A, 1)"], 
-                    ["point B, Point(c)", "segment f, Segment(A, B)"], 
-                    ["circle d, Circle(B, A)"], 
-                    ["point C, Intersect(c, d, 1)"], 
-                    ["point D, Intersect(c, d, 2)"], 
+                    ["point A, ", "circle c, Circle(A, 1)"],
+                    ["point B, Point(c)", "segment f, Segment(A, B)"],
+                    ["circle d, Circle(B, A)"],
+                    ["point C, Intersect(c, d, 1)"],
+                    ["point D, Intersect(c, d, 2)"],
                     ["segment g, Segment(C, D)"],
-                    ["point E, Intersect(f, g)"],                    
+                    ["point E, Intersect(f, g)"],
                     ["segment h, Segment(B, D)"],
                     ['text text1, AB=BD=1'],
                     ['text text2, BE=\\frac{1}{2}'],
@@ -109,9 +109,9 @@
                     ['text text4, CD=2×ED=\\sqrt{3}']
                 ],
 
-                "stepsText": [                    
-                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
-                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
+                "stepsText": [
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."),
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"),
                     addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
                     addNbsp("Select the Intersect tool and create Point C at the left-most intersection of the 2 circles."),
                     addNbsp("Select the Intersect tool and create Point D at the right-most intersection of the 2 circles."),
@@ -120,9 +120,9 @@
                     addNbsp("Draw Segment BD."),
                     addNbsp("AB=BD=1. Select the Text tool and enter 'AB=BD=1'"),
                     addNbsp(katex.renderToString("BE=\\frac{1}{2}") + ". Select the Text tool and enter 'BE=\\frac{1}{2}'"),
-                    addNbsp("Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") +                     
-                        " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"), 
-                    addNbsp(katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + 
+                    addNbsp("Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") +
+                        " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'"),
+                    addNbsp(katex.renderToString("CD=2 \\times ED = \\sqrt{3}") +
                         ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}'. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.)")
                 ],
 
@@ -403,7 +403,7 @@
                 "id": 8,
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "4",
+                "name": "The Lucifer Pattern 4",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -442,15 +442,13 @@
                 "id": 11,
                 "elementID": "A_triquetraLargeSVGGlow",
                 "steps": [
-                    ["point A, ", "circle c, Circle(A, 1)"], 
-                    ["point B, Point(c)", "segment f, Segment(A, B)"], 
+                    ["point A, ", "circle c, Circle(A, 1)"],
+                    ["point B, Point(c)", "segment f, Segment(A, B)"],
                     ["circle d, Circle(B, A)"],
                     ["point C, Intersect(c, d, 1)"],
                     ["point D, Intersect(c, d, 2)"],
-
                     ["segment g, Segment(C, B)"],
                     ["segment h, Segment(C, A)"],
-
                     ["circle e, Circle(C, B)"],
                     ["point E, Intersect(d, e, 2)"],
                     ["point F, Intersect(c, e, 2)"],
@@ -460,24 +458,19 @@
                 ],
 
                 "stepsText": [
-                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."), 
-
-                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"), 
-                    
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."),
+                    addNbsp("Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B"),
                     addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
                     addNbsp("Select the Intersect tool and create Point C at the left-most intersection of the 2 circles."),
                     addNbsp("Select the Intersect tool and create Point D at the right-most intersection of the 2 circles."),
-
-                    addNbsp("Select the Segment tool and draw a Segment CB"), 
-                    addNbsp("Select the Segment tool and draw a Segment CA"), 
-
+                    addNbsp("Select the Segment tool and draw a Segment CB"),
+                    addNbsp("Select the Segment tool and draw a Segment CA"),
                     addNbsp("Select the Circle with Center tool and draw a Circle with center C and radius CB."),
-
                     addNbsp("Select the Intersect tool and create Point E at the intersection of Circle with Center B and with Circle with Center C."),
                     addNbsp("Select the Intersect tool and create Point F at the intersection of Circle with Center C and with Circle with Center A."),
                     addNbsp("Select the Segment tool and draw Segment ED."),
                     addNbsp("Select the Segment tool and draw Segment DF."),
-                    addNbsp("Select the Segment tool and draw Segment EF.")               
+                    addNbsp("Select the Segment tool and draw Segment EF.")
                 ],
 
                 "selected": false,
@@ -491,7 +484,7 @@
                 "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
                 "unlocked": false,
-                "unlocksSkills": [],
+                "unlocksSkills": [12],
                 "overview": "The Triquetra consists of three mutually intersecting vesica piscis.",
                 // "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle.",
                 "quote": '"...At that moment a huge amount of information was created."',
@@ -520,24 +513,47 @@
                 </span>`
             }, {
                 "id": 12,
+                "steps": [
+                    ["point A, ", "circle c, Circle(A, 1)"],
+                    ["circle d, Circle(B, A)"],
+                    ["circle e, Circle(C, A)"],
+                    ["circle f, Circle(D, A)"],
+                    ["circle g, Circle(E, A)"],
+                    ["circle h, Circle(F, A)"],
+                    ["circle k, Circle(G, A)"]
+                ],
+
+                "stepsText": [
+                    addNbsp("Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center B and radius BA."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center C and radius CA."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center D and radius DA."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center E and radius EA."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center F and radius FA."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center G and radius GA.")             
+                ],
+
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
-                "name": "8",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "(NO REQUIREMENT)",
+                "url": "src/assets/images/skills/genesis.svg",
+                "stepsImage2": "src/assets/images/skills/details/detailGenesis.svg",
+                "d3Data": ["hexStatus4Genesis", "Complete4Genesis"],
+                "name": "The Genesis Pattern",
+                "difficulty": "EASY  |  7 STEP",
+                "requirement": "The Triquetra",
                 "completed": false,
                 "unlocked": false,
-                "unlocksSkills": [],
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "unlocksSkills": [13],
+                "overview": "Consisting of 6 equal circles intersecting the circumference of a similar central circle. This represents the first motions of creation.",
+                "quote": '"...and He rested on the seventh day from all his work."',
+                "quotee": "Genesis 2:2"
             },
             {
                 "id": 13,
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "9",
-                "difficulty": "EASY  |  1 STEP",
+                "d3Data": ["hexStatus5Egg", "Complete5Egg"],
+                "name": "The Egg of Life",
+                "difficulty": "EASY  |  13 STEPS",
                 "requirement": "REQUIRES VESICA PISCIS",
                 "completed": false,
                 "unlocked": false,
@@ -572,7 +588,7 @@
                 "id": 17,
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "name": "12",
+                "name": "Completed Flower of Life",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,

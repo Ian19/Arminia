@@ -401,6 +401,36 @@
             ///////// RETREIVE LOCAL STORAGE DATA AND APPLY TO SKILLDATA AND SKILL TREE /////////
             /////////////////////////////////////////////////////////////////////////////////////
 
+            /////////////////////////////////////////
+            /////////// TEMPORARY DEBUG PURPOSES ONLY
+            ////////////////////////////////////////
+
+            // localStorage.setItem('ArminiaSkills', "0, 1, 11");
+
+            // // assign local storage as a comma separated array
+            // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+
+            // // iterate through local storage data and apply to skillData and skill tree
+            // localStorageArray.forEach(function (element) {
+
+            //     game.skills.skillData.forEach(function (skill) {
+
+            //         if (element == skill.id) {
+
+            //             skill.completed = true;
+            //             skill.unlocked = true;
+            //             game.setSkillComplete(skill);
+            //             game.setSkillsUnlocked(skill.unlocksSkills);
+
+            //         }
+            //     });
+            // });
+
+            /////////////////////////////////////////
+            /////////// END DEBUG
+            ////////////////////////////////////////
+
+
             if (localStorage.getItem('ArminiaSkills') != '') {
 
                 if (localStorage.getItem('ArminiaSkills') == null) {

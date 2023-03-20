@@ -19,6 +19,8 @@
 
     const geogebra = function (game) {
 
+        let cheatNum = 0;
+
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
             "borderColor": "#FFFFFF"
@@ -30,6 +32,7 @@
             let svg;
             let zoom;
             let ready = false;
+
 
             $("#A_cheatBtnID").hide();
 
@@ -56,8 +59,10 @@
                 var clone = object.cloneNode(true);
                 var parent = object.parentNode;
 
-                parent.removeChild(object );
-                parent.appendChild(clone );
+                parent.removeChild(object);
+                parent.appendChild(clone);
+
+                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +70,7 @@
 
                 $("#A_stepsImage").css("display", "none");
                 $("#A_StepsImageCenter").css("display", "none");
-                
+
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
                 $("#A_startCASBtn").show();
 
@@ -101,12 +106,14 @@
 
                     $("#A_startCASBtn").click(function () {
 
+                        $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+
                         ready = true;
                         $("#A_cheatBtnID").show();
                         $("#A_startCASBtn").hide();
 
-                        const el3 = document.querySelector('#step1White');
-                        const bbox1 = el3.getBBox();
+                        const el1 = document.querySelector('#step1White');
+                        const bbox1 = el1.getBBox();
 
                         let midX = bbox1.x + (bbox1.width / 2);
                         let midY = bbox1.y + (bbox1.height / 2);
@@ -119,26 +126,23 @@
                     });
 
                     function myCallback() {
-
-                        const el3 = document.querySelector('#step1White');
-                        const bbox1 = el3.getBBox();
-
                         svg.transition()
                             .duration(750)
-                            .call(zoom.scaleTo, 3)
-                            .on("end", myCallback2);
-                    }
-
-                    function myCallback2() {
-
-                        const el3 = document.querySelector('#step1White');
-                        const bbox1 = el3.getBBox();
+                            .call(zoom.scaleTo, 3);
                     }
 
                 });
 
                 $(".appletStyle").addClass("A_cas");
                 game.animatePageOut("A_64TetraView");
+
+                function addNbsp(step) {
+                    const str = "<p>&nbsp;</p><p>&nbsp;</p>";
+                    step = str + step + str;
+                    return step;
+                }
+
+                $("#A_stepsBody").html(addNbsp("Press Start to begin."));
 
             }
 
@@ -153,7 +157,15 @@
             // Init stepper values
             $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
             $("#A_stepsValue").text("0%");
-            $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+
+            // function addNbsp(step) {
+            //     const str = "<p>&nbsp;</p><p>&nbsp;</p>";
+            //     step = str + step + str;
+            //     return step;
+            // }
+
+            // $("#A_stepsBody").html(addNbsp("Press Start to begin."));
+
             $("#A_stepsProgress").css("width", "0%");
 
             ///////////////////////////////////////////////////////////////////////////////////////////
@@ -343,9 +355,24 @@
                         } else {
 
                             if (j == 0) {
-                                // commented as of paperZoom
-                                // game.skills.selectedSkill.stepsImage2 = game.skills.selectedSkill.stepsImageBackup;
-                                // $("#A_stepsImage").attr("data", game.skills.selectedSkill.stepsImage2 + "1.svg");
+
+                                let stepElement = document.getElementById("step1White");
+                                const stepBox = stepElement.getBBox();
+
+                                let midX = stepBox.x + (stepBox.width / 2);
+                                let midY = stepBox.y + (stepBox.height / 2);
+
+                                function myCallback4() {
+
+                                    svg.transition()
+                                        .duration(750)
+                                        .call(zoom.scaleTo, 3);
+                                }
+
+                                svg.transition()
+                                    .duration(750)
+                                    .call(zoom.translateTo, midX, midY)
+                                    .on("end", myCallback4);
                             }
                         }
 
@@ -485,6 +512,7 @@
                                     .on("end", myCallback3);
 
 
+                                console.log("BEGIN ZOOM AND TRANSLATE!");
                                 // if (!gotK) {
                                 //     let k;
                                 //     for (k = 1; k <= stepsArray.length - 1; k++) {
@@ -510,9 +538,15 @@
                 }
             }
 
+            // blink checkbox
+            checkbox7.onclick = function () {
+                removeAllAnimateTags();
+                updateWorkbook();
+            }
+
             function updateWorkbook() {
 
-                // stop CAS access until startt button clicked
+                // stop CAS access until start button clicked
 
                 if (ready) {
 
@@ -550,14 +584,14 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        // console.log(strState);
+                        console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {
                             for (let k = 0; k < steps[j].length; k++) {
 
                                 if (strState == steps[j][k]) {
-                                    // console.log("Correct Step!");
+                                    console.log("Correct Step!");
                                     test[j][k] = 1;
                                 }
                             }
@@ -571,6 +605,41 @@
                                 stepsArray[i] = 0;
                                 break;
                             }
+                        }
+                    }
+
+                    // reset all steps to black
+
+                    if (parameters.appName == "suite") {
+
+                        for (let n = 2; n <= game.skills.selectedSkill.steps.length; n++) {
+
+                            game.skills.selectedSkill.elements.forEach(function (element) {
+
+                                if (element.num == n) {
+
+                                    if (element.type == "divider") {
+
+                                        d3.select("#divider" + n.toString() + "Black")
+                                            .style("stroke", "black");
+
+                                    } else {
+
+                                        d3.select("#text" + n.toString() + "Black")
+                                            .style("display", "inline");
+
+                                        d3.select("#text" + n.toString() + "White")
+                                            .style("display", "none");
+                                    }
+                                }
+                            });
+
+                            d3.select("#step" + n.toString() + "Black")
+                                .style("display", "inline");
+
+                            d3.select("#step" + n.toString() + "White")
+                                .style("display", "none");
+
                         }
                     }
 
@@ -617,12 +686,6 @@
                 A_SVGStep.appendChild(animationElement2);
             }
         };
-
-        // blink checkbox
-        checkbox7.onclick = function () {
-            removeAllAnimateTags();
-            updateWorkbook();
-        }
 
         // verbose checkbox
         checkbox8.onclick = function () {
@@ -686,6 +749,11 @@
 
         $("#A_backToSkillsBtn").click(function () {
 
+            // Arminia.skills.cheatNum = 0;
+            cheatNum = 0;
+            console.log("A_backToSkillsBtn cheatNum: " + cheatNum);
+            // console.log("A_backToSkillsBtn cheatNum: " + Arminia.skills.cheatNum);
+
             // $("#A_overviewContainer").css("display", "none");
             // $(".scaleContainerClass").css("display", "inline-block");
             $("#A_constructionBtn").css("color", "white");
@@ -708,7 +776,7 @@
                 $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startCASBtn").hide();
-                
+
                 $(".A_mouseIconPaper").hide();
 
                 // tmp fix because only 1 paper available
@@ -758,8 +826,6 @@
             ["F_{t} = V_{c} + F_{d}"]
 
         ];
-
-        let cheatNum = 0;
 
         $("#A_cheatBtnID").click(function () {
 

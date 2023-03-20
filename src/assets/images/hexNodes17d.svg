@@ -10990,7 +10990,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 					657.309,504.416 611.928,478.219 611.929,425.817 657.308,399.617 702.688,425.819 702.688,478.217 				"/>
 			</g>
 			<g id="Genesis">
-				<g id="hexStatus4Genesis_2_">
+				<g id="hexStatus4Genesis">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="657.308,347.218 611.929,321.018 611.93,268.621 
 						657.309,242.419 702.688,268.621 702.688,321.018 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="657.308,347.218 611.929,321.018 
@@ -11020,11 +11020,11 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						C666.9,277.455,674.675,285.225,674.675,294.82z"/>
 				</g>
 				
-					<polygon id="hexHover4_x5F_Genesis" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover4Genesis" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					657.308,347.218 611.929,321.018 611.93,268.621 657.309,242.419 702.688,268.621 702.688,321.018 				"/>
 			</g>
 			<g id="egg">
-				<g id="hexStatus5Egg_3_">
+				<g id="hexStatus5Egg">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="521.173,268.623 475.791,242.419 475.792,190.019 
 						521.171,163.819 566.542,190.02 566.544,242.42 					"/>
 					<polygon fill="none" stroke="#9999FF" stroke-width="2" stroke-miterlimit="10" points="521.173,268.623 475.791,242.419 
@@ -11072,7 +11072,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 						C516.73,209.152,523.063,215.477,523.063,223.289z"/>
 				</g>
 				
-					<polygon id="hexHover5_x5F_Egg_6_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
+					<polygon id="hexHover5Egg" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					521.173,268.623 475.791,242.419 475.792,190.019 521.171,163.819 566.542,190.02 566.544,242.42 				"/>
 			</g>
 			<g id="unsealedFOL">

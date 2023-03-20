@@ -8,14 +8,16 @@
             "type": "pwa-msedge",
             "request": "launch",
             "name": "Launch Edge against localhost",
-            "url": "http://localhost/arminia1_46/index.php",
+            // "url": "http://localhost/arminia/index.html",
+            "url": "http://127.0.0.1:5502/index.html",
             "webRoot": "${workspaceFolder}"
         },
         {
             "name": "Launch Microsoft Edge and open the Edge DevTools",
             "request": "launch",
             "type": "vscode-edge-devtools.debug",
-            "url": "http://localhost/arminia1_46/index.php"
+            // "url": "http://localhost/arminia/index.html"
+            "url": "http://127.0.0.1:5502/index.html"
         }
     ]
 }

@@ -573,7 +573,7 @@
                                 let midX = bbox1.x + (bbox1.width / 2);
                                 let midY = bbox1.y + (bbox1.height / 2);
 
-                                console.log("PANNING AND ZOOMING!");
+                                // console.log("PANNING AND ZOOMING!");
 
                                 svg.transition()
                                     .duration(750)
@@ -718,7 +718,7 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        console.log(strState);
+                        // console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {

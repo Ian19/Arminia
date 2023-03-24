@@ -915,6 +915,7 @@
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
                 "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"

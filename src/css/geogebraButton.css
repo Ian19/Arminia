@@ -40,7 +40,7 @@
     border: 1px solid #563a99a1 !important;
 }
 
-#A_startCASBtn {
+#A_startGeogebraBtn {
     display: none;
 
     /* stop text highlighting */
@@ -70,7 +70,7 @@
     animation: animate2 1.25s linear infinite;
 }
 
-#A_startCASBtn:hover {
+#A_startGeogebraBtn:hover {
     border: 1px solid #b19beb;
     background: #5d42a5ab;    
 }

@@ -34,8 +34,46 @@
             let ready = false;
             let A_SVGSteps;
 
-
             $("#A_cheatBtnID").hide();
+
+            $("#A_startGeogebraBtn").click(function () {
+
+                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+
+                ready = true;                
+
+                let el1;
+
+                if (parameters.appName == "classic") {
+
+                    el1 = document.querySelector('#A_SVGStep1');
+
+                } else {
+
+                    el1 = document.querySelector('#step1White');
+                    $("#A_cheatBtnID").show();
+
+                }
+
+                const bbox1 = el1.getBBox();
+
+                let midX = bbox1.x + (bbox1.width / 2);
+                let midY = bbox1.y + (bbox1.height / 2);
+
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.translateTo, midX, midY)
+                    .on("end", myCallback);
+
+                $("#A_startGeogebraBtn").hide();
+
+            });
+
+            function myCallback() {
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
+            }
 
             // settings for CAS or graphing 
             if (parameters.appName == "classic") {
@@ -78,9 +116,13 @@
                 $("#A_StepsImageCenter").css("display", "none");
 
                 // $("#A_stepsBackgroundImage").css("display", "inline-block");
-                $("#A_startCASBtn").show();
+                $("#A_startGeogebraBtn").show();
 
                 $(".A_mouseIconPaper").show();
+
+
+
+
 
 
                 d3.xml(game.skills.selectedSkill.stepsImage2).then(data => {
@@ -117,32 +159,7 @@
                         g.attr("transform", transform);
                     }
 
-                    $("#A_startCASBtn").click(function () {
 
-                        $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
-
-                        ready = true;
-                        // $("#A_cheatBtnID").show();
-                        $("#A_startCASBtn").hide();
-
-                        const el1 = document.querySelector('#A_SVGStep1');
-                        const bbox1 = el1.getBBox();
-
-                        let midX = bbox1.x + (bbox1.width / 2);
-                        let midY = bbox1.y + (bbox1.height / 2);
-
-                        svg.transition()
-                            .duration(750)
-                            .call(zoom.translateTo, midX, midY)
-                            .on("end", myCallback);
-
-                    });
-
-                    function myCallback() {
-                        svg.transition()
-                            .duration(750)
-                            .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
-                    }
 
                 });
 
@@ -162,7 +179,7 @@
                 $("#A_StepsImageCenter").css("display", "none");
 
                 $("#A_stepsBackgroundImage").css("display", "inline-block");
-                $("#A_startCASBtn").show();
+                $("#A_startGeogebraBtn").show();
 
                 $(".A_mouseIconPaper").show();
 
@@ -193,32 +210,7 @@
                         g.attr("transform", transform);
                     }
 
-                    $("#A_startCASBtn").click(function () {
 
-                        $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
-
-                        ready = true;
-                        $("#A_cheatBtnID").show();
-                        $("#A_startCASBtn").hide();
-
-                        const el1 = document.querySelector('#step1White');
-                        const bbox1 = el1.getBBox();
-
-                        let midX = bbox1.x + (bbox1.width / 2);
-                        let midY = bbox1.y + (bbox1.height / 2);
-
-                        svg.transition()
-                            .duration(750)
-                            .call(zoom.translateTo, midX, midY)
-                            .on("end", myCallback);
-
-                    });
-
-                    function myCallback() {
-                        svg.transition()
-                            .duration(750)
-                            .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
-                    }
 
                 });
 
@@ -938,7 +930,7 @@
 
                 $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
-                $("#A_startCASBtn").hide();
+                $("#A_startGeogebraBtn").hide();
 
                 $(".A_mouseIconPaper").hide();
 

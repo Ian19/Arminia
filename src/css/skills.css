@@ -57,12 +57,6 @@
     font-size: 0.7vw;
 }
 
-
-
-
-
-
-
 .A_mouseIcon {
     position: absolute;
     opacity: 0.8;
@@ -85,37 +79,6 @@
 .A_mouseIconPaper {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #A_detailImage {
     width: 80%;
@@ -241,6 +204,7 @@
 } 
 
 .A_detailGrid {
+    height: 10vw;
     position: relative;
     margin-top: 0.9vw;
     display: -ms-grid;

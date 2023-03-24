@@ -405,7 +405,7 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 11");
+            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13");
 
             // // assign local storage as a comma separated array
             // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");

@@ -7,7 +7,7 @@
 <g id="A_SVGSteps">
 	<g id="A_SVGStep1">
 		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="480.473" cy="507.296" r="246.143"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 468.4722 473.4541)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">A</text>
+		<text transform="matrix(1 0 0 1 468.4722 473.4541)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">A</text>
 		<path fill="#FFFFFF" d="M486.474,507.296c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
 			C483.787,501.296,486.474,503.981,486.474,507.296L486.474,507.296z"/>
 	</g>
@@ -15,37 +15,47 @@
 		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="480.473" cy="261.153" r="246.144"/>
 		<path fill="#FFFFFF" d="M486.472,261.153c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
 			C483.785,255.153,486.472,257.839,486.472,261.153L486.472,261.153z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 469.4722 237.1533)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">B</text>
+		<text transform="matrix(1 0 0 1 469.4722 237.1533)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">B</text>
 	</g>
 	<g id="A_SVGStep3">
-		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="267.259" cy="384.224" r="246.143"/>
 		<path fill="#FFFFFF" d="M273.259,384.224c0,3.313-2.688,6-6,6l0,0c-3.313,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
 			C270.571,378.224,273.259,380.909,273.259,384.224L273.259,384.224z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 222.9727 379.4541)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">C</text>
+		<text transform="matrix(1 0 0 1 222.9727 379.4541)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">C</text>
 	</g>
 	<g id="A_SVGStep4">
-		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="267.258" cy="630.368" r="246.143"/>
-		<path fill="#FFFFFF" d="M273.258,630.367c0,3.313-2.688,6-6,6l0,0c-3.313,0-5.999-2.688-5.999-6l0,0c0-3.313,2.688-6,5.999-6l0,0
-			C270.57,624.367,273.258,627.053,273.258,630.367L273.258,630.367z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 222.9722 659.5977)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">D</text>
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="267.259" cy="384.224" r="246.143"/>
 	</g>
 	<g id="A_SVGStep5">
-		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="481.472" cy="751.44" r="246.143"/>
-		<path fill="#FFFFFF" d="M487.472,751.439c0,3.313-2.688,6-6,6l0,0c-3.312,0-6-2.688-6-6l0,0c0-3.313,2.689-6,6-6l0,0
-			C484.785,745.439,487.472,748.125,487.472,751.439L487.472,751.439z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 468.186 799.6699)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">E</text>
+		<path fill="#FFFFFF" d="M273.258,630.367c0,3.313-2.688,6-6,6l0,0c-3.313,0-5.999-2.688-5.999-6l0,0c0-3.313,2.688-6,5.999-6l0,0
+			C270.57,624.367,273.258,627.053,273.258,630.367L273.258,630.367z"/>
+		<text transform="matrix(1 0 0 1 222.9722 659.5977)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">D</text>
 	</g>
 	<g id="A_SVGStep6">
-		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="693.703" cy="630.368" r="246.143"/>
-		<path fill="#FFFFFF" d="M699.703,630.367c0,3.313-2.689,6-6,6l0,0c-3.314,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
-			C697.015,624.367,699.703,627.053,699.703,630.367L699.703,630.367z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 714.4155 659.5977)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">F</text>
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="267.258" cy="630.368" r="246.143"/>
 	</g>
 	<g id="A_SVGStep7">
-		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="693.703" cy="384.225" r="246.143"/>
+		<path fill="#FFFFFF" d="M487.472,751.439c0,3.313-2.688,6-6,6l0,0c-3.312,0-6-2.688-6-6l0,0c0-3.313,2.689-6,6-6l0,0
+			C484.785,745.439,487.472,748.125,487.472,751.439L487.472,751.439z"/>
+		<text transform="matrix(1 0 0 1 468.186 799.6699)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">E</text>
+	</g>
+	<g id="A_SVGStep8">
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="481.472" cy="751.44" r="246.143"/>
+	</g>
+	<g id="A_SVGStep9">
+		<path fill="#FFFFFF" d="M699.703,630.367c0,3.313-2.689,6-6,6l0,0c-3.314,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
+			C697.015,624.367,699.703,627.053,699.703,630.367L699.703,630.367z"/>
+		<text transform="matrix(1 0 0 1 714.4155 659.5977)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">F</text>
+	</g>
+	<g id="A_SVGStep10">
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="693.703" cy="630.368" r="246.143"/>
+	</g>
+	<g id="A_SVGStep11">
 		<path fill="#FFFFFF" d="M699.703,384.225c0,3.313-2.689,6-6,6l0,0c-3.314,0-6-2.688-6-6l0,0c0-3.313,2.688-6,6-6l0,0
 			C697.015,378.225,699.703,380.91,699.703,384.225L699.703,384.225z"/>
-		<text class="A_verbose" transform="matrix(1 0 0 1 710.4155 379.4551)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">G</text>
+		<text transform="matrix(1 0 0 1 710.4155 379.4551)" fill="#FFFFFF" font-family="'Verdana'" font-size="35">G</text>
+	</g>
+	<g id="A_SVGStep12">
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="693.703" cy="384.225" r="246.143"/>
 	</g>
 </g>
 </svg>

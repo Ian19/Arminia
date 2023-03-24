@@ -11390,7 +11390,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>. -->
 					<polygon id="hexHover9_x5F_FOL_x5F_Seal_1_" fill="#7465D1" fill-opacity="0.01" stroke="#ECDB7A" stroke-width="2" stroke-miterlimit="10" points="
 					248.895,268.62 203.513,242.417 203.514,190.018 248.896,163.816 294.274,190.018 294.275,242.417 				"/>
 			</g>
-			<g id="completedFOL_1_">
+			<g id="completedFOL">
 				<g id="hexStatusCompleteFOL">
 					<polygon opacity="0.3" fill="#7465D1" enable-background="new    " points="385.033,347.217 339.652,321.017 339.652,268.62 
 						385.033,242.418 430.412,268.62 430.412,321.017 					"/>

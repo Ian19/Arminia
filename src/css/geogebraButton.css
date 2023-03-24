@@ -37,42 +37,90 @@
 }
 
 #A_backToSkillsBtn:hover {
-    border: 2px solid #563a99a1 !important;      
+    border: 1px solid #563a99a1 !important;
 }
 
 #A_startCASBtn {
-    display: none;      
+    display: none;
+
+    /* stop text highlighting */
+    user-select: none;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+
+    position: relative;
+    font-family: 'Verdana';
+    font-variant-caps: normal;
+    width: 7.4vw;
+    padding: 0.4vw;
+    border-radius: 4px;
+    font-size: 0.55vw;
+    letter-spacing: 0.05vw;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.4s;
+    color: var(--yellow1);
+    background: #473380ab;
+    border: 1px solid #8064cc;
+    animation: animate2 1.25s linear infinite;
+}
+
+#A_startCASBtn:hover {
+    border: 1px solid #b19beb;
+    background: #5d42a5ab;    
 }
 
 .A_geogebraButton {
 
     /* stop text highlighting */
     user-select: none;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
 
 
     position: relative;
     color: #acb0dee3;
     font-family: 'Verdana';
-    font-variant-caps:normal;    
+    font-variant-caps: normal;
     width: 7.4vw;
     padding: 0.4vw;
     border-radius: 4px;
     font-size: 0.55vw;
     letter-spacing: 0.05vw;
     border: 1px solid #473380;
-    transition: 0.4s;  
+    transition: 0.4s;
     overflow: hidden;
     cursor: pointer;
     background: #4733803b;
 }
 
-.A_geogebraButton:hover {    
+.A_geogebraButton:hover {
     color: white !important;
     border: 1px solid #8064cc !important;
     background: #8c6fdd3b;
+}
+
+@keyframes animate2 {
+    0% {
+        box-shadow: 0 0 0 0px #5f4a99;
+    }
+
+    50% {
+        box-shadow: 0 0 14px 0px #5f4a99;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0px #5f4a99;
+    }
 }
 
 .A_pdfFlexContainer {

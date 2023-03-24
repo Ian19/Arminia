@@ -31,6 +31,7 @@
             {
                 "id": 85,
                 "material_id": "ybm744ww",
+                "zoomScale": 3,
 
                 "steps": [
 

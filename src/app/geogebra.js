@@ -32,6 +32,7 @@
             let svg;
             let zoom;
             let ready = false;
+            let A_SVGSteps;
 
 
             $("#A_cheatBtnID").hide();
@@ -39,13 +40,13 @@
             // settings for CAS or graphing 
             if (parameters.appName == "classic") {
 
-                ready = true;
+                // ready = true;
 
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
-                $("#A_stepsBackgroundImage").css("display", "none");
 
-                $(".A_mouseIconPaper").hide();
+                // $("#A_stepsBackgroundImage").css("display", "none");
+                // $(".A_mouseIconPaper").hide();
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
                 // The reason why object content doesn't refresh is that removing value from data attribute 
@@ -53,20 +54,109 @@
                 // (i.e. opening files in the window) you don't have access to contents of that window because 
                 // of security reason. So removing entire tag makes sense and recreate again whenever needed.
 
-                var object = document.getElementById("A_stepsImage");
-                object.setAttribute('data', game.skills.selectedSkill.stepsImage2);
+                $("#A_stepsBackgroundImage").css("display", "inline-block");
 
-                var clone = object.cloneNode(true);
-                var parent = object.parentNode;
+                // var object = document.getElementById("A_stepsBackgroundImage");
+                // object.setAttribute('data', game.skills.selectedSkill.stepsImage2);
 
-                parent.removeChild(object);
-                parent.appendChild(clone);
+                // var clone = object.cloneNode(true);
+                // var parent = object.parentNode;
 
-                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+                // parent.removeChild(object);
+                // parent.appendChild(clone);
 
                 ////////////////////////////////////////////////////////////////////////////////////////////
 
+                // $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);   
+
+                ////////////////////////////////////////////////////////////////////////////////////////////
+                //////////////////////////////  END OLD CLASSIC CODE  ////////////////////////////////////////
+                ////////////////////////////////////////////////////////////////////////////////////////////
+
+
+                $("#A_stepsImage").css("display", "none");
+                $("#A_StepsImageCenter").css("display", "none");
+
+                // $("#A_stepsBackgroundImage").css("display", "inline-block");
+                $("#A_startCASBtn").show();
+
+                $(".A_mouseIconPaper").show();
+
+
+                d3.xml(game.skills.selectedSkill.stepsImage2).then(data => {
+
+                    var svgNode = data.documentElement;
+                    let obj = $('#A_stepsBackgroundImage')[0];
+                    obj = $('#A_stepsBackgroundImage')[0];
+                    obj.appendChild(svgNode);
+
+                    svg = d3.select(game.skills.selectedSkill.elementID);
+                    svg.style("width", "100%").style("height", "100%").style("display", "block");
+
+
+                    /////////////////////   NEW CODE  //////////////////////
+
+                    A_SVGSteps = svgNode.getElementById('A_SVGSteps');
+
+                    // console.log("test property!!");
+                    // console.log(A_SVGSteps.getBBox());
+                    // console.log(A_SVGSteps.width.baseVal.value);
+
+                    removeAllAnimateTags();
+                    addAnimateTags(0, 1);
+
+                    zoom = d3.zoom()
+                        .scaleExtent([1, 10])
+                        .on("zoom", zoomed);
+
+                    var g = svg.select('g');
+
+                    svg.call(zoom);
+
+                    function zoomed({ transform }) {
+                        g.attr("transform", transform);
+                    }
+
+                    $("#A_startCASBtn").click(function () {
+
+                        $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+
+                        ready = true;
+                        // $("#A_cheatBtnID").show();
+                        $("#A_startCASBtn").hide();
+
+                        const el1 = document.querySelector('#A_SVGStep1');
+                        const bbox1 = el1.getBBox();
+
+                        let midX = bbox1.x + (bbox1.width / 2);
+                        let midY = bbox1.y + (bbox1.height / 2);
+
+                        svg.transition()
+                            .duration(750)
+                            .call(zoom.translateTo, midX, midY)
+                            .on("end", myCallback);
+
+                    });
+
+                    function myCallback() {
+                        svg.transition()
+                            .duration(750)
+                            .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
+                    }
+
+                });
+
+                function addNbsp(step) {
+                    const str = "<p>&nbsp;</p><p>&nbsp;</p>";
+                    step = str + step + str;
+                    return step;
+                }
+
+                $("#A_stepsBody").html(addNbsp("Press Start to begin."));
+
             } else {
+
+                // parameters.appName == "suite" 
 
                 $("#A_stepsImage").css("display", "none");
                 $("#A_StepsImageCenter").css("display", "none");
@@ -83,7 +173,6 @@
                     obj.appendChild(svgNode);
 
                     svg = d3.select('#A_schwarzsPPaper');
-
                     svg.style("width", "100%").style("height", "100%").style("display", "block");
 
                     d3.select('#step1Black')
@@ -128,7 +217,7 @@
                     function myCallback() {
                         svg.transition()
                             .duration(750)
-                            .call(zoom.scaleTo, 3);
+                            .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
                     }
 
                 });
@@ -158,26 +247,22 @@
             $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
             $("#A_stepsValue").text("0%");
 
-            // function addNbsp(step) {
-            //     const str = "<p>&nbsp;</p><p>&nbsp;</p>";
-            //     step = str + step + str;
-            //     return step;
-            // }
-
-            // $("#A_stepsBody").html(addNbsp("Press Start to begin."));
-
             $("#A_stepsProgress").css("width", "0%");
 
             ///////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////// add and or remove blinking animation to svg file ////////////////////
 
-            document.getElementById('A_stepsImage').onload = function () {
+            // if (parameters.appName == "classic") {
 
-                svgObject = document.getElementById('A_stepsImage').contentDocument;
-                removeAllAnimateTags();
-                addAnimateTags(0, 1);
+            //     document.getElementById('A_stepsBackgroundImage').onload = function () {
 
-            };
+            //         svgObject = document.getElementById('A_stepsBackgroundImage').contentDocument;
+            //         removeAllAnimateTags();
+            //         addAnimateTags(0, 1);
+
+            //     };
+
+            // }
 
             ///////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////
@@ -336,7 +421,7 @@
 
             function buildStepsView() {
 
-                // let gotK = false;
+                let gotK = false;
 
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
 
@@ -366,7 +451,7 @@
 
                                     svg.transition()
                                         .duration(750)
-                                        .call(zoom.scaleTo, 3);
+                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
                                 }
 
                                 svg.transition()
@@ -389,6 +474,28 @@
                             // final step has been reached
                             if (parameters.appName == "classic") {
                                 removeAllAnimateTags();
+
+                                ////////////////////  FINAL STEP HAS BEEN REACHED AND CENTER ZOOM OUT  ////////////////////
+
+                                const bbox1 = A_SVGSteps.getBBox();
+
+                                let midX = bbox1.x + (bbox1.width / 2);
+                                let midY = bbox1.y + (bbox1.height / 2);
+
+                                svg.transition()
+                                    .duration(750)
+                                    .call(zoom.translateTo, midX, midY)
+                                    .on("end", myCallback5);
+
+
+                                function myCallback5() {
+                                    svg.transition()
+                                        .duration(750)
+                                        .call(zoom.scaleTo, 1);
+                                }
+
+                                /////////////////////////////////////////////////////////////////////////////////////////////
+
                             } else {
 
                                 let el = document.getElementById("A_schwarzsPPaper");
@@ -457,6 +564,28 @@
                             if (parameters.appName == "classic") {
                                 removeAllAnimateTags();
                                 addAnimateTags(j, 2);
+
+                                let s = j + 2;
+
+                                const el1 = document.querySelector('#A_SVGStep' + s.toString());
+                                const bbox1 = el1.getBBox();
+
+                                let midX = bbox1.x + (bbox1.width / 2);
+                                let midY = bbox1.y + (bbox1.height / 2);
+
+                                console.log("PANNING AND ZOOMING!");
+
+                                svg.transition()
+                                    .duration(750)
+                                    .call(zoom.translateTo, midX, midY)
+                                    .on("end", myCallback5);
+
+                                function myCallback5() {
+                                    svg.transition()
+                                        .duration(750)
+                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
+                                }
+
                             }
 
                             if (parameters.appName == "suite") {
@@ -472,6 +601,7 @@
                                     .style("display", "inline");
 
 
+                                // divider and text handler for papers
                                 game.skills.selectedSkill.elements.forEach(function (element) {
 
                                     if (element.num == s) {
@@ -503,7 +633,7 @@
 
                                     svg.transition()
                                         .duration(750)
-                                        .call(zoom.scaleTo, 3);
+                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
                                 }
 
                                 svg.transition()
@@ -512,17 +642,21 @@
                                     .on("end", myCallback3);
 
 
-                                console.log("BEGIN ZOOM AND TRANSLATE!");
-                                // if (!gotK) {
+                                // console.log("BEGIN ZOOM AND TRANSLATE!");
+                                // if (!gotK) {        
+
                                 //     let k;
+
                                 //     for (k = 1; k <= stepsArray.length - 1; k++) {
                                 //         if (stepsArray[k] == 0) {
+
                                 //             gotK = true;
-                                //             let num = rectArray[k].y;
-                                //             let x = (num * 3000) / 1000;
+
                                 //             svg.transition()
                                 //                 .duration(750)
-                                //                 .call(zoom.transform, d3.zoomIdentity.translate(0, -x).scale(2.5));
+                                //                 .call(zoom.translateTo, midX, midY)
+                                //                 .on("end", myCallback3);
+
                                 //             break;
                                 //         }
                                 //     }
@@ -591,7 +725,7 @@
                             for (let k = 0; k < steps[j].length; k++) {
 
                                 if (strState == steps[j][k]) {
-                                    console.log("Correct Step!");
+                                    // console.log("Correct Step!");
                                     test[j][k] = 1;
                                 }
                             }
@@ -608,7 +742,7 @@
                         }
                     }
 
-                    // reset all steps to black
+                    // reset all steps to black to allow steps to turn back to black for undo functionality
 
                     if (parameters.appName == "suite") {
 
@@ -648,27 +782,34 @@
                 }
             }
             api.registerAddListener(updateWorkbook);
-            api.registerClientListener(updateWorkbook);
+            // api.registerClientListener(updateWorkbook);
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
 
-        let svgObject;
+        // let svgObject;
         function removeAllAnimateTags() {
 
-            let A_SVGSteps = svgObject.getElementById('A_SVGSteps');
-            var element = A_SVGSteps.getElementsByTagName("animate"), index;
+            var element = A_SVGSteps.getElementsByTagName("animate");
 
             for (index = element.length - 1; index >= 0; index--) {
                 element[index].parentNode.removeChild(element[index]);
             }
+
+            // let A_SVGSteps = svgObject.getElementById('A_SVGSteps');
+            // var element = A_SVGSteps.getElementsByTagName("animate"), index;
+
+            // for (index = element.length - 1; index >= 0; index--) {
+            //     element[index].parentNode.removeChild(element[index]);
+            // }
         };
 
         function addAnimateTags(j, n) {
 
             if ($("#checkbox7").prop("checked") == true) {
 
-                let A_SVGStep = svgObject.getElementById('A_SVGStep' + `${j + n}`);
+                let A_SVGStep = A_SVGSteps.children[(j + n) - 1];
+
                 let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
                 let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
 
@@ -684,6 +825,23 @@
 
                 A_SVGStep.appendChild(animationElement1);
                 A_SVGStep.appendChild(animationElement2);
+
+                // let A_SVGStep = svgObject.getElementById('A_SVGStep' + `${j + n}`);
+                // let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+                // let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+
+                // animationElement1.setAttributeNS(null, 'attributeName', "stroke-opacity");
+                // animationElement1.setAttributeNS(null, 'values', "0;1;0");
+                // animationElement1.setAttributeNS(null, 'dur', "1.5s");
+                // animationElement1.setAttributeNS(null, 'repeatCount', "indefinite");
+
+                // animationElement2.setAttributeNS(null, 'attributeName', "fill-opacity");
+                // animationElement2.setAttributeNS(null, 'values', "0;1;0");
+                // animationElement2.setAttributeNS(null, 'dur', "1.5s");
+                // animationElement2.setAttributeNS(null, 'repeatCount', "indefinite");
+
+                // A_SVGStep.appendChild(animationElement1);
+                // A_SVGStep.appendChild(animationElement2);
             }
         };
 
@@ -692,7 +850,7 @@
 
             if (checkbox8.checked == true) {
 
-                var el = svgObject.getElementsByClassName("A_verbose");
+                var el = A_SVGSteps.getElementsByClassName("A_verbose");
 
                 for (var i = 0; i < el.length; i++) {
                     var currentEl = el[i];
@@ -700,7 +858,7 @@
                 }
 
             } else {
-                var el = svgObject.getElementsByClassName("A_verbose");
+                var el = A_SVGSteps.getElementsByClassName("A_verbose");
 
                 for (var i = 0; i < el.length; i++) {
                     var currentEl = el[i];
@@ -749,9 +907,12 @@
 
         $("#A_backToSkillsBtn").click(function () {
 
+            // svg = d3.select(game.skills.selectedSkill.elementID);
+
+            ready = false;
             // Arminia.skills.cheatNum = 0;
             cheatNum = 0;
-            console.log("A_backToSkillsBtn cheatNum: " + cheatNum);
+            // console.log("A_backToSkillsBtn cheatNum: " + cheatNum);
             // console.log("A_backToSkillsBtn cheatNum: " + Arminia.skills.cheatNum);
 
             // $("#A_overviewContainer").css("display", "none");
@@ -767,6 +928,8 @@
                 // Arminia.setGUI(game);
 
                 removeAllAnimateTags();
+
+                d3.select(game.skills.selectedSkill.elementID).remove();
 
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");

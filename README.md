@@ -10,17 +10,24 @@ To help users better understand new and cutting edge math papers, Arminia integr
 
 Arminia is in early development and most of the functionality is complete, however the main content or model, consisting of geometric constructions and math paper walkthroughs have not been added. 
 
-The following features are functioning:
+The following features are complete:
 - 3D viewer UI
 - 2D viewer and skill tree UI
 - Geogebra integration with constructions and math papers
 - general website functionality and theme
 - persistent skill tracking
 
-The following geometry and science content is available:
+The following pages are complete:
 - The 64 Tetrahedron Grid Information Sysem has content and can be accessed through the 3D Viewer
-- The Circle, Vesica Piscis and The Triquetra Skills are complete and can be accessed through the 2D Skill Viewer
-- The Schwarzschild Proton Paper by Nassim Harramein is complete and can be stepped through the CAS
+
+The following geometry constructions are complete:
+- The Circle 
+- The Vesica Piscis
+- The Triquetra
+- The Genesis Pattern
+
+The following peer reviewed scientiffic papers are complete in the CAS:
+- The Schwarzschild Proton Paper by Nassim Harramein
 
 The following features are either not functioning or incomplete:
 - persistent achievements

@@ -17,9 +17,6 @@ The following features are complete:
 - general website functionality and theme
 - persistent skill tracking
 
-The following pages are complete:
-- The 64 Tetrahedron Grid Information Sysem has content and can be accessed through the 3D Viewer
-
 The following geometry constructions are complete:
 - The Circle 
 - The Vesica Piscis

@@ -109,7 +109,7 @@
                 evt.target.style.display = "none";
 
                 // call setGUI at end A_geobebraView transitionOut as opposed to camera zoom out ending
-                if (evt.target.id == "A_geobebraView") {
+                if (evt.target.id == "A_geobebraView") {                    
                     Arminia.setGUI(game);
                 }
 

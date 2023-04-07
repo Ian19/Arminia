@@ -30,6 +30,7 @@
         game.skills.equationData = [
             {
                 "id": 85,
+                "elementID": "A_schwarzsPPaper",
                 "material_id": "ybm744ww",
                 "zoomScale": 3,
 
@@ -133,10 +134,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/vesica_piscis.png",
                 "url2": "src/assets/images/skills/vesicaPicsisLarge.svg",
-                "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/papers/schwarzschildproton/step",
-                "stepsImageBackup": "src/assets/images/papers/schwarzschildproton/step",
-                "stepsBackgroundImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton5.svg",
+                "stepsImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton8.svg",
                 "name": "The Schwarzschild Proton",
                 "difficulty": "HARD  |  31 STEPS",
                 "completed": false,

@@ -138,7 +138,12 @@
         //     console.log(localStorage.getItem(key));
         // });
 
-
+        $("#checkbox4").prop('checked', true); // fog
+        $("#checkbox5").prop('checked', true); // dust
+        $("#checkbox6").prop('checked', true); // spotlight
+        $("#checkbox13").prop('checked', true); // orbs
+        $("#checkbox14").prop('checked', true); // light rays
+        $("#checkbox10").prop('checked', false); // auto-rotate
 
 
 

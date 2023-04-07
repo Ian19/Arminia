@@ -9,6 +9,7 @@
     /* position: relative;
     bottom: 0px; */
     position: relative;
+    height: 21%;
 }
 
 #A_stepsBody {
@@ -94,6 +95,16 @@
     margin-top: 0.7vw;
     width: 13vw;
 }
+
+@keyframes transcolor {
+    from {
+      fill-opacity: 1;
+    }
+    
+    to {
+        fill-opacity: 0.25;
+    }
+  }
 
 
 

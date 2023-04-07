@@ -20,6 +20,7 @@
     const geogebra = function (game) {
 
         let cheatNum = 0;
+        const fadeNum = 0.2;
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
@@ -32,200 +33,93 @@
             let svg;
             let zoom;
             let ready = false;
-            let A_SVGSteps;
+            let newStart = true;
 
             $("#A_cheatBtnID").hide();
 
             $("#A_startGeogebraBtn").click(function () {
 
-                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+                if (parameters.appName == "suite") {
 
-                ready = true;                
-
-                let el1;
-
-                if (parameters.appName == "classic") {
-
-                    el1 = document.querySelector('#A_SVGStep1');
-
-                } else {
-
-                    el1 = document.querySelector('#step1White');
                     $("#A_cheatBtnID").show();
 
                 }
 
-                const bbox1 = el1.getBBox();
+                ready = true;
 
-                let midX = bbox1.x + (bbox1.width / 2);
-                let midY = bbox1.y + (bbox1.height / 2);
+                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
 
-                svg.transition()
-                    .duration(750)
-                    .call(zoom.translateTo, midX, midY)
-                    .on("end", myCallback);
+                d3.selectAll("[id *= 'divider']")
+                    .style("fill-opacity", fadeNum);
+
+                d3.selectAll("[id *= 'text']")
+                    .style("fill-opacity", fadeNum);
+
+                d3.selectAll("[id *= 'A_SVGStep']")
+                    .style("fill-opacity", fadeNum);
+
+                d3.select("#A_SVGStep1")
+                    .style("fill-opacity", 1);
+
+                removeAllAnimateTags();
+                addAnimateTags(0, 1);
+
+                panAndZoom("A_SVGStep1", game.skills.selectedSkill.zoomScale);
 
                 $("#A_startGeogebraBtn").hide();
 
             });
 
-            function myCallback() {
-                svg.transition()
-                    .duration(750)
-                    .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
-            }
+            $("#A_stepsBackgroundImage").css("display", "inline-block");
+            $("#A_StepsImageCenter").css("display", "none");
+            $("#A_startGeogebraBtn").show();
 
-            // settings for CAS or graphing 
+            // settings for CAS or graphing             
             if (parameters.appName == "classic") {
-
-                // ready = true;
 
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
 
-                // $("#A_stepsBackgroundImage").css("display", "none");
-                // $(".A_mouseIconPaper").hide();
+            } else if (parameters.appName == "suite") {
 
-                ////////////////////////////////////////////////////////////////////////////////////////////
-                // The reason why object content doesn't refresh is that removing value from data attribute 
-                // doesn't clear document created by object element in the window. If the origin is different 
-                // (i.e. opening files in the window) you don't have access to contents of that window because 
-                // of security reason. So removing entire tag makes sense and recreate again whenever needed.
-
-                $("#A_stepsBackgroundImage").css("display", "inline-block");
-
-                // var object = document.getElementById("A_stepsBackgroundImage");
-                // object.setAttribute('data', game.skills.selectedSkill.stepsImage2);
-
-                // var clone = object.cloneNode(true);
-                // var parent = object.parentNode;
-
-                // parent.removeChild(object);
-                // parent.appendChild(clone);
-
-                ////////////////////////////////////////////////////////////////////////////////////////////
-
-                // $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);   
-
-                ////////////////////////////////////////////////////////////////////////////////////////////
-                //////////////////////////////  END OLD CLASSIC CODE  ////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////////////
-
-
-                $("#A_stepsImage").css("display", "none");
-                $("#A_StepsImageCenter").css("display", "none");
-
-                // $("#A_stepsBackgroundImage").css("display", "inline-block");
-                $("#A_startGeogebraBtn").show();
-
-                $(".A_mouseIconPaper").show();
-
-
-
-
-
-
-                d3.xml(game.skills.selectedSkill.stepsImage2).then(data => {
-
-                    var svgNode = data.documentElement;
-                    let obj = $('#A_stepsBackgroundImage')[0];
-                    obj = $('#A_stepsBackgroundImage')[0];
-                    obj.appendChild(svgNode);
-
-                    svg = d3.select(game.skills.selectedSkill.elementID);
-                    svg.style("width", "100%").style("height", "100%").style("display", "block");
-
-
-                    /////////////////////   NEW CODE  //////////////////////
-
-                    A_SVGSteps = svgNode.getElementById('A_SVGSteps');
-
-                    // console.log("test property!!");
-                    // console.log(A_SVGSteps.getBBox());
-                    // console.log(A_SVGSteps.width.baseVal.value);
-
-                    removeAllAnimateTags();
-                    addAnimateTags(0, 1);
-
-                    zoom = d3.zoom()
-                        .scaleExtent([1, 10])
-                        .on("zoom", zoomed);
-
-                    var g = svg.select('g');
-
-                    svg.call(zoom);
-
-                    function zoomed({ transform }) {
-                        g.attr("transform", transform);
-                    }
-
-
-
-                });
-
-                function addNbsp(step) {
-                    const str = "<p>&nbsp;</p><p>&nbsp;</p>";
-                    step = str + step + str;
-                    return step;
-                }
-
-                $("#A_stepsBody").html(addNbsp("Press Start to begin."));
-
-            } else {
-
-                // parameters.appName == "suite" 
-
-                $("#A_stepsImage").css("display", "none");
-                $("#A_StepsImageCenter").css("display", "none");
-
-                $("#A_stepsBackgroundImage").css("display", "inline-block");
-                $("#A_startGeogebraBtn").show();
-
-                $(".A_mouseIconPaper").show();
-
-                d3.xml("src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton5.svg").then(data => {
-
-                    var svgNode = data.documentElement;
-                    const obj = $('#A_stepsBackgroundImage')[0];
-                    obj.appendChild(svgNode);
-
-                    svg = d3.select('#A_schwarzsPPaper');
-                    svg.style("width", "100%").style("height", "100%").style("display", "block");
-
-                    d3.select('#step1Black')
-                        .style("display", "none");
-
-                    d3.select('#step1White')
-                        .style("display", "inline");
-
-                    zoom = d3.zoom()
-                        .scaleExtent([1, 10])
-                        .on("zoom", zoomed);
-
-                    var g = svg.select('g');
-
-                    svg.call(zoom);
-
-                    function zoomed({ transform }) {
-                        g.attr("transform", transform);
-                    }
-
-
-
-                });
-
-                $(".appletStyle").addClass("A_cas");
                 game.animatePageOut("A_64TetraView");
-
-                function addNbsp(step) {
-                    const str = "<p>&nbsp;</p><p>&nbsp;</p>";
-                    step = str + step + str;
-                    return step;
-                }
-
-                $("#A_stepsBody").html(addNbsp("Press Start to begin."));
+                $(".appletStyle").addClass("A_cas");
 
             }
+
+            // load stepsImage svg file with d3.xml() and setup
+            d3.xml(game.skills.selectedSkill.stepsImage).then(data => {
+
+                const svgNode = data.documentElement;
+                const obj = $('#A_stepsBackgroundImage')[0];
+                obj.appendChild(svgNode);
+
+                svg = d3.select("#" + game.skills.selectedSkill.elementID);
+                svg.style("width", "100%").style("height", "100%").style("display", "block");
+
+                svg.select('g')
+                    .style("fill", "white");
+
+                zoom = d3.zoom()
+                    .scaleExtent([1, 10])
+                    .on("zoom", zoomed);
+
+                var g = svg.select('g');
+                svg.call(zoom);
+
+                function zoomed({ transform }) {
+                    g.attr("transform", transform);
+                }
+
+            });
+
+            function addNbsp(step) {
+                const str = "<p>&nbsp;</p><p>&nbsp;</p>";
+                step = str + step + str;
+                return step;
+            }
+
+            $("#A_stepsBody").html(addNbsp("Press Start to begin."));
 
             // Show and hide elements as Geogebra loads               
             game.animatePageIn("A_geobebraView");
@@ -238,26 +132,7 @@
             // Init stepper values
             $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
             $("#A_stepsValue").text("0%");
-
             $("#A_stepsProgress").css("width", "0%");
-
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////// add and or remove blinking animation to svg file ////////////////////
-
-            // if (parameters.appName == "classic") {
-
-            //     document.getElementById('A_stepsBackgroundImage').onload = function () {
-
-            //         svgObject = document.getElementById('A_stepsBackgroundImage').contentDocument;
-            //         removeAllAnimateTags();
-            //         addAnimateTags(0, 1);
-
-            //     };
-
-            // }
-
-            ///////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////////////////////////////////////////////////////////////////////////////
 
             // Position and size Geogebra and flex steps image box 
             $(".scaleContainerClass").css("display", "inline-block");
@@ -271,7 +146,6 @@
             $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
 
             // Updates html elements on Overview page with new skill data if the applet has been reinjected
-
             $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.url2);
             $("#A_geoDetailTitle").text(game.skills.selectedSkill.name);
             $("#A_geoDifficulty").text(game.skills.selectedSkill.difficulty);
@@ -282,8 +156,7 @@
 
             document.getElementById("A_geoDetailBody2").innerHTML = game.skills.selectedSkill.geoDetailBody;
 
-
-            // temporary for schwarzschild paper demo
+            // PDF.js temporary for schwarzschild paper demo
             if (parameters.appName == "suite") {
 
                 $("#A_prevPage").click(function () {
@@ -409,112 +282,62 @@
             ///////////////////////////////////////  STEPPER //////////////////////////////////////////
 
             let stepsArray = [];
+            let oldStepsArray = [];
             const stepsProgress = $("#A_stepsProgress")[0];
+
+            function myZoomCallback(scale) {
+
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.scaleTo, scale);
+
+            }
 
             function buildStepsView() {
 
-                let gotK = false;
-
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
 
-                for (let j = 0; j <= stepsArray.length - 1; j++) {
+                for (let j = 0; j < stepsArray.length; j++) {
 
                     let n = stepsPercentage * (j);
 
                     // Is step incomplete?
                     if (stepsArray[j] == 0) {
 
-                        if (parameters.appName == "classic") {
+                        // Step is incomplete
+                        removeAllAnimateTags();
 
-                            removeAllAnimateTags();
-                            addAnimateTags(j, 1);
+                        // second parameter is 1 because the step is incomplete and still needs to blink
+                        addAnimateTags(j, 1);
 
-                        } else {
+                        // if step1, zooms and pans to step1. Needed for undo functionality
+                        if (j == 0) {
 
-                            if (j == 0) {
+                            // get location and size data for pand and zoom
+                            panAndZoom("A_SVGStep1", game.skills.selectedSkill.zoomScale);
 
-                                let stepElement = document.getElementById("step1White");
-                                const stepBox = stepElement.getBBox();
-
-                                let midX = stepBox.x + (stepBox.width / 2);
-                                let midY = stepBox.y + (stepBox.height / 2);
-
-                                function myCallback4() {
-
-                                    svg.transition()
-                                        .duration(750)
-                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
-                                }
-
-                                svg.transition()
-                                    .duration(750)
-                                    .call(zoom.translateTo, midX, midY)
-                                    .on("end", myCallback4);
-                            }
                         }
 
-                        $("#A_stepsCount").html("Steps " + `${j + 1}` + " of " + stepsLength.toString());
-                        $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[j]);
-                        $("#A_stepsProgress").css("width", n.toString() + "%");
-                        $("#A_stepsValue").text(stepsProgress.style.width);
+                        // update the steps container text and progress bar
+                        updateStepsContainer(j, 1, 0, n, false);
                         break;
 
                     } else {
+
                         // Test if final step has been reached
                         if (j == stepsLength - 1) {
 
                             // final step has been reached
-                            if (parameters.appName == "classic") {
-                                removeAllAnimateTags();
 
-                                ////////////////////  FINAL STEP HAS BEEN REACHED AND CENTER ZOOM OUT  ////////////////////
+                            removeAllAnimateTags();
 
-                                const bbox1 = A_SVGSteps.getBBox();
+                            // get total dimensions and pan and zoom out
+                            panAndZoom("A_SVGGroupSteps", 1);
 
-                                let midX = bbox1.x + (bbox1.width / 2);
-                                let midY = bbox1.y + (bbox1.height / 2);
+                            // update the steps container text and progress bar
+                            updateStepsContainer(j, 1, 0, n, true);
 
-                                svg.transition()
-                                    .duration(750)
-                                    .call(zoom.translateTo, midX, midY)
-                                    .on("end", myCallback5);
-
-
-                                function myCallback5() {
-                                    svg.transition()
-                                        .duration(750)
-                                        .call(zoom.scaleTo, 1);
-                                }
-
-                                /////////////////////////////////////////////////////////////////////////////////////////////
-
-                            } else {
-
-                                let el = document.getElementById("A_schwarzsPPaper");
-                                let svgWidth = el.width.baseVal.value;
-                                let svgHeight = el.height.baseVal.value;
-
-                                function myCallback4() {
-
-                                    svg.transition()
-                                        .duration(750)
-                                        .call(zoom.translateTo, 0.5 * svgWidth, 0.5 * svgHeight);
-                                }
-
-                                svg.transition()
-                                    .duration(750)
-                                    .call(zoom.scaleTo, 1)
-                                    .on("end", myCallback4);
-                            }
-
-                            $("#A_stepsCount").html("Steps Complete (" + `${j + 1}` + " of " + stepsLength.toString() + ")");
-                            $("#A_stepsBody").html("<p>&nbsp;</p><p>&nbsp;</p>" + "<i>" + game.skills.selectedSkill.name + " has been added to your achievements!</i>" + "<p>&nbsp;</p><p>&nbsp;</p>");
-                            $("#A_stepsProgress").css("width", "100%");
-                            $("#A_stepsValue").text(stepsProgress.style.width);
-
-                            /////////////////////////////////////////////////////////////////////////////
                             //////////////////////  LOCAL STORAGE OPERATIONS ////////////////////////////
-                            /////////////////////////////////////////////////////////////////////////////
 
                             game.skills.selectedSkill.completed = "true";
 
@@ -524,8 +347,7 @@
 
                             } else {
 
-                                let lsTest = localStorage.getItem('ArminiaSkills');
-                                // [0,1,2,5,11]    
+                                let lsTest = localStorage.getItem('ArminiaSkills');  // [0,1,2,5,11]    
 
                                 let duplicate = false;
 
@@ -547,127 +369,80 @@
                             game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
 
                             /////////////////////////////////////////////////////////////////////////////
-                            /////////////////////////////////////////////////////////////////////////////
-                            /////////////////////////////////////////////////////////////////////////////
 
                         } else {
-                            // step complete, but final step NOT reached
 
-                            if (parameters.appName == "classic") {
-                                removeAllAnimateTags();
-                                addAnimateTags(j, 2);
+                            // step complete, but final step NOT reached                            
 
-                                let s = j + 2;
+                            removeAllAnimateTags();
+                            addAnimateTags(j, 2);
 
-                                const el1 = document.querySelector('#A_SVGStep' + s.toString());
-                                const bbox1 = el1.getBBox();
+                            let s = j + 2;
 
-                                let midX = bbox1.x + (bbox1.width / 2);
-                                let midY = bbox1.y + (bbox1.height / 2);
+                            d3.select("#A_SVGStep" + s.toString())
+                                .style("fill-opacity", 1);
 
-                                // console.log("PANNING AND ZOOMING!");
+                            // divider and text handler for papers
+                            game.skills.selectedSkill.elements.forEach(function (element) {
 
-                                svg.transition()
-                                    .duration(750)
-                                    .call(zoom.translateTo, midX, midY)
-                                    .on("end", myCallback5);
+                                if (element.num == s) {
 
-                                function myCallback5() {
-                                    svg.transition()
-                                        .duration(750)
-                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
-                                }
+                                    if (element.type == "divider") {
 
-                            }
+                                        d3.select("#divider" + s.toString())
+                                            .style("fill-opacity", 1);
 
-                            if (parameters.appName == "suite") {
+                                    } else {
 
-                                // commented as of paperZoom
-                                // let s = j + 1;
-                                let s = j + 2;
+                                        d3.select("#text" + s.toString())
+                                            .style("fill-opacity", 1);
 
-                                d3.select("#step" + s.toString() + "Black")
-                                    .style("display", "none");
-
-                                d3.select("#step" + s.toString() + "White")
-                                    .style("display", "inline");
-
-
-                                // divider and text handler for papers
-                                game.skills.selectedSkill.elements.forEach(function (element) {
-
-                                    if (element.num == s) {
-
-                                        if (element.type == "divider") {
-
-                                            d3.select("#divider" + s.toString() + "Black")
-                                                .style("stroke", "white");
-
-                                        } else {
-
-                                            d3.select("#text" + s.toString() + "Black")
-                                                .style("display", "none");
-
-                                            d3.select("#text" + s.toString() + "White")
-                                                .style("display", "inline");
-
-                                        }
                                     }
-                                });
-
-                                let stepElement = document.getElementById("step" + s.toString() + "White");
-                                const stepBox = stepElement.getBBox();
-
-                                let midX = stepBox.x + (stepBox.width / 2);
-                                let midY = stepBox.y + (stepBox.height / 2);
-
-                                function myCallback3() {
-
-                                    svg.transition()
-                                        .duration(750)
-                                        .call(zoom.scaleTo, game.skills.selectedSkill.zoomScale);
                                 }
+                            });
 
-                                svg.transition()
-                                    .duration(750)
-                                    .call(zoom.translateTo, midX, midY)
-                                    .on("end", myCallback3);
+                            // get element dimensions and then pan and zoom
+                            let elementStr = "A_SVGStep" + s.toString();
+                            panAndZoom(elementStr, game.skills.selectedSkill.zoomScale);
 
+                            // update the steps container text and progress bar
+                            updateStepsContainer(j, 2, 1, n, false);
 
-                                // console.log("BEGIN ZOOM AND TRANSLATE!");
-                                // if (!gotK) {        
-
-                                //     let k;
-
-                                //     for (k = 1; k <= stepsArray.length - 1; k++) {
-                                //         if (stepsArray[k] == 0) {
-
-                                //             gotK = true;
-
-                                //             svg.transition()
-                                //                 .duration(750)
-                                //                 .call(zoom.translateTo, midX, midY)
-                                //                 .on("end", myCallback3);
-
-                                //             break;
-                                //         }
-                                //     }
-                                // }
-                            }
-
-                            $("#A_stepsCount").html("Steps " + `${j + 2}` + " of " + stepsLength.toString());
-                            $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[j + 1]);
-                            $("#A_stepsProgress").css("width", n.toString() + "%");
-                            $("#A_stepsValue").text(stepsProgress.style.width);
                         }
                     }
                 }
             }
 
-            // blink checkbox
-            checkbox7.onclick = function () {
-                removeAllAnimateTags();
-                updateWorkbook();
+            function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
+
+                $("#A_stepsCount").html("Steps " + `${stepsArrayNum + stepsCountNum}` + " of " + stepsLength.toString());
+                $("#A_stepsValue").text(stepsProgress.style.width);
+
+                if (complete) {
+
+                    $("#A_stepsBody").html("<p>&nbsp;</p><p>&nbsp;</p>" + "<i>" + game.skills.selectedSkill.name + " has been added to your achievements!</i>" + "<p>&nbsp;</p><p>&nbsp;</p>");
+                    $("#A_stepsProgress").css("width", "100%");
+
+                } else {
+
+                    $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[stepsArrayNum + stepsBodyNum]);
+                    $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
+
+                }
+
+            }
+
+            function panAndZoom(element, scale) {
+
+                let stepBox = document.getElementById(element).getBBox();
+                let midX = stepBox.x + (stepBox.width / 2);
+                let midY = stepBox.y + (stepBox.height / 2);
+
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.translateTo, midX, midY)
+                    .on("end", () => myZoomCallback(scale));
+
             }
 
             function updateWorkbook() {
@@ -734,11 +509,51 @@
                         }
                     }
 
-                    // reset all steps to black to allow steps to turn back to black for undo functionality
+                    // assume sameResultState, check it later
+                    let sameResultState = true;
 
-                    if (parameters.appName == "suite") {
+                    // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
+                    // if new start, make oldStepsArray a duplicate of stepsArray
+                    if (newStart) {
 
-                        for (let n = 2; n <= game.skills.selectedSkill.steps.length; n++) {
+                        // give access to buildStepsView if newStart
+                        sameResultState = false;
+
+                        // now that we have determined newStart, set it to false here
+                        // it will never be set true again, unless geogebra page is reloaded
+                        newStart = false;
+
+                        for (let i = 0; i < stepsArray.length; i++) {
+                            oldStepsArray[i] = stepsArray[i];
+                        }
+
+                    } else sameResultState = true;
+
+
+                    // check if same Result State and set accordingly
+                    for (let i = 0; i < stepsArray.length; i++) {
+
+                        if (stepsArray[i] !== oldStepsArray[i]) {
+
+                            console.log("different results!");
+
+                            sameResultState = false;
+                            break;
+
+                        }
+                    }
+
+                    // prevent access to buildStepsView if same result state or if blink checkbox checked 
+                    // if (!sameResultState || blinkChecked) {
+                    if (!sameResultState) {
+
+                        // result state has changed! Set oldStepsArray to stepsArray
+                        for (let i = 0; i < stepsArray.length; i++) {
+                            oldStepsArray[i] = stepsArray[i];
+                        }
+
+                        // reset all steps to fadeNum for undo functionality
+                        for (let n = 2; n <= stepsLength; n++) {
 
                             game.skills.selectedSkill.elements.forEach(function (element) {
 
@@ -746,118 +561,40 @@
 
                                     if (element.type == "divider") {
 
-                                        d3.select("#divider" + n.toString() + "Black")
-                                            .style("stroke", "black");
+                                        d3.select("#divider" + n.toString())
+                                            .style("fill-opacity", fadeNum);
 
                                     } else {
 
-                                        d3.select("#text" + n.toString() + "Black")
-                                            .style("display", "inline");
+                                        d3.select("#text" + n.toString())
+                                            .style("fill-opacity", fadeNum);
 
-                                        d3.select("#text" + n.toString() + "White")
-                                            .style("display", "none");
                                     }
                                 }
                             });
 
-                            d3.select("#step" + n.toString() + "Black")
-                                .style("display", "inline");
-
-                            d3.select("#step" + n.toString() + "White")
-                                .style("display", "none");
+                            d3.select("#A_SVGStep" + n.toString())
+                                .style("fill-opacity", fadeNum);
 
                         }
-                    }
 
-                    // update the stepper
-                    buildStepsView();
+                        // update the stepper and stepsImage
+                        buildStepsView();
+
+                    } else {
+
+                        console.log("SAME RESULTS");
+
+                    }
                 }
             }
+
             api.registerAddListener(updateWorkbook);
-            // api.registerClientListener(updateWorkbook);
+            api.registerClientListener(updateWorkbook);
+
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
-
-        // let svgObject;
-        function removeAllAnimateTags() {
-
-            var element = A_SVGSteps.getElementsByTagName("animate");
-
-            for (index = element.length - 1; index >= 0; index--) {
-                element[index].parentNode.removeChild(element[index]);
-            }
-
-            // let A_SVGSteps = svgObject.getElementById('A_SVGSteps');
-            // var element = A_SVGSteps.getElementsByTagName("animate"), index;
-
-            // for (index = element.length - 1; index >= 0; index--) {
-            //     element[index].parentNode.removeChild(element[index]);
-            // }
-        };
-
-        function addAnimateTags(j, n) {
-
-            if ($("#checkbox7").prop("checked") == true) {
-
-                let A_SVGStep = A_SVGSteps.children[(j + n) - 1];
-
-                let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-                let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-
-                animationElement1.setAttributeNS(null, 'attributeName', "stroke-opacity");
-                animationElement1.setAttributeNS(null, 'values', "0;1;0");
-                animationElement1.setAttributeNS(null, 'dur', "1.5s");
-                animationElement1.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                animationElement2.setAttributeNS(null, 'attributeName', "fill-opacity");
-                animationElement2.setAttributeNS(null, 'values', "0;1;0");
-                animationElement2.setAttributeNS(null, 'dur', "1.5s");
-                animationElement2.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                A_SVGStep.appendChild(animationElement1);
-                A_SVGStep.appendChild(animationElement2);
-
-                // let A_SVGStep = svgObject.getElementById('A_SVGStep' + `${j + n}`);
-                // let animationElement1 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-                // let animationElement2 = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-
-                // animationElement1.setAttributeNS(null, 'attributeName', "stroke-opacity");
-                // animationElement1.setAttributeNS(null, 'values', "0;1;0");
-                // animationElement1.setAttributeNS(null, 'dur', "1.5s");
-                // animationElement1.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                // animationElement2.setAttributeNS(null, 'attributeName', "fill-opacity");
-                // animationElement2.setAttributeNS(null, 'values', "0;1;0");
-                // animationElement2.setAttributeNS(null, 'dur', "1.5s");
-                // animationElement2.setAttributeNS(null, 'repeatCount', "indefinite");
-
-                // A_SVGStep.appendChild(animationElement1);
-                // A_SVGStep.appendChild(animationElement2);
-            }
-        };
-
-        // verbose checkbox
-        checkbox8.onclick = function () {
-
-            if (checkbox8.checked == true) {
-
-                var el = A_SVGSteps.getElementsByClassName("A_verbose");
-
-                for (var i = 0; i < el.length; i++) {
-                    var currentEl = el[i];
-                    currentEl.setAttributeNS(null, 'visibility', "visible");
-                }
-
-            } else {
-                var el = A_SVGSteps.getElementsByClassName("A_verbose");
-
-                for (var i = 0; i < el.length; i++) {
-                    var currentEl = el[i];
-                    currentEl.setAttributeNS(null, 'visibility', "hidden");
-                }
-            }
-        }
 
         game.geogebra = {};
         game.geogebra.parameters = {};
@@ -865,6 +602,24 @@
 
         $("#A_constructionBtn").css("color", "white");
         $("#A_constructionBtn").css("border", "1px solid #8064cc");
+
+        function removeAllAnimateTags() {
+
+            d3.selectAll("[id *= 'A_SVGStep']")
+                .style("animation", "inherit");
+
+        };
+
+        function addAnimateTags(j, n) {
+
+            let s = j + n;
+
+            d3.select("#A_SVGStep" + s.toString())
+                .style("animation", "transcolor 0.75s infinite alternate")
+                .selectAll("[id *= 'A_text']")
+                .style("fill-opacity", "");
+
+        };
 
         $("#A_constructionBtn").click(function () {
             // game.nav = "skill";
@@ -899,21 +654,12 @@
 
         $("#A_backToSkillsBtn").click(function () {
 
-            // svg = d3.select(game.skills.selectedSkill.elementID);
-
             ready = false;
-            // Arminia.skills.cheatNum = 0;
             cheatNum = 0;
-            // console.log("A_backToSkillsBtn cheatNum: " + cheatNum);
-            // console.log("A_backToSkillsBtn cheatNum: " + Arminia.skills.cheatNum);
-
-            // $("#A_overviewContainer").css("display", "none");
-            // $(".scaleContainerClass").css("display", "inline-block");
             $("#A_constructionBtn").css("color", "white");
             $("#A_constructionBtn").css("border", "1px solid #8064cc");
             $("#A_overviewBtn").css("color", "#acb0dee3");
             $("#A_overviewBtn").css("border", "1px solid #473380");
-            // $("#A_stepsBackgroundImage").css("display", "none");
 
             if (parameters.appName == "classic") {
                 game.nav = "home";
@@ -921,14 +667,18 @@
 
                 removeAllAnimateTags();
 
-                d3.select(game.skills.selectedSkill.elementID).remove();
+                d3.select("#" + game.skills.selectedSkill.elementID).remove();
 
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");
 
             } else {
 
-                $("#A_stepsImage").css("display", "block");
+                removeAllAnimateTags();
+
+                d3.select("#" + game.skills.selectedSkill.elementID).remove();
+
+                // $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startGeogebraBtn").hide();
 
@@ -938,9 +688,7 @@
                 d3.select("#A_schwarzsPPaper").remove();
 
                 game.nav = "A_64TetraView";
-                // Arminia.setGUI(game);                  
                 game.animatePageOut("A_geobebraView");
-                // game.animatePageIn("A_proxyView"); 
                 game.animatePageIn("A_64TetraView");
 
             }
@@ -984,7 +732,15 @@
 
         $("#A_cheatBtnID").click(function () {
 
+            // console.log(cheatNum);
+            // console.log(stepsArray);
+
             if (cheatNum < cheatSteps.length) {
+
+                // stepsArray[cheatNum] = cheatSteps[cheatNum];
+
+                // updateWorkbook();
+
                 ggbApplet.evalCommand(cheatSteps[cheatNum]);
                 cheatNum++;
             }

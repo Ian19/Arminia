@@ -1,1 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="355" height="80" viewBox="0 0 160 45" xmlns:v="https://vecta.io/nano"><style><![CDATA[.B{font-family:Cinzel Decorative}.C{font-family:Cinzel}]]></style><defs><style>@font-face{font-family:"Cinzel";src:url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAVUAAwAAAAAB+wAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABHAAAAE8AAABgYSIqt2NtYXAAAAFsAAAASAAAAVIDXgNBZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAVMAAAGwbGtrbmhlYWQAAAMQAAAANgAAADYQkBNbaGhlYQAAA0gAAAAbAAAAJAPSATZobXR4AAADZAAAABAAAAAQBuUAqmxvY2EAAAN0AAAACgAAAAoA9ABwbWF4cAAAA4AAAAAaAAAAIAAKAGVuYW1lAAADnAAAAZkAAALxURoJWnBvc3QAAAU4AAAAFAAAACD/nwA2cHJlcAAABUwAAAAHAAAAB2gGjIV4nGNgYdzJOIGBlYGBqYspgoGBwRtCM8YxGDHqMCCBBQwM7wWQ+H7+fq4MBxgUGIKYL/zrYWBgvsBYosDAMBkkx/iFaQ+QUmBgAgBsXw5YAHicY2BgYGaAYBkGRgYQ8AHyGMF8FgYDIM0BhExAWoHBkyHo/38E6//D/zv/b4TqAgNGNgaCgJGwEghggjGYidUxKAAA1dkLngABAAH//wAPeJx1UE1Kw2AQnfm+pIXYv5A/TGskiWnatI3Jl6YpVgLSCnYhRlcuvIXXaMEzeAIPUDcuXbnwAJ5DaPAruFF0YGZ4A4/33gABVq7whb4BhSqAItuyZ8s2w4fyEYfle7kSF58bJnzAzxLhFAANsuG8Ohhgw2DHdmVFc9OIxWySKW6IbuTEaaIkFiYRSzRXThMtwNipVF/PaFE3PaQUPbNezHarhkWBNX4km+2C93opeSYJTE/arvkg9zv8rU2euPYJ5HABN3DHtRNmEU1toGuhEVnEsAjXc0L0Q8HnRtJIz3KS5Ryj36048TjE5F+/qs79xpr7vB4tWXt0Gcm9ZrsfNNXe8UEWzsMWbXtHJlHC9qFu5pMGFRDn086sJ4r138G6Zu2KbMz4fBjdZtWB6k8nLd1RpU5fEbrp2KP7gYSIjeFoz24trilBbDb/ys/f/gUEhEV+AAABAAAAAgAAgeIP118PPPUIAwPoAAAAAMtenhgAAAAA2zcyBAAy/owCsAPQAAAABgACAAAAAAAAeJxjYGRgYL7wr4eBgWkpAwQwMqACFgBX3QMLAAH0ADIA+gAAAVIAPAKlADwAAAAWABwAWgDYAAB4nGNgZGBgYGGIZWBlAAFGBgRgBxEACmcAcAAAeJx9kT1OwzAcxZ9pKUKCipWPwSMMJFEGBjqhUCQk1KACZWGBKEqCQh1iZ2hXLsAJWDgFExt34CDsvCRGogzEcvx7/4/n2AGwgQ8ItE/I2bJAj6rlJazgynIHm7ix3EUfleVlrOPJco/xZ8t9bOOFXaK7SvWCN8sCa+La8hL6IrLcgS8eLXexI14tL2NLvFvuMf5puY8D8RWoYlZmSWqk7/mevExjGWTTeZzL81Ldx5GRR5VJVanlbmpMoQ9dN8lMWt05kXpwR8enF0E4GY7dtmmvXcZxUuW3pe94njcYhaPhoI3v24TdwapJXOpMTWVTvlj4s6WOyqww2tFZ7qgyccOTMwRQKDBDiQwJUhhI+PCaKXHJSMw1YHaKOTmnOme1wj1V1NQf8ScYVirGNfVu42Poq3EIlyNhf11R4Q4OuxQeGB3hGKe4oHuICYYYM/Z7p70FNeY7oUOOW+7j08drxoA+IeeQ9Lt+/0/H4hkWcxOq+tszftm0uYEf9/8c/55S82T1PRaMajrUfjnX+l4S5kOc4OwbDj+NcwAAAHicY2BmAIP/cxiMGDABCwAqhwHVuAH/hbAEjQA=) format("woff"); font-weight:normal;font-style:normal;} @font-face{font-family:"Cinzel Decorative";src:url(data:application/font-woff;charset=utf-8;base64,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) format("woff"); font-weight:normal;font-style:normal;}</style><radialGradient id="A" r="44%"><stop stop-color="#fff" offset="50%"/><stop offset="100%"/></radialGradient><linearGradient id="B" gradientUnits="userSpaceOnUse" x1="-24.3" y1="11.8" x2="20.3" y2="28"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/><stop offset=".4" stop-color="#fff" stop-opacity=".85"/><stop offset=".45" stop-color="#fff"/><stop offset=".55" stop-color="#fff"/><stop offset=".58" stop-color="#fff" stop-opacity=".85"/><stop offset=".75" stop-color="#fff" stop-opacity=".001"/><stop offset="1" stop-color="#fff" stop-opacity="0"/><animate id="C" attributeName="x1" begin="0s;C.end + 4s" dur="4s" from="-24.3" to="145.7" restart="always"/><animate id="D" attributeName="x2" begin="0s;D.end + 4s" dur="4s" from="10.3" to="190.3" restart="always"/></linearGradient><filter id="E" height="130%"><feGaussianBlur stdDeviation="1.5"/><feOffset/><feComponentTransfer><feFuncA type="linear" slope="1.5"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><clipPath id="F"><text id="G" fill="gold" font-size="24" stroke="none"><tspan x="10" y="30" font-size="33" letter-spacing="2" class="B">A</tspan><tspan x="36" y="30" letter-spacing="3" class="C">R</tspan><tspan x="55.3" y="30" letter-spacing="2" class="B">M</tspan><tspan x="80.6" y="30" letter-spacing="5" class="C">I</tspan><tspan x="93.8" y="30" letter-spacing="3" class="B">N</tspan><tspan x="117.8" y="30" letter-spacing="3" class="C">I</tspan><tspan x="129.5" y="30" letter-spacing="2" class="B">A</tspan></text></clipPath><mask id="H"><ellipse transform="rotate(20)" style="transform-box:fill-box" cx="10" cy="20" rx="15" ry="50" fill="url(#A)"><animate attributeName="cx" begin="0s;C.end + 4s" dur="4s" from="10" to="180" restart="always"/></ellipse></mask><radialGradient id="I" cx="60.666" cy="60.667" r="60.666" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="gold" stop-opacity=".1"/><stop offset="1" stop-color="gold" stop-opacity="0"/></radialGradient><path id="J" filter="blur(3px)" transform="scale(.5)" opacity=".5" fill="url(#I)" d="M121.332 57.385l-52.119-.258 36.672-37.037-4.643-4.643-37.035 36.671L63.948 0h-6.565l-.258 52.118-37.035-36.67-4.643 4.642 36.672 37.037L0 57.385v6.565l52.117.258-36.67 37.035 4.643 4.642 37.035-36.67.258 52.118h6.565l.259-52.118 37.035 36.671 4.643-4.643-36.67-37.035 52.117-.258z"/></defs><use href="#G" filter="url(#E)" mask="url(#H)"/><use href="#G"/><path fill="url(#B)" clip-path="url(#F)" d="M0 0h400v40H0z"/><use x="-9" y="-21" href="#J" fill-opacity="0"><animate attributeName="fill-opacity" begin="0.2s;C.end + 4.2s" values="0;1;0" dur="0.5s" restart="always" fill="freeze"/><animateTransform attributeName="transform" type="rotate" begin="0.2s;C.end + 4.2s" values="0 21.33325 9.33325; 90 21.33325 9.33325" dur="0.5s" restart="always" fill="freeze"/></use><use x="86" y="3" href="#J" fill-opacity="0"><animate attributeName="fill-opacity" begin="2.5s;C.end + 6.5s" values="0;1;0" dur="0.5s" restart="always" fill="freeze"/><animateTransform attributeName="transform" type="rotate" begin="2.5s;C.end + 6.5s" values="0 116.33325 33.33325; 90 116.33325 33.33325" dur="0.5s" restart="always" fill="freeze"/></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="355" height="80" viewBox="0 0 160 45" xmlns:v="https://vecta.io/nano">
+
+    <style>
+        <![CDATA[
+        .B {
+            font-family: Cinzel Decorative
+        }
+
+        .C {
+            font-family: Cinzel
+        }
+        ]]>
+    </style>
+
+    <defs>
+
+        <style>
+            @font-face {
+                font-family: "Cinzel";
+                src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAVUAAwAAAAAB+wAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABHAAAAE8AAABgYSIqt2NtYXAAAAFsAAAASAAAAVIDXgNBZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAVMAAAGwbGtrbmhlYWQAAAMQAAAANgAAADYQkBNbaGhlYQAAA0gAAAAbAAAAJAPSATZobXR4AAADZAAAABAAAAAQBuUAqmxvY2EAAAN0AAAACgAAAAoA9ABwbWF4cAAAA4AAAAAaAAAAIAAKAGVuYW1lAAADnAAAAZkAAALxURoJWnBvc3QAAAU4AAAAFAAAACD/nwA2cHJlcAAABUwAAAAHAAAAB2gGjIV4nGNgYdzJOIGBlYGBqYspgoGBwRtCM8YxGDHqMCCBBQwM7wWQ+H7+fq4MBxgUGIKYL/zrYWBgvsBYosDAMBkkx/iFaQ+QUmBgAgBsXw5YAHicY2BgYGaAYBkGRgYQ8AHyGMF8FgYDIM0BhExAWoHBkyHo/38E6//D/zv/b4TqAgNGNgaCgJGwEghggjGYidUxKAAA1dkLngABAAH//wAPeJx1UE1Kw2AQnfm+pIXYv5A/TGskiWnatI3Jl6YpVgLSCnYhRlcuvIXXaMEzeAIPUDcuXbnwAJ5DaPAruFF0YGZ4A4/33gABVq7whb4BhSqAItuyZ8s2w4fyEYfle7kSF58bJnzAzxLhFAANsuG8Ohhgw2DHdmVFc9OIxWySKW6IbuTEaaIkFiYRSzRXThMtwNipVF/PaFE3PaQUPbNezHarhkWBNX4km+2C93opeSYJTE/arvkg9zv8rU2euPYJ5HABN3DHtRNmEU1toGuhEVnEsAjXc0L0Q8HnRtJIz3KS5Ryj36048TjE5F+/qs79xpr7vB4tWXt0Gcm9ZrsfNNXe8UEWzsMWbXtHJlHC9qFu5pMGFRDn086sJ4r138G6Zu2KbMz4fBjdZtWB6k8nLd1RpU5fEbrp2KP7gYSIjeFoz24trilBbDb/ys/f/gUEhEV+AAABAAAAAgAAgeIP118PPPUIAwPoAAAAAMtenhgAAAAA2zcyBAAy/owCsAPQAAAABgACAAAAAAAAeJxjYGRgYL7wr4eBgWkpAwQwMqACFgBX3QMLAAH0ADIA+gAAAVIAPAKlADwAAAAWABwAWgDYAAB4nGNgZGBgYGGIZWBlAAFGBgRgBxEACmcAcAAAeJx9kT1OwzAcxZ9pKUKCipWPwSMMJFEGBjqhUCQk1KACZWGBKEqCQh1iZ2hXLsAJWDgFExt34CDsvCRGogzEcvx7/4/n2AGwgQ8ItE/I2bJAj6rlJazgynIHm7ix3EUfleVlrOPJco/xZ8t9bOOFXaK7SvWCN8sCa+La8hL6IrLcgS8eLXexI14tL2NLvFvuMf5puY8D8RWoYlZmSWqk7/mevExjGWTTeZzL81Ldx5GRR5VJVanlbmpMoQ9dN8lMWt05kXpwR8enF0E4GY7dtmmvXcZxUuW3pe94njcYhaPhoI3v24TdwapJXOpMTWVTvlj4s6WOyqww2tFZ7qgyccOTMwRQKDBDiQwJUhhI+PCaKXHJSMw1YHaKOTmnOme1wj1V1NQf8ScYVirGNfVu42Poq3EIlyNhf11R4Q4OuxQeGB3hGKe4oHuICYYYM/Z7p70FNeY7oUOOW+7j08drxoA+IeeQ9Lt+/0/H4hkWcxOq+tszftm0uYEf9/8c/55S82T1PRaMajrUfjnX+l4S5kOc4OwbDj+NcwAAAHicY2BmAIP/cxiMGDABCwAqhwHVuAH/hbAEjQA=) format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "Cinzel Decorative";
+                src: url(data:application/font-woff;charset=utf-8;base64,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) format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+
+        <radialGradient id="A" r="44%">
+            <stop stop-color="#fff" offset="50%" />
+            <stop offset="100%" />
+        </radialGradient>
+
+        <linearGradient id="B" gradientUnits="userSpaceOnUse" x1="-24.3" y1="11.8" x2="20.3" y2="28">
+            <stop offset="0" stop-color="#fff" stop-opacity="0" />
+            <stop offset=".25" stop-color="#fff" stop-opacity="0" />
+            <stop offset=".4" stop-color="#fff" stop-opacity=".85" />
+            <stop offset=".45" stop-color="#fff" />
+            <stop offset=".55" stop-color="#fff" />
+            <stop offset=".58" stop-color="#fff" stop-opacity=".85" />
+            <stop offset=".75" stop-color="#fff" stop-opacity=".001" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+            <animate id="C" attributeName="x1" begin="0s;C.end + 4s" dur="4s" from="-24.3" to="145.7"
+                restart="always" />
+            <animate id="D" attributeName="x2" begin="0s;D.end + 4s" dur="4s" from="10.3" to="190.3" restart="always" />
+        </linearGradient>
+
+        <filter id="E" height="130%">
+            <feGaussianBlur stdDeviation="1.5" />
+            <feOffset />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="1.5" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+
+        <clipPath id="F">
+            <text id="G" fill="gold" font-size="24" stroke="none">
+                <tspan x="10" y="30" font-size="33" letter-spacing="2" class="B">A</tspan>
+                <tspan x="36" y="30" letter-spacing="3" class="C">R</tspan>
+                <tspan x="55.3" y="30" letter-spacing="2" class="B">M</tspan>
+                <tspan x="80.6" y="30" letter-spacing="5" class="C">I</tspan>
+                <tspan x="93.8" y="30" letter-spacing="3" class="B">N</tspan>
+                <tspan x="117.8" y="30" letter-spacing="3" class="C">I</tspan>
+                <tspan x="129.5" y="30" letter-spacing="2" class="B">A</tspan>
+            </text>
+        </clipPath>
+
+        <mask id="H">
+            <ellipse transform="rotate(20)" style="transform-box:fill-box" cx="10" cy="20" rx="15" ry="50"
+                fill="url(#A)">
+                <animate attributeName="cx" begin="0s;C.end + 4s" dur="4s" from="10" to="180" restart="always" />
+            </ellipse>
+        </mask>
+
+        <radialGradient id="I" cx="60.666" cy="60.667" r="60.666" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" />
+            <stop offset=".5" stop-color="gold" stop-opacity=".1" />
+            <stop offset="1" stop-color="gold" stop-opacity="0" />
+        </radialGradient>
+
+        <path id="J" filter="blur(3px)" transform="scale(.5)" opacity=".5" fill="url(#I)"
+            d="M121.332 57.385l-52.119-.258 36.672-37.037-4.643-4.643-37.035 36.671L63.948 0h-6.565l-.258 52.118-37.035-36.67-4.643 4.642 36.672 37.037L0 57.385v6.565l52.117.258-36.67 37.035 4.643 4.642 37.035-36.67.258 52.118h6.565l.259-52.118 37.035 36.671 4.643-4.643-36.67-37.035 52.117-.258z" />
+    </defs>
+
+    <use href="#G" filter="url(#E)" mask="url(#H)" />
+
+    <use href="#G" />
+
+    <path fill="url(#B)" clip-path="url(#F)" d="M0 0h400v40H0z" />
+
+    <use x="-9" y="-21" href="#J" fill-opacity="0">
+        <animate attributeName="fill-opacity" begin="0.2s;C.end + 4.2s" values="0;1;0" dur="0.5s" restart="always"
+            fill="freeze" />
+        <animateTransform attributeName="transform" type="rotate" begin="0.2s;C.end + 4.2s"
+            values="0 21.33325 9.33325; 90 21.33325 9.33325" dur="0.5s" restart="always" fill="freeze" />
+    </use>
+
+    <use x="86" y="3" href="#J" fill-opacity="0">
+        <animate attributeName="fill-opacity" begin="2.5s;C.end + 6.5s" values="0;1;0" dur="0.5s" restart="always"
+            fill="freeze" />
+        <animateTransform attributeName="transform" type="rotate" begin="2.5s;C.end + 6.5s"
+            values="0 116.33325 33.33325; 90 116.33325 33.33325" dur="0.5s" restart="always" fill="freeze" />
+    </use>
+    
+</svg>

@@ -296,8 +296,6 @@
                 }
             });
         }
-
-        $("#A_sidebarConstruction").hide();
     };
 
     if (window.Arminia === undefined) {

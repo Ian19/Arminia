@@ -30,9 +30,10 @@
         game.skills.skillData = [
             {
                 "id": 0,
-                "elementID": "#A_circleLargeSVGGlow2",
+                "elementID": "A_detailCircle",
                 "zoomScale": 1,
                 "material_id": "ybm744ww",
+                "elements": [],
 
                 // "steps": [["circle c, Circle(A, 1)"]],
 
@@ -56,8 +57,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
                 "url2": "src/assets/images/skills/circleLarge.svg",
-                "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/skills/details/circleLargeSVGGlow2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailCircle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  3 STEPS",
                 "completed": false,
@@ -93,9 +93,10 @@
                 `
             }, {
                 "id": 1,
-                "elementID": "#A_vesicaPicsisLargeSVGGlow",
+                "elementID": "A_detailVesicaPiscis",
                 "material_id": "ybm744ww",
-                "zoomScale": 1,
+                "elements": [],
+                "zoomScale": 1.5,
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"],
                     ["point B, Point(c)", "segment f, Segment(A, B)"],
@@ -132,9 +133,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/vesica_piscis.svg",
                 "url2": "src/assets/images/skills/vesica_piscis.svg",
-                "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/skills/details/vesicaPicsisLargeSVGGlow5.svg",
-                // "stepsImage2": "src/assets/images/skills/details/test.svg",
+                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis.svg",
                 "name": "The Vesica Piscis",
                 "difficulty": "EASY  |  12 STEPS",
                 "completed": false,
@@ -191,6 +190,7 @@
             },
             {
                 "id": 2,
+                "elements": [],
                 "d3Data": ["hexStatus23Roots1", "Complete23Roots1"],
                 "selected": false,
                 "url": "src/assets/images/skills/3_roots.svg",
@@ -230,6 +230,7 @@
             {
                 "id": 3,
                 "selected": false,
+                "elements": [],
                 "url": "src/assets/images/skills/3_roots2.svg",
                 "name": "Three Sacred Roots 2",
                 "difficulty": "EASY  |  17 STEPS",
@@ -267,6 +268,7 @@
             {
                 "id": 4,
                 "selected": false,
+                "elements": [],
                 "url": "src/assets/images/skills/3_roots2.svg",
                 "name": "Three Sacred Roots 3",
                 "difficulty": "EASY  |  17 STEPS",
@@ -304,6 +306,7 @@
                 "id": 5,
                 "d3Data": ["hexStatus2Luc1", "Complete2Luc1"],
                 "selected": false,
+                "elements": [],
                 "url": "src/assets/images/skills/circle.svg",
                 "name": "1",
                 "difficulty": "EASY  |  1 STEP",
@@ -403,8 +406,9 @@
                 "quotee": "Proclus"
             }, {
                 "id": 11,
-                "elementID": "#A_detailTriquetra",
-                "zoomScale": 1,
+                "elementID": "A_detailTriquetra",
+                "zoomScale": 1.25,
+                "elements": [],
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"],
                     ["point B, Point(c)", "segment f, Segment(A, B)"],
@@ -438,8 +442,7 @@
                 ],
 
                 "selected": false,
-                "stepsImage": "src/assets/images/skills/details/vesicaPiscisDetail.svg",
-                "stepsImage2": "src/assets/images/skills/details/triquetraLargeSVGGlow.svg",
+                "stepsImage": "src/assets/images/skills/details/detailTriquetra.svg",
                 "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
                 "url": "src/assets/images/skills/triqetra.svg",
                 "url2": "src/assets/images/skills/triqetra.svg",
@@ -477,8 +480,9 @@
                 </span>`
             }, {
                 "id": 12,
-                "elementID": "#A_detailGenesis",
+                "elementID": "A_detailGenesis",
                 "zoomScale": 1.5,
+                "elements": [],
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"],
                     ["point B, Point(c)", "circle d, Circle(B, A)"],
@@ -522,7 +526,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/genesis.svg",
                 "url2": "src/assets/images/skills/genesis.svg",
-                "stepsImage2": "src/assets/images/skills/details/detailGenesis2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailGenesis4.svg",
                 "d3Data": ["hexStatus4Genesis", "Complete4Genesis"],
                 "name": "The Genesis Pattern",
                 "difficulty": "EASY  |  7 STEP",
@@ -536,8 +540,9 @@
             },
             {
                 "id": 13,
-                "elementID": "#A_detailEgg",
+                "elementID": "A_detailEgg",
                 "zoomScale": 1.5,
+                "elements": [],
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"],
                     ["point B, Point(c)", "circle d, Circle(B, A)"],                    
@@ -595,7 +600,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/eggOfLife.svg",
                 "url2": "src/assets/images/skills/eggOfLife.svg",
-                "stepsImage2": "src/assets/images/skills/details/detailEgg2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailEgg3.svg",
                 "d3Data": ["hexStatus5Egg", "Complete5Egg"],
                 "name": "The Egg of Life",
                 "difficulty": "EASY  |  13 STEPS",
@@ -632,8 +637,9 @@
                 "quotee": "Proclus"
             }, {
                 "id": 17,
-                "elementID": "#A_detailCompletedFOL",
+                "elementID": "A_detailCompletedFOL",
                 "zoomScale": 3,
+                "elements": [],
 
                 "steps": [
                     ["point A, ", "circle c, Circle(A, 1)"],
@@ -862,7 +868,7 @@
                     addNbsp("Select the Circle with Center tool and draw a Circle with center P<sub>1</sub> and radius P<sub>1</sub>R."),     
                     addNbsp("Select the Circle with Center tool and draw a Circle with center Q<sub>1</sub> and radius Q<sub>1</sub>E<sub>1</sub>."),     
                     addNbsp("Select the Circle with Center tool and draw a Circle with center R<sub>1</sub> and radius R<sub>1</sub>S."),     
-                    addNbsp("Select the Circle with Center tool and draw a Circle with center S<sub>1</sub> and radius R<sub>1</sub>G<sub>1</sub>."),
+                    addNbsp("Select the Circle with Center tool and draw a Circle with center S<sub>1</sub> and radius S<sub>1</sub>G<sub>1</sub>."),
 
                     addNbsp("Select the Intersect tool and create Point T<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and H<sub>1</sub>."),
                     addNbsp("Select the Intersect tool and create Point U<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and J<sub>1</sub>."),
@@ -908,7 +914,7 @@
 
                 "selected": false,
                 "url": "src/assets/images/skills/circle.svg",
-                "stepsImage2": "src/assets/images/skills/details/detailCompletedFOL2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailCompletedFOL3.svg",
                 "d3Data": ["hexStatusCompleteFOL", "CompleteCompleteFOL"],
                 "name": "Completed Flower of Life",
                 "difficulty": "EASY  |  1 STEP",

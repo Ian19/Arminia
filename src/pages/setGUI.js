@@ -25,7 +25,6 @@
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_stepsBackgroundImage").css("display", "none");                
                 $("#A_sysHintContainer").show();
-                $("#A_sidebarConstruction").hide();
                 $("#A_sidebarGroupHologram").hide();
                 $("#checkbox9").prop("checked", true);
                 $("#checkbox0").prop("checked", true);
@@ -47,7 +46,6 @@
                 $("#A_homePage").hide();
 
                 $("#A_sysHintContainer").hide();
-                $("#A_sidebarConstruction").hide();
                 $("#A_sidebarGroupHologram").show();
                 $('#A_protonBtnID').text("THE SCHWARZSCHILD PROTON");
                 break;
@@ -58,7 +56,6 @@
                 $("#A_64TetraView").hide();
 
                 $("#A_sysHintContainer").hide();
-                $("#A_sidebarConstruction").show();
                 $("#A_sidebarGroupHologram").hide();
                 $("#A_detailButton").text("START");
                 break;

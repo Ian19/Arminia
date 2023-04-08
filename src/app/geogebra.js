@@ -21,6 +21,7 @@
 
         let cheatNum = 0;
         const fadeNum = 0.2;
+        const fillColor = "#ffe86d";
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
@@ -39,27 +40,18 @@
 
             $("#A_startGeogebraBtn").click(function () {
 
-                if (parameters.appName == "suite") {
-
-                    $("#A_cheatBtnID").show();
-
-                }
+                if (parameters.appName == "suite") $("#A_cheatBtnID").show();
 
                 ready = true;
 
                 $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
 
-                d3.selectAll("[id *= 'divider']")
-                    .style("fill-opacity", fadeNum);
-
-                d3.selectAll("[id *= 'text']")
-                    .style("fill-opacity", fadeNum);
-
-                d3.selectAll("[id *= 'A_SVGStep']")
+                d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
                     .style("fill-opacity", fadeNum);
 
                 d3.select("#A_SVGStep1")
-                    .style("fill-opacity", 1);
+                    .style("fill-opacity", 1)
+                    .style("fill", fillColor);
 
                 removeAllAnimateTags();
                 addAnimateTags(0, 1);
@@ -97,7 +89,7 @@
                 svg = d3.select("#" + game.skills.selectedSkill.elementID);
                 svg.style("width", "100%").style("height", "100%").style("display", "block");
 
-                svg.select('g')
+                d3.selectAll("[id *= 'A_SVGStep'], [id *= 'divider'], [id *= 'paperText']")
                     .style("fill", "white");
 
                 zoom = d3.zoom()
@@ -293,6 +285,38 @@
 
             }
 
+            function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
+
+                $("#A_stepsCount").html("Steps " + `${stepsArrayNum + stepsCountNum}` + " of " + stepsLength.toString());
+                $("#A_stepsValue").text(stepsProgress.style.width);
+
+                if (complete) {
+
+                    $("#A_stepsBody").html("<p>&nbsp;</p><p>&nbsp;</p>" + "<i>" + game.skills.selectedSkill.name + " has been added to your achievements!</i>" + "<p>&nbsp;</p><p>&nbsp;</p>");
+                    $("#A_stepsProgress").css("width", "100%");
+
+                } else {
+
+                    $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[stepsArrayNum + stepsBodyNum]);
+                    $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
+
+                }
+
+            }
+
+            function panAndZoom(element, scale) {
+
+                let stepBox = document.getElementById(element).getBBox();
+                let midX = stepBox.x + (stepBox.width / 2);
+                let midY = stepBox.y + (stepBox.height / 2);
+
+                svg.transition()
+                    .duration(750)
+                    .call(zoom.translateTo, midX, midY)
+                    .on("end", () => myZoomCallback(scale));
+
+            }
+
             function buildStepsView() {
 
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
@@ -304,11 +328,18 @@
                     // Is step incomplete?
                     if (stepsArray[j] == 0) {
 
+                        console.log("ENTERED INCOMPLETE STEP");
+
                         // Step is incomplete
                         removeAllAnimateTags();
 
                         // second parameter is 1 because the step is incomplete and still needs to blink
                         addAnimateTags(j, 1);
+
+                        // set current step to yellow for undo functionality
+                        let s = j + 1;
+                        d3.select("#A_SVGStep" + s.toString())
+                            .style("fill", fillColor);
 
                         // if step1, zooms and pans to step1. Needed for undo functionality
                         if (j == 0) {
@@ -333,6 +364,10 @@
 
                             // get total dimensions and pan and zoom out
                             panAndZoom("A_SVGGroupSteps", 1);
+
+                            let t = j + 1;
+                            d3.select("#A_SVGStep" + t.toString())
+                                .style("fill", "white");
 
                             // update the steps container text and progress bar
                             updateStepsContainer(j, 1, 0, n, true);
@@ -377,9 +412,16 @@
                             removeAllAnimateTags();
                             addAnimateTags(j, 2);
 
+                            let t = j + 1;
                             let s = j + 2;
 
+                            // set previous step to white
+                            d3.select("#A_SVGStep" + t.toString())
+                                .style("fill", "white");
+
+                            // set current step to yellow and opacity to 1
                             d3.select("#A_SVGStep" + s.toString())
+                                .style("fill", fillColor)
                                 .style("fill-opacity", 1);
 
                             // divider and text handler for papers
@@ -394,7 +436,7 @@
 
                                     } else {
 
-                                        d3.select("#text" + s.toString())
+                                        d3.select("#paperText" + s.toString())
                                             .style("fill-opacity", 1);
 
                                     }
@@ -411,38 +453,6 @@
                         }
                     }
                 }
-            }
-
-            function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
-
-                $("#A_stepsCount").html("Steps " + `${stepsArrayNum + stepsCountNum}` + " of " + stepsLength.toString());
-                $("#A_stepsValue").text(stepsProgress.style.width);
-
-                if (complete) {
-
-                    $("#A_stepsBody").html("<p>&nbsp;</p><p>&nbsp;</p>" + "<i>" + game.skills.selectedSkill.name + " has been added to your achievements!</i>" + "<p>&nbsp;</p><p>&nbsp;</p>");
-                    $("#A_stepsProgress").css("width", "100%");
-
-                } else {
-
-                    $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[stepsArrayNum + stepsBodyNum]);
-                    $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
-
-                }
-
-            }
-
-            function panAndZoom(element, scale) {
-
-                let stepBox = document.getElementById(element).getBBox();
-                let midX = stepBox.x + (stepBox.width / 2);
-                let midY = stepBox.y + (stepBox.height / 2);
-
-                svg.transition()
-                    .duration(750)
-                    .call(zoom.translateTo, midX, midY)
-                    .on("end", () => myZoomCallback(scale));
-
             }
 
             function updateWorkbook() {
@@ -544,7 +554,6 @@
                     }
 
                     // prevent access to buildStepsView if same result state or if blink checkbox checked 
-                    // if (!sameResultState || blinkChecked) {
                     if (!sameResultState) {
 
                         // result state has changed! Set oldStepsArray to stepsArray
@@ -552,31 +561,12 @@
                             oldStepsArray[i] = stepsArray[i];
                         }
 
-                        // reset all steps to fadeNum for undo functionality
-                        for (let n = 2; n <= stepsLength; n++) {
+                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
+                            .style("fill", "white")
+                            .style("fill-opacity", fadeNum);
 
-                            game.skills.selectedSkill.elements.forEach(function (element) {
-
-                                if (element.num == n) {
-
-                                    if (element.type == "divider") {
-
-                                        d3.select("#divider" + n.toString())
-                                            .style("fill-opacity", fadeNum);
-
-                                    } else {
-
-                                        d3.select("#text" + n.toString())
-                                            .style("fill-opacity", fadeNum);
-
-                                    }
-                                }
-                            });
-
-                            d3.select("#A_SVGStep" + n.toString())
-                                .style("fill-opacity", fadeNum);
-
-                        }
+                        d3.select("#A_SVGStep1")
+                            .style("fill-opacity", 1);
 
                         // update the stepper and stepsImage
                         buildStepsView();
@@ -615,9 +605,7 @@
             let s = j + n;
 
             d3.select("#A_SVGStep" + s.toString())
-                .style("animation", "transcolor 0.75s infinite alternate")
-                .selectAll("[id *= 'A_text']")
-                .style("fill-opacity", "");
+                .style("animation", "transcolor 0.75s infinite alternate");
 
         };
 

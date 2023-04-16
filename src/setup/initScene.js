@@ -24,23 +24,10 @@
 
         game.scene = new BABYLON.Scene(game.engine);
         game.scene.clearColor = new BABYLON.Color3.Black;
-
-        // game.scene.useOrderIndependentTransparency = true;
         
         game.camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, BABYLON.Vector3.Zero(), game.scene);
         game.camera.setTarget(BABYLON.Vector3.Zero());
-        game.camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
-
-
-        game.camera.initialTargetScreenOffset = 17.6; // 16.75 15.5 17.6
-        game.camera.zoomedTargetScreenOffset = 4.0; // 16.75 15.5 17.6
-
-        game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
-
-
-        // game.camera.orthoTop = 23.6;
-
-        // resetWindow(game.camera);
+        game.camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;        
         game.camera.checkCollisions = false;
         game.camera.panningSensibility = 100;
         game.camera.alpha = 90 * Math.PI / 180;
@@ -57,25 +44,26 @@
         game.camera.layerMask = 1;
         game.camera2 = game.camera.clone("camera2");
         game.camera2.layerMask = 2;
+        game.camera.inputs.attached.pointers.buttons = [0];
+        game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
+        game.camera.inputs.attached.pointers.multiTouchPanning = false;
+        game.camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED;
+
+        // custom properties
+        game.camera.initialTargetScreenOffset = 17.6;
+        game.camera.zoomedTargetScreenOffset = 4.0;
+        game.camera.zoomInScale = 10.8;
+        game.camera.zoomOutScale = 45;
+
+        game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
 
         game.scene.activeCameras = [game.camera, game.camera2];
         game.scene.cameraToUseForPointers = game.camera;
-
-        game.camera.inputs.attached.pointers.buttons = [0];
-
-        game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
-        game.camera.inputs.attached.pointers.multiTouchPanning = false;
-
-
-        game.camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED;
-
-        // console.log(game.camera.fovMode);
 
         // var defaultPipeline = new BABYLON.DefaultRenderingPipeline("default1", true, game.scene, [game.camera]);
         // defaultPipeline.imageProcessingEnabled = false;
         // defaultPipeline.samples = 5;
 
-        // const _game = game;
         game.scene.onPointerObservable.add((pointerInfo) => {
             switch (pointerInfo.type) {
                 case BABYLON.PointerEventTypes.POINTERMOVE:
@@ -94,27 +82,9 @@
             }
         });
 
-        // function resetWindow(cam) {
-        //     let ratio = (window.innerWidth) / window.innerHeight;
-        //     let zoom = cam.orthoTop;
-        //     let newWidth = zoom * ratio;
-        //     cam.orthoLeft = -Math.abs(newWidth);
-        //     cam.orthoRight = newWidth;
-        //     cam.orthoBottom = -Math.abs(zoom);
+        game.camera.orthoRight = game.camera.zoomOutScale;
+        game.camera2.orthoRight = game.camera.zoomOutScale;
 
-        //     console.log("window.innerWidth: " + window.innerWidth);
-        //     console.log("window.innerHeight: " + window.innerHeight);
-        //     console.log("ratio: " + ratio);
-        //     console.log("zoom: " + zoom);
-        //     console.log("newWidth: " + newWidth);
-        //     console.log("orthoLeft: " + cam.orthoLeft);
-        //     console.log("orthoRight: " + cam.orthoRight);
-        //     console.log("orthoBottom: " + cam.orthoBottom);
-        // }
-
-        // game.camera.orthoTop = 23.6;
-        game.camera.orthoRight = 45;
-        game.camera2.orthoRight = 45;
         resetWindow(game.camera);
         resetWindow(game.camera2);
         
@@ -125,17 +95,7 @@
             cam.orthoLeft = -cam.orthoRight;
             let newWidth = zoom / ratio;
             cam.orthoTop = Math.abs(newWidth);
-            cam.orthoBottom = -newWidth;            
-
-            // console.log("window.innerWidth: " + window.innerWidth);
-            // console.log("window.innerHeight: " + window.innerHeight);
-            // console.log("ratio: " + ratio);
-            // console.log("zoom: " + zoom);
-            // console.log("newWidth: " + newWidth);
-            // console.log("orthoTop: " + cam.orthoTop);
-            // console.log("orthoLeft: " + cam.orthoLeft);
-            // console.log("orthoRight: " + cam.orthoRight);
-            // console.log("orthoBottom: " + cam.orthoBottom);
+            cam.orthoBottom = -newWidth;
 
         }
 

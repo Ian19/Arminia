@@ -405,60 +405,60 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
+            localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
 
-            // // assign local storage as a comma separated array
-            // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            // assign local storage as a comma separated array
+            let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            // // iterate through local storage data and apply to skillData and skill tree
-            // localStorageArray.forEach(function (element) {
+            // iterate through local storage data and apply to skillData and skill tree
+            localStorageArray.forEach(function (element) {
 
-            //     game.skills.skillData.forEach(function (skill) {
+                game.skills.skillData.forEach(function (skill) {
 
-            //         if (element == skill.id) {
+                    if (element == skill.id) {
 
-            //             skill.completed = true;
-            //             skill.unlocked = true;
-            //             game.setSkillComplete(skill);
-            //             game.setSkillsUnlocked(skill.unlocksSkills);
+                        skill.completed = true;
+                        skill.unlocked = true;
+                        game.setSkillComplete(skill);
+                        game.setSkillsUnlocked(skill.unlocksSkills);
 
-            //         }
-            //     });
-            // });
+                    }
+                });
+            });
 
             /////////////////////////////////////////
             /////////// END DEBUG
             ////////////////////////////////////////
 
 
-            if (localStorage.getItem('ArminiaSkills') != '') {
+            // if (localStorage.getItem('ArminiaSkills') != '') {
 
-                if (localStorage.getItem('ArminiaSkills') == null) {
+            //     if (localStorage.getItem('ArminiaSkills') == null) {
 
-                    localStorage.setItem('ArminiaSkills', '');
+            //         localStorage.setItem('ArminiaSkills', '');
 
-                } else {
+            //     } else {
 
-                    // assign local storage as a comma separated array
-                    let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            //         // assign local storage as a comma separated array
+            //         let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-                    // iterate through local storage data and apply to skillData and skill tree
-                    localStorageArray.forEach(function (element) {
+            //         // iterate through local storage data and apply to skillData and skill tree
+            //         localStorageArray.forEach(function (element) {
 
-                        game.skills.skillData.forEach(function (skill) {
+            //             game.skills.skillData.forEach(function (skill) {
 
-                            if (element == skill.id) {
+            //                 if (element == skill.id) {
 
-                                skill.completed = true;
-                                skill.unlocked = true;
-                                game.setSkillComplete(skill);
-                                game.setSkillsUnlocked(skill.unlocksSkills);
+            //                     skill.completed = true;
+            //                     skill.unlocked = true;
+            //                     game.setSkillComplete(skill);
+            //                     game.setSkillsUnlocked(skill.unlocksSkills);
 
-                            }
-                        });
-                    });
-                }
-            }
+            //                 }
+            //             });
+            //         });
+            //     }
+            // }
 
             /////////////////////////////////////////////////////////////////////////////////////
             /////////////////////////////////////////////////////////////////////////////////////

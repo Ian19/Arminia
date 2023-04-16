@@ -47,7 +47,7 @@
 
                 $("#A_sysHintContainer").hide();
                 $("#A_sidebarGroupHologram").show();
-                $('#A_protonBtnID').text("THE SCHWARZSCHILD PROTON");
+                $('#A_protonBtnID').text("The Schwarzschild Proton");
                 break;
             case "skill":
 

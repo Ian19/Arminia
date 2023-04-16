@@ -14,6 +14,10 @@
    display: default;
 }
 
+.A_katexFontSize {
+    font-size: 0.6vw;
+}
+
 .A_64Tetra3DContainer {
     display: grid;
     /* grid-template-columns: auto auto auto auto; */

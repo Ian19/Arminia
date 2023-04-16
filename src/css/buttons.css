@@ -7,7 +7,7 @@
 .A_protonButton {
     position: relative;
     /* margin-top: 0.7vw; */
-    width: 15.5vw;
+    width: 16.6vw;
     padding: 0.6vw;
     border-radius: 4px;
     border: 1px solid #473380;
@@ -17,13 +17,19 @@
     background: #4733803b;
 }
 
+/* color: var(--yellow1); */
+/* font-family: 'Verdana'; */
+/* font-variant-caps: normal; */
+/* font-size: 0.65vw; */
+/* letter-spacing: 0.05vw; */
+
 .A_protonButtonText {
-    /* font-weight: bold; */
-    color: var(--yellow1);
-    font-family: 'Verdana';
+    font-family: 'Cinzel';
+    font-size: 0.8vw;
+    letter-spacing: 1px;
     font-variant-caps: normal;
-    font-size: 0.65vw;
-    letter-spacing: 0.05vw;
+    text-align: center;
+    color: var(--yellow1);
 }
 
 .A_protonButton:hover {    

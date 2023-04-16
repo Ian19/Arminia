@@ -99,6 +99,7 @@
 
             });
 
+
             const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
                 className: "os-theme-dark custom-class",
                 scrollbars: {
@@ -684,10 +685,10 @@
 
                 } else $("#A_cheatBtnID").text("DEBUG STEP 1");
 
-            } 
+            }
 
             cheatNum = 0;
-            
+
             ready = true;
 
             $("#A_startGeogebraBtnID").removeClass('A_startGeogebraBtn');

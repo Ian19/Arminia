@@ -30,6 +30,12 @@
 .A_header1 {
     font-size: 0.75vw;
     color: rgb(238, 219, 113);
+
+    /* font-family: 'Cinzel';
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    font-variant-caps: normal;
+    color: var(--yellow1); */
 }
 
 #A_pageBody {
@@ -37,6 +43,7 @@
     color: #acb0de;
     text-align: justify;
     padding-right: 1.3vw;
+    line-height: 0.92vw;
 }
 
 a:link {

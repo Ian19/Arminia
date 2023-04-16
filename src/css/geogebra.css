@@ -17,6 +17,14 @@
     background-color: transparent !important;
 }
 
+.GeoGebraFrame .propertiesTab {
+    background-color: white !important;   
+  }
+  
+.PropertiesViewW {
+    background-color: white !important;   
+  }
+
 .A_graphing {
     border-width: 0px !important;
     outline: 2px solid #563a9949 !important;    
@@ -80,3 +88,30 @@
 .GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button:focus[isSelected="false"][isMobile="false"] {    
     border-color: white  !important;
 }
+
+/* /////////////////////////  Style bar  //////////////////////// */
+.GeoGebraFrame .MyToggleButton, .GeoGebraFrame .MyCanvasButton {
+    background-color: #ebe8ff !important;
+}
+
+.GeoGebraFrame .TitleBarPanelContent {
+    background-color: #442f91b3 !important;
+}
+
+.GeoGebraFrame .TitleBarPanelContent {
+    border-bottom: 2px solid #623cd269 !important;
+    border-right: 2px solid #623cd269 !important;
+    border-left: 2px solid #623cd269 !important;
+}
+
+.GeoGebraFrame .ggbdockpanelhack > div {
+    right: -2px !important;
+}
+
+.GeoGebraFrame .TitleBarPanel .toggleStyleBar {
+    background-color: #ebe8ff !important;
+    border-radius: 5px 0 0 5px !important; 
+    right: 2px !important;
+}
+
+/* /////////////////////////////////////////////////////////////// */

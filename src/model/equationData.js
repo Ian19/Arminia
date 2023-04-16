@@ -19,17 +19,10 @@
 
     function equationData(game) {
 
-        // const path = "../src/src/assets/images/skills/";
-
-        function addNbsp(step) {
-            const str = "<p>&nbsp;</p><p>&nbsp;</p>";
-            step = str + step + str;
-            return step;
-        }
-
         game.skills.equationData = [
             {
                 "id": 85,
+                "type": "paper",
                 "elementID": "A_schwarzsPPaper",
                 "material_id": "ybm744ww",
                 "zoomScale": 3,
@@ -71,43 +64,43 @@
 
                 "stepsText": [
 
-                    addNbsp("Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
+                    "Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
                         + " (Hint: Enter 'p_v = 5.166 * 10^93'. Press the "
-                        + katex.renderToString("\\approx") + " button after each step.)"),
+                        + katex.renderToString("\\approx") + " button after each step.)",
 
-                    addNbsp("Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
-                        + " (hint: Enter 'r_p = 1.321 * 10^-13')"),
+                    "Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
+                        + " (hint: Enter 'r_p = 1.321 * 10^-13')",
 
-                    addNbsp("Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
-                        + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')"),
+                    "Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
+                        + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')",
 
-                    addNbsp("Enter " + katex.renderToString("R_p = p_v V_p")),
-                    addNbsp("Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}")),
-                    addNbsp("Enter " + katex.renderToString("v_{pl} = l^{3}")),
-                    addNbsp("Enter " + katex.renderToString("n = \\frac {V_p} {v_{pl}}")),
-                    addNbsp("Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}")),
-                    addNbsp("Enter " + katex.renderToString("R_{p2} = m_p n")),
-                    addNbsp("Enter " + katex.renderToString("R_s = r_p")),
-                    addNbsp("Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}")),
-                    addNbsp("Enter " + katex.renderToString("c = 2.99 \\times 10^{10}")),
-                    addNbsp("Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}")),
-                    addNbsp("Enter " + katex.renderToString("R_m = \\frac {M} {R_{p}} \\times 100")),
-                    addNbsp("Enter " + katex.renderToString("F = \\frac {G M^{2}} {{2 r_p}^{2}}")),
-                    addNbsp("Enter " + katex.renderToString("a = \\frac F M")),
-                    addNbsp("Enter " + katex.renderToString("v = 2 \\sqrt{2 a r_{p}}")),
-                    addNbsp("Enter " + katex.renderToString("r = 2r_p")),
-                    addNbsp("Enter " + katex.renderToString("t = \\frac {2 \\pi 2 r_{p}}{v}")),
-                    addNbsp("Enter " + katex.renderToString("f = \\frac 1 t")),
-                    addNbsp("Enter " + katex.renderToString("m = \\frac {M M} {M + M}")),
-                    addNbsp("Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}")),
-                    addNbsp("Enter " + katex.renderToString("V_c = \\frac V r")),
-                    addNbsp("Enter " + katex.renderToString("r_{m} = \\frac {r} {100}")),
-                    addNbsp("Enter " + katex.renderToString("K_c = 8.988 \\times 10^{9}")),
-                    addNbsp("Enter " + katex.renderToString("q_1 = 1.602 \\times 10^{-19}")),
-                    addNbsp("Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}")),
-                    addNbsp("Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}")),
-                    addNbsp("Enter " + katex.renderToString("F_d = F_c \\times 10^{5}")),
-                    addNbsp("Enter " + katex.renderToString("F_t = V_c + F_d"))
+                    "Enter " + katex.renderToString("R_p = p_v V_p"),
+                    "Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}"),
+                    "Enter " + katex.renderToString("v_{pl} = l^{3}"),
+                    "Enter " + katex.renderToString("n = \\frac {V_p} {v_{pl}}"),
+                    "Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}"),
+                    "Enter " + katex.renderToString("R_{p2} = m_p n"),
+                    "Enter " + katex.renderToString("R_s = r_p"),
+                    "Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}"),
+                    "Enter " + katex.renderToString("c = 2.99 \\times 10^{10}"),
+                    "Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}"),
+                    "Enter " + katex.renderToString("R_m = \\frac {M} {R_{p}} \\times 100"),
+                    "Enter " + katex.renderToString("F = \\frac {G M^{2}} {{2 r_p}^{2}}"),
+                    "Enter " + katex.renderToString("a = \\frac F M"),
+                    "Enter " + katex.renderToString("v = 2 \\sqrt{2 a r_{p}}"),
+                    "Enter " + katex.renderToString("r = 2r_p"),
+                    "Enter " + katex.renderToString("t = \\frac {2 \\pi 2 r_{p}}{v}"),
+                    "Enter " + katex.renderToString("f = \\frac 1 t"),
+                    "Enter " + katex.renderToString("m = \\frac {M M} {M + M}"),
+                    "Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}"),
+                    "Enter " + katex.renderToString("V_c = \\frac V r"),
+                    "Enter " + katex.renderToString("r_{m} = \\frac {r} {100}"),
+                    "Enter " + katex.renderToString("K_c = 8.988 \\times 10^{9}"),
+                    "Enter " + katex.renderToString("q_1 = 1.602 \\times 10^{-19}"),
+                    "Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}"),
+                    "Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}"),
+                    "Enter " + katex.renderToString("F_d = F_c \\times 10^{5}"),
+                    "Enter " + katex.renderToString("F_t = V_c + F_d")
 
                 ],
 

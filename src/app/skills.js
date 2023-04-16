@@ -37,7 +37,7 @@
         */
 
         // width="100%" height="100%"
-        d3.xml("src/assets/images/hexNodes17d.svg").then(data => {
+        d3.xml("src/assets/images/hexNodes17e.svg").then(data => {
 
             var svgNode = data.documentElement;
             const obj = $('#A_svgContainer')[0];
@@ -405,7 +405,7 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13");
+            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
 
             // // assign local storage as a comma separated array
             // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
@@ -466,60 +466,32 @@
 
         }); // END OF d3.xml()
 
-        // let skillCheck = game.skills.selectedSkill;
-
         $(document).on('click', '#A_detailBtn', function () {
 
-            // console.log("A_detailBtn click");
-
-            // game.geogebra.parameters.appName = "graphing";
             game.geogebra.parameters.appName = "classic";
-            // game.geogebra.parameters.appName = "geometry";
-            // game.geogebra.parameters.appName = "suite";
-            game.geogebra.parameters.filename = "/src/assets/geogebra/file_900x1000.ggb";
+            game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
             game.geogebra.parameters.showAlgebraInput = false;
             game.geogebra.parameters.showToolBar = true;
             game.geogebra.parameters.showToolBarHelp = true;
-
-            // game.geogebra.parameters.showMenuBar = true;
+            game.geogebra.parameters.allowStyleBar = true;
+            // game.geogebra.parameters.showResetIcon = true;
+            // game.geogebra.parameters.enableRightClick = false;
 
             if (game.skills.selectedSkill.name == "The Schwarzschild Proton") {
 
                 game.skills.selectedSkill = game.skills.lastSkill;
-
-                console.log(game.skills.selectedSkill.name);
             }
-
 
             Arminia.geogebraBtnClick(game, "A_homePage", "#A_detailBtn");
 
         });
 
-        //         // fade snowflake main out
-        //         // fadeMain(game, "out");
-
-        //         // var skill = "`" + game.skills.selectedSkill.name + "`";
-
-        //         // $("#A_noSkillSelectedText").hide();
-        //         // document.getElementById("A_geogebraPage").style.display = "block";
-
-        //         // $.ajax({
-        //         //     url: "action.php",
-        //         //     method: "post",
-        //         //     data: {
-        //         //         action: "setSkill",
-        //         //         skill: skill
-        //         //     },
-        //         //     success: function (response) {
-        //         //         // console.log("success");
-        //         //         // console.log(response);
-        //         //     }
-        //         // });
-        //     }
-        // }
     };
+
     if (window.Arminia === undefined) {
         window.Arminia = {};
     }
+
     Arminia.skills = skills;
+
 })();

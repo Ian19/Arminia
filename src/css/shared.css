@@ -3,6 +3,8 @@
     bottom: 0px;
     position: relative;
     height: 70vh;
+    /* height: 50vw; */
+    /* height: 36vw; */
     display: flex;
     justify-content: space-between;
 }
@@ -28,6 +30,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    /* height: 34vw; */
 }
 
 #A_StepsImageCenter {

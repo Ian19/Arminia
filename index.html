@@ -527,8 +527,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
             <img src="src/assets/images/swish1.svg" alt="" class="A_swish">
         </div>
 
-        <!-- <div class="A_scroll2" id="A_pageBody"> -->
-        <div class="A_scroll2" id="A_pageBody">
+        <div id="A_pageBody">
 
             <div class="A_header1">The 64 Tertrahedron Grid</div>
             <br>
@@ -1287,7 +1286,8 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
         <div id="A_sharedContainer">
 
-            <div id="applet_container" class="scaleContainerClass"></div>
+            <div id="applet_container" class="scaleContainerClass">
+            </div>
 
             <div id="A_overviewContainer" class="A_overviewScroll">
 
@@ -1409,8 +1409,8 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                 <div id="A_stepsContainer">
 
                     <div id="A_stepsCount"></div>
-                    <div id="A_stepsBodyContainer">
-                        <div id="A_stepsBody"></div>
+                    <div id="A_stepsBodyContainer" class="A_scroll2">
+                        <div id="A_stepsBody" ></div>
                     </div>
 
                     <div id="A_stepsBarContainer">
@@ -1421,15 +1421,16 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                             <span id="A_stepsValue"></span>
                         </div>
                     </div>
-
                 </div>
             </div>
+
         </div>
 
         <div class="A_btnContainer2">
             <span class="A_geogebraButton" id="A_backToSkillsBtn">BACK</span>
-            <span id="A_startGeogebraBtn">START</span>
-            <span class="A_geogebraButton" id="A_cheatBtnID">TEST CAS</span>
+            <span id="A_startGeogebraBtnID" class="A_startGeogebraBtn">START</span>
+            <span class="A_geogebraButton" id="A_cheatBtnID">DEBUG STEP 1</span>
+            <span class="A_geogebraButton" id="A_submitBtn">SUBMIT</span>
         </div>
     </div>
 

@@ -74,7 +74,7 @@
 
 #A_imageAndIconContainer {
     position: relative;
-    height: 79%;
+    height: 77%;
 }
 
 #A_mouseZoomPaper {
@@ -121,7 +121,7 @@
     padding-right: 2px;
     color: var(--yellow1);
     font-family: 'Cinzel';
-    font-size: 0.83vw;
+    font-size: 0.77vw;
     letter-spacing: 1px;    
     font-variant-caps: normal;
 }

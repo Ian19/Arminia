@@ -40,8 +40,11 @@
     border: 1px solid #563a99a1 !important;
 }
 
-#A_startGeogebraBtn {
+#A_startGeogebraBtnID {
     display: none;
+}
+
+.A_startGeogebraBtn {    
 
     /* stop text highlighting */
     user-select: none;

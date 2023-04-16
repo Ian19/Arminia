@@ -9,10 +9,14 @@
     /* position: relative;
     bottom: 0px; */
     position: relative;
-    height: 21%;
+    height: 23%;
+    
 }
 
 #A_stepsBody {
+
+    /* height: 50px;
+    overflow: auto; */
 
     /* font-size: 0.9vw !important;
     line-height: 1.4 !important; */
@@ -24,12 +28,16 @@
     padding: .4vw .4vw .4vw 1.2vw;
     background-color: #563a995c;
     border-radius: 4px;
+
 }
 
 #A_stepsBodyContainer {
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
+    /* height: 50px; */
+    height: 2.6vw;
+    margin: 1vw 0;
 }
 
 #Container {

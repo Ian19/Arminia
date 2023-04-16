@@ -22,6 +22,8 @@
         let cheatNum = 0;
         const fadeNum = 0.2;
         const fillColor = "#ffe86d";
+        let ready = false;
+        let svg;
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
@@ -31,40 +33,30 @@
         parameters.appletOnLoad = function (api) {
 
             Arminia.setGUI(game);
-            let svg;
+
             let zoom;
-            let ready = false;
+            ready = false;
             let newStart = true;
+            cheatNum = 0;
 
             $("#A_cheatBtnID").hide();
 
-            $("#A_startGeogebraBtn").click(function () {
+            if (game.skills.selectedSkill.type == "style") {
 
-                if (parameters.appName == "suite") $("#A_cheatBtnID").show();
+                $("#A_submitBtn").show();
 
-                ready = true;
+            } else $("#A_submitBtn").hide();
 
-                $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+            if (game.skills.selectedSkill.type !== "paper") {
 
-                d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                    .style("fill-opacity", fadeNum);
+                ggbApplet.evalCommand("CenterView((0, 0))");
+                ggbApplet.evalCommand(game.skills.selectedSkill.startingZoomScale);
 
-                d3.select("#A_SVGStep1")
-                    .style("fill-opacity", 1)
-                    .style("fill", fillColor);
-
-                removeAllAnimateTags();
-                addAnimateTags(0, 1);
-
-                panAndZoom("A_SVGStep1", game.skills.selectedSkill.zoomScale);
-
-                $("#A_startGeogebraBtn").hide();
-
-            });
+            }
 
             $("#A_stepsBackgroundImage").css("display", "inline-block");
             $("#A_StepsImageCenter").css("display", "none");
-            $("#A_startGeogebraBtn").show();
+            $("#A_startGeogebraBtnID").show();
 
             // settings for CAS or graphing             
             if (parameters.appName == "classic") {
@@ -81,6 +73,8 @@
 
             // load stepsImage svg file with d3.xml() and setup
             d3.xml(game.skills.selectedSkill.stepsImage).then(data => {
+
+                ready = false;
 
                 const svgNode = data.documentElement;
                 const obj = $('#A_stepsBackgroundImage')[0];
@@ -105,13 +99,17 @@
 
             });
 
-            function addNbsp(step) {
-                const str = "<p>&nbsp;</p><p>&nbsp;</p>";
-                step = str + step + str;
-                return step;
-            }
+            const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
+                className: "os-theme-dark custom-class",
+                scrollbars: {
+                    clickScrolling: true,
+                    dragScrolling: true
+                }
+            });
 
-            $("#A_stepsBody").html(addNbsp("Press Start to begin."));
+            osInstance2.getElements().host.classList.add('os-host-flexbox');
+
+            $("#A_stepsBody").html("Press Start to begin.");
 
             // Show and hide elements as Geogebra loads               
             game.animatePageIn("A_geobebraView");
@@ -276,14 +274,7 @@
             let stepsArray = [];
             let oldStepsArray = [];
             const stepsProgress = $("#A_stepsProgress")[0];
-
-            function myZoomCallback(scale) {
-
-                svg.transition()
-                    .duration(750)
-                    .call(zoom.scaleTo, scale);
-
-            }
+            let correctStyle;
 
             function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
 
@@ -292,7 +283,7 @@
 
                 if (complete) {
 
-                    $("#A_stepsBody").html("<p>&nbsp;</p><p>&nbsp;</p>" + "<i>" + game.skills.selectedSkill.name + " has been added to your achievements!</i>" + "<p>&nbsp;</p><p>&nbsp;</p>");
+                    $("#A_stepsBody").html("<i>" + game.skills.selectedSkill.name + " has been completed!</i>");
                     $("#A_stepsProgress").css("width", "100%");
 
                 } else {
@@ -304,16 +295,36 @@
 
             }
 
-            function panAndZoom(element, scale) {
+            function setLocalStorage() {
 
-                let stepBox = document.getElementById(element).getBBox();
-                let midX = stepBox.x + (stepBox.width / 2);
-                let midY = stepBox.y + (stepBox.height / 2);
+                game.skills.selectedSkill.completed = "true";
 
-                svg.transition()
-                    .duration(750)
-                    .call(zoom.translateTo, midX, midY)
-                    .on("end", () => myZoomCallback(scale));
+                if (localStorage.getItem('ArminiaSkills') == '') {
+
+                    localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));
+
+                } else {
+
+                    let lsTest = localStorage.getItem('ArminiaSkills');  // [0,1,2,5,11]    
+
+                    let duplicate = false;
+
+                    for (let i = 0; i < lsTest.length; i++) {
+                        if (lsTest[i] == game.skills.selectedSkill.id) {
+                            duplicate = true;
+                            break;
+                        }
+                    }
+
+                    if (!duplicate) {
+
+                        lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
+                        localStorage.setItem('ArminiaSkills', lsTest);
+                    }
+                }
+
+                game.setSkillComplete(game.skills.selectedSkill);
+                game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
 
             }
 
@@ -328,7 +339,7 @@
                     // Is step incomplete?
                     if (stepsArray[j] == 0) {
 
-                        console.log("ENTERED INCOMPLETE STEP");
+                        // console.log("ENTERED INCOMPLETE STEP");
 
                         // Step is incomplete
                         removeAllAnimateTags();
@@ -372,38 +383,8 @@
                             // update the steps container text and progress bar
                             updateStepsContainer(j, 1, 0, n, true);
 
-                            //////////////////////  LOCAL STORAGE OPERATIONS ////////////////////////////
-
-                            game.skills.selectedSkill.completed = "true";
-
-                            if (localStorage.getItem('ArminiaSkills') == '') {
-
-                                localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));
-
-                            } else {
-
-                                let lsTest = localStorage.getItem('ArminiaSkills');  // [0,1,2,5,11]    
-
-                                let duplicate = false;
-
-                                for (let i = 0; i < lsTest.length; i++) {
-                                    if (lsTest[i] == game.skills.selectedSkill.id) {
-                                        duplicate = true;
-                                        break;
-                                    }
-                                }
-
-                                if (!duplicate) {
-
-                                    lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
-                                    localStorage.setItem('ArminiaSkills', lsTest);
-                                }
-                            }
-
-                            game.setSkillComplete(game.skills.selectedSkill);
-                            game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
-
-                            /////////////////////////////////////////////////////////////////////////////
+                            //skill complete and set local storage
+                            setLocalStorage();
 
                         } else {
 
@@ -455,126 +436,171 @@
                 }
             }
 
-            function updateWorkbook() {
+            $("#A_submitBtn").click(function () {
+
+                if (correctStyle) {
+
+                    console.log("styles complete!");
+
+                    stepsArray.push(1);
+
+                    // update the stepper and stepsImage
+                    buildStepsView();
+
+                } else {
+
+                    console.log("styles NOT complete!");
+
+                }
+
+            });
+
+            function updateWorkbook(type, target, arg) {
+
+                // Future code to change objects to white
+                // api.getAllObjectNames().forEach(function (element) {
+                //     if (api.getColor(element) !== "#FFFFFF") {
+                //         api.unregisterClientListener(updateWorkbook);
+                //         ggbApplet.evalCommand("SetColor(" + element + ", White)");
+                //         api.registerClientListener(updateWorkbook);
+                //     }
+                // });
 
                 // stop CAS access until start button clicked
 
                 if (ready) {
 
-                    let objNumber = api.getObjectNumber();
-                    let strName, strType, strState, strCommand;
-                    stepsArray = [];
+                    if (game.skills.selectedSkill.type == "style") {
 
-                    // Init stepsArray so that each element equals 1, which is the 'correct step' state
-                    for (let j = 0; j <= stepsLength - 1; j++) {
-                        stepsArray.push(1);
-                    }
+                        let objectsArray = game.skills.selectedSkill.objects;
+                        correctStyle = true;
 
-                    // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
-                    // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
-                    let test = [];
-                    for (let n = 0; n < stepsLength; n++) {
-                        test[n] = [];
-                        for (let m = 0; m < steps[n].length; m++) {
-                            test[n].push(0);
-                        }
-                    }
+                        for (let i = 0; i < objectsArray.length; i++) {
 
-                    // Begin main construction steps testing by iterating through all the objects in Geogebra
-                    for (let i = 0; i < objNumber; i++) {
+                            if (api.getLineThickness(objectsArray[i]) !== 7) {
 
-                        // Get first object and put in String 'strState
-                        strName = api.getObjectName(i);
-                        strType = api.getObjectType(strName);
-                        strCommand = api.getCommandString(strName);
-
-                        if (strType == "text") {
-                            strCommand = api.getValueString(strName);
-                        } else {
-                            strCommand = api.getCommandString(strName);
-                        }
-
-                        strState = strType + " " + strName + ", " + strCommand;
-                        // console.log(strState);
-
-                        // Check if geogebra object exists in model skillData steps by building multidimension test array
-                        for (let j = 0; j < stepsLength; j++) {
-                            for (let k = 0; k < steps[j].length; k++) {
-
-                                if (strState == steps[j][k]) {
-                                    // console.log("Correct Step!");
-                                    test[j][k] = 1;
-                                }
-                            }
-                        }
-                    }
-
-                    // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
-                    for (let i = 0; i < test.length; i++) {
-                        for (let j = 0; j < test[i].length; j++) {
-                            if (test[i][j] == 0) {
-                                stepsArray[i] = 0;
+                                correctStyle = false;
                                 break;
                             }
                         }
-                    }
-
-                    // assume sameResultState, check it later
-                    let sameResultState = true;
-
-                    // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
-                    // if new start, make oldStepsArray a duplicate of stepsArray
-                    if (newStart) {
-
-                        // give access to buildStepsView if newStart
-                        sameResultState = false;
-
-                        // now that we have determined newStart, set it to false here
-                        // it will never be set true again, unless geogebra page is reloaded
-                        newStart = false;
-
-                        for (let i = 0; i < stepsArray.length; i++) {
-                            oldStepsArray[i] = stepsArray[i];
-                        }
-
-                    } else sameResultState = true;
-
-
-                    // check if same Result State and set accordingly
-                    for (let i = 0; i < stepsArray.length; i++) {
-
-                        if (stepsArray[i] !== oldStepsArray[i]) {
-
-                            console.log("different results!");
-
-                            sameResultState = false;
-                            break;
-
-                        }
-                    }
-
-                    // prevent access to buildStepsView if same result state or if blink checkbox checked 
-                    if (!sameResultState) {
-
-                        // result state has changed! Set oldStepsArray to stepsArray
-                        for (let i = 0; i < stepsArray.length; i++) {
-                            oldStepsArray[i] = stepsArray[i];
-                        }
-
-                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                            .style("fill", "white")
-                            .style("fill-opacity", fadeNum);
-
-                        d3.select("#A_SVGStep1")
-                            .style("fill-opacity", 1);
-
-                        // update the stepper and stepsImage
-                        buildStepsView();
 
                     } else {
 
-                        console.log("SAME RESULTS");
+                        let objNumber = api.getObjectNumber();
+                        let strName, strType, strState, strCommand;
+                        stepsArray = [];
 
+                        // Init stepsArray so that each element equals 1, which is the 'correct step' state
+                        for (let j = 0; j <= stepsLength - 1; j++) {
+                            stepsArray.push(1);
+                        }
+
+                        // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
+                        // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
+                        let test = [];
+                        for (let n = 0; n < stepsLength; n++) {
+                            test[n] = [];
+                            for (let m = 0; m < steps[n].length; m++) {
+                                test[n].push(0);
+                            }
+                        }
+
+                        // Begin main construction steps testing by iterating through all the objects in Geogebra
+                        for (let i = 0; i < objNumber; i++) {
+
+                            // Get first object and put in String 'strState
+                            strName = api.getObjectName(i);
+                            strType = api.getObjectType(strName);
+                            strCommand = api.getCommandString(strName);
+
+                            if (strType == "text") {
+                                strCommand = api.getValueString(strName);
+                            } else {
+                                strCommand = api.getCommandString(strName);
+                            }
+
+                            strState = strType + " " + strName + ", " + strCommand;
+                            console.log(strState);
+
+                            // Check if geogebra object exists in model skillData steps by building multidimension test array
+                            for (let j = 0; j < stepsLength; j++) {
+                                for (let k = 0; k < steps[j].length; k++) {
+
+                                    if (strState == steps[j][k]) {
+                                        // console.log("Correct Step!");
+                                        test[j][k] = 1;
+                                    }
+                                }
+                            }
+                        }
+
+                        // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
+                        for (let i = 0; i < test.length; i++) {
+                            for (let j = 0; j < test[i].length; j++) {
+                                if (test[i][j] == 0) {
+                                    stepsArray[i] = 0;
+                                    break;
+                                }
+                            }
+                        }
+
+                        // assume sameResultState, check it later
+                        let sameResultState = true;
+
+                        // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
+                        // if new start, make oldStepsArray a duplicate of stepsArray
+                        if (newStart) {
+
+                            // give access to buildStepsView if newStart
+                            sameResultState = false;
+
+                            // now that we have determined newStart, set it to false here
+                            // it will never be set true again, unless geogebra page is reloaded
+                            newStart = false;
+
+                            for (let i = 0; i < stepsArray.length; i++) {
+                                oldStepsArray[i] = stepsArray[i];
+                            }
+
+                        } else sameResultState = true;
+
+
+                        // check if same Result State and set accordingly
+                        for (let i = 0; i < stepsArray.length; i++) {
+
+                            if (stepsArray[i] !== oldStepsArray[i]) {
+
+                                // console.log("different results!");
+
+                                sameResultState = false;
+                                break;
+
+                            }
+                        }
+
+                        // prevent access to buildStepsView if same result state or if blink checkbox checked 
+                        if (!sameResultState) {
+
+                            // result state has changed! Set oldStepsArray to stepsArray
+                            for (let i = 0; i < stepsArray.length; i++) {
+                                oldStepsArray[i] = stepsArray[i];
+                            }
+
+                            d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
+                                .style("fill", "white")
+                                .style("fill-opacity", fadeNum);
+
+                            d3.select("#A_SVGStep1")
+                                .style("fill-opacity", 1);
+
+                            // update the stepper and stepsImage
+                            buildStepsView();
+
+                        } else {
+
+                            // console.log("SAME RESULTS");
+
+                        }
                     }
                 }
             }
@@ -608,6 +634,80 @@
                 .style("animation", "transcolor 0.75s infinite alternate");
 
         };
+
+        let zoom2;
+
+        function myZoomCallback2(scale) {
+
+            svg.transition()
+                .duration(750)
+                .call(zoom2.scaleTo, scale);
+
+        }
+
+        function panAndZoom(element, scale) {
+
+            zoom2 = d3.zoom()
+                .scaleExtent([1, 10])
+                .on("zoom", zoomed2);
+
+            var g = svg.select('g');
+            svg.call(zoom2);
+
+            function zoomed2({ transform }) {
+                g.attr("transform", transform);
+            }
+
+            let stepBox = document.getElementById(element).getBBox();
+            let midX = stepBox.x + (stepBox.width / 2);
+            let midY = stepBox.y + (stepBox.height / 2);
+
+            svg.transition()
+                .duration(750)
+                .call(zoom2.translateTo, midX, midY)
+                .on("end", () => myZoomCallback2(scale));
+
+        }
+
+        $("#A_startGeogebraBtnID").click(function () {
+
+            if (parameters.appName == "suite") $("#A_cheatBtnID").show();
+
+            if (ready) {
+
+                ggbApplet.reset();
+
+                if (game.skills.selectedSkill.type !== "paper") {
+
+                    ggbApplet.evalCommand("CenterView((0, 0))");
+                    ggbApplet.evalCommand(game.skills.selectedSkill.startingZoomScale);
+
+                } else $("#A_cheatBtnID").text("DEBUG STEP 1");
+
+            } 
+
+            cheatNum = 0;
+            
+            ready = true;
+
+            $("#A_startGeogebraBtnID").removeClass('A_startGeogebraBtn');
+            $("#A_startGeogebraBtnID").addClass('A_geogebraButton');
+
+            $("#A_stepsBody").html(game.skills.selectedSkill.stepsText[0]);
+
+            d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
+                .style("fill-opacity", fadeNum);
+
+            d3.select("#A_SVGStep1")
+                .style("fill-opacity", 1)
+                .style("fill", fillColor);
+
+            removeAllAnimateTags();
+            addAnimateTags(0, 1);
+
+            panAndZoom("A_SVGStep1", game.skills.selectedSkill.zoomScale);
+
+        });
 
         $("#A_constructionBtn").click(function () {
             // game.nav = "skill";
@@ -644,10 +744,14 @@
 
             ready = false;
             cheatNum = 0;
+
             $("#A_constructionBtn").css("color", "white");
             $("#A_constructionBtn").css("border", "1px solid #8064cc");
             $("#A_overviewBtn").css("color", "#acb0dee3");
             $("#A_overviewBtn").css("border", "1px solid #473380");
+
+            $("#A_startGeogebraBtnID").removeClass('A_geogebraButton');
+            $("#A_startGeogebraBtnID").addClass('A_startGeogebraBtn');
 
             if (parameters.appName == "classic") {
                 game.nav = "home";
@@ -668,7 +772,7 @@
 
                 // $("#A_stepsImage").css("display", "block");
                 $("#A_StepsImageCenter").css("display", "flex");
-                $("#A_startGeogebraBtn").hide();
+                $("#A_startGeogebraBtnID").hide();
 
                 $(".A_mouseIconPaper").hide();
 
@@ -718,19 +822,39 @@
 
         ];
 
+
         $("#A_cheatBtnID").click(function () {
 
-            // console.log(cheatNum);
-            // console.log(stepsArray);
+            // ggbApplet.evalCommand("CenterView((0, 0))");
+            // ggbApplet.evalCommand("A = Intersect(xAxis,yAxis)");
+            // ggbApplet.evalCommand("c: Circle(A, 1)");
+            // ggbApplet.evalCommand("B = Intersect(c, yAxis, 2)");
+            // ggbApplet.evalCommand("d: Circle(B, A)");
+            // ggbApplet.evalCommand("C = Intersect(c, d, 1)");
+            // ggbApplet.evalCommand("e: Circle(C, A)");
+            // ggbApplet.evalCommand("D = Intersect(c, e, 1)");
+            // ggbApplet.evalCommand("f: Circle(D, A)");
+            // ggbApplet.evalCommand("E: Intersect(c, f, 1)");
+
+
+
+            // ["point E, Intersect(c, f, 1)"],
+            // ["circle g, Circle(E, A)"],
+            // ["point F, Intersect(c, g, 1)"],
+            // ["circle h, Circle(F, A)"],
+            // ["point G, Intersect(c, d, 2)"],
+            // ["circle k, Circle(G, A)"],
 
             if (cheatNum < cheatSteps.length) {
 
-                // stepsArray[cheatNum] = cheatSteps[cheatNum];
-
-                // updateWorkbook();
-
                 ggbApplet.evalCommand(cheatSteps[cheatNum]);
+
+                let i = cheatNum + 2;
+
+                $("#A_cheatBtnID").text("DEBUG STEP " + i.toString());
+
                 cheatNum++;
+
             }
 
         });

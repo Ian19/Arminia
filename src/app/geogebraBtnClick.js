@@ -64,27 +64,6 @@
                     game.applet.inject('applet_container');
                 }
             }
-
-            // fade snowflake main out
-            // fadeMain(game, "out");
-
-            // var skill = "`" + game.skills.selectedSkill.name + "`";
-
-            // $("#A_noSkillSelectedText").hide();
-            // document.getElementById("A_geogebraPage").style.display = "block";
-
-            // $.ajax({
-            //     url: "action.php",
-            //     method: "post",
-            //     data: {
-            //         action: "setSkill",
-            //         skill: skill
-            //     },
-            //     success: function (response) {
-            //         // console.log("success");
-            //         // console.log(response);
-            //     }
-            // });
         }
 
     };

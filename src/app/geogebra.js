@@ -141,7 +141,7 @@
                 $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
 
                 // Updates html elements on Overview page with new skill data if the applet has been reinjected
-                $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.url2);
+                $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
                 $("#A_geoDetailTitle").text(game.skills.selectedSkill.name);
                 $("#A_geoDifficulty").text(game.skills.selectedSkill.difficulty);
                 $("#A_geoDetailRequirement").text(game.skills.selectedSkill.requirement);

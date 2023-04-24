@@ -37,7 +37,7 @@
         */
 
         // width="100%" height="100%"
-        d3.xml("src/assets/images/hexNodes17e.svg").then(data => {
+        d3.xml("src/assets/images/misc/hexNodes17e.svg").then(data => {
 
             var svgNode = data.documentElement;
             const obj = $('#A_svgContainer')[0];
@@ -253,7 +253,7 @@
                 // $("#A_detailGridID").css("display", "grid");
                 $("#A_detailGridID").css("opacity", "1");
 
-                $("#A_detailImage").attr("src", skill.url);
+                $("#A_detailImage").attr("src", skill.thumbnailURL);
                 $("#A_detailTitle").text(skill.name);
                 $("#A_skillDifficulty").text(skill.difficulty);
                 $("#A_detailRequirement").text(skill.requirement);
@@ -405,60 +405,60 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
+            localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
 
-            // // assign local storage as a comma separated array
-            // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            // assign local storage as a comma separated array
+            let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            // // iterate through local storage data and apply to skillData and skill tree
-            // localStorageArray.forEach(function (element) {
+            // iterate through local storage data and apply to skillData and skill tree
+            localStorageArray.forEach(function (element) {
 
-            //     game.skills.skillData.forEach(function (skill) {
+                game.skills.skillData.forEach(function (skill) {
 
-            //         if (element == skill.id) {
+                    if (element == skill.id) {
 
-            //             skill.completed = true;
-            //             skill.unlocked = true;
-            //             game.setSkillComplete(skill);
-            //             game.setSkillsUnlocked(skill.unlocksSkills);
+                        skill.completed = true;
+                        skill.unlocked = true;
+                        game.setSkillComplete(skill);
+                        game.setSkillsUnlocked(skill.unlocksSkills);
 
-            //         }
-            //     });
-            // });
+                    }
+                });
+            });
 
             /////////////////////////////////////////
             /////////// END DEBUG
             ////////////////////////////////////////
 
 
-            if (localStorage.getItem('ArminiaSkills') != '') {
+            // if (localStorage.getItem('ArminiaSkills') != '') {
 
-                if (localStorage.getItem('ArminiaSkills') == null) {
+            //     if (localStorage.getItem('ArminiaSkills') == null) {
 
-                    localStorage.setItem('ArminiaSkills', '');
+            //         localStorage.setItem('ArminiaSkills', '');
 
-                } else {
+            //     } else {
 
-                    // assign local storage as a comma separated array
-                    let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            //         // assign local storage as a comma separated array
+            //         let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-                    // iterate through local storage data and apply to skillData and skill tree
-                    localStorageArray.forEach(function (element) {
+            //         // iterate through local storage data and apply to skillData and skill tree
+            //         localStorageArray.forEach(function (element) {
 
-                        game.skills.skillData.forEach(function (skill) {
+            //             game.skills.skillData.forEach(function (skill) {
 
-                            if (element == skill.id) {
+            //                 if (element == skill.id) {
 
-                                skill.completed = true;
-                                skill.unlocked = true;
-                                game.setSkillComplete(skill);
-                                game.setSkillsUnlocked(skill.unlocksSkills);
+            //                     skill.completed = true;
+            //                     skill.unlocked = true;
+            //                     game.setSkillComplete(skill);
+            //                     game.setSkillsUnlocked(skill.unlocksSkills);
 
-                            }
-                        });
-                    });
-                }
-            }
+            //                 }
+            //             });
+            //         });
+            //     }
+            // }
 
         }); // END OF d3.xml()
 

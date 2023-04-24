@@ -21,7 +21,7 @@
 
         // const background1 = new BABYLON.Layer("background1", "src/assets/images/background6i.png", game.scene, true);
         // const background1 = new BABYLON.Layer("background1", "src/assets/images/background7.png", game.scene, true);
-        const background1 = new BABYLON.Layer("background1", "src/assets/images/background8.png", game.scene, true);
+        const background1 = new BABYLON.Layer("background1", "src/assets/images/misc/background8.png", game.scene, true);
         background1.layerMask = 1;
 
         // Main Parents

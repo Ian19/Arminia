@@ -58,8 +58,7 @@
 
                 "d3Data": ["hexStatus1Circle", "Complete1Circle"],
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
-                "url2": "src/assets/images/skills/circleLarge.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCircle.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  3 STEPS",
@@ -204,8 +203,7 @@
 
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "selected": false,
-                "url": "src/assets/images/skills/vesica_piscis.svg",
-                "url2": "src/assets/images/skills/vesica_piscis.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis2.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  12 STEPS",
@@ -268,7 +266,7 @@
                 "elements": [],
                 "d3Data": ["hexStatus23Roots1", "Complete23Roots1"],
                 "selected": false,
-                "url": "src/assets/images/skills/3_roots.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots.svg",
 
                 "difficulty": "EASY  |  7 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
@@ -308,7 +306,7 @@
                 "type": "construction",
                 "selected": false,
                 "elements": [],
-                "url": "src/assets/images/skills/3_roots2.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots2.svg",
                 "difficulty": "EASY  |  17 STEPS",
                 "requirement": "(REQUIRES Three Sacred Roots 1)",
                 "completed": false,
@@ -347,7 +345,7 @@
                 "type": "construction",
                 "selected": false,
                 "elements": [],
-                "url": "src/assets/images/skills/3_roots2.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots2.svg",
                 "difficulty": "EASY  |  17 STEPS",
                 "requirement": "(REQUIRES Three Sacred Roots 2)",
                 "completed": false,
@@ -385,8 +383,7 @@
                 "d3Data": ["hexStatus2Luc1", "Complete2Luc1"],
                 "selected": false,
                 "elements": [],
-                "url": "src/assets/images/skills/circle.svg",
-
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -421,7 +418,7 @@
                 "name": "Lucifer Pattern 2",
                 "id": 6,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -434,7 +431,7 @@
                 "name": "Lucifer Pattern 3",
                 "id": 7,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -447,7 +444,7 @@
                 "name": "The Lucifer Pattern 4",
                 "id": 8,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -460,7 +457,7 @@
                 "name": "The Tetractys",
                 "id": 9,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
 
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -474,7 +471,7 @@
                 "name": "Da Vinci's Key",
                 "id": 10,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -604,8 +601,7 @@
                 "stepsImage": "src/assets/images/skills/details/detailTriquetra.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
-                "url": "src/assets/images/skills/triqetra.svg",
-                "url2": "src/assets/images/skills/triqetra.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/triqetra.svg",
                 "difficulty": "EASY  |  13 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
                 "completed": false,
@@ -747,8 +743,7 @@
                 }],
 
                 "selected": false,
-                "url": "src/assets/images/skills/genesis.svg",
-                "url2": "src/assets/images/skills/genesis.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/genesis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailGenesis4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatus4Genesis", "Complete4Genesis"],
@@ -967,8 +962,7 @@
                 }],
 
                 "selected": false,
-                "url": "src/assets/images/skills/eggOfLife.svg",
-                "url2": "src/assets/images/skills/eggOfLife.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/eggOfLife.svg",
                 "stepsImage": "src/assets/images/skills/details/detailEgg3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatus5Egg", "Complete5Egg"],
@@ -1299,7 +1293,7 @@
 
 
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL3.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "d3Data": ["hexStatusFOLUnseal", "CompleteFOLUnseal"],
@@ -1317,7 +1311,7 @@
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "tools": "0 | 34 | 10 | 5",
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -2220,7 +2214,7 @@
                 }],
 
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCompletedFOL3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatusCompleteFOL", "CompleteCompleteFOL"],
@@ -2255,7 +2249,7 @@
                 }],
 
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "stepsImage": "src/assets/images/skills/details/detailFruitOfLife.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",
@@ -2269,7 +2263,7 @@
             }, {
                 "id": 18,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "16",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2282,7 +2276,7 @@
                 "name": "Flower Of Life Information System",
                 "id": 19,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -2293,7 +2287,7 @@
             }, {
                 "id": 20,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "20",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2305,7 +2299,7 @@
             }, {
                 "id": 21,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2317,7 +2311,7 @@
             }, {
                 "id": 22,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "REQUIRES THE TRIQUETRA",
@@ -2329,7 +2323,7 @@
             }, {
                 "id": 23,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2341,7 +2335,7 @@
             }, {
                 "id": 24,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2353,7 +2347,7 @@
             }, {
                 "id": 25,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2365,7 +2359,7 @@
             }, {
                 "id": 26,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2377,7 +2371,7 @@
             }, {
                 "id": 27,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2389,7 +2383,7 @@
             }, {
                 "id": 28,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2402,7 +2396,7 @@
             {
                 "id": 29,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2414,7 +2408,7 @@
             }, {
                 "id": 30,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2426,7 +2420,7 @@
             }, {
                 "id": 31,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2438,7 +2432,7 @@
             }, {
                 "id": 32,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2450,7 +2444,7 @@
             }, {
                 "id": 33,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2462,7 +2456,7 @@
             }, {
                 "id": 34,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2474,7 +2468,7 @@
             }, {
                 "id": 35,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2487,7 +2481,7 @@
             {
                 "id": 36,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2500,7 +2494,7 @@
             {
                 "id": 37,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2512,7 +2506,7 @@
             }, {
                 "id": 38,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2525,7 +2519,7 @@
             {
                 "id": 39,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2537,7 +2531,7 @@
             }, {
                 "id": 40,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2549,7 +2543,7 @@
             }, {
                 "id": 41,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2561,7 +2555,7 @@
             }, {
                 "id": 42,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2573,7 +2567,7 @@
             }, {
                 "id": 43,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2585,7 +2579,7 @@
             }, {
                 "id": 44,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2597,7 +2591,7 @@
             }, {
                 "id": 45,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2609,7 +2603,7 @@
             }, {
                 "id": 46,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2621,7 +2615,7 @@
             }, {
                 "id": 47,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2633,7 +2627,7 @@
             }, {
                 "id": 48,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2645,7 +2639,7 @@
             }, {
                 "id": 49,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2657,7 +2651,7 @@
             }, {
                 "id": 50,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2669,7 +2663,7 @@
             }, {
                 "id": 51,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2681,7 +2675,7 @@
             }, {
                 "id": 52,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2693,7 +2687,7 @@
             }, {
                 "id": 53,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2705,7 +2699,7 @@
             }, {
                 "id": 54,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2717,7 +2711,7 @@
             }, {
                 "id": 55,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2729,7 +2723,7 @@
             }, {
                 "id": 56,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2741,7 +2735,7 @@
             }, {
                 "id": 57,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2753,7 +2747,7 @@
             }, {
                 "id": 58,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2765,7 +2759,7 @@
             }, {
                 "id": 59,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2777,7 +2771,7 @@
             }, {
                 "id": 60,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2789,7 +2783,7 @@
             }, {
                 "id": 61,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2801,7 +2795,7 @@
             }, {
                 "id": 62,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2813,7 +2807,7 @@
             }, {
                 "id": 63,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2825,7 +2819,7 @@
             }, {
                 "id": 64,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2837,7 +2831,7 @@
             }, {
                 "id": 65,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2849,7 +2843,7 @@
             }, {
                 "id": 65,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2861,7 +2855,7 @@
             }, {
                 "id": 66,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2873,7 +2867,7 @@
             }, {
                 "id": 67,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2885,7 +2879,7 @@
             }, {
                 "id": 68,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2897,7 +2891,7 @@
             }, {
                 "id": 69,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2909,7 +2903,7 @@
             }, {
                 "id": 70,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2921,7 +2915,7 @@
             }, {
                 "id": 71,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2933,7 +2927,7 @@
             }, {
                 "id": 72,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2945,7 +2939,7 @@
             }, {
                 "id": 73,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2957,7 +2951,7 @@
             }, {
                 "id": 74,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2969,7 +2963,7 @@
             }, {
                 "id": 75,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2981,7 +2975,7 @@
             }, {
                 "id": 76,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -2993,7 +2987,7 @@
             }, {
                 "id": 77,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3005,7 +2999,7 @@
             }, {
                 "id": 78,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3017,7 +3011,7 @@
             }, {
                 "id": 79,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3029,7 +3023,7 @@
             }, {
                 "id": 80,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3041,7 +3035,7 @@
             }, {
                 "id": 81,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3053,7 +3047,7 @@
             }, {
                 "id": 82,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3065,7 +3059,7 @@
             }, {
                 "id": 83,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
@@ -3077,7 +3071,7 @@
             }, {
                 "id": 84,
                 "selected": false,
-                "url": "src/assets/images/skills/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",

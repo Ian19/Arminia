@@ -22,7 +22,9 @@ The following geometry constructions are complete:
 - The Vesica Piscis
 - The Triquetra
 - The Genesis Pattern
-- The Flower of Life
+- The Completed Flower of Life
+- The Fruit of Life
+- The Unsealed Flower of Life
 
 The following peer reviewed scientiffic papers are complete in the CAS:
 - The Schwarzschild Proton Paper by Nassim Harramein

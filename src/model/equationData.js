@@ -127,7 +127,7 @@
                 "selected": false,
                 "url": "src/assets/images/skills/vesica_piscis.png",
                 "url2": "src/assets/images/skills/vesicaPicsisLarge.svg",
-                "stepsImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton8.svg",
+                "stepsImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton9.svg",
                 "name": "The Schwarzschild Proton",
                 "difficulty": "HARD  |  31 STEPS",
                 "completed": false,

@@ -405,64 +405,60 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
+            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
 
-            // assign local storage as a comma separated array
-            let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            // // assign local storage as a comma separated array
+            // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            // iterate through local storage data and apply to skillData and skill tree
-            localStorageArray.forEach(function (element) {
+            // // iterate through local storage data and apply to skillData and skill tree
+            // localStorageArray.forEach(function (element) {
 
-                game.skills.skillData.forEach(function (skill) {
+            //     game.skills.skillData.forEach(function (skill) {
 
-                    if (element == skill.id) {
+            //         if (element == skill.id) {
 
-                        skill.completed = true;
-                        skill.unlocked = true;
-                        game.setSkillComplete(skill);
-                        game.setSkillsUnlocked(skill.unlocksSkills);
+            //             skill.completed = true;
+            //             skill.unlocked = true;
+            //             game.setSkillComplete(skill);
+            //             game.setSkillsUnlocked(skill.unlocksSkills);
 
-                    }
-                });
-            });
+            //         }
+            //     });
+            // });
 
             /////////////////////////////////////////
             /////////// END DEBUG
             ////////////////////////////////////////
 
 
-            // if (localStorage.getItem('ArminiaSkills') != '') {
+            if (localStorage.getItem('ArminiaSkills') != '') {
 
-            //     if (localStorage.getItem('ArminiaSkills') == null) {
+                if (localStorage.getItem('ArminiaSkills') == null) {
 
-            //         localStorage.setItem('ArminiaSkills', '');
+                    localStorage.setItem('ArminiaSkills', '');
 
-            //     } else {
+                } else {
 
-            //         // assign local storage as a comma separated array
-            //         let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+                    // assign local storage as a comma separated array
+                    let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            //         // iterate through local storage data and apply to skillData and skill tree
-            //         localStorageArray.forEach(function (element) {
+                    // iterate through local storage data and apply to skillData and skill tree
+                    localStorageArray.forEach(function (element) {
 
-            //             game.skills.skillData.forEach(function (skill) {
+                        game.skills.skillData.forEach(function (skill) {
 
-            //                 if (element == skill.id) {
+                            if (element == skill.id) {
 
-            //                     skill.completed = true;
-            //                     skill.unlocked = true;
-            //                     game.setSkillComplete(skill);
-            //                     game.setSkillsUnlocked(skill.unlocksSkills);
+                                skill.completed = true;
+                                skill.unlocked = true;
+                                game.setSkillComplete(skill);
+                                game.setSkillsUnlocked(skill.unlocksSkills);
 
-            //                 }
-            //             });
-            //         });
-            //     }
-            // }
-
-            /////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////////
+                            }
+                        });
+                    });
+                }
+            }
 
         }); // END OF d3.xml()
 
@@ -470,12 +466,11 @@
 
             game.geogebra.parameters.appName = "classic";
             game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
-            game.geogebra.parameters.showAlgebraInput = false;
+            // game.geogebra.parameters.showAlgebraInput = true;
             game.geogebra.parameters.showToolBar = true;
             game.geogebra.parameters.showToolBarHelp = true;
             game.geogebra.parameters.allowStyleBar = true;
-            // game.geogebra.parameters.showResetIcon = true;
-            // game.geogebra.parameters.enableRightClick = false;
+            game.geogebra.parameters.customToolBar = game.skills.selectedSkill.tools;
 
             if (game.skills.selectedSkill.name == "The Schwarzschild Proton") {
 

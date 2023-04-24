@@ -15,19 +15,27 @@
 // You should have received a copy of the GNU General Public License
 // along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
-(function() {
+(function () {
 
-    var initScene = function(game) {
+    var initScene = function (game) {
 
         game.canvas = $("#A_gameCanvas")[0];
         game.engine = new BABYLON.Engine(game.canvas, true);
 
         game.scene = new BABYLON.Scene(game.engine);
         game.scene.clearColor = new BABYLON.Color3.Black;
-        
+
         game.camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, BABYLON.Vector3.Zero(), game.scene);
         game.camera.setTarget(BABYLON.Vector3.Zero());
-        game.camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;        
+        game.camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+
+        // custom properties
+        game.camera.initialTargetScreenOffset = 17.6;
+        game.camera.zoomedTargetScreenOffset = 4.0;
+        game.camera.zoomInScale = 10.8;
+        game.camera.zoomOutScale = 45;
+
+        game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
         game.camera.checkCollisions = false;
         game.camera.panningSensibility = 100;
         game.camera.alpha = 90 * Math.PI / 180;
@@ -48,14 +56,6 @@
         game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
         game.camera.inputs.attached.pointers.multiTouchPanning = false;
         game.camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED;
-
-        // custom properties
-        game.camera.initialTargetScreenOffset = 17.6;
-        game.camera.zoomedTargetScreenOffset = 4.0;
-        game.camera.zoomInScale = 10.8;
-        game.camera.zoomOutScale = 45;
-
-        game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
 
         game.scene.activeCameras = [game.camera, game.camera2];
         game.scene.cameraToUseForPointers = game.camera;
@@ -87,11 +87,11 @@
 
         resetWindow(game.camera);
         resetWindow(game.camera2);
-        
+
         function resetWindow(cam) {
 
             let ratio = (window.innerWidth) / window.innerHeight;
-            let zoom = cam.orthoRight;            
+            let zoom = cam.orthoRight;
             cam.orthoLeft = -cam.orthoRight;
             let newWidth = zoom / ratio;
             cam.orthoTop = Math.abs(newWidth);
@@ -99,7 +99,7 @@
 
         }
 
-        window.addEventListener("resize", function() {
+        window.addEventListener("resize", function () {
             game.engine.resize();
             resetWindow(game.camera);
             resetWindow(game.camera2);

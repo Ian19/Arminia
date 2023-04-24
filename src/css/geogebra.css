@@ -17,13 +17,25 @@
     background-color: transparent !important;
 }
 
+.gwt-TabLayoutPanel {
+    background-color: white !important;   
+}
+
 .GeoGebraFrame .propertiesTab {
     background-color: white !important;   
-  }
+}
+
+.GeoGebraFrame .algebraView {
+    background-color: white !important;
+}
+
+.GeoGebraFrame .algebraPanel {
+    background-color: white !important;
+}
   
 .PropertiesViewW {
     background-color: white !important;   
-  }
+}
 
 .A_graphing {
     border-width: 0px !important;

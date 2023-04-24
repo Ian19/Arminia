@@ -27,82 +27,325 @@
                 "material_id": "ybm744ww",
                 "zoomScale": 3,
 
-                "steps": [
+                "steps": [{
 
-                    ["symbolic p_{v}, 5.1660 * 10.000^93.000"],
-                    ["symbolic r_{p}, 1.3210 * 10.000^-13.000"],
-                    ["symbolic V_{p}, 4.0000 / 3.0000 r_{p}^3.0000 π"],
-                    ["symbolic R_{p}, p_{v} V_{p}"],
-                    ["symbolic l, 1.6200 * 10.000^-33.000"],
-                    ["symbolic v_{pl}, l^3.0000"],
-                    ["symbolic n, V_{p} / v_{pl}"],
-                    ["symbolic m_{p}, 2.1800 * 10.000^-5.0000"],
-                    ["symbolic R_{p2}, m_{p} n"],
-                    ["symbolic R_{s}, r_{p}"],
-                    ["symbolic G, 6.6700 * 10.000^-8.0000"],
-                    ["symbolic c, 2.9900 * 10.000^10.000"],
-                    ["symbolic M, (R_{s} c^2.0000) / (2.0000G)"],
-                    ["symbolic R_{m}, M / R_{p} * 100.00"],
-                    ["symbolic F, (G M^2.0000) / (2.0000r_{p})^2.0000"],
-                    ["symbolic a, F / M"],
-                    ["symbolic v, 2.0000sqrt(2.0000a r_{p})"],
-                    ["symbolic r, 2.0000r_{p}"],
-                    ["symbolic t, (2.0000π * 2.0000r_{p}) / v"],
-                    ["symbolic f, 1.0000 / t"],
-                    ["symbolic m, (M M) / (M + M)"],
-                    ["symbolic V_{r}, (m c^2.0000) / 2.0000"],
-                    ["symbolic V_{c}, V_{r} / r"],
-                    ["symbolic r_{m}, r / 100.00"],
-                    ["symbolic Kc, 8.9880 * 10.000^9.0000"],
-                    ["symbolic q_{1}, 1.6020 * 10.000^-19.000"],
-                    ["symbolic q_{2}, 1.6020 * 10.000^-19.000"],
-                    ["symbolic F_{c}, (Kc q_{1} q_{2}) / r_{m}^2.0000"],
-                    ["symbolic F_{d}, F_{c} * 10.000^5.0000"],
-                    ["symbolic F_{t}, V_{c} + F_{d}"]
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic p_{v}, 5.1660 * 10.000^93.000"],
+                    "stepsText": "Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.") + " (Hint: Enter 'p_v = 5.166 * 10^93'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
 
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic r_{p}, 1.3210 * 10.000^-13.000"],
+                    "stepsText": "Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}") + " (hint: Enter 'r_p = 1.321 * 10^-13')",
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic V_{p}, 4.0000 / 3.0000 r_{p}^3.0000 π"],
+                    "stepsText": "Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}") + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')",
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic R_{p}, p_{v} V_{p}"],
+                    "stepsText": "Enter " + katex.renderToString("R_p = p_v V_p"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic l, 1.6200 * 10.000^-33.000"],
+                    "stepsText": "Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic v_{pl}, l^3.0000"],
+                    "stepsText": "Enter " + katex.renderToString("v_{pl} = l^{3}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic n, V_{p} / v_{pl}"],
+                    "stepsText": "Enter " + katex.renderToString("n = \\frac {V_p} {v_{pl}}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic m_{p}, 2.1800 * 10.000^-5.0000"],
+                    "stepsText": "Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic R_{p2}, m_{p} n"],
+                    "stepsText": "Enter " + katex.renderToString("R_{p2} = m_p n"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic R_{s}, r_{p}"],
+                    "stepsText": "Enter " + katex.renderToString("R_s = r_p"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic G, 6.6700 * 10.000^-8.0000"],
+                    "stepsText": "Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic c, 2.9900 * 10.000^10.000"],
+                    "stepsText": "Enter " + katex.renderToString("c = 2.99 \\times 10^{10}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic M, (R_{s} c^2.0000) / (2.0000G)"],
+                    "stepsText": "Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic R_{m}, M / R_{p} * 100.00"],
+                    "stepsText": "Enter " + katex.renderToString("R_m = \\frac {M} {R_{p}} \\times 100"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic F, (G M^2.0000) / (2.0000r_{p})^2.0000"],
+                    "stepsText": "Enter " + katex.renderToString("F = \\frac {G M^{2}} {{2 r_p}^{2}}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic a, F / M"],
+                    "stepsText": "Enter " + katex.renderToString("a = \\frac F M"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic v, 2.0000sqrt(2.0000a r_{p})"],
+                    "stepsText": "Enter " + katex.renderToString("v = 2 \\sqrt{2 a r_{p}}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic r, 2.0000r_{p}"],
+                    "stepsText": "Enter " + katex.renderToString("r = 2r_p"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic t, (2.0000π * 2.0000r_{p}) / v"],
+                    "stepsText": "Enter " + katex.renderToString("t = \\frac {2 \\pi 2 r_{p}}{v}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic f, 1.0000 / t"],
+                    "stepsText": "Enter " + katex.renderToString("f = \\frac 1 t"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic m, (M M) / (M + M)"],
+                    "stepsText": "Enter " + katex.renderToString("m = \\frac {M M} {M + M}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic V_{r}, (m c^2.0000) / 2.0000"],
+                    "stepsText": "Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic V_{c}, V_{r} / r"],
+                    "stepsText": "Enter " + katex.renderToString("V_c = \\frac V r"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic r_{m}, r / 100.00"],
+                    "stepsText": "Enter " + katex.renderToString("r_{m} = \\frac {r} {100}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic Kc, 8.9880 * 10.000^9.0000"],
+                    "stepsText": "Enter " + katex.renderToString("K_c = 8.988 \\times 10^{9}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic q_{1}, 1.6020 * 10.000^-19.000"],
+                    "stepsText": "Enter " + katex.renderToString("q_1 = 1.602 \\times 10^{-19}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic q_{2}, 1.6020 * 10.000^-19.000"],
+                    "stepsText": "Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic F_{c}, (Kc q_{1} q_{2}) / r_{m}^2.0000"],
+                    "stepsText": "Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic F_{d}, F_{c} * 10.000^5.0000"],
+                    "stepsText": "Enter " + katex.renderToString("F_d = F_c \\times 10^{5}"),
+
+                }, {
+
+                    "type": "construction",
+                    "zoomScale": 3,
+                    "styleObjects": [],
+                    "correctStep": ["symbolic F_{t}, V_{c} + F_{d}"],
+                    "stepsText": "Enter " + katex.renderToString("F_t = V_c + F_d")
+
+                }
                 ],
 
-                "stepsText": [
+                // "steps": [
 
-                    "Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
-                        + " (Hint: Enter 'p_v = 5.166 * 10^93'. Press the "
-                        + katex.renderToString("\\approx") + " button after each step.)",
+                //     ["symbolic p_{v}, 5.1660 * 10.000^93.000"],
+                //     ["symbolic r_{p}, 1.3210 * 10.000^-13.000"],
+                //     ["symbolic V_{p}, 4.0000 / 3.0000 r_{p}^3.0000 π"],
+                //     ["symbolic R_{p}, p_{v} V_{p}"],
+                //     ["symbolic l, 1.6200 * 10.000^-33.000"],
+                //     ["symbolic v_{pl}, l^3.0000"],
+                //     ["symbolic n, V_{p} / v_{pl}"],
+                //     ["symbolic m_{p}, 2.1800 * 10.000^-5.0000"],
+                //     ["symbolic R_{p2}, m_{p} n"],
+                //     ["symbolic R_{s}, r_{p}"],
+                //     ["symbolic G, 6.6700 * 10.000^-8.0000"],
+                //     ["symbolic c, 2.9900 * 10.000^10.000"],
+                //     ["symbolic M, (R_{s} c^2.0000) / (2.0000G)"],
+                //     ["symbolic R_{m}, M / R_{p} * 100.00"],
+                //     ["symbolic F, (G M^2.0000) / (2.0000r_{p})^2.0000"],
+                //     ["symbolic a, F / M"],
+                //     ["symbolic v, 2.0000sqrt(2.0000a r_{p})"],
+                //     ["symbolic r, 2.0000r_{p}"],
+                //     ["symbolic t, (2.0000π * 2.0000r_{p}) / v"],
+                //     ["symbolic f, 1.0000 / t"],
+                //     ["symbolic m, (M M) / (M + M)"],
+                //     ["symbolic V_{r}, (m c^2.0000) / 2.0000"],
+                //     ["symbolic V_{c}, V_{r} / r"],
+                //     ["symbolic r_{m}, r / 100.00"],
+                //     ["symbolic Kc, 8.9880 * 10.000^9.0000"],
+                //     ["symbolic q_{1}, 1.6020 * 10.000^-19.000"],
+                //     ["symbolic q_{2}, 1.6020 * 10.000^-19.000"],
+                //     ["symbolic F_{c}, (Kc q_{1} q_{2}) / r_{m}^2.0000"],
+                //     ["symbolic F_{d}, F_{c} * 10.000^5.0000"],
+                //     ["symbolic F_{t}, V_{c} + F_{d}"]
 
-                    "Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
-                        + " (hint: Enter 'r_p = 1.321 * 10^-13')",
+                // ],
 
-                    "Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
-                        + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')",
+                // "stepsText": [
 
-                    "Enter " + katex.renderToString("R_p = p_v V_p"),
-                    "Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}"),
-                    "Enter " + katex.renderToString("v_{pl} = l^{3}"),
-                    "Enter " + katex.renderToString("n = \\frac {V_p} {v_{pl}}"),
-                    "Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}"),
-                    "Enter " + katex.renderToString("R_{p2} = m_p n"),
-                    "Enter " + katex.renderToString("R_s = r_p"),
-                    "Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}"),
-                    "Enter " + katex.renderToString("c = 2.99 \\times 10^{10}"),
-                    "Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}"),
-                    "Enter " + katex.renderToString("R_m = \\frac {M} {R_{p}} \\times 100"),
-                    "Enter " + katex.renderToString("F = \\frac {G M^{2}} {{2 r_p}^{2}}"),
-                    "Enter " + katex.renderToString("a = \\frac F M"),
-                    "Enter " + katex.renderToString("v = 2 \\sqrt{2 a r_{p}}"),
-                    "Enter " + katex.renderToString("r = 2r_p"),
-                    "Enter " + katex.renderToString("t = \\frac {2 \\pi 2 r_{p}}{v}"),
-                    "Enter " + katex.renderToString("f = \\frac 1 t"),
-                    "Enter " + katex.renderToString("m = \\frac {M M} {M + M}"),
-                    "Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}"),
-                    "Enter " + katex.renderToString("V_c = \\frac V r"),
-                    "Enter " + katex.renderToString("r_{m} = \\frac {r} {100}"),
-                    "Enter " + katex.renderToString("K_c = 8.988 \\times 10^{9}"),
-                    "Enter " + katex.renderToString("q_1 = 1.602 \\times 10^{-19}"),
-                    "Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}"),
-                    "Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}"),
-                    "Enter " + katex.renderToString("F_d = F_c \\times 10^{5}"),
-                    "Enter " + katex.renderToString("F_t = V_c + F_d")
+                //     "Enter  " + katex.renderToString("p_v = 5.166 \\times 10^{93} gm/cm^{3}.")
+                //         + " (Hint: Enter 'p_v = 5.166 * 10^93'. Press the "
+                //         + katex.renderToString("\\approx") + " button after each step.)",
 
-                ],
+                //     "Enter " + katex.renderToString("r_p = 1.321 \\times 10^{-13}")
+                //         + " (hint: Enter 'r_p = 1.321 * 10^-13')",
+
+                //     "Enter " + katex.renderToString("V_p = \\frac 4 3 \\pi r_p^{3}")
+                //         + " (hint: Enter 'V_p = 4 / 3 * r_p^3 * pi')",
+
+                //     "Enter " + katex.renderToString("R_p = p_v V_p"),
+                //     "Enter " + katex.renderToString("l = 1.62 \\times 10^{-33}"),
+                //     "Enter " + katex.renderToString("v_{pl} = l^{3}"),
+                //     "Enter " + katex.renderToString("n = \\frac {V_p} {v_{pl}}"),
+                //     "Enter " + katex.renderToString("m_p = 2.18 \\times 10^{-5}"),
+                //     "Enter " + katex.renderToString("R_{p2} = m_p n"),
+                //     "Enter " + katex.renderToString("R_s = r_p"),
+                //     "Enter " + katex.renderToString("G = 6.67 \\times 10^{-8}"),
+                //     "Enter " + katex.renderToString("c = 2.99 \\times 10^{10}"),
+                //     "Enter " + katex.renderToString("M = \\frac{R_s c^{2}}{2G}"),
+                //     "Enter " + katex.renderToString("R_m = \\frac {M} {R_{p}} \\times 100"),
+                //     "Enter " + katex.renderToString("F = \\frac {G M^{2}} {{2 r_p}^{2}}"),
+                //     "Enter " + katex.renderToString("a = \\frac F M"),
+                //     "Enter " + katex.renderToString("v = 2 \\sqrt{2 a r_{p}}"),
+                //     "Enter " + katex.renderToString("r = 2r_p"),
+                //     "Enter " + katex.renderToString("t = \\frac {2 \\pi 2 r_{p}}{v}"),
+                //     "Enter " + katex.renderToString("f = \\frac 1 t"),
+                //     "Enter " + katex.renderToString("m = \\frac {M M} {M + M}"),
+                //     "Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}"),
+                //     "Enter " + katex.renderToString("V_c = \\frac V r"),
+                //     "Enter " + katex.renderToString("r_{m} = \\frac {r} {100}"),
+                //     "Enter " + katex.renderToString("K_c = 8.988 \\times 10^{9}"),
+                //     "Enter " + katex.renderToString("q_1 = 1.602 \\times 10^{-19}"),
+                //     "Enter " + katex.renderToString("q_2 = 1.602 \\times 10^{-19}"),
+                //     "Enter " + katex.renderToString("F_c = \\frac {Kc q_1 q_2} {r_m^{2}}"),
+                //     "Enter " + katex.renderToString("F_d = F_c \\times 10^{5}"),
+                //     "Enter " + katex.renderToString("F_t = V_c + F_d")
+
+                // ],
 
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "elements": [

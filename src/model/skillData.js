@@ -91,6 +91,48 @@
                         alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
                         recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
                         praesentium consequatur consectetur eum expedita?
+                    </span><br><br>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                        excepturi nulla adipisci, et dolores doloribus tempore.
+                    </span><br><br>
+                    <span>
+                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                        praesentium consequatur consectetur eum expedita?
+                    </span><br><br>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
+                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
+                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
+                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
+                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
+                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
+                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
+                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
+                        excepturi nulla adipisci, et dolores doloribus tempore.
+                    </span><br><br>
+                    <span>
+                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
+                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
+                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
+                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
+                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
+                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
+                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
+                        praesentium consequatur consectetur eum expedita?
                     </span>
                 `
             }, {
@@ -204,7 +246,7 @@
                 "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
-                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  12 STEPS",
                 "completed": false,
@@ -1293,8 +1335,8 @@
 
 
                 "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL3.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/thumbUnsealedFOL.svg",
+                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL4.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "d3Data": ["hexStatusFOLUnseal", "CompleteFOLUnseal"],
                 "difficulty": "EASY  |  1 STEP",
@@ -2214,7 +2256,7 @@
                 }],
 
                 "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/thumbCompletedFOL.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCompletedFOL3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatusCompleteFOL", "CompleteCompleteFOL"],
@@ -2249,7 +2291,7 @@
                 }],
 
                 "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/thumbFruit.svg",
                 "stepsImage": "src/assets/images/skills/details/detailFruitOfLife.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",

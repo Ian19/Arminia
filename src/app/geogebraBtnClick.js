@@ -19,52 +19,39 @@
 
     const geogebraBtnClick = function (game, outPage, btn) {
 
-        if (game.skills.selectedSkill.unlocked) {
+        $(btn).text("LOADING");
+        game.nav = "skill";
 
-            $(btn).text("LOADING");            
-            game.nav = "skill";
+        // Check if this is the first time applet has been loaded
+        if (typeof ggbApplet === "undefined") {
 
-            // Check for new skill to avoid duplicate applet reinjection
-            // TEMP FIX TO FORCE CONSTANT INJECTION
-            if ("null" === "not null") {
+            // console.log("NEW APPLET LOADING. game.applet == undefined");
 
-                // console.log("DUPLICATE SKILLS...AVOIDING REINJECTION skillCheck == game.skills.selectedSkill");
+            // console.log(game.geogebra.parameters);
 
-                // console.log(game.nav);
+            game.applet = {};
+            game.applet = new GGBApplet('6.0', game.geogebra.parameters);
 
-                Arminia.setGUI(game);
+            // This needs to be before injection
+            $("#A_geobebraView").show();
 
-                game.main.setEnabled(false);
-                game.animatePageIn("A_geobebraView");
-                game.animatePageOut(outPage);
+            game.applet.inject('applet_container');
 
-            } else {
+        } else {
 
-                // Check if this is the first time applet has been loaded
+            // console.log("REMOVING OLD APPLET. game.applet != undefined");
 
-                if (typeof ggbApplet === "undefined") {
+            ggbApplet.remove();
 
-                    // console.log("NEW APPLET LOADING...game.applet == undefined");
-                    // game.skills.lastSkill = game.skills.selectedSkill;
-                    game.applet = {};
-                    game.applet = new GGBApplet('6.0', game.geogebra.parameters);
+            document.getElementById('applet_container').innerHTML = "";
 
-                    // This needs to be before injection
-                    $("#A_geobebraView").show();
-                    game.applet.inject('applet_container');
+            // console.log(game.geogebra.parameters);
 
-                } else {
-
-                    // game.skills.lastSkill = game.skills.selectedSkill;
-                    // console.log("REMOVING OLD APPLET...game.applet != undefined");
-                    ggbApplet.remove();
-                    document.getElementById('applet_container').innerHTML = "";
-                    game.applet = {};
-                    game.applet = new GGBApplet('6.0', game.geogebra.parameters);
-                    game.applet.inject('applet_container');
-                }
-            }
+            game.applet = {};
+            game.applet = new GGBApplet('6.0', game.geogebra.parameters);
+            game.applet.inject('applet_container');
         }
+
 
     };
 

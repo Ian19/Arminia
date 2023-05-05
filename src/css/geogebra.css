@@ -1,13 +1,13 @@
 
-.scaleContainerClass {
+/* .scaleContainerClass {
     display: inline-block;
-    /* width: 48% !important;  */
     width: 42vw !important; 
-}
+} */
 
 .appletStyle {
     position: relative;
     height: 100%;
+    width: 100%; 
     bottom: 0px;
     left: 2px;
     box-sizing: border-box !important;    
@@ -16,6 +16,7 @@
     border-radius: 4px !important;    
     background-color: transparent !important;
 }
+
 
 .gwt-TabLayoutPanel {
     background-color: white !important;   
@@ -50,7 +51,6 @@
 #A_subGeoView {
     position: relative;
     height: 80%;
-    /* border: 1px solid red; */
 }
 
 #A_geogebraIntroText {
@@ -78,9 +78,7 @@
 
 /* button color */
 .GeoGebraFrame .toolbarPanel .toolBPanel .toolbar_button{
-    /* background-color: #dcd6ff !important; */
     background-color: #ebe8ff !important;
-    /* border: 0px !important; */
 }
 
 /* button border color isSelected="false"*/

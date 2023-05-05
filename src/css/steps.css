@@ -1,18 +1,3 @@
-#A_stepsContainer {
-    color: #acb0dee3;
-    font-size: 0.75vw;
-    width: 100%;
-    /* padding-top: min(2vw, 20px); */
-    /* padding-top: min(1vw, 10px); */
-    /* height: 31%; */
-
-    /* position: relative;
-    bottom: 0px; */
-    position: relative;
-    height: 23%;
-    
-}
-
 #A_stepsBody {
 
     /* height: 50px;
@@ -65,7 +50,7 @@
     letter-spacing: 1.3px;
 }
 
-#A_stepsImageDifficulty {    
+#A_stepsImageDifficulty {
     margin-top: 4px;
     color: lightyellow;
     font-family: 'Verdana';
@@ -74,19 +59,19 @@
     font-variant-caps: all-small-caps;
 }
 
-#A_stepsImageRequirement {    
+#A_stepsImageRequirement {
     margin-top: 4px;
     color: #BC67FF;
     font-family: 'Verdana';
     font-size: 0.65vw;
     letter-spacing: 1px;
-    font-variant-caps: all-small-caps;    
+    font-variant-caps: all-small-caps;
 }
 
-#A_stepsImageDefinition {    
+#A_stepsImageDefinition {
     font-style: normal;
     font-size: 0.7vw;
-    text-align: center;  
+    text-align: center;
     color: #acb0dee3;
     /* margin: 6px 0 35px; */
     margin-top: 13px;
@@ -106,15 +91,9 @@
 
 @keyframes transcolor {
     from {
-      fill-opacity: 1;
+        fill-opacity: 1;
     }
-    
     to {
         fill-opacity: 0.25;
     }
-  }
-
-
-
-
-
+}

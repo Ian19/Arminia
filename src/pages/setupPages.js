@@ -67,7 +67,7 @@
         $(document).on('click', '#A_protonBtnID', function () {
 
             // temporary until more papers are added
-            game.skills.lastSkill = game.skills.selectedSkill;
+            // game.skills.lastSkill = game.skills.selectedSkill;
             game.skills.selectedSkill = game.skills.equationData[0];
 
             // game.skills.lastSkill = game.skills.selectedSkill;
@@ -103,6 +103,9 @@
             // console.log(display);
             // console.log(opacity);
 
+            // console.log("animationEnd");
+            // console.log(game.skills.selectedSkill);
+
 
             if (evt.animationName == "transitionOut") {
 
@@ -127,11 +130,6 @@
         element.addEventListener("animationend", animationEnd, false);
         element.addEventListener("oanimationend", animationEnd, false);
         element.addEventListener("MSAnimationEnd", animationEnd, false);
-
-        // element.addEventListener("webkitAnimationEnd", animationEnd, false);
-        // element.addEventListener("animationend", animationEnd, false);
-        // element.addEventListener("oanimationend", animationEnd, false);
-        // element.addEventListener("MSAnimationEnd", animationEnd, false);
         
         element = document.getElementById('A_64TetraView');
         element.addEventListener("webkitAnimationEnd", animationEnd, false);

@@ -23,6 +23,8 @@
         const app = $('#A_skillsContainer')[0];
         app.style.display = "inline-block";
 
+        let selectedConstruction = {};
+
         // $('#A_detailGridID').css("display", "none");
         $("#A_detailGridID").css("opacity", "0");
 
@@ -89,51 +91,6 @@
             function zoomed({ transform }) {
                 g.attr("transform", transform);
             }
-
-            // $(document).on('click', '#A_zoomInBtn', function () {
-            //     console.log("A_zoomInBtn click");
-
-            //     svg.transition()
-            //         .call(zoom.scaleBy, 2);
-            // });
-
-            // $(document).on('click', '#A_zoomOutBtn', function () {
-            //     console.log("A_zoomOutBtn click");
-
-            //     svg.transition()
-            //         .call(zoom.scaleBy, 0.5);
-            // });
-
-            // $(document).on('click', '#A_resetZoomBtn', function () {
-            //     console.log("A_resetZoomBtn click");
-
-            //     svg.transition()
-            //         .call(zoom.scaleTo, 1);
-            // });
-
-            // $(document).on('click', '#A_panLeftBtn', function () {
-            //     console.log("A_panLeftBtn click");
-
-            //     svg.transition()
-            //         .call(zoom.translateBy, 50, 0);
-            // });
-
-            // $(document).on('click', '#A_panRightBtn', function () {
-            //     console.log("A_panRightBtn click");
-
-            //     svg.transition()
-            //         .call(zoom.translateBy, -50, 0);
-            // });
-
-            // $(document).on('click', '#A_CenterBtn', function () {
-            //     let el = document.getElementById("Layer_1");
-            //     let svgWidth = el.width.baseVal.value;
-            //     let svgHeight = el.height.baseVal.value;
-
-            //     svg.transition()
-            //         .call(zoom.translateTo, 0.5 * svgWidth, 0.5 * svgHeight);                    
-            // });
-
 
             function mouseover1(t, d, i) {
 
@@ -202,7 +159,9 @@
                             oldSelectedSkillData = null;
                             skillSelected = false;
 
-                            game.skills.selectedSkill = null;
+                            // game.skills.selectedSkill = null;
+
+                            selectedConstruction = null;
 
                         } else {
 
@@ -212,11 +171,11 @@
                                 .style("stroke", "#BC67FF");
 
                             newSkillData.selected = true;
-                            skillSelected = true;
+                            skillSelected = true;                            
 
-                            game.skills.lastSkill = game.skills.selectedSkill;
+                            // game.skills.selectedSkill = newSkillData;
 
-                            game.skills.selectedSkill = newSkillData;
+                            selectedConstruction = newSkillData;
 
                         }
                     } else {
@@ -230,20 +189,20 @@
                         // select new skill
                         updateSkills(this, newSkillData);
                         // show detail
-                        updateSkillsDetail(newSkillData);
+                        updateSkillsDetail(newSkillData);                        
 
-                        game.skills.lastSkill = game.skills.selectedSkill;
+                        // game.skills.selectedSkill = newSkillData;
 
-                        game.skills.selectedSkill = newSkillData;
+                        selectedConstruction = newSkillData;
 
                     }
                 } else {
                     // no skill selected, select new skill
-                    updateSkills(this, newSkillData);
+                    updateSkills(this, newSkillData);                    
 
-                    game.skills.lastSkill = game.skills.selectedSkill;
+                    // game.skills.selectedSkill = newSkillData;
 
-                    game.skills.selectedSkill = newSkillData;
+                    selectedConstruction = newSkillData;
                 }
             }
 
@@ -296,7 +255,6 @@
                 g.selectAll("[id *= 'test1']")
                     .style("stroke", "#BC67FF")
                     .style("stroke-opacity", 0.7);
-
 
                 // console.log(g);
 
@@ -352,21 +310,6 @@
             game.setSkillComplete = setSkillComplete;
             game.setSkillsUnlocked = setSkillsUnlocked;
 
-            // start with circle selected            
-            let newSkillData = game.skills.skillData[0];
-            oldSelectedSkillData = newSkillData;
-            newSkillData.selected = true;
-            skillSelected = true;
-            game.skills.selectedSkill = newSkillData;
-            oldSelectedSkillData = newSkillData;
-
-            var oldSelectedSkillSVG = g.select("[id *= 'hexHover1']")
-                .style("stroke-opacity", 1)
-                .style("stroke", "#ECDB7A");
-
-            // show detail
-            updateSkillsDetail(game.skills.selectedSkill);
-
             /*            
             function setSkillToIncomplete(hexID, skillID) {
     
@@ -393,7 +336,6 @@
                 .style("fill-opacity", 1)
                 // change stroke color to indicate completed skill of second child node
                 .select("polygon:nth-child(2)")
-                // .style("stroke", "#9999FF");
                 .style("stroke", "#EAEAF1");
 
             /////////////////////////////////////////////////////////////////////////////////////
@@ -405,79 +347,80 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
+            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
 
-            // assign local storage as a comma separated array
-            let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+            // // assign local storage as a comma separated array
+            // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            // iterate through local storage data and apply to skillData and skill tree
-            localStorageArray.forEach(function (element) {
+            // // iterate through local storage data and apply to skillData and skill tree
+            // localStorageArray.forEach(function (element) {
 
-                game.skills.skillData.forEach(function (skill) {
+            //     game.skills.skillData.forEach(function (skill) {
 
-                    if (element == skill.id) {
+            //         if (element == skill.id) {
 
-                        skill.completed = true;
-                        skill.unlocked = true;
-                        game.setSkillComplete(skill);
-                        game.setSkillsUnlocked(skill.unlocksSkills);
+            //             skill.completed = true;
+            //             skill.unlocked = true;
+            //             game.setSkillComplete(skill);
+            //             game.setSkillsUnlocked(skill.unlocksSkills);
 
-                    }
-                });
-            });
+            //         }
+            //     });
+            // });
 
             /////////////////////////////////////////
             /////////// END DEBUG
             ////////////////////////////////////////
 
 
-            // if (localStorage.getItem('ArminiaSkills') != '') {
+            if (localStorage.getItem('ArminiaSkills') != '') {
 
-            //     if (localStorage.getItem('ArminiaSkills') == null) {
+                if (localStorage.getItem('ArminiaSkills') == null) {
 
-            //         localStorage.setItem('ArminiaSkills', '');
+                    localStorage.setItem('ArminiaSkills', '');
 
-            //     } else {
+                } else {
 
-            //         // assign local storage as a comma separated array
-            //         let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
+                    // assign local storage as a comma separated array
+                    let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-            //         // iterate through local storage data and apply to skillData and skill tree
-            //         localStorageArray.forEach(function (element) {
+                    // iterate through local storage data and apply to skillData and skill tree
+                    localStorageArray.forEach(function (element) {
 
-            //             game.skills.skillData.forEach(function (skill) {
+                        game.skills.skillData.forEach(function (skill) {
 
-            //                 if (element == skill.id) {
+                            if (element == skill.id) {
 
-            //                     skill.completed = true;
-            //                     skill.unlocked = true;
-            //                     game.setSkillComplete(skill);
-            //                     game.setSkillsUnlocked(skill.unlocksSkills);
+                                skill.completed = true;
+                                skill.unlocked = true;
+                                game.setSkillComplete(skill);
+                                game.setSkillsUnlocked(skill.unlocksSkills);
 
-            //                 }
-            //             });
-            //         });
-            //     }
-            // }
+                            }
+                        });
+                    });
+                }
+            }
 
         }); // END OF d3.xml()
 
-        $(document).on('click', '#A_detailBtn', function () {
+        $(document).on('click', '#A_detailBtn', function () {    
 
-            game.geogebra.parameters.appName = "classic";
-            game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
-            // game.geogebra.parameters.showAlgebraInput = true;
-            game.geogebra.parameters.showToolBar = true;
-            game.geogebra.parameters.showToolBarHelp = true;
-            game.geogebra.parameters.allowStyleBar = true;
-            game.geogebra.parameters.customToolBar = game.skills.selectedSkill.tools;
+            if (selectedConstruction.unlocked) {
 
-            if (game.skills.selectedSkill.name == "The Schwarzschild Proton") {
+                game.skills.selectedSkill =  selectedConstruction;
 
-                game.skills.selectedSkill = game.skills.lastSkill;
+                game.geogebra.parameters.appName = "classic";
+                game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
+                // game.geogebra.parameters.showAlgebraInput = true;
+                game.geogebra.parameters.showToolBar = true;
+                game.geogebra.parameters.showToolBarHelp = true;
+                game.geogebra.parameters.allowStyleBar = true;
+                game.geogebra.parameters.customToolBar = game.skills.selectedSkill.tools;
+
+                Arminia.geogebraBtnClick(game, "A_homePage", "#A_detailBtn");
+
             }
-
-            Arminia.geogebraBtnClick(game, "A_homePage", "#A_detailBtn");
 
         });
 

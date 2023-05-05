@@ -1,4 +1,4 @@
-.A_page {
+/* .A_page {
     position: absolute;
     bottom: 30px;
     top: 0px;
@@ -6,6 +6,17 @@
     width: 42vw;
     left: 2.6vw;
     padding-top: 0.1vw;
+} */
+
+.A_page {
+    height: 100vh;
+    position: absolute;
+    /* bottom: 30px; */
+    /* top: 0px; */
+    flex-direction: column;
+    width: 42vw;
+    left: 2.6vw;
+    /* padding-top: 0.1vw; */
 }
 
 #A_homePage {

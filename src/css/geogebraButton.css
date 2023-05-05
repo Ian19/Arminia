@@ -22,14 +22,6 @@
     margin: 0 0.3vw;
 }
 
-.A_btnContainer2 {
-    position: absolute;
-    display: flex;
-    text-align: center;
-    margin: 0.7vw 0.3vw 0 0.1vw;
-    gap: 0.5vw;
-}
-
 #A_backToSkillsBtn {
     /* margin: 1vw -0.3vw 0 -0.3vw; */
     /* border: 2px solid #563a9949 !important;     */

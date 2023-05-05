@@ -22,8 +22,13 @@
 
         switch (game.nav) {
             case "home":
+
+                console.log("setGUI called");
+
                 $("#A_overviewContainer").css("display", "none");
-                $("#A_stepsBackgroundImage").css("display", "none");                
+                $("#A_overviewBtn").text("OVERVIEW");
+                
+                $("#A_stepsBackgroundImage").css("display", "none");
                 $("#A_sysHintContainer").show();
                 $("#A_sidebarGroupHologram").hide();
                 $("#checkbox9").prop("checked", true);
@@ -44,6 +49,9 @@
             case "A_64TetraView":
 
                 $("#A_homePage").hide();
+
+                $("#A_overviewContainer").css("display", "none");
+                $("#A_overviewBtn").text("OVERVIEW");
 
                 $("#A_sysHintContainer").hide();
                 $("#A_sidebarGroupHologram").show();

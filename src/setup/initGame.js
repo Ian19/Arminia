@@ -33,8 +33,7 @@
         game.selectedInfoSystem.edgesRenderingMeshes = [];
         game.selectedInfoSystem.wireMeshes = [];
 
-        game.skills = {};
-        game.skills.lastSkill = {};
+        game.skills = {};        
         game.nav = "home";
 
         // game.camera2.useAutoRotationBehavior = true;

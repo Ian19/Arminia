@@ -15,13 +15,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
-(function() {
+(function () {
 
-    const geogebra = function(game) {
+    const geogebra = function (game) {
 
         let cheatNum = 0;
         const fadeNum = 0.2;
-        const fillColor = "#ffe86d";
+        const fadeColor = "#544783";
+        const fillColor = "#ffe86d"; // yellow
         let ready = false;
         let svg;
 
@@ -39,589 +40,606 @@
         $("#A_constructionBtn").css("color", "white");
         $("#A_constructionBtn").css("border", "1px solid #8064cc");
 
-        parameters.appletOnLoad = function(api) {
+        parameters.appletOnLoad = function (api) {
 
-                Arminia.setGUI(game);
+            Arminia.setGUI(game);
 
-                let zoom;
+            let zoom;
+            ready = false;
+            let newStart = true;
+            cheatNum = 0;
+
+            $("#A_cheatBtnID").hide();
+
+            if (game.skills.selectedSkill.type !== "paper") {
+
+                ggbApplet.evalCommand("CenterView((0, 0))");
+                ggbApplet.evalCommand(game.skills.selectedSkill.startingZoomScale);
+
+            }
+
+            $("#A_stepsBackgroundImage").css("display", "inline-block");
+            $("#A_StepsImageCenter").css("display", "none");
+            $("#A_startGeogebraBtnID").show();
+
+            // settings for CAS or graphing             
+            if (parameters.appName == "classic") {
+
+                game.animatePageOut("A_homePage");
+                $(".appletStyle").addClass("A_graphing");
+
+            } else if (parameters.appName == "suite") {
+
+                game.animatePageOut("A_64TetraView");
+                $(".appletStyle").addClass("A_cas");
+
+            }
+
+            // load stepsImage svg file with d3.xml() and setup
+            d3.xml(game.skills.selectedSkill.stepsImage).then(data => {
+
                 ready = false;
-                let newStart = true;
-                cheatNum = 0;
 
-                $("#A_cheatBtnID").hide();
+                const svgNode = data.documentElement;
+                const obj = $('#A_stepsBackgroundImage')[0];
+                obj.appendChild(svgNode);
 
-                if (game.skills.selectedSkill.type !== "paper") {
+                svg = d3.select("#" + game.skills.selectedSkill.elementID);
+                svg.style("width", "100%").style("height", "100%").style("display", "block");
 
-                    ggbApplet.evalCommand("CenterView((0, 0))");
-                    ggbApplet.evalCommand(game.skills.selectedSkill.startingZoomScale);
+                d3.selectAll("[id *= 'A_SVGStep'], [id *= 'divider'], [id *= 'paperText']")
+                    .style("fill", "white");
 
+                zoom = d3.zoom()
+                    .scaleExtent([1, 10])
+                    .on("zoom", zoomed);
+
+                var g = svg.select('g');
+                svg.call(zoom);
+
+                function zoomed({ transform }) {
+                    g.attr("transform", transform);
                 }
 
-                $("#A_stepsBackgroundImage").css("display", "inline-block");
-                $("#A_StepsImageCenter").css("display", "none");
-                $("#A_startGeogebraBtnID").show();
+            });
 
-                // settings for CAS or graphing             
-                if (parameters.appName == "classic") {
 
-                    game.animatePageOut("A_homePage");
-                    $(".appletStyle").addClass("A_graphing");
-
-                } else if (parameters.appName == "suite") {
-
-                    game.animatePageOut("A_64TetraView");
-                    $(".appletStyle").addClass("A_cas");
-
+            const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
+                className: "os-theme-dark custom-class",
+                scrollbars: {
+                    clickScrolling: true,
+                    dragScrolling: true
                 }
+            });
 
-                // load stepsImage svg file with d3.xml() and setup
-                d3.xml(game.skills.selectedSkill.stepsImage).then(data => {
+            osInstance2.getElements().host.classList.add('os-host-flexbox');
 
-                    ready = false;
+            let type = game.skills.selectedSkill.type;
 
-                    const svgNode = data.documentElement;
-                    const obj = $('#A_stepsBackgroundImage')[0];
-                    obj.appendChild(svgNode);
+            $("#A_stepsBody").html("The diagram above shows the  " + type + " in its completed state. Use the large Geogebra panel on the left to complete the steps. Press Start to begin.");
 
-                    svg = d3.select("#" + game.skills.selectedSkill.elementID);
-                    svg.style("width", "100%").style("height", "100%").style("display", "block");
+            // Show and hide elements as Geogebra loads               
+            game.animatePageIn("A_geobebraView");
+            game.main.setEnabled(false);
 
-                    d3.selectAll("[id *= 'A_SVGStep'], [id *= 'divider'], [id *= 'paperText']")
-                        .style("fill", "white");
+            // Setup Steps System
+            // let steps = game.skills.selectedSkill.steps;
+            let steps = game.skills.selectedSkill.steps;
+            let stepsLength = game.skills.selectedSkill.steps.length;
 
-                    zoom = d3.zoom()
-                        .scaleExtent([1, 10])
-                        .on("zoom", zoomed);
+            // Init stepper values
+            $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
+            $("#A_stepsValue").text("0%");
+            $("#A_stepsProgress").css("width", "0%");
 
-                    var g = svg.select('g');
-                    svg.call(zoom);
+            // Position and size Geogebra and flex steps image box 
+            $(".scaleContainerClass").css("display", "inline-block");
+            let rect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
+            let h = rect.bottom - rect.top;
 
-                    function zoomed({ transform }) {
-                        g.attr("transform", transform);
-                    }
 
+            // TESTING NEW GRID
+            // $("#A_stepsImageFlex").css("height", h + "px");
+
+
+            // Steps Image title, difficulty and definition
+            $("#A_stepsImageTitle").text(game.skills.selectedSkill.name);
+            $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
+            $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
+
+            // Updates html elements on Overview page with new skill data if the applet has been reinjected
+            $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
+            $("#A_geoDetailTitle").text(game.skills.selectedSkill.name);
+            $("#A_geoDifficulty").text(game.skills.selectedSkill.difficulty);
+            $("#A_geoDetailRequirement").text(game.skills.selectedSkill.requirement);
+            $("#A_geoDetailQuote").text(game.skills.selectedSkill.quote);
+            $("#A_geoDetailQuotee").text(game.skills.selectedSkill.quotee);
+            $("#A_geoDetailDefinition").text(game.skills.selectedSkill.overview);
+
+            document.getElementById("A_geoDetailBody2").innerHTML = game.skills.selectedSkill.geoDetailBody;
+
+            let rect2 = document.getElementById("A_stepsContainer").getBoundingClientRect();
+            let mybottom = window.innerHeight - rect2.y;
+
+            $("#A_mouseIconBorder").css("bottom", mybottom.toString() + "px");
+
+            // PDF.js temporary for schwarzschild paper demo
+            if (parameters.appName == "suite") {
+
+                $("#A_prevPage").click(function () {
+                    showPrevPage();
                 });
 
-
-                const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
-                    className: "os-theme-dark custom-class",
-                    scrollbars: {
-                        clickScrolling: true,
-                        dragScrolling: true
-                    }
+                $("#A_nextPage").click(function () {
+                    showNextPage();
                 });
 
-                osInstance2.getElements().host.classList.add('os-host-flexbox');
+                const url = "src/assets/docs/The_Schwarzschild_Proton.pdf";
 
-                $("#A_stepsBody").html("Press Start to begin.");
+                // Loaded via <script> tag, create shortcut to access PDF.js exports.
+                var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-                // Show and hide elements as Geogebra loads               
-                game.animatePageIn("A_geobebraView");
-                game.main.setEnabled(false);
+                // The workerSrc property shall be specified.
+                pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
-                // Setup Steps System
-                // let steps = game.skills.selectedSkill.steps;
-                let steps = game.skills.selectedSkill.steps;
-                let stepsLength = game.skills.selectedSkill.steps.length;
+                let pdfDoc = null,
+                    pageNum = 1,
+                    pageRendering = false,
+                    pageNumPending = null
 
-                // Init stepper values
-                $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
-                $("#A_stepsValue").text("0%");
-                $("#A_stepsProgress").css("width", "0%");
+                const canvas = document.querySelector('#A_pdfRender'),
+                    ctx = canvas.getContext('2d')
 
-                // Position and size Geogebra and flex steps image box 
-                $(".scaleContainerClass").css("display", "inline-block");
-                let rect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
-                let h = rect.bottom - rect.top;
-                $("#A_stepsImageFlex").css("height", h + "px");
+                const scale = 1.3;
 
-                // Steps Image title, difficulty and definition
-                $("#A_stepsImageTitle").text(game.skills.selectedSkill.name);
-                $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
-                $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
+                // Get page info from document, resize canvas accordingly, and render page.
+                // param num Page number. 
 
-                // Updates html elements on Overview page with new skill data if the applet has been reinjected
-                $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
-                $("#A_geoDetailTitle").text(game.skills.selectedSkill.name);
-                $("#A_geoDifficulty").text(game.skills.selectedSkill.difficulty);
-                $("#A_geoDetailRequirement").text(game.skills.selectedSkill.requirement);
-                $("#A_geoDetailQuote").text(game.skills.selectedSkill.quote);
-                $("#A_geoDetailQuotee").text(game.skills.selectedSkill.quotee);
-                $("#A_geoDetailDefinition").text(game.skills.selectedSkill.overview);
+                // let testRect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
+                // let w = testRect.right - testRect.left;
 
-                document.getElementById("A_geoDetailBody2").innerHTML = game.skills.selectedSkill.geoDetailBody;
+                // Render the page
+                function renderPage(num) {
 
-                let rect2 = document.getElementById("A_stepsContainer").getBoundingClientRect();
-                $("#A_mouseIconBorder").css("bottom", rect2.height + "px");
+                    pageRendering = true;
+                    // Using promise to fetch the page
 
-                // PDF.js temporary for schwarzschild paper demo
-                if (parameters.appName == "suite") {
+                    // Get page
+                    pdfDoc.getPage(num).then(function (page) {
 
-                    $("#A_prevPage").click(function() {
-                        showPrevPage();
-                    });
+                        // Scaled Viewport
+                        // var desiredWidth = w - 20;
 
-                    $("#A_nextPage").click(function() {
-                        showNextPage();
-                    });
+                        // var viewport = page.getViewport({ scale: 1, });
+                        // var scale = w / viewport.width;
+                        // var scaledViewport = page.getViewport({ scale: scale, });
+                        // canvas.height = viewport.height;
+                        // canvas.width = viewport.width;
 
-                    const url = "src/assets/docs/The_Schwarzschild_Proton.pdf";
+                        const viewport = page.getViewport({ scale: scale });
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
 
-                    // Loaded via <script> tag, create shortcut to access PDF.js exports.
-                    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+                        // Render PDF page into canvas context
+                        const renderContext = {
+                            canvasContext: ctx,
+                            viewport: viewport
+                            // viewport: scaledViewport
+                        }
 
-                    // The workerSrc property shall be specified.
-                    pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+                        let renderTask = page.render(renderContext);
 
-                    let pdfDoc = null,
-                        pageNum = 1,
-                        pageRendering = false,
-                        pageNumPending = null
+                        // Wait for rendering to finish
+                        renderTask.promise.then(function () {
 
-                    const canvas = document.querySelector('#A_pdfRender'),
-                        ctx = canvas.getContext('2d')
+                            pageRendering = false;
 
-                    const scale = 1.3;
-
-                    // Get page info from document, resize canvas accordingly, and render page.
-                    // param num Page number. 
-
-                    // let testRect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
-                    // let w = testRect.right - testRect.left;
-
-                    // Render the page
-                    function renderPage(num) {
-
-                        pageRendering = true;
-                        // Using promise to fetch the page
-
-                        // Get page
-                        pdfDoc.getPage(num).then(function(page) {
-
-                            // Scaled Viewport
-                            // var desiredWidth = w - 20;
-
-                            // var viewport = page.getViewport({ scale: 1, });
-                            // var scale = w / viewport.width;
-                            // var scaledViewport = page.getViewport({ scale: scale, });
-                            // canvas.height = viewport.height;
-                            // canvas.width = viewport.width;
-
-                            const viewport = page.getViewport({ scale: scale });
-                            canvas.height = viewport.height;
-                            canvas.width = viewport.width;
-
-                            // Render PDF page into canvas context
-                            const renderContext = {
-                                canvasContext: ctx,
-                                viewport: viewport
-                                    // viewport: scaledViewport
+                            if (pageNumPending !== null) {
+                                // New page rendering is pending
+                                renderPage(pageNumPending);
+                                pageNumPending = null;
                             }
-
-                            let renderTask = page.render(renderContext);
-
-                            // Wait for rendering to finish
-                            renderTask.promise.then(function() {
-
-                                pageRendering = false;
-
-                                if (pageNumPending !== null) {
-                                    // New page rendering is pending
-                                    renderPage(pageNumPending);
-                                    pageNumPending = null;
-                                }
-                            });
                         });
-                        // Output current page
-                        document.querySelector('#A_pageNum').textContent = num;
-                    }
-
-                    // If another page rendering in progress, waits until the rendering is
-                    // finised. Otherwise, executes rendering immediately.
-
-                    function queueRenderPage(num) {
-                        if (pageRendering) {
-                            pageNumPending = num;
-                        } else {
-                            renderPage(num);
-                        }
-                    }
-
-                    // Show previous page
-                    const showPrevPage = () => {
-                        if (pageNum <= 1) {
-                            return;
-                        }
-                        pageNum--;
-                        queueRenderPage(pageNum);
-                    }
-
-                    // Show next page
-                    const showNextPage = () => {
-                        if (pageNum >= pdfDoc.numPages) {
-                            return;
-                        }
-                        pageNum++;
-                        queueRenderPage(pageNum);
-                    }
-
-                    // Asynchronously downloads PDF
-                    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-
-                        pdfDoc = pdfDoc_;
-                        document.querySelector('#A_pageCount').textContent = pdfDoc.numPages;
-
-                        // Initial/first page rendering
-                        renderPage(pageNum);
                     });
+                    // Output current page
+                    document.querySelector('#A_pageNum').textContent = num;
                 }
 
-                ///////////////////////////////////////////////////////////////////////////////////////////
-                ///////////////////////////////////////  STEPPER //////////////////////////////////////////
+                // If another page rendering in progress, waits until the rendering is
+                // finised. Otherwise, executes rendering immediately.
 
-                let stepsArray = [];
-                let oldStepsArray = [];
-                const stepsProgress = $("#A_stepsProgress")[0];
-                let correctStyle;
+                function queueRenderPage(num) {
+                    if (pageRendering) {
+                        pageNumPending = num;
+                    } else {
+                        renderPage(num);
+                    }
+                }
 
-                function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
+                // Show previous page
+                const showPrevPage = () => {
+                    if (pageNum <= 1) {
+                        return;
+                    }
+                    pageNum--;
+                    queueRenderPage(pageNum);
+                }
 
-                    $("#A_stepsCount").html("Steps " + `${stepsArrayNum + stepsCountNum}` + " of " + stepsLength.toString());
+                // Show next page
+                const showNextPage = () => {
+                    if (pageNum >= pdfDoc.numPages) {
+                        return;
+                    }
+                    pageNum++;
+                    queueRenderPage(pageNum);
+                }
 
-                    if (complete) {
+                // Asynchronously downloads PDF
+                pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
 
-                        $("#A_stepsBody").html("<i>" + game.skills.selectedSkill.name + " has been completed!</i>");
-                        $("#A_stepsProgress").css("width", "100%");
+                    pdfDoc = pdfDoc_;
+                    document.querySelector('#A_pageCount').textContent = pdfDoc.numPages;
+
+                    // Initial/first page rendering
+                    renderPage(pageNum);
+                });
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////  STEPPER //////////////////////////////////////////
+
+            let stepsArray = [];
+            let oldStepsArray = [];
+            const stepsProgress = $("#A_stepsProgress")[0];
+            let correctStyle;
+
+            function updateStepsContainer(stepsArrayNum, stepsCountNum, stepsBodyNum, stepsProgressNum, complete) {
+
+                $("#A_stepsCount").html("Steps " + `${stepsArrayNum + stepsCountNum}` + " of " + stepsLength.toString());
+
+                if (complete) {
+
+                    $("#A_stepsBody").html("<i>" + game.skills.selectedSkill.name + " has been completed!</i>");
+                    $("#A_stepsProgress").css("width", "100%");
+
+                } else {
+
+                    $("#A_stepsBody").html(game.skills.selectedSkill.steps[stepsArrayNum + stepsBodyNum].stepsText);
+                    $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
+
+                }
+
+                $("#A_stepsValue").text(stepsProgress.style.width);
+
+            }
+
+            function setLocalStorage() {
+
+                game.skills.selectedSkill.completed = "true";
+
+                if (localStorage.getItem('ArminiaSkills') == '') {
+
+                    localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));
+
+                } else {
+
+                    let lsTest = localStorage.getItem('ArminiaSkills'); // [0,1,2,5,11]    
+
+                    let duplicate = false;
+
+                    for (let i = 0; i < lsTest.length; i++) {
+                        if (lsTest[i] == game.skills.selectedSkill.id) {
+                            duplicate = true;
+                            break;
+                        }
+                    }
+
+                    if (!duplicate) {
+
+                        lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
+                        localStorage.setItem('ArminiaSkills', lsTest);
+                    }
+                }
+
+                game.setSkillComplete(game.skills.selectedSkill);
+                game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
+
+            }
+
+            function buildStepsView() {
+
+                let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
+
+                for (let j = 0; j < stepsArray.length; j++) {
+
+                    let n = stepsPercentage * (j);
+
+                    // Is step incomplete?
+                    if (stepsArray[j] == 0) {
+
+                        // console.log("ENTERED INCOMPLETE STEP");
+
+                        // Step is incomplete
+                        removeAllAnimateTags();
+
+                        // second parameter is 1 because the step is incomplete and still needs to blink
+                        addAnimateTags(j, 1);
+
+                        // set current step to yellow for undo functionality
+                        let s = j + 1;
+                        d3.select("#A_SVGStep" + s.toString())
+                            .style("fill", fillColor)
+                            .select("[id *= 'A_text']")
+                            .style("fill", fillColor);
+
+                        // if step1, zooms and pans to step1. Needed for undo functionality
+                        if (j == 0) {
+
+                            // get location and size data for pand and zoom
+                            panAndZoom("A_SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
+
+                        }
+
+                        // update the steps container text and progress bar
+                        updateStepsContainer(j, 1, 0, n, false);
+                        break;
 
                     } else {
 
-                        $("#A_stepsBody").html(game.skills.selectedSkill.steps[stepsArrayNum + stepsBodyNum].stepsText);
-                        $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
+                        // Test if final step has been reached
+                        if (j == stepsLength - 1) {
 
-                    }
+                            // final step has been reached
 
-                    $("#A_stepsValue").text(stepsProgress.style.width);
-
-                }
-
-                function setLocalStorage() {
-
-                    game.skills.selectedSkill.completed = "true";
-
-                    if (localStorage.getItem('ArminiaSkills') == '') {
-
-                        localStorage.setItem('ArminiaSkills', parseInt(game.skills.selectedSkill.id));
-
-                    } else {
-
-                        let lsTest = localStorage.getItem('ArminiaSkills'); // [0,1,2,5,11]    
-
-                        let duplicate = false;
-
-                        for (let i = 0; i < lsTest.length; i++) {
-                            if (lsTest[i] == game.skills.selectedSkill.id) {
-                                duplicate = true;
-                                break;
-                            }
-                        }
-
-                        if (!duplicate) {
-
-                            lsTest = lsTest + "," + parseInt(game.skills.selectedSkill.id);
-                            localStorage.setItem('ArminiaSkills', lsTest);
-                        }
-                    }
-
-                    game.setSkillComplete(game.skills.selectedSkill);
-                    game.setSkillsUnlocked(game.skills.selectedSkill.unlocksSkills);
-
-                }
-
-                function buildStepsView() {
-
-                    let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
-
-                    for (let j = 0; j < stepsArray.length; j++) {
-
-                        let n = stepsPercentage * (j);
-
-                        // Is step incomplete?
-                        if (stepsArray[j] == 0) {
-
-                            // console.log("ENTERED INCOMPLETE STEP");
-
-                            // Step is incomplete
                             removeAllAnimateTags();
 
-                            // second parameter is 1 because the step is incomplete and still needs to blink
-                            addAnimateTags(j, 1);
+                            // get total dimensions and pan and zoom out
+                            panAndZoom("A_SVGGroupSteps", 1);
 
-                            // set current step to yellow for undo functionality
-                            let s = j + 1;
-                            d3.select("#A_SVGStep" + s.toString())
-                                .style("fill", fillColor);
-
-                            // if step1, zooms and pans to step1. Needed for undo functionality
-                            if (j == 0) {
-
-                                // get location and size data for pand and zoom
-                                panAndZoom("A_SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
-
-                            }
+                            d3.selectAll("[id *= 'A_SVGStep']")
+                                .style("fill", "white")
+                                .select("[id *= 'A_text']")
+                                .style("fill", "white");
 
                             // update the steps container text and progress bar
-                            updateStepsContainer(j, 1, 0, n, false);
-                            break;
+                            updateStepsContainer(j, 1, 0, n, true);
+
+                            //skill complete and set local storage
+                            setLocalStorage();
 
                         } else {
 
-                            // Test if final step has been reached
-                            if (j == stepsLength - 1) {
+                            // step complete, but final step NOT reached                            
 
-                                // final step has been reached
+                            removeAllAnimateTags();
+                            addAnimateTags(j, 2);
 
-                                removeAllAnimateTags();
+                            let t = j + 1;
+                            let s = j + 2;
 
-                                // get total dimensions and pan and zoom out
-                                panAndZoom("A_SVGGroupSteps", 1);
+                            // set previous step to white
+                            d3.select("#A_SVGStep" + t.toString())
+                                // .lower()
+                                .style("fill", "white")
+                                .select("[id *= 'A_text']")
+                                .style("fill", fadeColor);
 
-                                let t = j + 1;
-                                d3.select("#A_SVGStep" + t.toString())
-                                    .style("fill", "white");
+                            // set current step to yellow and opacity to 1
+                            d3.select("#A_SVGStep" + s.toString())
+                                .raise()
+                                .style("fill", fillColor)
+                                .select("[id *= 'A_text']")
+                                .style("fill", fillColor);
 
-                                // update the steps container text and progress bar
-                                updateStepsContainer(j, 1, 0, n, true);
+                            // divider and text handler for papers
+                            game.skills.selectedSkill.elements.forEach(function (element) {
 
-                                //skill complete and set local storage
-                                setLocalStorage();
+                                if (element.num == s) {
 
-                            } else {
+                                    if (element.type == "divider") {
 
-                                // step complete, but final step NOT reached                            
+                                        d3.select("#divider" + s.toString())
+                                            .style("fill-opacity", 1);
 
-                                removeAllAnimateTags();
-                                addAnimateTags(j, 2);
+                                    } else {
 
-                                let t = j + 1;
-                                let s = j + 2;
+                                        d3.select("#paperText" + s.toString())
+                                            .style("fill-opacity", 1);
 
-                                // set previous step to white
-                                d3.select("#A_SVGStep" + t.toString())
-                                    .style("fill", "white");
-
-                                // set current step to yellow and opacity to 1
-                                d3.select("#A_SVGStep" + s.toString())
-                                    .style("fill", fillColor)
-                                    .style("fill-opacity", 1);
-
-                                // divider and text handler for papers
-                                game.skills.selectedSkill.elements.forEach(function(element) {
-
-                                    if (element.num == s) {
-
-                                        if (element.type == "divider") {
-
-                                            d3.select("#divider" + s.toString())
-                                                .style("fill-opacity", 1);
-
-                                        } else {
-
-                                            d3.select("#paperText" + s.toString())
-                                                .style("fill-opacity", 1);
-
-                                        }
                                     }
-                                });
+                                }
+                            });
 
-                                // get element dimensions and then pan and zoom
-                                let elementStr = "A_SVGStep" + s.toString();
+                            // get element dimensions and then pan and zoom
+                            let elementStr = "A_SVGStep" + s.toString();
 
-                                panAndZoom(elementStr, game.skills.selectedSkill.steps[t].zoomScale);
+                            panAndZoom(elementStr, game.skills.selectedSkill.steps[t].zoomScale);
 
-                                // update the steps container text and progress bar
-                                updateStepsContainer(j, 2, 1, n, false);
+                            // update the steps container text and progress bar
+                            updateStepsContainer(j, 2, 1, n, false);
 
-                            }
                         }
                     }
                 }
+            }
 
-                function updateWorkbook() {
+            function updateWorkbook() {
 
-                    // Future code which enables the drawing of objects that are colored white
-                    // unfortunately, the mouse driven scaling circle and movable segments of the tools are always default palette colors
-                    // api.getAllObjectNames().forEach(function (element) {
-                    //     if (api.getColor(element) !== "#FFFFFF") {
-                    //         api.unregisterClientListener(updateWorkbook);
-                    //         ggbApplet.evalCommand("SetColor(" + element + ", White)");
-                    //         api.registerClientListener(updateWorkbook);
-                    //     }
-                    // });
+                // Future code which enables the drawing of objects that are colored white
+                // unfortunately, the mouse driven scaling circle and movable segments of the tools are always default palette colors
+                // api.getAllObjectNames().forEach(function (element) {
+                //     if (api.getColor(element) !== "#FFFFFF") {
+                //         api.unregisterClientListener(updateWorkbook);
+                //         ggbApplet.evalCommand("SetColor(" + element + ", White)");
+                //         api.registerClientListener(updateWorkbook);
+                //     }
+                // });
 
-                    // stop CAS access until start button clicked
+                // stop CAS access until start button clicked
 
-                    if (ready) {
+                if (ready) {
 
-                        let objNumber = api.getObjectNumber();
-                        let strName, strType, strState, strCommand;
-                        stepsArray = [];
+                    let objNumber = api.getObjectNumber();
+                    let strName, strType, strState, strCommand;
+                    stepsArray = [];
 
-                        // Init stepsArray so that each element equals 1, which is the 'correct step' state
-                        for (let j = 0; j <= stepsLength - 1; j++) {
-                            stepsArray.push(1);
+                    // Init stepsArray so that each element equals 1, which is the 'correct step' state
+                    for (let j = 0; j <= stepsLength - 1; j++) {
+                        stepsArray.push(1);
+                    }
+
+                    // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
+                    // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
+                    let test = [];
+                    for (let n = 0; n < stepsLength; n++) {
+
+                        test[n] = [];
+
+                        for (let m = 0; m < steps[n].correctStep.length; m++) {
+
+                            test[n].push(0);
+
                         }
+                    }
 
-                        // Init multidimensional test array elements to the 0 'incorrect' state. This array has the same array structure as the steps skillData model
-                        // Test array is multidimensional because a single step can need two or more geogebra objects to become completed
-                        let test = [];
-                        for (let n = 0; n < stepsLength; n++) {
+                    // Begin main construction steps testing by iterating through all the objects in Geogebra
+                    for (let i = 0; i < objNumber; i++) {
 
-                            test[n] = [];
+                        // Get first object and put in String 'strState
+                        strName = api.getObjectName(i);
+                        strType = api.getObjectType(strName);
+                        strCommand = api.getCommandString(strName);
 
-                            for (let m = 0; m < steps[n].correctStep.length; m++) {
-
-                                test[n].push(0);
-
-                            }
-                        }
-
-                        // Begin main construction steps testing by iterating through all the objects in Geogebra
-                        for (let i = 0; i < objNumber; i++) {
-
-                            // Get first object and put in String 'strState
-                            strName = api.getObjectName(i);
-                            strType = api.getObjectType(strName);
+                        if (strType == "text") {
+                            strCommand = api.getValueString(strName);
+                        } else {
                             strCommand = api.getCommandString(strName);
+                        }
 
-                            if (strType == "text") {
-                                strCommand = api.getValueString(strName);
+                        strState = strType + " " + strName + ", " + strCommand;
+                        // console.log(strState);
+
+                        // Check if geogebra object exists in model skillData steps by building multidimension test array
+                        for (let j = 0; j < stepsLength; j++) {
+
+                            if (steps[j].type == "style") {
+
+                                test[j][0] = 1
+
                             } else {
-                                strCommand = api.getCommandString(strName);
-                            }
 
-                            strState = strType + " " + strName + ", " + strCommand;
-                            // console.log(strState);
+                                for (let k = 0; k < steps[j].correctStep.length; k++) {
 
-                            // Check if geogebra object exists in model skillData steps by building multidimension test array
-                            for (let j = 0; j < stepsLength; j++) {
+                                    if (strState == steps[j].correctStep[k]) {
 
-                                if (steps[j].type == "style") {
+                                        // console.log("Correct Step!");
 
-                                    test[j][0] = 1
+                                        if (steps[j].type == "construction") test[j][k] = 1;
 
-                                } else {
+                                        if (api.getLineThickness(strName) == 3 && steps[j].type == "combo")
+                                            test[j][k] = 1;
 
-                                    for (let k = 0; k < steps[j].correctStep.length; k++) {
-
-                                        if (strState == steps[j].correctStep[k]) {
-
-                                            // console.log("Correct Step!");
-
-                                            if (steps[j].type == "construction") test[j][k] = 1;
-
-                                            if (api.getLineThickness(strName) == 3 && steps[j].type == "combo")
-                                                test[j][k] = 1;
-
-                                        }
                                     }
                                 }
                             }
                         }
+                    }
 
-                        // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
-                        for (let i = 0; i < test.length; i++) {
-                            for (let j = 0; j < test[i].length; j++) {
-                                if (test[i][j] == 0) {
+                    // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
+                    for (let i = 0; i < test.length; i++) {
+                        for (let j = 0; j < test[i].length; j++) {
+                            if (test[i][j] == 0) {
+                                stepsArray[i] = 0;
+                                break;
+                            }
+                        }
+                    }
+
+                    for (let i = 0; i < stepsArray.length; i++) {
+
+                        if (stepsArray[i] == 1 && steps[i].type == "style") {
+
+                            let objStrName;
+
+                            for (let j = 0; j < steps[i].styleObjects.length; j++) {
+
+                                objStrName = steps[i].styleObjects[j];
+
+                                if (api.getLineThickness(objStrName) !== 3) {
+
                                     stepsArray[i] = 0;
                                     break;
+
                                 }
                             }
                         }
+                    }
+
+                    // assume sameResultState, check it later
+                    let sameResultState = true;
+
+                    // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
+                    // if new start, make oldStepsArray a duplicate of stepsArray
+                    if (newStart) {
+
+                        // give access to buildStepsView if newStart
+                        sameResultState = false;
+
+                        // now that we have determined newStart, set it to false here
+                        // it will never be set true again, unless geogebra page is reloaded
+                        newStart = false;
 
                         for (let i = 0; i < stepsArray.length; i++) {
-
-                            if (stepsArray[i] == 1 && steps[i].type == "style") {
-
-                                let objStrName;
-
-                                for (let j = 0; j < steps[i].styleObjects.length; j++) {
-
-                                    objStrName = steps[i].styleObjects[j];
-
-                                    if (api.getLineThickness(objStrName) !== 3) {
-
-                                        stepsArray[i] = 0;
-                                        break;
-
-                                    }
-                                }
-                            }
+                            oldStepsArray[i] = stepsArray[i];
                         }
 
-                        // assume sameResultState, check it later
-                        let sameResultState = true;
+                    } else sameResultState = true;
 
-                        // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
-                        // if new start, make oldStepsArray a duplicate of stepsArray
-                        if (newStart) {
 
-                            // give access to buildStepsView if newStart
+                    // check if same Result State and set accordingly
+                    for (let i = 0; i < stepsArray.length; i++) {
+
+                        if (stepsArray[i] !== oldStepsArray[i]) {
+
+                            // console.log("different results!");
+
                             sameResultState = false;
-
-                            // now that we have determined newStart, set it to false here
-                            // it will never be set true again, unless geogebra page is reloaded
-                            newStart = false;
-
-                            for (let i = 0; i < stepsArray.length; i++) {
-                                oldStepsArray[i] = stepsArray[i];
-                            }
-
-                        } else sameResultState = true;
-
-
-                        // check if same Result State and set accordingly
-                        for (let i = 0; i < stepsArray.length; i++) {
-
-                            if (stepsArray[i] !== oldStepsArray[i]) {
-
-                                // console.log("different results!");
-
-                                sameResultState = false;
-                                break;
-
-                            }
-                        }
-
-                        // prevent access to buildStepsView if same result state or if blink checkbox checked 
-                        if (!sameResultState) {
-
-                            // result state has changed! Set oldStepsArray to stepsArray
-                            for (let i = 0; i < stepsArray.length; i++) {
-                                oldStepsArray[i] = stepsArray[i];
-                            }
-
-                            d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                                .style("fill", "white")
-                                .style("fill-opacity", fadeNum);
-
-                            d3.select("#A_SVGStep1")
-                                .style("fill-opacity", 1);
-
-                            // update the stepper and stepsImage
-                            buildStepsView();
-
-                        } else {
-
-                            // console.log("SAME RESULTS");
+                            break;
 
                         }
                     }
+
+                    // prevent access to buildStepsView if same result state or if blink checkbox checked 
+                    if (!sameResultState) {
+
+                        // result state has changed! Set oldStepsArray to stepsArray
+                        for (let i = 0; i < stepsArray.length; i++) {
+                            oldStepsArray[i] = stepsArray[i];
+                        }
+
+                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
+                            .style("fill", fadeColor);
+
+                        d3.select("#A_SVGStep1")
+                            .select("[id *= 'A_text']")
+                            .style("fill", fadeColor);
+
+
+                        // update the stepper and stepsImage
+                        buildStepsView();
+
+                    } else {
+
+                        // console.log("SAME RESULTS");
+
+                    }
                 }
+            }
 
-                api.registerAddListener(updateWorkbook);
-                api.registerClientListener(updateWorkbook);
+            api.registerAddListener(updateWorkbook);
+            api.registerClientListener(updateWorkbook);
 
-            } // End of parameters.appletOnLoad
+        } // End of parameters.appletOnLoad
 
         function removeAllAnimateTags() {
 
@@ -673,7 +691,7 @@
 
         }
 
-        $("#A_startGeogebraBtnID").click(function() {
+        $("#A_startGeogebraBtnID").click(function () {
 
             if (parameters.appName == "suite") $("#A_cheatBtnID").show();
 
@@ -704,10 +722,10 @@
             $("#A_stepsProgress").css("width", "0%");
 
             d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                .style("fill-opacity", fadeNum);
+                .style("fill", fadeColor);
 
             d3.select("#A_SVGStep1")
-                .style("fill-opacity", 1)
+                // .style("fill-opacity", 1)
                 .style("fill", fillColor);
 
             removeAllAnimateTags();
@@ -717,53 +735,45 @@
 
         });
 
-        $("#A_constructionBtn").click(function() {
-            // game.nav = "skill";
-            this.style.color = "white";
-            this.style.border = "1px solid #8064cc";
-            $("#A_overviewBtn").css("color", "#acb0dee3");
-            $("#A_overviewBtn").css("border", "1px solid #473380");
-            $("#A_overviewContainer").css("display", "none");
-            $(".scaleContainerClass").css("display", "inline-block");
-            $("#A_geogebraIntroText").css("display", "block");
+        $("#A_overviewBtn").click(function () {
+
+            if (this.innerText == "OVERVIEW") {
+
+                this.innerText = "CONSTRUCTION";
+
+                $("#A_overviewContainer").css("display", "inline-block");
+                $(".scaleContainerClass").css("display", "none");
+
+                OverlayScrollbars(document.querySelector('.A_overviewScroll'), {
+                    className: "os-theme-dark custom-class",
+                    scrollbars: {
+                        clickScrolling: true,
+                        dragScrolling: true,
+                        autoHide: "move"
+                    }
+                });
+
+            } else {
+
+                $("#A_overviewContainer").css("display", "none");
+                $(".scaleContainerClass").css("display", "inline-block");
+                this.innerText = "OVERVIEW";
+
+            }
+
         });
 
-        $("#A_overviewBtn").click(function() {
-            // game.nav = "overview";
-            this.style.color = "white";
-            this.style.border = "1px solid #8064cc";
-            $("#A_constructionBtn").css("color", "#acb0dee3");
-            $("#A_constructionBtn").css("border", "1px solid #473380");
-            $("#A_overviewContainer").css("display", "inline-block");
-            $(".scaleContainerClass").css("display", "none");
-            $("#A_geogebraIntroText").css("display", "none");
-
-            OverlayScrollbars(document.querySelector('.A_overviewScroll'), {
-                className: "os-theme-dark custom-class",
-                scrollbars: {
-                    clickScrolling: true,
-                    dragScrolling: true,
-                    autoHide: "move"
-                }
-            });
-        });
-
-        $("#A_backToSkillsBtn").click(function() {
+        $("#A_backToSkillsBtn").click(function () {
 
             ready = false;
             cheatNum = 0;
-
-            $("#A_constructionBtn").css("color", "white");
-            $("#A_constructionBtn").css("border", "1px solid #8064cc");
-            $("#A_overviewBtn").css("color", "#acb0dee3");
-            $("#A_overviewBtn").css("border", "1px solid #473380");
 
             $("#A_startGeogebraBtnID").removeClass('A_geogebraButton');
             $("#A_startGeogebraBtnID").addClass('A_startGeogebraBtn');
 
             if (parameters.appName == "classic") {
+
                 game.nav = "home";
-                // Arminia.setGUI(game);
 
                 removeAllAnimateTags();
 
@@ -778,10 +788,7 @@
 
                 d3.select("#" + game.skills.selectedSkill.elementID).remove();
 
-                // $("#A_stepsImage").css("display", "block");
-                $("#A_StepsImageCenter").css("display", "flex");
                 $("#A_startGeogebraBtnID").hide();
-
                 $(".A_mouseIconPaper").hide();
 
                 // tmp fix because only 1 paper available
@@ -830,7 +837,7 @@
 
         ];
 
-        $("#A_cheatBtnID").click(function() {
+        $("#A_cheatBtnID").click(function () {
 
             if (cheatNum < cheatSteps.length) {
 

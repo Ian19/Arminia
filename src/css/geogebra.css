@@ -61,6 +61,11 @@
     font-family: 'Verdana';
 }
 
+.GeoGebraFrame .avItem .elemText .avPlainText {
+    color: red !important;
+
+}
+
 .GeoGebraFrame .toolbarPanel {
     /* toolbarPanel covers login -- Default 100 */
     z-index: 0 !important;

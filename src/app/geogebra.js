@@ -68,7 +68,8 @@
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
 
-            } else if (parameters.appName == "suite") {
+            // } else if (parameters.appName == "suite") {
+            } else if (game.skills.selectedSkill.type == "paper") {
 
                 game.animatePageOut("A_64TetraView");
                 $(".appletStyle").addClass("A_cas");
@@ -116,7 +117,7 @@
 
             let type = game.skills.selectedSkill.type;
 
-            $("#A_stepsBody").html("The diagram above shows the  " + type + " in its completed state. Use the large Geogebra panel on the left to complete the steps. Press Start to begin.");
+            $("#A_stepsBody").html("The diagram above shows the  " + type + " in its completed state. Use the Geogebra panel on the left to complete the steps. Press Start to begin.");
 
             // Show and hide elements as Geogebra loads               
             game.animatePageIn("A_geobebraView");
@@ -164,7 +165,8 @@
             $("#A_mouseIconBorder").css("bottom", mybottom.toString() + "px");
 
             // PDF.js temporary for schwarzschild paper demo
-            if (parameters.appName == "suite") {
+            // if (parameters.appName == "suite") {
+            if (game.skills.selectedSkill.type == "paper") {
 
                 $("#A_prevPage").click(function () {
                     showPrevPage();
@@ -517,7 +519,7 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        // console.log(strState);
+                        console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {
@@ -693,7 +695,8 @@
 
         $("#A_startGeogebraBtnID").click(function () {
 
-            if (parameters.appName == "suite") $("#A_cheatBtnID").show();
+            // if (parameters.appName == "suite") $("#A_cheatBtnID").show();
+            if (game.skills.selectedSkill.type == "paper") $("#A_cheatBtnID").show();
 
             if (ready) {
 
@@ -841,6 +844,17 @@
 
             if (cheatNum < cheatSteps.length) {
 
+                var c = document.getElementsByClassName("canvasDef")[0];
+
+                console.log(c);
+
+                // var ctx = c.getContext("2d");
+
+                // console.log(ctx);
+
+                // ctx.fillStyle = "red";
+                // ctx.strokeStyle = "red";
+
                 ggbApplet.evalCommand(cheatSteps[cheatNum]);
 
                 let i = cheatNum + 2;
@@ -848,6 +862,10 @@
                 $("#A_cheatBtnID").text("DEBUG STEP " + i.toString());
 
                 cheatNum++;
+
+
+
+
 
             }
 

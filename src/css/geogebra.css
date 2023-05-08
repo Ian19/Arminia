@@ -61,10 +61,41 @@
     font-family: 'Verdana';
 }
 
-.GeoGebraFrame .avItem .elemText .avPlainText {
+/* .GeoGebraFrame .avItem .elemText .avPlainText {
     color: red !important;
-
 }
+
+.GeoGebraFrame .avItem .elemText {
+    color: red !important;
+} 
+
+.GeoGebraFrame .avItem {
+    color: red !important;
+}
+
+.canvasVal {
+    color: red !important;
+}
+
+.avValue {
+    color: red !important;
+}
+
+.avOutput {
+    color: red !important;
+}
+
+.GeoGebraFrame .elemText .prefixLatex {
+    color: red !important;
+}
+
+.canvasDef {
+    color: red !important;
+}
+
+.avDefinition {
+    color: red !important;
+} */
 
 .GeoGebraFrame .toolbarPanel {
     /* toolbarPanel covers login -- Default 100 */

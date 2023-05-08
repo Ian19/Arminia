@@ -786,7 +786,7 @@
 
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/genesis.svg",
-                "stepsImage": "src/assets/images/skills/details/detailGenesis4.svg",
+                "stepsImage": "src/assets/images/skills/details/detailGenesis5.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatus4Genesis", "Complete4Genesis"],
                 "difficulty": "EASY  |  7 STEP",
@@ -1005,7 +1005,7 @@
 
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/eggOfLife.svg",
-                "stepsImage": "src/assets/images/skills/details/detailEgg3.svg",
+                "stepsImage": "src/assets/images/skills/details/detailEgg4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatus5Egg", "Complete5Egg"],
                 "difficulty": "EASY  |  13 STEPS",
@@ -1045,7 +1045,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["e_5"],
                     "correctStep": ["arc e_5, CircularArc(H_1, T, G_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center H<sub>1</sub> from point T to G<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1053,7 +1053,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["f_5"],
                     "correctStep": ["arc f_5, CircularArc(T, U, H_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center T from point U to H<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1061,7 +1061,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["g_5"],
                     "correctStep": ["arc g_5, CircularArc(U, J_1, T)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center U from point J<sub>1</sub> to T. Then Make sure the line thickness is set to 3.",
@@ -1069,7 +1069,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["h_5"],
                     "correctStep": ["arc h_5, CircularArc(J_1, V, U)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center J<sub>1</sub> from point V to U. Then Make sure the line thickness is set to 3.",
@@ -1077,7 +1077,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["k_5"],
                     "correctStep": ["arc k_5, CircularArc(V, W, J_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center V from point W to J<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1085,7 +1085,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["p_5"],
                     "correctStep": ["arc p_5, CircularArc(W, L_1, V)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center W from point L<sub>1</sub> to V. Then Make sure the line thickness is set to 3.",
@@ -1093,7 +1093,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["q_5"],
                     "correctStep": ["arc q_5, CircularArc(L_1, Z, W)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center L<sub>1</sub> from point Z to W. Then Make sure the line thickness is set to 3.",
@@ -1101,7 +1101,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["r_5"],
                     "correctStep": ["arc r_5, CircularArc(Z, A_1, L_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Z from point A<sub>1</sub> to L<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1109,7 +1109,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["s_5"],
                     "correctStep": ["arc s_5, CircularArc(A_1, N_1, Z)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center A<sub>1</sub> from point N<sub>1</sub> to Z. Then Make sure the line thickness is set to 3.",
@@ -1117,7 +1117,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["t_5"],
                     "correctStep": ["arc t_5, CircularArc(N_1, B_1, A_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center N<sub>1</sub> from point B<sub>1</sub> to A<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1125,7 +1125,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["c_6"],
                     "correctStep": ["arc c_6, CircularArc(B_1, C_1, N_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center B<sub>1</sub> from point C<sub>1</sub> to N<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1133,7 +1133,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["d_6"],
                     "correctStep": ["arc d_6, CircularArc(C_1, P_1, B_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center C<sub>1</sub> from point P<sub>1</sub> to B<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1141,7 +1141,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["e_6"],
                     "correctStep": ["arc e_6, CircularArc(P_1, D_1, C_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center P<sub>1</sub> from point D<sub>1</sub> to C<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1149,7 +1149,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["f_6"],
                     "correctStep": ["arc f_6, CircularArc(D_1, E_1, P_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center D<sub>1</sub> from point E<sub>1</sub> to P<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1157,7 +1157,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["g_6"],
                     "correctStep": ["arc g_6, CircularArc(E_1, R_1, D_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center E<sub>1</sub> from point R<sub>1</sub> to D<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1165,7 +1165,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["h_6"],
                     "correctStep": ["arc h_6, CircularArc(R_1, F_1, E_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center R<sub>1</sub> from point F<sub>1</sub> to E<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1173,7 +1173,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["k_6"],
                     "correctStep": ["arc k_6, CircularArc(F_1, G_1, R_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center F<sub>1</sub> from point G<sub>1</sub> to R<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1181,7 +1181,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["p_6"],
                     "correctStep": ["arc p_6, CircularArc(G_1, H_1, F_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center G<sub>1</sub> from point H<sub>1</sub> to F<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1189,7 +1189,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["q_6"],
                     "correctStep": ["arc q_6, CircularArc(T_1, T, H_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center T<sub>1</sub> from point T to H<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1197,7 +1197,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["r_6"],
                     "correctStep": ["arc r_6, CircularArc(I_1, U, T)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center I<sub>1</sub> from point U to T. Then Make sure the line thickness is set to 3.",
@@ -1205,7 +1205,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["s_6"],
                     "correctStep": ["arc s_6, CircularArc(U_1, J_1, U)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center U<sub>1</sub> from point J<sub>1</sub> to U. Then Make sure the line thickness is set to 3.",
@@ -1213,7 +1213,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["t_6"],
                     "correctStep": ["arc t_6, CircularArc(V_1, V, J_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center V<sub>1</sub> from point V to J<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1221,7 +1221,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["c_7"],
                     "correctStep": ["arc c_7, CircularArc(K_1, W, V)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center K<sub>1</sub> from point W to V. Then Make sure the line thickness is set to 3.",
@@ -1229,7 +1229,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["d_7"],
                     "correctStep": ["arc d_7, CircularArc(W_1, L_1, W)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center W<sub>1</sub> from point L<sub>1</sub> to W. Then Make sure the line thickness is set to 3.",
@@ -1237,7 +1237,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["e_7"],
                     "correctStep": ["arc e_7, CircularArc(Z_1, Z, L_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Z<sub>1</sub> from point Z to L<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1245,7 +1245,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["f_7"],
                     "correctStep": ["arc f_7, CircularArc(M_1, A_1, Z)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center M<sub>1</sub> from point A<sub>1</sub> to Z. Then Make sure the line thickness is set to 3.",
@@ -1253,7 +1253,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["g_7"],
                     "correctStep": ["arc g_7, CircularArc(A_2, N_1, A_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center A<sub>2</sub> from point N<sub>1</sub> to A<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1261,7 +1261,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["h_7"],
                     "correctStep": ["arc h_7, CircularArc(B_2, B_1, N_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center B<sub>2</sub> from point B<sub>1</sub> to N<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1269,7 +1269,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["k_7"],
                     "correctStep": ["arc k_7, CircularArc(O_1, C_1, B_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center O<sub>1</sub> from point C<sub>1</sub> to B<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1277,7 +1277,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["p_7"],
                     "correctStep": ["arc p_7, CircularArc(C_2, P_1, C_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center C<sub>2</sub> from point P<sub>1</sub> to C<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1285,7 +1285,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["q_7"],
                     "correctStep": ["arc q_7, CircularArc(D_2, D_1, P_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center D<sub>2</sub> from point D<sub>1</sub> to P<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1293,7 +1293,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["r_7"],
                     "correctStep": ["arc r_7, CircularArc(Q_1, E_1, D_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Q<sub>1</sub> from point E<sub>1</sub> to D<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1301,7 +1301,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["s_7"],
                     "correctStep": ["arc s_7, CircularArc(E_2, R_1, E_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center E<sub>2</sub> from point R<sub>1</sub> to E<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1309,7 +1309,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["t_7"],
                     "correctStep": ["arc t_7, CircularArc(F_2, F_1, R_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center F<sub>2</sub> from point F<sub>1</sub> to R<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1317,7 +1317,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["c_8"],
                     "correctStep": ["arc c_8, CircularArc(S_1, G_1, F_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center S<sub>1</sub> from point G<sub>1</sub> to F<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1325,7 +1325,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 2.4,
+                    "zoomScale": 3.5,
                     "styleObjects": ["d_8"],
                     "correctStep": ["arc d_8, CircularArc(G_2, H_1, G_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center G<sub>2</sub> from point H<sub>1</sub> to G<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1336,7 +1336,7 @@
 
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbUnsealedFOL.svg",
-                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL4.svg",
+                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL5.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "d3Data": ["hexStatusFOLUnseal", "CompleteFOLUnseal"],
                 "difficulty": "EASY  |  1 STEP",
@@ -1695,7 +1695,7 @@
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 4.8,
-                    "correctStep": ["point Z, Intersect(r, f_1, 1)"],
+                    "correctStep": ["point Z, Intersect(r, f_1, 2)"],
                     "stepsText": "Select the Intersect tool and create Point Z at the lower intersection of Circles P and J.",
 
                 }, {
@@ -2257,7 +2257,7 @@
 
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbCompletedFOL.svg",
-                "stepsImage": "src/assets/images/skills/details/detailCompletedFOL3.svg",
+                "stepsImage": "src/assets/images/skills/details/detailCompletedFOL4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "d3Data": ["hexStatusCompleteFOL", "CompleteCompleteFOL"],
                 "difficulty": "EASY  |  1 STEP",

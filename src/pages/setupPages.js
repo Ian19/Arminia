@@ -75,9 +75,12 @@
             // console.log("A_protonBtnID click");
 
             game.geogebra.parameters.appName = "suite";
+            // game.geogebra.parameters.appName = "classic";
             game.geogebra.parameters.filename = "src/assets/geogebra/testCAS3.ggb";
+            // game.geogebra.parameters.filename = "src/assets/geogebra/testingColors.ggb";
             game.geogebra.parameters.showAlgebraInput = true;
             game.geogebra.parameters.showToolBar = false;
+            game.geogebra.parameters.allowStyleBar = false;
 
             Arminia.geogebraBtnClick(game, "A_64TetraView", "#A_protonBtnID");
 

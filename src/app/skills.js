@@ -25,29 +25,20 @@
 
         let selectedConstruction = {};
 
-        // $('#A_detailGridID').css("display", "none");
         $("#A_detailGridID").css("opacity", "0");
 
-        // DEMO ONLY
-        /*
-        for (let i = 0; i < game.skillData.length; i++) {
-            if (i < 9) {
-                game.skillData[i].completed = true;
-                game.skillData[i].requirement = "COMPLETED";
-            }
-        }
-        */
+        d3.xml("src/assets/images/misc/hexNodes17g.svg").then(data => {
 
-        // width="100%" height="100%"
-        d3.xml("src/assets/images/misc/hexNodes17e.svg").then(data => {
+            const selectedStrokeColor = "#ECDB7A";
+            const lockedStrokeColor = "#4e4b8d";
+            const completedStrokeColor = "#cc66ff";
+            const unlockedStrokeColor = "#acb0de";
 
-            var svgNode = data.documentElement;
+            let svgNode = data.documentElement;
             const obj = $('#A_svgContainer')[0];
             obj.appendChild(svgNode);
             app.appendChild(obj);
-            var svg = d3.select('#Layer_1');
-
-            // svg.attr("height", "100%");
+            let svg = d3.select('#Layer_1');
 
             const skillsBox = svg.node().getBBox();
             const margin = -150;
@@ -62,26 +53,28 @@
                 skillsBox.y + skillsBox.height + margin
             ];
 
-            var zoom = d3.zoom()
+            let zoom = d3.zoom()
                 .scaleExtent([0.19, 10])
                 .translateExtent([worldTopLeft, worldBottomRight])
                 .on("zoom", zoomed);
 
-            var g = svg.select('g');
+            let g = svg.select('g');
 
-            var oldSelectedSkillSVG = null;
-            var oldSelectedSkillData = null;
-            var skillSelected = false;
+            let oldSelectedSkillSVG = null;
+            let oldSelectedSkillData = null;
+            let skillSelected = false;
+
+            // g.select("[id = 'backgroundGrid']")
+            //     .attr("opacity", 0.7);
+
+            g.selectAll("[id *= 'Complete']")
+                .attr("pointer-events", "none");
 
             g.selectAll("[id *= 'hexHover']")
                 .data(game.skills.skillData)
                 .classed('hexHover', true)
-                .style("stroke-opacity", 0)
                 .on("mousedown", mousedown1)
                 .on("mouseover", function (d, i) {
-
-                    // console.log(this, d, i);
-
                     mouseover1(this, d, i);
                 })
                 .on("mouseout", mouseout1);
@@ -95,45 +88,44 @@
             function mouseover1(t, d, i) {
 
                 // console.log(t, d, i);
-                d3.select(t).style("stroke-opacity", 1);
 
                 d3.select(t).style("stroke", "white");
-
                 updateSkillsDetail(i);
             }
 
             function mouseout1(d, i) {
 
-                // console.log(d, i);
-
                 if (!skillSelected) {
 
-                    d3.select(this).style("stroke-opacity", 0);
+                    // console.log("skill unselected mouseout1: " + i.status, d, this);
+
+                    setStrokeColor(i, this);
+
                     $("#A_skillSelectText").css("display", "block");
-                    // $("#A_detailGridID").css("display", "none");
                     $("#A_detailGridID").css("opacity", "0");
 
                 } else {
 
                     updateSkillsDetail(oldSelectedSkillData);
 
+                    // console.log("skill selected mouseout1: " + i.status, d, this);
+
                     if (!i.selected) {
 
-                        // console.log("mouseout!!");
+                        setStrokeColor(i, this);
 
-                        d3.select(this).style("stroke-opacity", 0);
                     } else {
 
-                        d3.select(this).style("stroke", "#ECDB7A");
-
+                        d3.select(this).style("stroke", selectedStrokeColor);
 
                     }
                 }
             }
 
-            function mousedown1(t, newSkillData, i) {
+            function mousedown1(t, newSkillData) {
 
-                // console.log(t, newSkillData, i);
+                // console.log("mousedown1 0", t, i);
+                // console.log("mousedown1 0", t, newSkillData);
 
                 // check if a skill is already selected
                 if (skillSelected) {
@@ -141,77 +133,93 @@
                     // check if the new skill is the same as the last selected skill
                     if (oldSelectedSkillData == newSkillData) {
 
+                        // console.log("mousedown1 1", t);
+
+                        // on Click flash animation
                         d3.select(this)
-                            .style("fill-opacity", 0.5)
+                            .style("fill", "#7465d1")
                             .transition()
-                            .style("fill-opacity", 0.01);
+                            .style("fill", "#382d70");
 
                         // toggle selected state and related graphics 
                         if (newSkillData.selected == true) {
 
-                            // deselect skill    
-                            d3.select(this)
-                                .style("stroke-opacity", 0)
-                                .style("stroke", "#acb0de");
+                            // console.log("mousedown1 4", t);
+
+                            // deselect skill  
+                            setStrokeColor(newSkillData, this);
 
                             newSkillData.selected = false;
                             oldSelectedSkillSVG = null;
                             oldSelectedSkillData = null;
                             skillSelected = false;
-
-                            // game.skills.selectedSkill = null;
-
                             selectedConstruction = null;
 
-                        } else {
-
-                            // select skill    
-                            d3.select(this)
-                                .style("stroke-opacity", 1)
-                                .style("stroke", "#BC67FF");
-
-                            newSkillData.selected = true;
-                            skillSelected = true;                            
-
-                            // game.skills.selectedSkill = newSkillData;
-
-                            selectedConstruction = newSkillData;
-
                         }
+
                     } else {
 
-                        // selected skill is a different, clear previous skill                        
-                        oldSelectedSkillSVG
-                            .style("stroke-opacity", 0)
-                            .style("stroke", "#acb0de");
+                        // console.log("mousedown1 3", t, oldSelectedSkillData);
+
+                        // setStrokeColor(oldSelectedSkillData, oldSelectedSkillData.d3Data);
+                        // temp fix until skilldata.d3Data has been completed for all skills
+                        setStrokeColor(oldSelectedSkillData, oldSelectedSkillSVG);
 
                         oldSelectedSkillData.selected = false;
+
                         // select new skill
                         updateSkills(this, newSkillData);
-                        // show detail
-                        updateSkillsDetail(newSkillData);                        
 
-                        // game.skills.selectedSkill = newSkillData;
+                        // show detail
+                        updateSkillsDetail(newSkillData);
 
                         selectedConstruction = newSkillData;
 
                     }
                 } else {
                     // no skill selected, select new skill
-                    updateSkills(this, newSkillData);                    
-
-                    // game.skills.selectedSkill = newSkillData;
-
+                    updateSkills(this, newSkillData);
                     selectedConstruction = newSkillData;
                 }
             }
 
+            function setStrokeColor(skill, element) {
+
+                // console.log("setStrokeColor");
+                // console.log(skill);
+
+                switch (skill.status) {
+
+                    case "locked":
+
+                        if (skill.d3Data.includes("hexHoverIS")) {                            
+
+                            d3.select(element).style("stroke", "cyan");
+
+                        } else {
+
+                            d3.select(element).style("stroke", lockedStrokeColor); 
+                        }
+                        
+                        break;
+
+                    case "unlocked":
+
+                        d3.select(element).style("stroke", unlockedStrokeColor);
+                        break;
+
+                    case "completed":
+
+                        d3.select(element).style("stroke", completedStrokeColor);
+                        break;
+
+                }
+            }
+
             function updateSkillsDetail(skill) {
+
                 $("#A_skillSelectText").css("display", "none");
-
-                // $("#A_detailGridID").css("display", "grid");
                 $("#A_detailGridID").css("opacity", "1");
-
                 $("#A_detailImage").attr("src", skill.thumbnailURL);
                 $("#A_detailTitle").text(skill.name);
                 $("#A_skillDifficulty").text(skill.difficulty);
@@ -226,78 +234,45 @@
 
             function updateSkills(t, n) {
 
-                oldSelectedSkillSVG = d3.select(t);
+                // console.log("updateSkills 0", t, n);
+
+                oldSelectedSkillSVG = t;
                 oldSelectedSkillData = n;
                 n.selected = true;
                 skillSelected = true;
 
                 d3.select(t)
-                    .style("stroke-opacity", 1)
-                    .style("stroke", "#ECDB7A");
+                    .style("stroke", selectedStrokeColor);
 
                 d3.select(t)
-                    .style("fill-opacity", 0.5)
+                    .style("fill", "#7465d1")
                     .transition()
-                    .style("fill-opacity", 0.01);
-            }
-
-            function setAllSkillsIncomplete() {
-                g.selectAll("[id *= 'hexStatus']")
-                    .style("stroke-opacity", 0.3)
-                    .style("fill-opacity", 0.5)
-                    .selectAll("image")
-                    .style("visibility", "hidden");
-
-                g.selectAll("[id *= 'hexHover']")
-                    .style("stroke", "#acb0de");
-
-
-                g.selectAll("[id *= 'test1']")
-                    .style("stroke", "#BC67FF")
-                    .style("stroke-opacity", 0.7);
-
-                // console.log(g);
-
-                g.selectAll("[id *= 'Complete']")
-                    .selectAll("image")
-                    .style("visibility", "hidden");
+                    .style("fill", "#382d70");
             }
 
             function setSkillComplete(detailsData) {
 
-                g.select("#" + detailsData.d3Data[0])
-                    .style("stroke-opacity", 1)
-                    .style("fill-opacity", 1)
-                    // change stroke color to indicate completed skill of second child node
-                    .select("polygon:nth-child(2)")
-                    .style("stroke", "#66CCCC");
+                g.select(detailsData.d3Data).style("stroke", completedStrokeColor);
 
-
-                g.select("#" + detailsData.d3Data[1])
-                    .selectAll("image")
-                    .style("visibility", "visible");
             }
 
             function setSkillsUnlocked(unlockedSkills) {
 
-                // iterate through all unlocked skills and set unlocked and apply skill tree changes
+                // iterate through all unlocked skills and set unlocked and apply skill tree changes                
                 unlockedSkills.forEach(function (element) {
 
+                    // i.e. element = ["The Vesuica Piscis", "The Genesis Pattern"]
                     game.skills.skillData.forEach(function (skill) {
 
-                        if (element == skill.id) {
+                        if (element == skill.name) {
 
                             // check if skill is completed
-                            if (skill.completed != true) {
+                            // if (skill.completed != true) {
+                            if (skill.status != "completed") {
 
-                                skill.unlocked = true;
+                                skill.status = "unlocked";
 
-                                g.select("#" + skill.d3Data[0])
-                                    .style("stroke-opacity", 1)
-                                    .style("fill-opacity", 1)
-                                    // change stroke color to indicate completed skill of second child node
-                                    .select("polygon:nth-child(2)")
-                                    .style("stroke", "#EAEAF1");
+                                g.select(skill.d3Data).style("stroke", unlockedStrokeColor);
 
                             }
                         }
@@ -305,38 +280,13 @@
                 });
             }
 
-            setAllSkillsIncomplete();
-
             game.setSkillComplete = setSkillComplete;
             game.setSkillsUnlocked = setSkillsUnlocked;
 
-            /*            
-            function setSkillToIncomplete(hexID, skillID) {
-    
-                g.select("#" + hexID)
-                    .style("stroke-opacity", 0.3)
-                    .style("fill-opacity", 0.5);
-    
-                g.select("#" + skillID)
-                    .selectAll("image")
-                        .style("visibility", "hidden");       
-                
-            }  */
-
-            // DEMO ONLY
-            // setSkillToIncomplete("hexStatus3Triquetra", "Complete3Triquetra");     
-
-            // d3.select(this).selectAll("polygon, path") 
-            // g.selectAll("[id *= 'available']")
-
-
-            // unlock circle for Skill Tree
-            g.select("#" + game.skills.skillData[0].d3Data[0])
-                .style("stroke-opacity", 1)
-                .style("fill-opacity", 1)
-                // change stroke color to indicate completed skill of second child node
-                .select("polygon:nth-child(2)")
-                .style("stroke", "#EAEAF1");
+            // init stroke colors 
+            g.selectAll("[id *= 'hexHover']").style("stroke", lockedStrokeColor);
+            g.selectAll("[id *= 'hexHoverIS']").style("stroke", "cyan");
+            g.select("#hexHoverCircle").style("stroke", unlockedStrokeColor);
 
             /////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////// LOCAL STORAGE INIT ////////////////////////////////////
@@ -347,7 +297,13 @@
             /////////// TEMPORARY DEBUG PURPOSES ONLY
             ////////////////////////////////////////
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 11, 12, 13, 14, 16, 17");
+            // for (let i = 0; i < game.skills.skillData.length; i++) {
+            //     game.skills.skillData[i].id = i;
+            // }
+            // // console.log(game.skills.skillData);
+
+            // localStorage.setItem('ArminiaSkills', "0, 1, 9, 10, 11, 12, 14, 15");
+            // // localStorage.setItem('ArminiaSkills', "0");
 
             // // assign local storage as a comma separated array
             // let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
@@ -359,8 +315,8 @@
 
             //         if (element == skill.id) {
 
-            //             skill.completed = true;
-            //             skill.unlocked = true;
+            //             skill.status = "completed";
+
             //             game.setSkillComplete(skill);
             //             game.setSkillsUnlocked(skill.unlocksSkills);
 
@@ -372,6 +328,10 @@
             /////////// END DEBUG
             ////////////////////////////////////////
 
+            // initialise the game.skills.skillData.id as its index in the skillData array
+            for (let i = 0; i < game.skills.skillData.length; i++) {
+                game.skills.skillData[i].id = i;
+            }
 
             if (localStorage.getItem('ArminiaSkills') != '') {
 
@@ -391,8 +351,7 @@
 
                             if (element == skill.id) {
 
-                                skill.completed = true;
-                                skill.unlocked = true;
+                                skill.status = "completed";
                                 game.setSkillComplete(skill);
                                 game.setSkillsUnlocked(skill.unlocksSkills);
 
@@ -404,11 +363,11 @@
 
         }); // END OF d3.xml()
 
-        $(document).on('click', '#A_detailBtn', function () {    
+        $(document).on('click', '#A_detailBtn', function () {
 
-            if (selectedConstruction.unlocked) {
+            if (selectedConstruction.status == "unlocked" || selectedConstruction.status == "completed") {
 
-                game.skills.selectedSkill =  selectedConstruction;
+                game.skills.selectedSkill = selectedConstruction;
 
                 game.geogebra.parameters.appName = "classic";
                 game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;

@@ -49,6 +49,7 @@
             let newStart = true;
             cheatNum = 0;
 
+            $("#A_cheatBtnID").text("DEBUG STEP 1");
             $("#A_cheatBtnID").hide();
 
             if (game.skills.selectedSkill.type !== "paper") {
@@ -317,7 +318,7 @@
 
             function setLocalStorage() {
 
-                game.skills.selectedSkill.completed = "true";
+                game.skills.selectedSkill.status = "completed";
 
                 if (localStorage.getItem('ArminiaSkills') == '') {
 
@@ -696,7 +697,9 @@
         $("#A_startGeogebraBtnID").click(function () {
 
             // if (parameters.appName == "suite") $("#A_cheatBtnID").show();
-            if (game.skills.selectedSkill.type == "paper") $("#A_cheatBtnID").show();
+            if (game.skills.selectedSkill.type == "paper") {
+                $("#A_cheatBtnID").show();
+            }
 
             if (ready) {
 
@@ -862,10 +865,6 @@
                 $("#A_cheatBtnID").text("DEBUG STEP " + i.toString());
 
                 cheatNum++;
-
-
-
-
 
             }
 

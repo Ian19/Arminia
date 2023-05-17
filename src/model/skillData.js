@@ -23,11 +23,13 @@
             {
                 "name": "The Circle",
                 "id": 0,
+                "d3Data": "#hexHoverCircle",
+                "selected": false,
+                "status": "unlocked",
                 "type": "construction",
                 "elementID": "A_detailCircle",
                 "tools": "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
                 "startingZoomScale": "ZoomOut(1)",
-                "material_id": "ybm744ww",
                 "elements": [],
 
                 "steps": [{
@@ -56,91 +58,25 @@
 
                 }],
 
-                "d3Data": ["hexStatus1Circle", "Complete1Circle"],
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCircle.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  3 STEPS",
-                "completed": false,
-                "unlocked": true,
-                "unlocksSkills": [1],
+                "unlocksSkills": ["The Vesica Piscis"],
                 "requirement": "(NO REQUIREMENT)",
                 "overview": "A circle is a set of points on a plane that are equidistant from the circle's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
                 // God is a circle whose centre is everywhere and whose circumference is nowhere' (Hermes Trismegistus)   
-                "geoDetailBody": `                
-                    <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                        excepturi nulla adipisci, et dolores doloribus tempore.
-                    </span><br><br>
-                    <span>
-                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                        praesentium consequatur consectetur eum expedita?
-                    </span><br><br>
-                    <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                        excepturi nulla adipisci, et dolores doloribus tempore.
-                    </span><br><br>
-                    <span>
-                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                        praesentium consequatur consectetur eum expedita?
-                    </span><br><br>
-                    <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                        porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                        deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                        ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                        necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                        Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                        vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                        provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                        excepturi nulla adipisci, et dolores doloribus tempore.
-                    </span><br><br>
-                    <span>
-                        Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                        consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                        debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                        Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                        incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                        alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                        recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                        praesentium consequatur consectetur eum expedita?
-                    </span>
-                `
+                "geoDetailBody": `<span>Lorem ipsum</span><br><br>`
             }, {
                 "name": "The Vesica Piscis",
                 "id": 1,
+                "d3Data": "#hexHoverVesica",
+                "selected": false,
+                "status": "locked",
                 "type": "construction",
                 "elementID": "A_detailVesicaPiscis",
-                "material_id": "ybm744ww",
                 "elements": [],
                 "tools": "0 | 34 | 10 | 15 | 17 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "startingZoomScale": "ZoomOut(1)",
@@ -243,293 +179,137 @@
 
                 }],
 
-                "d3Data": ["hexStatus2Vesica", "Complete2Vesica"],
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  12 STEPS",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [11], // The Triquetra
+                "unlocksSkills": ["The Triquetra"],
                 "requirement": "(REQUIRES THE CIRCLE)",
                 "overview": "The Vesica Piscis is formed by the intersection of two circles with the same radius where each circle's center lies on the circumference of the other.",
                 "quote": '"...the geometric image through which light was created."',
                 "quotee": "Drunvalo Melchizedek",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>
-                `
+                "geoDetailBody": `<span>Lorem ipsum</span><br><br>`
             },
             {
-                "name": "Three Sacred Roots 1",
+                "name": "Three Universal Roots 1",
                 "id": 2,
+                "d3Data": "#hexHoverRootsA",
+                "selected": false,
+                "status": "locked",
                 "type": "construction",
                 "elements": [],
-                "d3Data": ["hexStatus23Roots1", "Complete23Roots1"],
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots.svg",
-
                 "difficulty": "EASY  |  7 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 // "overview": "The three sacred roots are \$ \\sqrt{2} \$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
                 "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ".",
                 "quote": "...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation...",
                 "quotee": "Robert Lawlor",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>`
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             },
             {
-                "name": "Three Sacred Roots 2",
+                "name": "Three Universal Roots 2",
                 "id": 3,
-                "type": "construction",
+                "d3Data": "#hexHoveRootsB",
                 "selected": false,
+                "status": "locked",
+                "type": "construction",
                 "elements": [],
                 "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots2.svg",
                 "difficulty": "EASY  |  17 STEPS",
                 "requirement": "(REQUIRES Three Sacred Roots 1)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 // "overview": "The three sacred roots are \$ \\sqrt{2} \a$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
                 "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ".",
                 "quote": '"...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation..."',
                 "quotee": "Robert Lawlor",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>`
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             },
             {
-                "name": "Three Sacred Roots 3",
+                "name": "Three Universal Roots 3",
                 "id": 4,
+                "d3Data": "#hexHoverRootsC",
                 "type": "construction",
+                "status": "locked",
                 "selected": false,
                 "elements": [],
                 "thumbnailURL": "src/assets/images/skills/thumbnails/3_roots2.svg",
                 "difficulty": "EASY  |  17 STEPS",
                 "requirement": "(REQUIRES Three Sacred Roots 2)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 // "overview": "The three sacred roots are \$ \\sqrt{2} \a$, \$ \\sqrt{3} \$ and \$ \\sqrt{5} \$. They are irrational functions describing core concepts of geometry.",
                 "overview": "The three sacred roots are " + katex.renderToString("\\sqrt{2}, \\sqrt{3} \\thickspace and \\thickspace \\sqrt{5}") + ".",
                 "quote": '"...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation..."',
                 "quotee": "Robert Lawlor",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>`
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
-                "name": "Lucifer Pattern 1",
+                "name": "Duality Pattern 1",
                 "id": 5,
-                "d3Data": ["hexStatus2Luc1", "Complete2Luc1"],
+                "d3Data": "#hexHoverDualityA",
+                "status": "locked",
                 "selected": false,
                 "elements": [],
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>`
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
-                "name": "Lucifer Pattern 2",
+                "name": "Duality Pattern 2",
                 "id": 6,
+                "d3Data": "#hexHoverDualityB",
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
-            }, {
-                "name": "Lucifer Pattern 3",
-                "id": 7,
-                "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [],
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
-            }, {
-                "name": "The Lucifer Pattern 4",
-                "id": 8,
-                "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "difficulty": "EASY  |  1 STEP",
-                "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [],
-                "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
-                "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "The Tetractys",
-                "id": 9,
+                "id": 7,
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-
+                "d3Data": "#hexHoverTetractys",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "Da Vinci's Key",
-                "id": 10,
+                "id": 8,
+                "d3Data": "#hexHoverLeo",
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "The Triquetra",
-                "id": 11,
+                "id": 9,
+                "d3Data": "#hexHoverTriquetra",
+                "status": "locked",
+                "selected": false,
                 "type": "construction",
                 "elementID": "A_detailTriquetra",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "tools": "0 | 34 | 10 | 15 | 17 | 5",
-
                 "startingZoomScale": "ZoomOut(1)",
                 "elements": [],
 
@@ -639,45 +419,23 @@
 
                 }],
 
-                "selected": false,
                 "stepsImage": "src/assets/images/skills/details/detailTriquetra.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
-                "d3Data": ["hexStatus3Triquetra", "Complete3Triquetra"],
                 "thumbnailURL": "src/assets/images/skills/thumbnails/triqetra.svg",
                 "difficulty": "EASY  |  13 STEPS",
                 "requirement": "(REQUIRES VESICA PISCIS)",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [12], // The Genesis Pattern
+                "unlocksSkills": ["The Genesis Pattern"],
                 "overview": "The Triquetra consists of three mutually intersecting vesica piscis.",
                 // "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle.",
                 "quote": '"...At that moment a huge amount of information was created."',
                 "quotee": "Drunvalo Melchizedek",
-                "geoDetailBody": `                
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo quod optio
-                    porro sed quibusdam ea minima, praesentium dolor error soluta ratione possimus omnis
-                    deleniti doloribus quas itaque voluptatem laboriosam eaque veritatis ducimus eveniet
-                    ullam nam! Animi aut officia libero temporibus dicta maiores eveniet, facere
-                    necessitatibus, nulla voluptas architecto? Harum maxime alias ipsa sapiente!
-                    Assumenda sint eum dolorem laborum dicta repellat omnis pariatur, facere officia,
-                    vitae facilis dolores, temporibus a doloribus voluptatibus soluta id! Quis atque
-                    provident magni, necessitatibus labore voluptatum esse commodi corporis harum
-                    excepturi nulla adipisci, et dolores doloribus tempore.
-                </span><br><br>
-                <span>
-                    Fuga distinctio architecto dolorem, harum at molestias cumque rerum optio amet? Quas
-                    consectetur rem explicabo iure dolorem labore dolores sit error neque vel cupiditate
-                    debitis aliquid eaque laborum similique id distinctio, libero eos dolore illo.
-                    Placeat mollitia quis nihil rem! Nulla quia quibusdam dicta explicabo illo dolore
-                    incidunt facilis earum deleniti iure, eos amet fugiat minus accusamus et molestias
-                    alias doloribus nobis ipsa sunt veniam voluptatem labore accusantium. Quam
-                    recusandae veniam quod asperiores odio? Sed, magni! Beatae exercitationem possimus
-                    praesentium consequatur consectetur eum expedita?
-                </span>`
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "The Genesis Pattern",
-                "id": 12,
+                "id": 10,
+                "d3Data": "#hexHoverGenesis",
+                "status": "locked",
+                "selected": false,
                 "type": "construction",
                 "elementID": "A_detailGenesis",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
@@ -784,23 +542,23 @@
 
                 }],
 
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/genesis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailGenesis5.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
-                "d3Data": ["hexStatus4Genesis", "Complete4Genesis"],
                 "difficulty": "EASY  |  7 STEP",
                 "requirement": "The Triquetra",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [13], // The Egg of Life
+                "unlocksSkills": ["The Egg of Life"],
                 "overview": "Consisting of 6 equal circles intersecting the circumference of a similar central circle. This represents the first motions of creation.",
                 "quote": '"...and He rested on the seventh day from all his work."',
-                "quotee": "Genesis 2:2"
+                "quotee": "Genesis 2:2",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             },
             {
                 "name": "The Egg of Life",
-                "id": 13,
+                "id": 11,
+                "d3Data": "#hexHoverEgg",
+                "status": "locked",
+                "selected": false,
                 "type": "construction",
                 "elementID": "A_detailEgg",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
@@ -1003,22 +761,22 @@
 
                 }],
 
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/eggOfLife.svg",
                 "stepsImage": "src/assets/images/skills/details/detailEgg4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
-                "d3Data": ["hexStatus5Egg", "Complete5Egg"],
                 "difficulty": "EASY  |  13 STEPS",
                 "requirement": "REQUIRES THE GENESIS PATTERN",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [16],
+                "unlocksSkills": ["Completed Flower of Life"],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "Unsealed Flower Of Life",
-                "id": 14,
+                "id": 12,
+                "d3Data": "#hexHoverFOLUnseal",
+                "status": "locked",
+                "selected": false,
                 "type": "combo",
                 "elementID": "A_detailUnsealedFOL",
                 "tools": "0 | 10 | 20", // MOVE, CIRCLE_TWO_POINTS, CIRCLE_ARC_THREE_POINTS
@@ -1333,37 +1091,37 @@
                 }
                 ],
 
-
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbUnsealedFOL.svg",
                 "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL5.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
-                "d3Data": ["hexStatusFOLUnseal", "CompleteFOLUnseal"],
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "COMPLETED FLOWER OF LIFE",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [],
+                "unlocksSkills": ["Sealed Flower Of Life"],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "Sealed Flower Of Life",
-                "id": 15,
-                // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
-                "tools": "0 | 34 | 10 | 5",
+                "id": 13,
+                "d3Data": "#hexHoverFOLSeal",
+                "status": "locked",
                 "selected": false,
+                "tools": "0 | 34 | 10 | 5",   // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
+                "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "Completed Flower of Life",
-                "id": 16,
+                "id": 14,
+                "d3Data": "#hexHoverFullFOL",
+                "status": "locked",
+                "selected": false,
                 "type": "construction",
                 "elementID": "A_detailCompletedFOL",
                 "tools": "0 | 34 | 10 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
@@ -2255,22 +2013,22 @@
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center M<sub>2</sub> and radius M<sub>2</sub>R<sub>1</sub>."
                 }],
 
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbCompletedFOL.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCompletedFOL4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
-                "d3Data": ["hexStatusCompleteFOL", "CompleteCompleteFOL"],
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
-                "unlocksSkills": [17],
+                "unlocksSkills": ["Unsealed Flower Of Life"],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "Fruit of Life",
-                "id": 17,
+                "id": 15,
+                "d3Data": "hexHoverFruitA",
+                "status": "locked",
+                "selected": false,
                 "type": "style",
                 "elements": [],
                 "objects": ["c", "d_1", "e_1", "f_1", "g_1", "h_1", "k_1", "p_4", "q_4", "r_4", "s_4", "t_4", "c_5"],
@@ -2278,7 +2036,6 @@
                 "tools": "0", // MOVE
                 "zoomScale": 1,
                 "startingZoomScale": "ZoomOut(1.6)",
-                "d3Data": ["hexStatusFruit1", "CompleteFruit1"],
 
                 "steps": [{
 
@@ -2290,23 +2047,23 @@
 
                 }],
 
-                "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbFruit.svg",
                 "stepsImage": "src/assets/images/skills/details/detailFruitOfLife.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "completed": false,
-                "unlocked": false,
                 "unlocksSkills": [],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
-                "quotee": "Proclus"
+                "quotee": "Proclus",
+                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
-                "id": 18,
+                "name": "Fruit of Life 2",
+                "id": 16,
+                "d3Data": ["temp", "temp"],
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "name": "16",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "completed": false,
@@ -2316,7 +2073,9 @@
                 "quotee": "Proclus"
             }, {
                 "name": "Flower Of Life Information System",
-                "id": 19,
+                "id": 17,
+                "d3Data": "#hexHoverISOne",
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
@@ -2327,7 +2086,9 @@
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             }, {
-                "id": 20,
+                "id": 18,
+                "d3Data": ["temp", "temp"],
+                "status": "locked",
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "20",
@@ -2339,8 +2100,10 @@
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             }, {
-                "id": 21,
+                "id": 19,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2351,8 +2114,10 @@
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus"
             }, {
-                "id": 22,
+                "id": 20,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2365,6 +2130,8 @@
             }, {
                 "id": 23,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2377,6 +2144,8 @@
             }, {
                 "id": 24,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2389,6 +2158,8 @@
             }, {
                 "id": 25,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2401,6 +2172,8 @@
             }, {
                 "id": 26,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2413,6 +2186,8 @@
             }, {
                 "id": 27,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2425,6 +2200,8 @@
             }, {
                 "id": 28,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2438,6 +2215,8 @@
             {
                 "id": 29,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2450,6 +2229,8 @@
             }, {
                 "id": 30,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2462,6 +2243,8 @@
             }, {
                 "id": 31,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2474,6 +2257,8 @@
             }, {
                 "id": 32,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2486,6 +2271,8 @@
             }, {
                 "id": 33,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2498,6 +2285,8 @@
             }, {
                 "id": 34,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2510,6 +2299,8 @@
             }, {
                 "id": 35,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2523,6 +2314,8 @@
             {
                 "id": 36,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2536,6 +2329,8 @@
             {
                 "id": 37,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2548,6 +2343,8 @@
             }, {
                 "id": 38,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2561,6 +2358,8 @@
             {
                 "id": 39,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2573,6 +2372,8 @@
             }, {
                 "id": 40,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2585,6 +2386,8 @@
             }, {
                 "id": 41,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2597,6 +2400,8 @@
             }, {
                 "id": 42,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2609,6 +2414,8 @@
             }, {
                 "id": 43,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2621,6 +2428,8 @@
             }, {
                 "id": 44,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2633,6 +2442,8 @@
             }, {
                 "id": 45,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2645,6 +2456,8 @@
             }, {
                 "id": 46,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2657,6 +2470,8 @@
             }, {
                 "id": 47,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2669,6 +2484,8 @@
             }, {
                 "id": 48,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2681,6 +2498,8 @@
             }, {
                 "id": 49,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2693,6 +2512,8 @@
             }, {
                 "id": 50,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2705,6 +2526,8 @@
             }, {
                 "id": 51,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2717,6 +2540,8 @@
             }, {
                 "id": 52,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2729,6 +2554,8 @@
             }, {
                 "id": 53,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2741,6 +2568,8 @@
             }, {
                 "id": 54,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2753,6 +2582,8 @@
             }, {
                 "id": 55,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2765,6 +2596,8 @@
             }, {
                 "id": 56,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2777,6 +2610,8 @@
             }, {
                 "id": 57,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2789,6 +2624,8 @@
             }, {
                 "id": 58,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2801,6 +2638,8 @@
             }, {
                 "id": 59,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2813,6 +2652,8 @@
             }, {
                 "id": 60,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2825,6 +2666,8 @@
             }, {
                 "id": 61,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2837,6 +2680,8 @@
             }, {
                 "id": 62,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2849,6 +2694,8 @@
             }, {
                 "id": 63,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2861,6 +2708,8 @@
             }, {
                 "id": 64,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2873,6 +2722,8 @@
             }, {
                 "id": 65,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2885,6 +2736,8 @@
             }, {
                 "id": 65,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2897,6 +2750,8 @@
             }, {
                 "id": 66,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2909,6 +2764,8 @@
             }, {
                 "id": 67,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2921,6 +2778,8 @@
             }, {
                 "id": 68,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2933,6 +2792,8 @@
             }, {
                 "id": 69,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2945,6 +2806,8 @@
             }, {
                 "id": 70,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2957,6 +2820,8 @@
             }, {
                 "id": 71,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2969,6 +2834,8 @@
             }, {
                 "id": 72,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2981,6 +2848,8 @@
             }, {
                 "id": 73,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -2993,6 +2862,8 @@
             }, {
                 "id": 74,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3005,6 +2876,8 @@
             }, {
                 "id": 75,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3017,6 +2890,8 @@
             }, {
                 "id": 76,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3029,6 +2904,8 @@
             }, {
                 "id": 77,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3041,6 +2918,8 @@
             }, {
                 "id": 78,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3053,6 +2932,8 @@
             }, {
                 "id": 79,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3065,6 +2946,8 @@
             }, {
                 "id": 80,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3077,6 +2960,8 @@
             }, {
                 "id": 81,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3089,6 +2974,8 @@
             }, {
                 "id": 82,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3101,6 +2988,8 @@
             }, {
                 "id": 83,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",
@@ -3113,6 +3002,8 @@
             }, {
                 "id": 84,
                 "selected": false,
+                "d3Data": "#temp",
+                "status": "locked",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "name": "The Circle",
                 "difficulty": "EASY  |  1 STEP",

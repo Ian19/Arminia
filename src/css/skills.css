@@ -46,6 +46,8 @@
 #A_SkillTextTitle {
     margin: 5px 0 0 10px;
     color: #BC67FF;
+    /* color: #acb0de;
+    color: #4e4b8d; */
     font-size: 0.9vw;
     font-variant-caps: all-small-caps;
     position: absolute;    

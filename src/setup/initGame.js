@@ -68,8 +68,6 @@
         game.infoSystem1.tree1 = new Arminia.Tree(game);
         game.infoSystem1.tree1.treeConstants = new Arminia.TreeConstants(game);
 
-
-
         game.infoSystem2 = new Arminia.InfoSystem(game, "InfoSys2", new BABYLON.Vector3(0, 8, 0), game.infoSystemData[1]);
         game.infoSystem2.FruitOfLife = new Arminia.FruitOfLife(game, "FruitOfLife2", game.infoSystem2);
         game.infoSystem2.metaCubeLines2D = new Arminia.MetaCubeLines2D(game);
@@ -143,6 +141,11 @@
         $("#checkbox13").prop('checked', true); // orbs
         $("#checkbox14").prop('checked', true); // light rays
         $("#checkbox10").prop('checked', false); // auto-rotate
+
+
+
+
+
 
 
 

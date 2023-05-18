@@ -143,7 +143,11 @@
         $("#checkbox10").prop('checked', false); // auto-rotate
 
 
+        // var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
+        // if (iOS) {
+        //     $('body').css('position','fixed');
+        // }
 
 
 

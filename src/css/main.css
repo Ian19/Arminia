@@ -12,7 +12,8 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Verdana', sans-serif;
-    overflow: hidden;    
+    overflow: hidden; 
+    /* position: fixed;    */
 }
 
 #A_gameCanvas {

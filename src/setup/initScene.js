@@ -64,23 +64,30 @@
         // defaultPipeline.imageProcessingEnabled = false;
         // defaultPipeline.samples = 5;
 
-        game.scene.onPointerObservable.add((pointerInfo) => {
-            switch (pointerInfo.type) {
-                case BABYLON.PointerEventTypes.POINTERMOVE:
-                    if (pointerInfo.event.clientX > (window.innerWidth / 2.5)) {
-                        game.scene.cameraToUseForPointers = game.camera;
-                    } else {
-                        game.scene.cameraToUseForPointers = game.camera2;
-                    }
-                    break;
-                case BABYLON.PointerEventTypes.POINTERUP:
-                    break;
-                case BABYLON.PointerEventTypes.POINTERDOWN:
-                    break;
-                case BABYLON.PointerEventTypes.POINTERWHEEL:
-                    break;
-            }
-        });
+        // game.scene.onPointerObservable.add((pointerInfo) => {
+        //     switch (pointerInfo.type) {
+
+        //         case BABYLON.PointerEventTypes.POINTERMOVE:
+
+        //             if (pointerInfo.event.clientX > (window.innerWidth / 2.5)) {
+
+        //                 game.scene.cameraToUseForPointers = game.camera;
+
+        //             } else {
+
+        //                 game.scene.cameraToUseForPointers = game.camera2;
+        //             }
+
+        //             break;
+
+        //         case BABYLON.PointerEventTypes.POINTERUP:
+        //             break;
+        //         case BABYLON.PointerEventTypes.POINTERDOWN:
+        //             break;
+        //         case BABYLON.PointerEventTypes.POINTERWHEEL:
+        //             break;
+        //     }
+        // });
 
         game.camera.orthoRight = game.camera.zoomOutScale;
         game.camera2.orthoRight = game.camera.zoomOutScale;

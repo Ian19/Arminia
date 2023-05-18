@@ -64,20 +64,42 @@
             let oldSelectedSkillData = null;
             let skillSelected = false;
 
-            // g.select("[id = 'backgroundGrid']")
-            //     .attr("opacity", 0.7);
+            g.select("[id = 'backgroundGrid']")
+                .attr("opacity", 0.7);
 
             g.selectAll("[id *= 'Complete']")
                 .attr("pointer-events", "none");
 
             g.selectAll("[id *= 'hexHover']")
+            
                 .data(game.skills.skillData)
-                .classed('hexHover', true)
-                .on("mousedown", mousedown1)
-                .on("mouseover", function (d, i) {
+
+                .on(
+                    "click wheel " +
+                    "mouseenter mouseout mousedown mouseup mousemove mouseover mouseleave " +
+                    "drag dragend dragenter dragleave dragover dragstart drop " +
+                    "touchstart touchend touchmove " +
+                    "lostpointercapture pointerup pointerover",
+                    function (event) {
+                        event.preventDefault();
+                    }
+                )
+
+                .on("pointerenter", function (d, i) {
                     mouseover1(this, d, i);
                 })
-                .on("mouseout", mouseout1);
+
+                .on("pointerout", function (d, i) {
+
+                    mouseout1(this, d, i);
+
+                })
+
+                .on("pointerdown", function (event, d) {
+
+                    mousedown1(event, d);
+
+                });
 
             svg.call(zoom);
 
@@ -87,19 +109,21 @@
 
             function mouseover1(t, d, i) {
 
-                // console.log(t, d, i);
+                // console.log("mouseover1: " + t, d, i);
 
-                d3.select(t).style("stroke", "white");
+                d3.select(t).attr("stroke", "white");
                 updateSkillsDetail(i);
             }
 
-            function mouseout1(d, i) {
+            function mouseout1(t, d, i) {
+
+                // console.log("mouseout1: " + d, i);
 
                 if (!skillSelected) {
 
                     // console.log("skill unselected mouseout1: " + i.status, d, this);
 
-                    setStrokeColor(i, this);
+                    setStrokeColor(i, t);
 
                     $("#A_skillSelectText").css("display", "block");
                     $("#A_detailGridID").css("opacity", "0");
@@ -112,11 +136,11 @@
 
                     if (!i.selected) {
 
-                        setStrokeColor(i, this);
+                        setStrokeColor(i, t);
 
                     } else {
 
-                        d3.select(this).style("stroke", selectedStrokeColor);
+                        d3.select(t).attr("stroke", selectedStrokeColor);
 
                     }
                 }
@@ -124,7 +148,7 @@
 
             function mousedown1(t, newSkillData) {
 
-                // console.log("mousedown1 0", t, i);
+
                 // console.log("mousedown1 0", t, newSkillData);
 
                 // check if a skill is already selected
@@ -136,10 +160,20 @@
                         // console.log("mousedown1 1", t);
 
                         // on Click flash animation
-                        d3.select(this)
-                            .style("fill", "#7465d1")
-                            .transition()
-                            .style("fill", "#382d70");
+                        // d3.select(this)
+                        //     .style("fill", "#7465d1")
+                        //     .transition()
+                        //     .style("fill", "#382d70");
+
+                        // d3.select(this)
+                        //     .attr("fill", "#7465d1")
+                        //     .transition()
+                        //     .attr("fill", "#382d70");
+
+                        // d3.select(t.target)
+                        //     .attr("fill", "#7465d1")
+                        //     .transition()
+                        //     .attr("fill", "#382d70");
 
                         // toggle selected state and related graphics 
                         if (newSkillData.selected == true) {
@@ -147,7 +181,8 @@
                             // console.log("mousedown1 4", t);
 
                             // deselect skill  
-                            setStrokeColor(newSkillData, this);
+                            // setStrokeColor(newSkillData, this);
+                            setStrokeColor(newSkillData, t.target);
 
                             newSkillData.selected = false;
                             oldSelectedSkillSVG = null;
@@ -168,7 +203,8 @@
                         oldSelectedSkillData.selected = false;
 
                         // select new skill
-                        updateSkills(this, newSkillData);
+                        updateSkills(t.target, newSkillData);
+                        // updateSkills(this, newSkillData);
 
                         // show detail
                         updateSkillsDetail(newSkillData);
@@ -178,7 +214,8 @@
                     }
                 } else {
                     // no skill selected, select new skill
-                    updateSkills(this, newSkillData);
+                    // updateSkills(this, newSkillData);
+                    updateSkills(t.target, newSkillData);
                     selectedConstruction = newSkillData;
                 }
             }
@@ -192,25 +229,29 @@
 
                     case "locked":
 
-                        if (skill.d3Data.includes("hexHoverIS")) {                            
+                        if (skill.d3Data.includes("hexHoverIS")) {
 
-                            d3.select(element).style("stroke", "cyan");
+                            // d3.select(element).style("stroke", "cyan");
+                            d3.select(element).attr("stroke", "cyan");
 
                         } else {
 
-                            d3.select(element).style("stroke", lockedStrokeColor); 
+                            // d3.select(element).style("stroke", lockedStrokeColor); 
+                            d3.select(element).attr("stroke", lockedStrokeColor);
                         }
-                        
+
                         break;
 
                     case "unlocked":
 
-                        d3.select(element).style("stroke", unlockedStrokeColor);
+                        // d3.select(element).style("stroke", unlockedStrokeColor);
+                        d3.select(element).attr("stroke", unlockedStrokeColor);
                         break;
 
                     case "completed":
 
-                        d3.select(element).style("stroke", completedStrokeColor);
+                        // d3.select(element).style("stroke", completedStrokeColor);
+                        d3.select(element).attr("stroke", completedStrokeColor);
                         break;
 
                 }
@@ -234,7 +275,9 @@
 
             function updateSkills(t, n) {
 
-                // console.log("updateSkills 0", t, n);
+                // console.log("updateSkills 0");
+                // console.log(t);
+                // console.log(n);
 
                 oldSelectedSkillSVG = t;
                 oldSelectedSkillData = n;
@@ -242,17 +285,25 @@
                 skillSelected = true;
 
                 d3.select(t)
-                    .style("stroke", selectedStrokeColor);
+                    .attr("stroke", selectedStrokeColor);
+                // .style("stroke", selectedStrokeColor);
 
-                d3.select(t)
-                    .style("fill", "#7465d1")
-                    .transition()
-                    .style("fill", "#382d70");
+                // d3.select(t)
+                //     .style("fill", "#7465d1")
+                //     .transition()
+                //     .style("fill", "#382d70");
+
+
+                // d3.select(t)
+                //     .attr("fill", "#7465d1")
+                //     .transition()
+                //     .attr("fill", "#382d70");
             }
 
             function setSkillComplete(detailsData) {
 
-                g.select(detailsData.d3Data).style("stroke", completedStrokeColor);
+                // g.select(detailsData.d3Data).style("stroke", completedStrokeColor);
+                g.select(detailsData.d3Data).attr("stroke", completedStrokeColor);
 
             }
 
@@ -272,7 +323,8 @@
 
                                 skill.status = "unlocked";
 
-                                g.select(skill.d3Data).style("stroke", unlockedStrokeColor);
+                                // g.select(skill.d3Data).style("stroke", unlockedStrokeColor);
+                                g.select(skill.d3Data).attr("stroke", unlockedStrokeColor);
 
                             }
                         }
@@ -284,9 +336,14 @@
             game.setSkillsUnlocked = setSkillsUnlocked;
 
             // init stroke colors 
-            g.selectAll("[id *= 'hexHover']").style("stroke", lockedStrokeColor);
-            g.selectAll("[id *= 'hexHoverIS']").style("stroke", "cyan");
-            g.select("#hexHoverCircle").style("stroke", unlockedStrokeColor);
+            // g.selectAll("[id *= 'hexHover']").style("stroke", lockedStrokeColor);
+            g.selectAll("[id *= 'hexHover']").attr("stroke", lockedStrokeColor);
+
+            // g.selectAll("[id *= 'hexHoverIS']").style("stroke", "cyan");
+            g.selectAll("[id *= 'hexHoverIS']").attr("stroke", "cyan");
+
+            // g.select("#hexHoverCircle").style("stroke", unlockedStrokeColor);
+            g.select("#hexHoverCircle").attr("stroke", unlockedStrokeColor);
 
             /////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////// LOCAL STORAGE INIT ////////////////////////////////////

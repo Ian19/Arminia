@@ -25,7 +25,12 @@
 
         let selectedConstruction = {};
 
-        $("#A_detailGridID").css("opacity", "0");
+        // $("#A_detailGridID").css("opacity", "0");
+
+        const collection = document.getElementsByClassName("A_column");
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].style.display = "none";
+        }
 
         d3.xml("src/assets/images/misc/hexNodes17g.svg").then(data => {
 
@@ -69,6 +74,18 @@
 
             g.selectAll("[id *= 'Complete']")
                 .attr("pointer-events", "none");
+
+            d3.select('#Layer_1')
+                .on(
+                    "click wheel " +
+                    "mouseenter mouseout mousedown mouseup mousemove mouseover mouseleave " +
+                    "drag dragend dragenter dragleave dragover dragstart drop " +
+                    "touchstart touchend touchmove " +
+                    "lostpointercapture pointerup pointerover",
+                    function (event) {
+                        event.preventDefault();
+                    }
+                );
 
             g.selectAll("[id *= 'hexHover']")
 
@@ -122,7 +139,12 @@
                     setStrokeColor(i, t);
 
                     $("#A_skillSelectText").css("display", "block");
-                    $("#A_detailGridID").css("opacity", "0");
+                    // $("#A_detailGridID").css("opacity", "0");
+
+                    const collection = document.getElementsByClassName("A_column");
+                    for (let i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "none";
+                    }
 
                 } else {
 
@@ -238,7 +260,13 @@
             function updateSkillsDetail(skill) {
 
                 $("#A_skillSelectText").css("display", "none");
-                $("#A_detailGridID").css("opacity", "1");
+                // $("#A_detailGridID").css("opacity", "1");
+
+                const collection = document.getElementsByClassName("A_column");
+                for (let i = 0; i < collection.length; i++) {
+                    collection[i].style.display = "inherit";
+                }
+
                 $("#A_detailImage").attr("src", skill.thumbnailURL);
                 $("#A_detailTitle").text(skill.name);
                 $("#A_skillDifficulty").text(skill.difficulty);
@@ -305,7 +333,7 @@
 
             // init stroke colors 
             g.selectAll("[id *= 'hexHover']").attr("stroke", lockedStrokeColor);
-            g.selectAll("[id *= 'hexHoverIS']").attr("stroke", "cyan"); 
+            g.selectAll("[id *= 'hexHoverIS']").attr("stroke", "cyan");
             g.select("#hexHoverCircle").attr("stroke", unlockedStrokeColor);
 
             /////////////////////////////////////////////////////////////////////////////////////

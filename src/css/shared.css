@@ -12,13 +12,21 @@
     /* top: 3vh; */
     /* bottom: 3vh; */
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); 
     width: 88vw;    
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* grid-template-rows: 18vh 56vh 16vh 10vh; */
-    grid-template-rows: 18vh 56vh 16vh 5vh;
-    /* grid-template-rows: 14vh 50vh 16vh 10vh; */
+
+    /* grid-template-rows: 18vh 56vh 16vh 5vh; */
+
+    grid-template-rows: 
+    calc(var(--vh, 1vh) * 18) 
+    calc(var(--vh, 1vh) * 56) 
+    calc(var(--vh, 1vh) * 16) 
+    calc(var(--vh, 1vh) * 5);
+      
+     
+
     column-gap: 4vw;
     /* row-gap: 10px; */
     align-content: center;
@@ -28,7 +36,10 @@
 .scaleContainerClass {
     /* padding-top: 3.5vh; */
     grid-row: span 3;    
-    height: 90vh !important;;
+
+    height: 90vh !important;
+    height: calc(var(--vh, 1vh) * 90) !important;
+
     /* width: 100% !important;; */
     display: inline-block;
     /* width: 42vw !important;  */
@@ -46,16 +57,6 @@
     /* top: -1.4vw; */
 }
 
-/* #A_stepsHeaderFlex {
-    position: relative;
-    top: -5vw;
-    display: flex;
-    flex-direction: column;
-    width: 48%;
-    height: 4.2vw;
-    align-items: center;
-} */
-
 #A_stepsHeaderFlex {
     /* padding-top: 3.5vh; */
     position: relative;
@@ -65,6 +66,7 @@
     /* width: 48%; */
     /* height: 4.2vw; */
     align-items: center;
+    align-self: start;
 }
 
 #A_imageAndIconContainer {
@@ -78,6 +80,7 @@
     font-size: 0.75vw;
     width: 100%;
     position: relative;
+    align-self: end;
     /* height: 23%; */    
     /* height: 10%;     */
 }

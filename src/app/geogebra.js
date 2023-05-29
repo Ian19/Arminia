@@ -136,13 +136,18 @@
 
             // Position and size Geogebra and flex steps image box 
             $(".scaleContainerClass").css("display", "inline-block");
+
+
+            console.log("window.innerWidth: ", window.innerWidth);
+            console.log("window.innerHeight: ", window.innerHeight);
+
+            let sharedContainerRect = document.getElementById("A_sharedContainer").getBoundingClientRect();
+            console.log("sharedContainerRect: ", sharedContainerRect);
+
             let rect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
             let h = rect.bottom - rect.top;
 
-
-            // TESTING NEW GRID
-            // $("#A_stepsImageFlex").css("height", h + "px");
-
+            console.log("scaleContainerClass: ", rect);
 
             // Steps Image title, difficulty and definition
             $("#A_stepsImageTitle").text(game.skills.selectedSkill.name);

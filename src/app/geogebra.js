@@ -21,8 +21,10 @@
 
         let cheatNum = 0;
         const fadeNum = 0.2;
-        const fadeColor = "#544783";
-        const fillColor = "#ffe86d"; // yellow
+        // const fadeColor = "#544783";
+        // const fadeColor = "#FFFFFF40";
+        const fadeColor = "#FFFFFF1C";
+        const currentStepColor = "#ffe86d"; // yellow
         let ready = false;
         let svg;
 
@@ -48,6 +50,7 @@
             ready = false;
             let newStart = true;
             cheatNum = 0;
+            const requiredLineThickness = 3;
 
             $("#A_cheatBtnID").text("DEBUG STEP 1");
             $("#A_cheatBtnID").hide();
@@ -69,7 +72,7 @@
                 game.animatePageOut("A_homePage");
                 $(".appletStyle").addClass("A_graphing");
 
-            // } else if (parameters.appName == "suite") {
+                // } else if (parameters.appName == "suite") {
             } else if (game.skills.selectedSkill.type == "paper") {
 
                 game.animatePageOut("A_64TetraView");
@@ -89,8 +92,23 @@
                 svg = d3.select("#" + game.skills.selectedSkill.elementID);
                 svg.style("width", "100%").style("height", "100%").style("display", "block");
 
-                d3.selectAll("[id *= 'A_SVGStep'], [id *= 'divider'], [id *= 'paperText']")
-                    .style("fill", "white");
+                // the completed geometry is displayed at start so set all svg elements to color white
+                d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                    // d3.selectAll("[id *= 'A-SVGStep']")
+                    .attr("fill", "white");
+
+                // the completed geometry is displayed at start so set geo stroke to color white
+                d3.selectAll("[id *= 'geo']")
+                    .attr("stroke", "white");
+
+                if (game.skills.selectedSkill.type == "paper") {
+
+                    console.log("section 1");
+
+                    d3.select("#A_SVGGroupSteps")
+                        .attr("fill", "white");
+
+                }
 
                 zoom = d3.zoom()
                     .scaleExtent([1, 10])
@@ -137,17 +155,16 @@
             // Position and size Geogebra and flex steps image box 
             $(".scaleContainerClass").css("display", "inline-block");
 
-
-            console.log("window.innerWidth: ", window.innerWidth);
-            console.log("window.innerHeight: ", window.innerHeight);
+            // console.log("window.innerWidth: ", window.innerWidth);
+            // console.log("window.innerHeight: ", window.innerHeight);
 
             let sharedContainerRect = document.getElementById("A_sharedContainer").getBoundingClientRect();
-            console.log("sharedContainerRect: ", sharedContainerRect);
+            // console.log("sharedContainerRect: ", sharedContainerRect);
 
             let rect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
             let h = rect.bottom - rect.top;
 
-            console.log("scaleContainerClass: ", rect);
+            // console.log("scaleContainerClass: ", rect);
 
             // Steps Image title, difficulty and definition
             $("#A_stepsImageTitle").text(game.skills.selectedSkill.name);
@@ -331,14 +348,17 @@
 
                 } else {
 
-                    let lsTest = localStorage.getItem('ArminiaSkills'); // [0,1,2,5,11]    
+                    let lsTest = localStorage.getItem('ArminiaSkills').split(","); // [0,1,2,5,11]   
 
                     let duplicate = false;
 
                     for (let i = 0; i < lsTest.length; i++) {
+
                         if (lsTest[i] == game.skills.selectedSkill.id) {
+
                             duplicate = true;
                             break;
+
                         }
                     }
 
@@ -356,16 +376,20 @@
 
             function buildStepsView() {
 
+                // console.log("ENTERED buildStepsView");
+
                 let stepsPercentage = Math.round(100 / stepsLength); // i.e 33 or 66 or 99 
 
                 for (let j = 0; j < stepsArray.length; j++) {
 
                     let n = stepsPercentage * (j);
 
+                    // console.log(stepsArray);
+
                     // Is step incomplete?
                     if (stepsArray[j] == 0) {
 
-                        // console.log("ENTERED INCOMPLETE STEP");
+                        console.log("ENTERED INCOMPLETE STEP");
 
                         // Step is incomplete
                         removeAllAnimateTags();
@@ -375,16 +399,19 @@
 
                         // set current step to yellow for undo functionality
                         let s = j + 1;
-                        d3.select("#A_SVGStep" + s.toString())
-                            .style("fill", fillColor)
-                            .select("[id *= 'A_text']")
-                            .style("fill", fillColor);
+                        d3.select("#A-SVGStep" + s.toString())
+                            .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                            .attr("fill", currentStepColor);
+
+                        d3.select("#A-SVGStep" + s.toString())
+                            .selectAll("[id *= 'geo']")
+                            .attr("stroke", currentStepColor);
 
                         // if step1, zooms and pans to step1. Needed for undo functionality
                         if (j == 0) {
 
                             // get location and size data for pand and zoom
-                            panAndZoom("A_SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
+                            panAndZoom("A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
 
                         }
 
@@ -397,17 +424,26 @@
                         // Test if final step has been reached
                         if (j == stepsLength - 1) {
 
+                            console.log("FINAL STEP REACHED");
+
                             // final step has been reached
 
                             removeAllAnimateTags();
 
-                            // get total dimensions and pan and zoom out
-                            panAndZoom("A_SVGGroupSteps", 1);
+                            console.log("SECTION 1");
 
-                            d3.selectAll("[id *= 'A_SVGStep']")
-                                .style("fill", "white")
-                                .select("[id *= 'A_text']")
-                                .style("fill", "white");
+                            // get total dimensions and pan and zoom out
+                            panAndZoom("A-SVGGroupSteps", 1);
+
+                            console.log("SECTION 2");
+
+                            d3.selectAll("[id *= 'A-SVGStep']")
+                                .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                                .attr("fill", "white");
+
+                            d3.selectAll("[id *= 'A-SVGStep']")
+                                .selectAll("[id *= 'geo']")
+                                .attr("stroke", "white");
 
                             // update the steps container text and progress bar
                             updateStepsContainer(j, 1, 0, n, true);
@@ -417,7 +453,9 @@
 
                         } else {
 
-                            // step complete, but final step NOT reached                            
+                            // step complete, but final step NOT reached     
+
+                            console.log("STEP COMPLETE BUT FINAL STEP NOT REACHED YET");
 
                             removeAllAnimateTags();
                             addAnimateTags(j, 2);
@@ -425,19 +463,34 @@
                             let t = j + 1;
                             let s = j + 2;
 
-                            // set previous step to white
-                            d3.select("#A_SVGStep" + t.toString())
-                                // .lower()
-                                .style("fill", "white")
-                                .select("[id *= 'A_text']")
-                                .style("fill", fadeColor);
+                            ///////////////////////////////////////////////
 
-                            // set current step to yellow and opacity to 1
-                            d3.select("#A_SVGStep" + s.toString())
-                                .raise()
-                                .style("fill", fillColor)
-                                .select("[id *= 'A_text']")
-                                .style("fill", fillColor);
+                            // set previous step to white
+                            d3.select("#A-SVGStep" + t.toString())
+                                .selectAll("[id *= 'mathText']")
+                                .attr("fill", "white");
+
+                            // set previous step point label to fade Color    
+                            d3.select("#A-SVGStep" + t.toString())
+                                .selectAll("[id *= 'A-point'], [id *= 'A-text']")
+                                .attr("fill", fadeColor);
+
+                            d3.select("#A-SVGStep" + t.toString())
+                                .selectAll("[id *= 'geo']")
+                                .attr("stroke", "white");
+
+                            ///////////////////////////////////////////////
+
+                            // set current step to yellow
+                            d3.select("#A-SVGStep" + s.toString())
+                                .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                                .attr("fill", currentStepColor);
+
+                            d3.select("#A-SVGStep" + s.toString())
+                                .selectAll("[id *= 'geo']")
+                                .attr("stroke", currentStepColor);
+
+                            ///////////////////////////////////////////////
 
                             // divider and text handler for papers
                             game.skills.selectedSkill.elements.forEach(function (element) {
@@ -447,19 +500,19 @@
                                     if (element.type == "divider") {
 
                                         d3.select("#divider" + s.toString())
-                                            .style("fill-opacity", 1);
+                                            .attr("fill", "white");
 
                                     } else {
 
                                         d3.select("#paperText" + s.toString())
-                                            .style("fill-opacity", 1);
+                                            .attr("fill", "white");
 
                                     }
                                 }
                             });
 
                             // get element dimensions and then pan and zoom
-                            let elementStr = "A_SVGStep" + s.toString();
+                            let elementStr = "A-SVGStep" + s.toString();
 
                             panAndZoom(elementStr, game.skills.selectedSkill.steps[t].zoomScale);
 
@@ -525,7 +578,7 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        console.log(strState);
+                        // console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {
@@ -544,7 +597,7 @@
 
                                         if (steps[j].type == "construction") test[j][k] = 1;
 
-                                        if (api.getLineThickness(strName) == 3 && steps[j].type == "combo")
+                                        if (api.getLineThickness(strName) == requiredLineThickness && steps[j].type == "combo")
                                             test[j][k] = 1;
 
                                     }
@@ -573,7 +626,7 @@
 
                                 objStrName = steps[i].styleObjects[j];
 
-                                if (api.getLineThickness(objStrName) !== 3) {
+                                if (api.getLineThickness(objStrName) !== requiredLineThickness) {
 
                                     stepsArray[i] = 0;
                                     break;
@@ -620,25 +673,31 @@
                     // prevent access to buildStepsView if same result state or if blink checkbox checked 
                     if (!sameResultState) {
 
+                        console.log("DIFFERENT RESULTS");
+
                         // result state has changed! Set oldStepsArray to stepsArray
                         for (let i = 0; i < stepsArray.length; i++) {
                             oldStepsArray[i] = stepsArray[i];
                         }
 
-                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                            .style("fill", fadeColor);
+                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                            // d3.selectAll("[id *= 'A-SVGStep']")
+                            .attr("fill", fadeColor);
 
-                        d3.select("#A_SVGStep1")
-                            .select("[id *= 'A_text']")
-                            .style("fill", fadeColor);
+                        d3.selectAll("[id *= 'A-SVGStep']")
+                            .selectAll("[id *= 'geo']")
+                            .attr("stroke", fadeColor);
 
+                        d3.select("#A-SVGStep1")
+                            .selectAll("[id *= 'A-text']")
+                            .attr("fill", fadeColor);
 
                         // update the stepper and stepsImage
                         buildStepsView();
 
                     } else {
 
-                        // console.log("SAME RESULTS");
+                        console.log("SAME RESULTS");
 
                     }
                 }
@@ -651,7 +710,7 @@
 
         function removeAllAnimateTags() {
 
-            d3.selectAll("[id *= 'A_SVGStep']")
+            d3.selectAll("[id *= 'A-SVGStep']")
                 .style("animation", "inherit");
 
         };
@@ -660,7 +719,7 @@
 
             let s = j + n;
 
-            d3.select("#A_SVGStep" + s.toString())
+            d3.select("#A-SVGStep" + s.toString())
                 .style("animation", "transcolor 0.75s infinite alternate");
 
         };
@@ -720,7 +779,6 @@
             }
 
             cheatNum = 0;
-
             ready = true;
 
             $("#A_startGeogebraBtnID").removeClass('A_startGeogebraBtn');
@@ -732,17 +790,26 @@
             $("#A_stepsValue").text("0%");
             $("#A_stepsProgress").css("width", "0%");
 
-            d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A_SVGStep']")
-                .style("fill", fadeColor);
+            d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                // d3.selectAll("[id *= 'A-SVGStep']")
+                .attr("fill", fadeColor);
 
-            d3.select("#A_SVGStep1")
-                // .style("fill-opacity", 1)
-                .style("fill", fillColor);
+            d3.selectAll("[id *= 'A-SVGStep']")
+                .selectAll("[id *= 'geo']")
+                .attr("stroke", fadeColor);
+
+            d3.select("#A-SVGStep1")
+                .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                .attr("fill", currentStepColor);
+
+            d3.select("#A-SVGStep1")
+                .selectAll("[id *= 'geo']")
+                .attr("stroke", currentStepColor);
 
             removeAllAnimateTags();
             addAnimateTags(0, 1);
 
-            panAndZoom("A_SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
+            panAndZoom("A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale);
 
         });
 
@@ -854,7 +921,7 @@
 
                 var c = document.getElementsByClassName("canvasDef")[0];
 
-                console.log(c);
+                // console.log(c);
 
                 // var ctx = c.getContext("2d");
 

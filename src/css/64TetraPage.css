@@ -31,7 +31,7 @@
     /* grid-template-columns: auto auto auto auto; */
     grid-template-columns: 1fr;
     justify-items: center;
-    align-items: start;
+    align-items: start;    
 }
 
 .A_64Tetra3DContainer2 {

@@ -350,7 +350,7 @@
             // }
             // // console.log(game.skills.skillData);
 
-            // localStorage.setItem('ArminiaSkills', "0, 1, 9, 10, 11, 12, 14, 15");
+            // localStorage.setItem('ArminiaSkills', "0,1,9,10,11,12,14,15");
             // // localStorage.setItem('ArminiaSkills', "0");
 
             // // assign local storage as a comma separated array
@@ -377,6 +377,9 @@
             ////////////////////////////////////////
 
             // initialise the game.skills.skillData.id as its index in the skillData array
+
+            // localStorage.setItem('ArminiaSkills', "0,1,9,10,11,12,14,15");
+
             for (let i = 0; i < game.skills.skillData.length; i++) {
                 game.skills.skillData[i].id = i;
             }
@@ -392,7 +395,13 @@
                     // assign local storage as a comma separated array
                     let localStorageArray = localStorage.getItem('ArminiaSkills').split(",");
 
-                    // iterate through local storage data and apply to skillData and skill tree
+                    // remove spaces
+                    localStorageArray = localStorageArray.map(str => str.replace(/\s/g, ''));
+
+                    // remove duplicates
+                    localStorageArray = [...new Set(localStorageArray)];
+
+                    // iterate through array of completed skills and apply to skillData and skill tree
                     localStorageArray.forEach(function (element) {
 
                         game.skills.skillData.forEach(function (skill) {

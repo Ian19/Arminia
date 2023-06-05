@@ -92,8 +92,10 @@
 @keyframes transcolor {
     from {
         fill-opacity: 1;
+        stroke-opacity: 1;
     }
     to {
         fill-opacity: 0.25;
+        stroke-opacity: 0.25;
     }
 }

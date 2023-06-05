@@ -27,7 +27,7 @@
                 "selected": false,
                 "status": "unlocked",
                 "type": "construction",
-                "elementID": "A_detailCircle",
+                "elementID": "A-detailCircle",
                 "tools": "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
                 "startingZoomScale": "ZoomOut(1)",
                 "elements": [],
@@ -59,7 +59,7 @@
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "stepsImage": "src/assets/images/skills/details/detailCircle.svg",
+                "stepsImage": "src/assets/images/skills/details/detailCircle2.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  3 STEPS",
                 "unlocksSkills": ["The Vesica Piscis"],
@@ -76,7 +76,7 @@
                 "selected": false,
                 "status": "locked",
                 "type": "construction",
-                "elementID": "A_detailVesicaPiscis",
+                "elementID": "A-detailVesicaPiscis",
                 "elements": [],
                 "tools": "0 | 34 | 10 | 15 | 17 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "startingZoomScale": "ZoomOut(1)",
@@ -174,13 +174,13 @@
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 1.5,
-                    "correctStep": ['text text4, CD=2×ED=\\sqrt{3}'],
-                    "stepsText": katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}'. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.)"
+                    "correctStep": ['text text4, CD=2×ED=\\sqrt{3}=1.732'],
+                    "stepsText": "Select the 'Move' tool and select segment CD and press CTRL + SHIFT + G to show the label 'g'. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}='. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.) Click 'Advanced->Geogebra Objects' and click on the lowercase 'g' so that the complete text reads 'CD=2×ED=\\sqrt{3}=g'. This should calculate 1.732 and provide our proof."
 
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
-                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis3.svg",
+                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis4.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  12 STEPS",
                 "unlocksSkills": ["The Triquetra"],
@@ -307,7 +307,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A_detailTriquetra",
+                "elementID": "A-detailTriquetra",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "tools": "0 | 34 | 10 | 15 | 17 | 5",
                 "startingZoomScale": "ZoomOut(1)",
@@ -419,7 +419,7 @@
 
                 }],
 
-                "stepsImage": "src/assets/images/skills/details/detailTriquetra.svg",
+                "stepsImage": "src/assets/images/skills/details/detailTriquetra2.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "thumbnailURL": "src/assets/images/skills/thumbnails/triqetra.svg",
                 "difficulty": "EASY  |  13 STEPS",
@@ -437,7 +437,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A_detailGenesis",
+                "elementID": "A-detailGenesis",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "tools": "0 | 34 | 10 | 5",
                 "zoomScale": 2.4,
@@ -543,7 +543,7 @@
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/genesis.svg",
-                "stepsImage": "src/assets/images/skills/details/detailGenesis5.svg",
+                "stepsImage": "src/assets/images/skills/details/detailGenesis6.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  7 STEP",
                 "requirement": "The Triquetra",
@@ -560,111 +560,16 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A_detailEgg",
+                "elementID": "A-detailEgg",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "tools": "0 | 34 | 10 | 5",
                 "zoomScale": 2.4,
-                "startingZoomScale": "ZoomOut(1)",
+                "startingZoomScale": "ZoomOut(2)",
                 "elements": [],
 
-                "steps": [{
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point A, ", "circle c, Circle(A, 1)"],
-                    "stepsText": "Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point B, Point(c)", "circle d, Circle(B, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center B and radius BA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point C, Intersect(c, d, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point C at the left intersection of Circles A and B.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle e, Circle(C, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center C and radius CA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point D, Intersect(c, e, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point D at the lower intersection of Circles A and C.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle f, Circle(D, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center D and radius DA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point E, Intersect(c, f, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point E at the lower intersection of Circles A and D.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle g, Circle(E, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center E and radius EA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point F, Intersect(c, g, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point F at the lower intersection of Circles A and E.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle h, Circle(F, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center F and radius FA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point G, Intersect(c, d, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point G at the intersection of Circles A, B and F.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle k, Circle(G, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center G and radius GA."
-
-                }, {
-
+                "steps": [
+                    
+                {
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 2.4,
@@ -762,8 +667,8 @@
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/eggOfLife.svg",
-                "stepsImage": "src/assets/images/skills/details/detailEgg4.svg",
-                "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
+                "stepsImage": "src/assets/images/skills/details/detailEgg5.svg",
+                "geogebraFile": "/src/assets/geogebra/genesisPattern.ggb",
                 "difficulty": "EASY  |  13 STEPS",
                 "requirement": "REQUIRES THE GENESIS PATTERN",
                 "unlocksSkills": ["Completed Flower of Life"],
@@ -778,7 +683,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "combo",
-                "elementID": "A_detailUnsealedFOL",
+                "elementID": "A-detailUnsealedFOL",
                 "tools": "0 | 10 | 20", // MOVE, CIRCLE_TWO_POINTS, CIRCLE_ARC_THREE_POINTS
                 "zoomScale": 2.4,
                 "startingZoomScale": "ZoomOut(1.55)",
@@ -787,7 +692,7 @@
                 "steps": [{
 
                     "type": "combo",
-                    "zoomScale": 1.5,
+                    "zoomScale": 1.5, 
                     "styleObjects": ["d_5"],
                     "correctStep": ["circle d_5, Circle(A, H_1)"],
                     "stepsText": "Select the Circle:Center & Radius tool and draw a Circle with center A and radius AH<sub>1</sub>. Make sure the line thickness is set to 3.",
@@ -803,7 +708,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["e_5"],
                     "correctStep": ["arc e_5, CircularArc(H_1, T, G_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center H<sub>1</sub> from point T to G<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -811,7 +716,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["f_5"],
                     "correctStep": ["arc f_5, CircularArc(T, U, H_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center T from point U to H<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -819,7 +724,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["g_5"],
                     "correctStep": ["arc g_5, CircularArc(U, J_1, T)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center U from point J<sub>1</sub> to T. Then Make sure the line thickness is set to 3.",
@@ -827,7 +732,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["h_5"],
                     "correctStep": ["arc h_5, CircularArc(J_1, V, U)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center J<sub>1</sub> from point V to U. Then Make sure the line thickness is set to 3.",
@@ -835,7 +740,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["k_5"],
                     "correctStep": ["arc k_5, CircularArc(V, W, J_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center V from point W to J<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -843,7 +748,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["p_5"],
                     "correctStep": ["arc p_5, CircularArc(W, L_1, V)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center W from point L<sub>1</sub> to V. Then Make sure the line thickness is set to 3.",
@@ -851,7 +756,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["q_5"],
                     "correctStep": ["arc q_5, CircularArc(L_1, Z, W)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center L<sub>1</sub> from point Z to W. Then Make sure the line thickness is set to 3.",
@@ -859,7 +764,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["r_5"],
                     "correctStep": ["arc r_5, CircularArc(Z, A_1, L_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Z from point A<sub>1</sub> to L<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -867,7 +772,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["s_5"],
                     "correctStep": ["arc s_5, CircularArc(A_1, N_1, Z)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center A<sub>1</sub> from point N<sub>1</sub> to Z. Then Make sure the line thickness is set to 3.",
@@ -875,7 +780,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["t_5"],
                     "correctStep": ["arc t_5, CircularArc(N_1, B_1, A_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center N<sub>1</sub> from point B<sub>1</sub> to A<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -883,7 +788,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["c_6"],
                     "correctStep": ["arc c_6, CircularArc(B_1, C_1, N_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center B<sub>1</sub> from point C<sub>1</sub> to N<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -891,7 +796,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["d_6"],
                     "correctStep": ["arc d_6, CircularArc(C_1, P_1, B_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center C<sub>1</sub> from point P<sub>1</sub> to B<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -899,7 +804,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["e_6"],
                     "correctStep": ["arc e_6, CircularArc(P_1, D_1, C_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center P<sub>1</sub> from point D<sub>1</sub> to C<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -907,7 +812,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["f_6"],
                     "correctStep": ["arc f_6, CircularArc(D_1, E_1, P_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center D<sub>1</sub> from point E<sub>1</sub> to P<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -915,7 +820,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["g_6"],
                     "correctStep": ["arc g_6, CircularArc(E_1, R_1, D_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center E<sub>1</sub> from point R<sub>1</sub> to D<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -923,7 +828,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["h_6"],
                     "correctStep": ["arc h_6, CircularArc(R_1, F_1, E_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center R<sub>1</sub> from point F<sub>1</sub> to E<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -931,7 +836,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["k_6"],
                     "correctStep": ["arc k_6, CircularArc(F_1, G_1, R_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center F<sub>1</sub> from point G<sub>1</sub> to R<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -939,7 +844,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["p_6"],
                     "correctStep": ["arc p_6, CircularArc(G_1, H_1, F_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center G<sub>1</sub> from point H<sub>1</sub> to F<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -947,7 +852,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["q_6"],
                     "correctStep": ["arc q_6, CircularArc(T_1, T, H_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center T<sub>1</sub> from point T to H<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -955,7 +860,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["r_6"],
                     "correctStep": ["arc r_6, CircularArc(I_1, U, T)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center I<sub>1</sub> from point U to T. Then Make sure the line thickness is set to 3.",
@@ -963,7 +868,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["s_6"],
                     "correctStep": ["arc s_6, CircularArc(U_1, J_1, U)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center U<sub>1</sub> from point J<sub>1</sub> to U. Then Make sure the line thickness is set to 3.",
@@ -971,7 +876,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["t_6"],
                     "correctStep": ["arc t_6, CircularArc(V_1, V, J_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center V<sub>1</sub> from point V to J<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -979,7 +884,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["c_7"],
                     "correctStep": ["arc c_7, CircularArc(K_1, W, V)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center K<sub>1</sub> from point W to V. Then Make sure the line thickness is set to 3.",
@@ -987,7 +892,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["d_7"],
                     "correctStep": ["arc d_7, CircularArc(W_1, L_1, W)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center W<sub>1</sub> from point L<sub>1</sub> to W. Then Make sure the line thickness is set to 3.",
@@ -995,7 +900,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["e_7"],
                     "correctStep": ["arc e_7, CircularArc(Z_1, Z, L_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Z<sub>1</sub> from point Z to L<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1003,7 +908,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["f_7"],
                     "correctStep": ["arc f_7, CircularArc(M_1, A_1, Z)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center M<sub>1</sub> from point A<sub>1</sub> to Z. Then Make sure the line thickness is set to 3.",
@@ -1011,7 +916,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["g_7"],
                     "correctStep": ["arc g_7, CircularArc(A_2, N_1, A_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center A<sub>2</sub> from point N<sub>1</sub> to A<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1019,7 +924,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["h_7"],
                     "correctStep": ["arc h_7, CircularArc(B_2, B_1, N_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center B<sub>2</sub> from point B<sub>1</sub> to N<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1027,7 +932,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["k_7"],
                     "correctStep": ["arc k_7, CircularArc(O_1, C_1, B_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center O<sub>1</sub> from point C<sub>1</sub> to B<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1035,7 +940,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["p_7"],
                     "correctStep": ["arc p_7, CircularArc(C_2, P_1, C_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center C<sub>2</sub> from point P<sub>1</sub> to C<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1043,7 +948,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["q_7"],
                     "correctStep": ["arc q_7, CircularArc(D_2, D_1, P_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center D<sub>2</sub> from point D<sub>1</sub> to P<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1051,7 +956,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["r_7"],
                     "correctStep": ["arc r_7, CircularArc(Q_1, E_1, D_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center Q<sub>1</sub> from point E<sub>1</sub> to D<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1059,7 +964,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["s_7"],
                     "correctStep": ["arc s_7, CircularArc(E_2, R_1, E_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center E<sub>2</sub> from point R<sub>1</sub> to E<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1067,7 +972,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["t_7"],
                     "correctStep": ["arc t_7, CircularArc(F_2, F_1, R_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center F<sub>2</sub> from point F<sub>1</sub> to R<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1075,7 +980,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["c_8"],
                     "correctStep": ["arc c_8, CircularArc(S_1, G_1, F_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center S<sub>1</sub> from point G<sub>1</sub> to F<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1083,7 +988,7 @@
                 }, {
 
                     "type": "combo",
-                    "zoomScale": 3.5,
+                    "zoomScale": 4.5,
                     "styleObjects": ["d_8"],
                     "correctStep": ["arc d_8, CircularArc(G_2, H_1, G_1)"],
                     "stepsText": "Select the Circular Arc tool and draw an arc with Center G<sub>2</sub> from point H<sub>1</sub> to G<sub>1</sub>. Then Make sure the line thickness is set to 3.",
@@ -1092,7 +997,7 @@
                 ],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbUnsealedFOL.svg",
-                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL5.svg",
+                "stepsImage": "src/assets/images/skills/details/detailUnsealedFOL6.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "COMPLETED FLOWER OF LIFE",
@@ -1107,8 +1012,27 @@
                 "d3Data": "#hexHoverFOLSeal",
                 "status": "locked",
                 "selected": false,
+                "type": "construction",
+                "elementID": "A_detailSealedFOL",
                 "tools": "0 | 34 | 10 | 5",   // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
+                "startingZoomScale": "ZoomOut(1.55)",
+                "elements": [],
+
+                "steps": [{
+
+                    "type": "construction",
+                    "zoomScale": 1,
+                    "styleObjects": [],
+                    "correctStep": ["point A, ", "circle c, Circle(A, 1)"],
+                    "stepsText": "Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1.",
+
+                }],
+
+
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
+                "stepsImage": "src/assets/images/skills/details/detailSealedFOL.svg",
+                // "geogebraFile": "/src/assets/geogebra/sealedFOL.ggb",
+                "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
                 "unlocksSkills": [],
@@ -1123,205 +1047,14 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A_detailCompletedFOL",
+                "elementID": "A-detailCompletedFOL",
                 "tools": "0 | 34 | 10 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
-                "startingZoomScale": "ZoomOut(1)",
+                "startingZoomScale": "ZoomOut(2)",
                 "elements": [],
 
-                "steps": [{
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point A, ", "circle c, Circle(A, 1)"],
-                    "stepsText": "Select the Circle:Center & Radius tool and draw a Circle with center A radius equal to 1.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point B, Point(c)", "circle d, Circle(B, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center B and radius BA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point C, Intersect(c, d, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point C at the left intersection of Circles A and B.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle e, Circle(C, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center C and radius CA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point D, Intersect(c, e, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point D at the lower intersection of Circles A and C.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle f, Circle(D, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center D and radius DA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point E, Intersect(c, f, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point E at the lower intersection of Circles A and D.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle g, Circle(E, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center E and radius EA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point F, Intersect(c, g, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point F at the lower intersection of Circles A and E.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle h, Circle(F, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center F and radius FA.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point G, Intersect(c, d, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point G at the intersection of Circles A, B and F.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle k, Circle(G, A)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center G and radius GA."
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point H, Intersect(d, e, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point H at the upper intersection of Circles B and C.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point I, Intersect(e, f, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point I at the left intersection of Circles C and D.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point J, Intersect(f, g, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point J at the lower intersection of Circles D and E.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point K, Intersect(g, h, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point K at the lower intersection of Circles E and F.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point L, Intersect(h, k, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point L at the right intersection of Circles G and F.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point M, Intersect(d, k, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point M at the UPPER intersection of Circles B and G.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle p, Circle(H, B)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center H and radius HB.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle q, Circle(I, C)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center I and radius IC.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle r, Circle(J, D)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center J and radius JD.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle s, Circle(K, E)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center K and radius KE.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle t, Circle(L, G)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center L and radius LG.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle c_1, Circle(M, B)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center M and radius MB."
-
-                }, {
-
+                "steps": [
+                    
+                {
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 4.8,
@@ -2014,11 +1747,11 @@
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbCompletedFOL.svg",
-                "stepsImage": "src/assets/images/skills/details/detailCompletedFOL4.svg",
-                "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
+                "stepsImage": "src/assets/images/skills/details/detailCompletedFOL5.svg",
+                "geogebraFile": "/src/assets/geogebra/egg.ggb",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "unlocksSkills": ["Unsealed Flower Of Life"],
+                "unlocksSkills": ["Unsealed Flower Of Life", "Fruit of Life"],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
@@ -2026,13 +1759,13 @@
             }, {
                 "name": "Fruit of Life",
                 "id": 15,
-                "d3Data": "hexHoverFruitA",
+                "d3Data": "#hexHoverFruitA",
                 "status": "locked",
                 "selected": false,
-                "type": "style",
+                "type": "styled construction",
                 "elements": [],
                 "objects": ["c", "d_1", "e_1", "f_1", "g_1", "h_1", "k_1", "p_4", "q_4", "r_4", "s_4", "t_4", "c_5"],
-                "elementID": "A_detailFruitOfLife",
+                "elementID": "A-detailFruitOfLife",
                 "tools": "0", // MOVE
                 "zoomScale": 1,
                 "startingZoomScale": "ZoomOut(1.6)",
@@ -2043,16 +1776,16 @@
                     "zoomScale": 1,
                     "styleObjects": ["c", "d_1", "e_1", "f_1", "g_1", "h_1", "k_1", "p_4", "q_4", "r_4", "s_4", "t_4", "c_5"],
                     "correctStep": [["dummy container"]],
-                    "stepsText": "Select the Move Tool and Ctrl-Click Circles A, N, O, P, Q, R, S, H<sub>2</sub>, I<sub>2</sub>, J<sub>2</sub>, K<sub>2</sub>, L<sub>2</sub>, M<sub>2</sub>. Click the Style Menu and select the Set line style button. Drag the slider to 7.",
+                    "stepsText": "Select the Move Tool and Ctrl-Click Circles A, N, O, P, Q, R, S, H<sub>2</sub>, I<sub>2</sub>, J<sub>2</sub>, K<sub>2</sub>, L<sub>2</sub>, M<sub>2</sub>. Click the Style Menu and select the Set line style button. Drag the slider to 3.",
 
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbFruit.svg",
-                "stepsImage": "src/assets/images/skills/details/detailFruitOfLife.svg",
+                "stepsImage": "src/assets/images/skills/details/detailFruitOfLife2.svg",
                 "geogebraFile": "/src/assets/geogebra/completedFOL.ggb",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",
-                "unlocksSkills": [],
+                "unlocksSkills": ["Fruit of Life 2"],
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
@@ -2060,9 +1793,11 @@
             }, {
                 "name": "Fruit of Life 2",
                 "id": 16,
-                "d3Data": ["temp", "temp"],
+                "d3Data": "#hexHoverFruitB",
                 "status": "locked",
                 "selected": false,
+                "type": "construction",
+                "elements": [],
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
                 "difficulty": "EASY  |  1 STEP",
                 "requirement": "(NO REQUIREMENT)",

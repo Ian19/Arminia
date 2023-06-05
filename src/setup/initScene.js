@@ -32,8 +32,8 @@
         // custom properties
         game.camera.initialTargetScreenOffset = 17.6;
         game.camera.zoomedTargetScreenOffset = 4.0;
-        game.camera.zoomInScale = 10.8;
-        game.camera.zoomOutScale = 45;
+        game.camera.zoomInScale = 11.2;
+        game.camera.zoomOutScale = 47;
 
         game.camera.targetScreenOffset = new BABYLON.Vector2(game.camera.initialTargetScreenOffset, 0);
         game.camera.checkCollisions = false;

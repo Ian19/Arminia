@@ -23,7 +23,7 @@
             {
                 "id": 85,
                 "type": "paper",
-                "elementID": "A_schwarzsPPaper",
+                "elementID": "A-schwarzsPPaper",
                 "status": "unlocked",
                 "zoomScale": 3,
 
@@ -291,7 +291,7 @@
 
                 "selected": false,
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "stepsImage": "src/assets/images/papers/schwarzschildproton/The_Schwarzschild_Proton9.svg",
+                "stepsImage": "src/assets/images/papers/The_Schwarzschild_Proton10.svg",
                 "name": "The Schwarzschild Proton",
                 "difficulty": "HARD  |  31 STEPS",
                 "unlocksSkills": [2],

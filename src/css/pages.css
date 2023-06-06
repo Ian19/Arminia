@@ -9,8 +9,9 @@
 } */
 
 .A_page {
-    height: 100vh;
-    position: absolute;
+    /* height: 100vh; */
+    height: calc(var(--vh, 1vh) * 100);
+    position: fixed;
     /* bottom: 30px; */
     /* top: 0px; */
     flex-direction: column;

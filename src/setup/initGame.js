@@ -152,13 +152,14 @@
         window.addEventListener('resize', () => {
 
             // We execute the same script as before
-            let vh = window.innerHeight * 0.01;
-            
+            let vh = window.innerHeight * 0.01;            
             document.documentElement.style.setProperty('--vh', `${vh}px`);
 
         });
 
-
+        // enable touch actions on A_gameCanvas
+        var elem = document.getElementById("A_gameCanvas")
+        elem.setAttribute("style", "touch-action: auto;");
 
 
         ///////////////////////////////////////////  DEBUG  //////////////////////////////////////////////

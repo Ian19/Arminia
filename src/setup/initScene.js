@@ -55,6 +55,7 @@
         game.camera.inputs.attached.pointers.buttons = [0];
         game.camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
         game.camera.inputs.attached.pointers.multiTouchPanning = false;
+
         game.camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED;
 
         game.scene.activeCameras = [game.camera, game.camera2];

@@ -23,9 +23,7 @@
     calc(var(--vh, 1vh) * 18) 
     calc(var(--vh, 1vh) * 56) 
     calc(var(--vh, 1vh) * 16) 
-    calc(var(--vh, 1vh) * 5);
-      
-     
+    calc(var(--vh, 1vh) * 5);     
 
     column-gap: 4vw;
     /* row-gap: 10px; */

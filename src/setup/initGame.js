@@ -131,10 +131,6 @@
         //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-        // Object.keys(localStorage).forEach(function (key) {
-        //     console.log(localStorage.getItem(key));
-        // });
-
         $("#checkbox4").prop('checked', true); // fog
         $("#checkbox5").prop('checked', true); // dust
         $("#checkbox6").prop('checked', true); // spotlight
@@ -142,9 +138,20 @@
         $("#checkbox14").prop('checked', true); // light rays
         $("#checkbox10").prop('checked', false); // auto-rotate
 
+        // enable touch actions on A_gameCanvas
+        var elem = document.getElementById("A_gameCanvas")
+        elem.setAttribute("style", "touch-action: auto;");
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////  IOS HACKS  //////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////  vh HACK  ////////////////////////////////////////////
 
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
         let vh = window.innerHeight * 0.01;
+
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -152,14 +159,37 @@
         window.addEventListener('resize', () => {
 
             // We execute the same script as before
-            let vh = window.innerHeight * 0.01;            
+            let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
 
         });
 
-        // enable touch actions on A_gameCanvas
-        var elem = document.getElementById("A_gameCanvas")
-        elem.setAttribute("style", "touch-action: auto;");
+        //////////////////////////////////////  main swish HACK  ///////////////////////////////////////
+
+        // animated SVG title has more height in IOS and pushes swish down  
+        // detect IOS      
+        var isIOS = (function () {
+            var iosQuirkPresent = function () {
+                var audio = new Audio();
+
+                audio.volume = 0.5;
+                return audio.volume === 1;   // volume cannot be changed from "1" on iOS 12 and below
+            };
+
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            var isAppleDevice = navigator.userAgent.includes('Macintosh');
+            var isTouchScreen = navigator.maxTouchPoints >= 1;   // true for iOS 13 (and hopefully beyond)
+
+            return isIOS || (isAppleDevice && (isTouchScreen || iosQuirkPresent()));
+
+        })();
+
+        if (!isIOS) document.getElementById("A_mainSwish").style.marginTop = "0px";
+        
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
 
 
         ///////////////////////////////////////////  DEBUG  //////////////////////////////////////////////

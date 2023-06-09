@@ -23,8 +23,11 @@
 }
 
 .A_swish {
-    margin-top: -0.2vw;
     width: 15vw;
+}
+
+#A_mainSwish {
+    margin-top: -1.4vh;
 }
 
 .A_header1 {

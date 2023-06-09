@@ -109,5 +109,5 @@
         <animateTransform attributeName="transform" type="rotate" begin="2.5s;C.end + 6.5s"
             values="0 116.33325 33.33325; 90 116.33325 33.33325" dur="0.5s" restart="always" fill="freeze" />
     </use>
-    
+
 </svg>

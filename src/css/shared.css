@@ -11,7 +11,7 @@
     position: relative;
     /* top: 3vh; */
     /* bottom: 3vh; */
-    height: 100vh;
+    /* height: 100vh; */
     height: calc(var(--vh, 1vh) * 100); 
     width: 88vw;    
     display: grid;

@@ -32,12 +32,20 @@
 
 .A_header1 {
     margin: calc(var(--vh, 1vh) * 3.7) 0 calc(var(--vh, 1vh) * 2.5);
-    font-family: 'Cinzel';
-    font-size: 1.5vw;
-    letter-spacing: 1px;
-    font-variant-caps: normal;
     text-align: center;
+    font-size: 1.5vw;
+    font-variant-caps: normal;
     color: gold;
+}
+
+.A_reg {
+    font-family: 'Cinzel';    
+    letter-spacing: 0.1em;
+}
+
+.A_decor {
+    font-family: 'Cinzel Decorative';
+    letter-spacing: -0.3em;
 }
 
 #A_pageBody {

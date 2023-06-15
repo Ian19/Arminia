@@ -1,5 +1,5 @@
 {
     "liveServer.settings.port": 5502,
     "compile-hero.disable-compile-files-on-did-save-code": false,
-    "svg.preview.background": "editor"
+    "svg.preview.background": "black"
 }

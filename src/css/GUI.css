@@ -11,13 +11,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;    
+    justify-content: flex-start;
     align-items: center;
     margin: 0.6vw 0;
 }
 
 .A_title {
-    width: 15vw;
+    /* width: 15vw; */
     cursor: pointer;
     /* font-family: cinzel; */
 }
@@ -31,14 +31,13 @@
 }
 
 .A_header1 {
-    font-size: 0.75vw;
-    color: rgb(238, 219, 113);
-
-    /* font-family: 'Cinzel';
-    font-size: 0.8vw;
+    margin: calc(var(--vh, 1vh) * 3.7) 0 calc(var(--vh, 1vh) * 2.5);
+    font-family: 'Cinzel';
+    font-size: 1.5vw;
     letter-spacing: 1px;
     font-variant-caps: normal;
-    color: var(--yellow1); */
+    text-align: center;
+    color: gold;
 }
 
 #A_pageBody {
@@ -54,7 +53,7 @@ a:link {
     background-color: transparent;
     text-decoration: none;
 }
-    
+
 a:visited {
     color: lightyellow;
     background-color: transparent;

@@ -1,5 +1,22 @@
-<!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 200 40"> -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="318" height="80" viewBox="0 0 159 40">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="321" height="80" viewBox="0 0 160.5 40">
+
+<!-- Copyright 2022 Ian Hicks
+
+This file is part of Arminia.
+
+Arminia is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Arminia is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Arminia.  If not, see <http://www.gnu.org/licenses/>. 
+-->
 
     <style>
         <![CDATA[
@@ -18,14 +35,6 @@
         <style>
             #softEdgeMask {
                 transform-box: fill-box;
-                /* transform: rotate(20deg);
-                transform-origin: center;                 */
-            }
-
-            #ellipse1 {
-                /* transform-box: fill-box; */
-                /* transform: rotate(20deg); */
-                /* transform-origin: center; */
             }
 
             @font-face {

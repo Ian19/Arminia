@@ -48,6 +48,13 @@
     align-items: start;
 }
 
+.A_64Tetra3DContainer5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: start;
+}
+
 /* #A_64Tetra3DContainer > div:nth-child(n+9):not(:nth-child(n+13)) {
     margin-top: 10vw;
   } */

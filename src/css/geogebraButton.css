@@ -6,14 +6,16 @@
 
 .A_geoMenu2 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 0.9vw;
     align-items: center;
 
 }
 
 .A_pageInfo {
-    display: inline;
+    /* display: inline; */
+    display: flex;
+    white-space: pre-wrap;
 }
 
 .A_btnContainer {
@@ -22,10 +24,14 @@
     margin: 0 0.3vw;
 }
 
-#A_backToSkillsBtn {
-    /* margin: 1vw -0.3vw 0 -0.3vw; */
-    /* border: 2px solid #563a9949 !important;     */
-    /* width: 4.4vw !important;   */
+#A_overviewPaperTitle {
+    text-indent: 0%;
+    text-align: center; 
+    color: var(--yellow1);
+}
+
+#A_geogebraDetailImage {
+    width: 16vw;
 }
 
 #A_backToSkillsBtn:hover {

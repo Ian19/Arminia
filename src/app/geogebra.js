@@ -171,14 +171,46 @@
             $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
             $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
 
+            // $("#A_geogebraDetailTitle").text(game.skills.selectedSkill.name);
+            $("#A_geogebraDetailTitle").html(game.skills.selectedSkill.formattedName);
+            $("#A_geogebraDetailQuote").text(game.skills.selectedSkill.quote);
+            $("#A_geogebraDetailQuotee").text(game.skills.selectedSkill.quotee);
+
+
+
+
             // Updates html elements on Overview page with new skill data if the applet has been reinjected
-            $("#A_geoDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
-            $("#A_geoDetailTitle").text(game.skills.selectedSkill.name);
-            $("#A_geoDifficulty").text(game.skills.selectedSkill.difficulty);
-            $("#A_geoDetailRequirement").text(game.skills.selectedSkill.requirement);
-            $("#A_geoDetailQuote").text(game.skills.selectedSkill.quote);
-            $("#A_geoDetailQuotee").text(game.skills.selectedSkill.quotee);
-            $("#A_geoDetailDefinition").text(game.skills.selectedSkill.overview);
+            // $("#A_geogebraDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            // The reason why object content doesn't refresh is that removing value from data attribute 
+            // doesn't clear document created by object element in the window. If the origin is different 
+            // (i.e. opening files in the window) you don't have access to contents of that window because 
+            // of security reason. So removing entire tag makes sense and recreate again whenever needed.
+
+            var object = document.getElementById("A_geogebraDetailImage");
+            object.setAttribute('data', game.skills.selectedSkill.thumbnailURL);
+
+            var clone = object.cloneNode(true);
+            var parent = object.parentNode;
+
+            parent.removeChild(object);
+            parent.appendChild(clone);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            //////////////////////////////  END OLD CLASSIC CODE  ////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////
+
+            
+            $("#A_geogebraThumbName").text(game.skills.selectedSkill.name);
+
+
+            $("#A_geogebraDifficulty").text(game.skills.selectedSkill.difficulty);
+            $("#A_geogebraDetailRequirement").text(game.skills.selectedSkill.requirement);
+
+
+            $("#A_geogebraDetailDefinition").text(game.skills.selectedSkill.overview);
 
             document.getElementById("A_geoDetailBody2").innerHTML = game.skills.selectedSkill.geoDetailBody;
 

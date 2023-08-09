@@ -1,12 +1,3 @@
-/* .A_GUIContainer {
-    position: absolute;
-    width: 42vw;
-    left: 2.6vw;
-    padding-top: 1%;
-    height: 100vh;
-    bottom: 0px;
-} */
-
 .A_titleContainer {
     position: relative;
     display: flex;
@@ -17,7 +8,7 @@
 }
 
 .A_title {
-    /* width: 15vw; */
+    width: 15vw;
     cursor: pointer;
     /* font-family: cinzel; */
 }
@@ -30,12 +21,12 @@
     margin-top: -1.4vh;
 }
 
-.A_header1 {
-    margin: calc(var(--vh, 1vh) * 3.7) 0 calc(var(--vh, 1vh) * 2.5);
+.A_header1 { 
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     font-variant-caps: normal;
     color: gold;
+    margin-bottom: calc(var(--vh, 1vh) * 1);
 }
 
 .A_reg {
@@ -47,6 +38,36 @@
     font-family: 'Cinzel Decorative';
     letter-spacing: -0.3em;
 }
+
+#A_64TetraViewSwish {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(var(--vh, 1vh) * 1);
+}
+
+#A_featureQuote {
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    text-align: center;
+    font-style: italic;
+    margin-top: 14px;
+    line-height: 1.4;
+    color: #acb0de;
+    /* color: var(--yellow1); */
+    /* color: lightyellow; */
+    /* color: white; */
+    margin: 0 2vw;
+} 
+
+#A_featureQuotee {
+    font-family: 'Verdana';
+    font-size: 0.65vw;
+    text-align: right;
+    font-style: italic;
+    line-height: 1.4;
+    color: #acb0de;
+    margin-bottom: -1vw;
+} 
 
 #A_pageBody {
     font-size: 0.7vw;

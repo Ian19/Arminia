@@ -21,6 +21,16 @@
 
         game.skills.equationData = [
             {
+
+                "name": "The Schwarzschild Proton",
+                // "name": "",
+                "formattedName": `                    
+                <span class="A_decor">T</span>
+                <span class="A_reg">he </span>
+                <span class="A_decor">S</span>
+                <span class="A_reg">chwarzschild </span>
+                <span class="A_decor">P</span>
+                <span class="A_reg">roton</span>`,
                 "id": 85,
                 "type": "paper",
                 "elementID": "A-schwarzsPPaper",
@@ -290,9 +300,11 @@
                 ],
 
                 "selected": false,
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
-                "stepsImage": "src/assets/images/papers/The_Schwarzschild_Proton10.svg",
-                "name": "The Schwarzschild Proton",
+                // "thumbnailURL": "src/assets/images/papers/thumbnails/thumbSchwarzschildProton.png",
+                "thumbnailURL": "src/assets/images/papers/thumbnails/thumbSchwarzschildProton2.svg",
+                // "thumbnailURL": "src/assets/images/papers/thumbnails/thumbSchwarzschildProton2.svg",
+                // "thumbnailURL": "",
+                "stepsImage": "src/assets/images/papers/The_Schwarzschild_Proton10.svg",                
                 "difficulty": "HARD  |  31 STEPS",
                 "unlocksSkills": [2],
                 "requirement": "(REQUIRES THE 64 TETRAHEDRON GRID)",
@@ -303,7 +315,7 @@
                 
                 <div>
                     Nassim Haramein's paper "The Schwarzschild Proton" presents a new solution for the mass of the proton that is much heavier than that which the standard model predicts. 
-                    While the standard proton has a mass 10 to the -24g, the proton that Nassim Haramein's equations describe have a mass of 10 to the 14g - a difference of 38 orders of magnitude.
+                    While the standard proton has a mass of ` + katex.renderToString("10^{-24} gm") +  `, the proton that Nassim Haramein's equations describe have a mass of ` + katex.renderToString("10^{14} gm") +  ` - a difference of 38 orders of magnitude.
                 </div>
                 <br>
                 <div>
@@ -323,9 +335,7 @@
                 </div>
                 <br>
 
-                <div style="text-align: center; color: var(--yellow1)">
-                    The Schwarzschild Proton Paper
-                </div>
+                <div id="A_overviewPaperTitle" >The Schwarzschild Proton Paper</div>
                 <br>
                 
                 <div class="A_geoMenu2">
@@ -334,9 +344,7 @@
                         <span class="A_geogebraButton" id="A_prevPage">PREVIOUS PAGE</span>
                     </div>
 
-                    <span class="A_pageInfo">
-                        Page <span id="A_pageNum"></span> of <span id="A_pageCount"></span>
-                    </span>  
+                    <span class="A_pageInfo">Page <span id="A_pageNum"></span> of <span id="A_pageCount"></span></span>  
 
                     <div class="A_btnContainer">
                         <span class="A_geogebraButton" id="A_nextPage">NEXT PAGE</span>

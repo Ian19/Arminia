@@ -22,6 +22,11 @@
         game.skills.skillData = [
             {
                 "name": "The Circle",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">C</span>
+                    <span class="A_reg">ircle</span>`,
                 "id": 0,
                 "d3Data": "#hexHoverCircle",
                 "selected": false,
@@ -58,7 +63,7 @@
 
                 }],
 
-                "thumbnailURL": "src/assets/images/skills/thumbnails/circle.svg",
+                "thumbnailURL": "src/assets/images/skills/thumbnails/circle2.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCircle2.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  3 STEPS",
@@ -68,9 +73,99 @@
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
                 // God is a circle whose centre is everywhere and whose circumference is nowhere' (Hermes Trismegistus)   
-                "geoDetailBody": `<span>Lorem ipsum</span><br><br>`
+                "geoDetailBody": `<div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                        quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                        necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                        expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                        fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                        distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                        fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                        veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                        dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                        nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                        pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                        explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                        Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                        porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                        excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                        vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                        illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                        impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                        laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                        tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                        aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                        laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                        voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                        delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                        suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                        consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                        aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                        officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                        corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                        repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                        ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                        repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                        natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                        ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                        sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                        nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                        consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                        modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                        alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                        voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                        saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                        ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                        culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                        voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                        Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                        officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                        <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                        laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                        doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                        consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                        quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                        dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                        repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                        consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                        laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                        praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                        possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                        molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                        voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                        voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                        laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                        sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                        culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                        suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                        omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                        tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                        fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                        maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                        consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                        quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                        doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                        dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                        deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                        assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                        qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                        iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                        tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                        aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                        Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                        assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                        beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                        temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                    </div>`
             }, {
                 "name": "The Vesica Piscis",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">V</span>
+                    <span class="A_reg">esica </span>
+                    <span class="A_decor">P</span>
+                    <span class="A_reg">iscis</span>`,
                 "id": 1,
                 "d3Data": "#hexHoverVesica",
                 "selected": false,
@@ -188,7 +283,90 @@
                 "overview": "The Vesica Piscis is formed by the intersection of two circles with the same radius where each circle's center lies on the circumference of the other.",
                 "quote": '"...the geometric image through which light was created."',
                 "quotee": "Drunvalo Melchizedek",
-                "geoDetailBody": `<span>Lorem ipsum</span><br><br>`
+                "geoDetailBody": `<div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                        quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                        necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                        expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                        fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                        distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                        fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                        veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                        dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                        nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                        pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                        explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                        Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                        porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                        excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                        vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                        illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                        impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                        laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                        tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                        aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                        laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                        voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                        delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                        suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                        consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                        aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                        officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                        corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                        repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                        ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                        repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                        natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                        ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                        sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                        nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                        consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                        modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                        alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                        voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                        saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                        ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                        culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                        voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                        Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                        officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                        <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                        laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                        doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                        consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                        quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                        dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                        repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                        consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                        laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                        praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                        possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                        molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                        voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                        voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                        laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                        sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                        culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                        suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                        omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                        tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                        fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                        maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                        consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                        quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                        doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                        dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                        deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                        assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                        qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                        iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                        tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                        aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                        Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                        assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                        beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                        temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                    </div>`
             },
             {
                 "name": "Three Universal Roots 1",
@@ -302,6 +480,11 @@
                 "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             }, {
                 "name": "The Triquetra",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">riquetra</span>`,
                 "id": 9,
                 "d3Data": "#hexHoverTriquetra",
                 "status": "locked",
@@ -427,11 +610,102 @@
                 "unlocksSkills": ["The Genesis Pattern"],
                 "overview": "The Triquetra consists of three mutually intersecting vesica piscis.",
                 // "overview": "The Triquetra consists of three mutually intersecting vesica piscis. The central region common to all three is a Reuleaux triangle.",
-                "quote": '"...At that moment a huge amount of information was created."',
+                "quote": '"At that moment a huge amount of information was created."',
                 "quotee": "Drunvalo Melchizedek",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                        quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                        necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                        expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                        fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                        distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                        fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                        veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                        dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                        nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                        pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                        explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                        Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                        porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                        excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                        vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                        illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                        impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                        laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                        tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                        aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                        laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                        voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                        delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                        suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                        consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                        aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                        officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                        corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                        repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                        ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                        repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                        natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                        ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                        sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                        nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                        consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                        modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                        alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                        voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                        saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                        ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                        culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                        voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                        Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                        officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                        <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                        laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                        doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                        consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                        quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                        dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                        repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                        consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                        laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                        praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                        possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                        molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                        voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                        voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                        laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                        sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                        culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                        suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                        omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                        tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                        fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                        maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                        consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                        quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                        doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                        dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                        deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                        assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                        qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                        iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                        tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                        aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                        Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                        assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                        beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                        temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                    </div>`
             }, {
                 "name": "The Genesis Pattern",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">G</span>
+                    <span class="A_reg">enesis </span>
+                    <span class="A_decor">P</span>
+                    <span class="A_reg">attern</span>`,
                 "id": 10,
                 "d3Data": "#hexHoverGenesis",
                 "status": "locked",
@@ -551,10 +825,101 @@
                 "overview": "Consisting of 6 equal circles intersecting the circumference of a similar central circle. This represents the first motions of creation.",
                 "quote": '"...and He rested on the seventh day from all his work."',
                 "quotee": "Genesis 2:2",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            },
-            {
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+            </div>`
+            }, {
                 "name": "The Egg of Life",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">E</span>
+                    <span class="A_reg">gg </span>
+                    <span class="A_decor">O</span>
+                    <span class="A_reg">f </span>
+                    <span class="A_decor">L</span>
+                    <span class="A_reg">ife</span>`,
                 "id": 11,
                 "d3Data": "#hexHoverEgg",
                 "status": "locked",
@@ -568,103 +933,103 @@
                 "elements": [],
 
                 "steps": [
-                    
-                {
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point H, Intersect(d, e, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point H at the upper intersection of Circles B and C.",
 
-                }, {
+                    {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point H, Intersect(d, e, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point H at the upper intersection of Circles B and C.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point I, Intersect(e, f, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point I at the left intersection of Circles C and D.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point I, Intersect(e, f, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point I at the left intersection of Circles C and D.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point J, Intersect(f, g, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point J at the lower intersection of Circles D and E.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point J, Intersect(f, g, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point J at the lower intersection of Circles D and E.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point K, Intersect(g, h, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point K at the lower intersection of Circles E and F.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point K, Intersect(g, h, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point K at the lower intersection of Circles E and F.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point L, Intersect(h, k, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point L at the right intersection of Circles G and F.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point L, Intersect(h, k, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point L at the right intersection of Circles G and F.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["point M, Intersect(d, k, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point M at the UPPER intersection of Circles B and G.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["point M, Intersect(d, k, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point M at the UPPER intersection of Circles B and G.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle p, Circle(H, B)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center H and radius HB.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle p, Circle(H, B)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center H and radius HB.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle q, Circle(I, C)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center I and radius IC.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle q, Circle(I, C)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center I and radius IC.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle r, Circle(J, D)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center J and radius JD.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle r, Circle(J, D)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center J and radius JD.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle s, Circle(K, E)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center K and radius KE.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle s, Circle(K, E)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center K and radius KE.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle t, Circle(L, G)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center L and radius LG.",
+                    }, {
 
-                }, {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle t, Circle(L, G)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center L and radius LG.",
 
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 2.4,
-                    "correctStep": ["circle c_1, Circle(M, B)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center M and radius MB."
+                    }, {
 
-                }],
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 2.4,
+                        "correctStep": ["circle c_1, Circle(M, B)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center M and radius MB."
+
+                    }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/eggOfLife.svg",
                 "stepsImage": "src/assets/images/skills/details/detailEgg5.svg",
@@ -675,9 +1040,103 @@
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+            </div>`
             }, {
                 "name": "Unsealed Flower Of Life",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">U</span>
+                    <span class="A_reg">nsealed </span>
+                    <span class="A_decor">F</span>
+                    <span class="A_reg">lower </span>
+                    <span class="A_decor">O</span>
+                    <span class="A_reg">f </span>
+                    <span class="A_decor">L</span>
+                    <span class="A_reg">ife</span>`,
                 "id": 12,
                 "d3Data": "#hexHoverFOLUnseal",
                 "status": "locked",
@@ -692,7 +1151,7 @@
                 "steps": [{
 
                     "type": "combo",
-                    "zoomScale": 1.5, 
+                    "zoomScale": 1.5,
                     "styleObjects": ["d_5"],
                     "correctStep": ["circle d_5, Circle(A, H_1)"],
                     "stepsText": "Select the Circle:Center & Radius tool and draw a Circle with center A and radius AH<sub>1</sub>. Make sure the line thickness is set to 3.",
@@ -1005,9 +1464,103 @@
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                </div>`
             }, {
                 "name": "Sealed Flower Of Life",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">S</span>
+                    <span class="A_reg">ealed </span>
+                    <span class="A_decor">F</span>
+                    <span class="A_reg">lower </span>
+                    <span class="A_decor">O</span>
+                    <span class="A_reg">f </span>
+                    <span class="A_decor">L</span>
+                    <span class="A_reg">ife</span>`,
                 "id": 13,
                 "d3Data": "#hexHoverFOLSeal",
                 "status": "locked",
@@ -1039,9 +1592,103 @@
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                </div>`
             }, {
                 "name": "Completed Flower of Life",
+                "formattedName": `                    
+                    <span class="A_decor">T</span>
+                    <span class="A_reg">he </span>
+                    <span class="A_decor">C</span>
+                    <span class="A_reg">ompleted </span>
+                    <span class="A_decor">F</span>
+                    <span class="A_reg">lower </span>
+                    <span class="A_decor">O</span>
+                    <span class="A_reg">f </span>
+                    <span class="A_decor">L</span>
+                    <span class="A_reg">ife</span>`,
                 "id": 14,
                 "d3Data": "#hexHoverFullFOL",
                 "status": "locked",
@@ -1053,698 +1700,698 @@
                 "elements": [],
 
                 "steps": [
-                    
-                {
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point N, Intersect(d, p, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point N at the upper intersection of Circles H and M.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point O, Intersect(e, p, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point O at the left intersection of Circles C and H.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point P, Intersect(f, q, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point P at the left intersection of Circles D and j.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point Q, Intersect(g, r, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point Q at the lower intersection of Circles J and K.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point R, Intersect(h, s, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point R at the right intersection of Circles F and K.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point S, Intersect(k, t, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point S at the left intersection of Circles M and G.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle d_1, Circle(N, B)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center N and radius NB.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle e_1, Circle(O, C)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center O and radius OC.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle f_1, Circle(P, D)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center P and radius PD.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle g_1, Circle(Q, E)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center Q and radius QE.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle h_1, Circle(R, F)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center R and radius RF.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle k_1, Circle(S, G)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center S and radius SG.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point T, Intersect(p, d_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point T at the upper intersection of Circles H and N.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point U, Intersect(p, e_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point U at the upper intersection of Circles O and H.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point V, Intersect(q, e_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point V at the left intersection of Circles O and I.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point W, Intersect(q, f_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point W at the left intersection of Circles I and P.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point Z, Intersect(r, f_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point Z at the lower intersection of Circles P and J.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point A_1, Intersect(r, g_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point A<sub>1</sub> at the lower intersection of Circles J and Q.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point B_1, Intersect(s, g_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point B<sub>1</sub> at the lower intersection of Circles Q and K.",
-
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point C_1, Intersect(s, h_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point C<sub>1</sub> at the lower intersection of Circles K and R.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point D_1, Intersect(t, h_1, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point D<sub>1</sub> at the right intersection of Circles L and R.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point E_1, Intersect(t, k_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point E<sub>1</sub> at the right intersection of Circles S and L.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point F_1, Intersect(c_1, k_1, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point F<sub>1</sub> at the upper intersection of Circles M and S.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point G_1, Intersect(c_1, d_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point G<sub>1</sub> at the upper intersection of Circles N and M.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle p_1, Circle(T, N)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center T and radius TN.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle q_1, Circle(U, H)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center U and radius UH.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle r_1, Circle(V, O)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center V and radius VO.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle s_1, Circle(W, I)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center W and radius WI.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle t_1, Circle(Z, J)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center Z and radius ZJ.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle c_2, Circle(A_1, Q)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center A<sub>1</sub> and radius A<sub>1</sub>Q.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle d_2, Circle(B_1, Q)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center B<sub>1</sub> and radius B<sub>1</sub>Q.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle e_2, Circle(C_1, K)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center C<sub>1</sub> and radius C<sub>1</sub>K.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle f_2, Circle(D_1, L)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center D<sub>1</sub> and radius D<sub>1</sub>L.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle g_2, Circle(E_1, S)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center E<sub>1</sub> and radius E<sub>1</sub>S.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle h_2, Circle(F_1, M)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center F<sub>1</sub> and radius F<sub>1</sub>M.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle k_2, Circle(G_1, N)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center G<sub>1</sub> and radius G<sub>1</sub>N.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point H_1, Intersect(d_1, p_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point H<sub>1</sub> at the upper intersection of Circles G<sub>1</sub> and T.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point I_1, Intersect(p_1, q_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point I<sub>1</sub> at the upper intersection of Circles U and T.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point J_1, Intersect(e_1, q_1, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point J<sub>1</sub> at the left intersection of Circles U and O.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point K_1, Intersect(r_1, s_1, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point K<sub>1</sub> at the left intersection of Circles V and W.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point L_1, Intersect(f_1, s_1, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point L<sub>1</sub> at the left intersection of Circles P and Z.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point M_1, Intersect(t_1, c_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point M<sub>1</sub> at the lower intersection of Circles Z and A<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point N_1, Intersect(g_1, c_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point N<sub>1</sub> at the lower intersection of Circles A<sub>1</sub> and B<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point O_1, Intersect(d_2, e_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point O<sub>1</sub> at the lower intersection of Circles B<sub>1</sub> and C<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point P_1, Intersect(h_1, e_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point P<sub>1</sub> at the lower intersection of Circles C<sub>1</sub> and D<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point Q_1, Intersect(f_2, g_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point Q<sub>1</sub> at the right intersection of Circles D<sub>1</sub> and E<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point R_1, Intersect(k_1, g_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point R<sub>1</sub> at the upper intersection of Circles E<sub>1</sub> and F<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point S_1, Intersect(h_2, k_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point S<sub>1</sub> at the upper intersection of Circles F<sub>1</sub> and G<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle p_2, Circle(H_1, N)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center H<sub>1</sub> and radius H<sub>1</sub>N.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle q_2, Circle(I_1, T)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>1</sub> and radius I<sub>1</sub>T.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle r_2, Circle(J_1, U)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center J<sub>1</sub> and radius J<sub>1</sub>U.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle s_2, Circle(K_1, V)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center K<sub>1</sub> and radius K<sub>1</sub>V.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle t_2, Circle(L_1, P)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center L<sub>1</sub> and radius L<sub>1</sub>P.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle c_3, Circle(M_1, A_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center M<sub>1</sub> and radius M<sub>1</sub>A<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle d_3, Circle(N_1, Q)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center N<sub>1</sub> and radius N<sub>1</sub>Q.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle e_3, Circle(O_1, B_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center O<sub>1</sub> and radius O<sub>1</sub>B<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle f_3, Circle(P_1, R)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center P<sub>1</sub> and radius P<sub>1</sub>R.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle g_3, Circle(Q_1, E_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center Q<sub>1</sub> and radius Q<sub>1</sub>E<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle h_3, Circle(R_1, S)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center R<sub>1</sub> and radius R<sub>1</sub>S.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle k_3, Circle(S_1, G_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center S<sub>1</sub> and radius S<sub>1</sub>G<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point T_1, Intersect(p_1, p_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point T<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and H<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point U_1, Intersect(q_1, q_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point U<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and J<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point V_1, Intersect(r_1, r_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point V<sub>1</sub> at the upper intersection of Circles K<sub>1</sub> and J<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point W_1, Intersect(s_1, s_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point W<sub>1</sub> at the lower intersection of Circles K<sub>1</sub> and L<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point Z_1, Intersect(t_1, t_2, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point Z<sub>1</sub> at the lower intersection of Circles L<sub>1</sub> and M<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point A_2, Intersect(c_2, c_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point A<sub>2</sub> at the lower intersection of Circles M<sub>1</sub> and N<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point B_2, Intersect(d_2, d_3, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point B<sub>2</sub> at the lower intersection of Circles N<sub>1</sub> and O<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point C_2, Intersect(e_2, e_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point C<sub>2</sub> at the lower intersection of Circles O<sub>1</sub> and P<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point D_2, Intersect(f_2, f_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point D<sub>2</sub> at the lower intersection of Circles P<sub>1</sub> and Q<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point E_2, Intersect(g_2, g_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point E<sub>2</sub> at the upper intersection of Circles R<sub>1</sub> and Q<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point F_2, Intersect(h_2, h_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point F<sub>2</sub> at the upper intersection of Circles S<sub>1</sub> and R<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point G_2, Intersect(k_2, p_2, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point G<sub>2</sub> at the upper intersection of Circles H<sub>1</sub> and S<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle p_3, Circle(T_1, H_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center T<sub>1</sub> and radius T<sub>1</sub>H<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle q_3, Circle(U_1, U)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center U<sub>1</sub> and radius U<sub>1</sub>U.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle r_3, Circle(V_1, V)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center V<sub>1</sub> and radius V<sub>1</sub>V.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle s_3, Circle(W_1, W)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center W<sub>1</sub> and radius W<sub>1</sub>W.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle t_3, Circle(Z_1, Z)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center Z<sub>1</sub> and radius Z<sub>1</sub>Z.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle c_4, Circle(A_2, N_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center A<sub>2</sub> and radius A<sub>2</sub>N<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle d_4, Circle(B_2, N_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center B<sub>2</sub> and radius B<sub>2</sub>N<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle e_4, Circle(C_2, C_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center C<sub>2</sub> and radius C<sub>2</sub>C<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle f_4, Circle(D_2, D_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center D<sub>2</sub> and radius D<sub>2</sub>D<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle g_4, Circle(E_2, E_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center E<sub>2</sub> and radius E<sub>2</sub>E<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle h_4, Circle(F_2, F_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center F<sub>2</sub> and radius F<sub>2</sub>F<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle k_4, Circle(G_2, H_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center G<sub>2</sub> and radius G<sub>2</sub>H<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point H_2, Intersect(p_2, p_3, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point H<sub>2</sub> at the upper intersection of Circles T<sub>1</sub> and G<sub>2</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point I_2, Intersect(r_2, q_3, 2)"],
-                    "stepsText": "Select the Intersect tool and create Point I<sub>2</sub> at the upper intersection of Circles V<sub>1</sub> and U<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point J_2, Intersect(t_2, s_3, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point J<sub>2</sub> at the lower intersection of Circles W<sub>1</sub> and Z<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point K_2, Intersect(d_3, c_4, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point K<sub>2</sub> at the lower intersection of Circles A<sub>2</sub> and B<sub>2</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point L_2, Intersect(f_3, e_4, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point L<sub>2</sub> at the lower intersection of Circles C<sub>2</sub> and D<sub>2</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["point M_2, Intersect(h_3, g_4, 1)"],
-                    "stepsText": "Select the Intersect tool and create Point M<sub>2</sub> at the upper intersection of Circles F<sub>2</sub> and E<sub>2</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle p_4, Circle(H_2, H_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center H<sub>2</sub> and radius H<sub>2</sub>H<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle q_4, Circle(I_2, J_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>2</sub> and radius I<sub>2</sub>J<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle r_4, Circle(J_2, L_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center J<sub>2</sub> and radius J<sub>2</sub>L<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle s_4, Circle(K_2, N_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center K<sub>2</sub> and radius K<sub>2</sub>N<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle t_4, Circle(L_2, P_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center L<sub>2</sub> and radius L<sub>2</sub>P<sub>1</sub>.",
-                }, {
-
-                    "type": "construction",
-                    "styleObjects": [],
-                    "zoomScale": 4.8,
-                    "correctStep": ["circle c_5, Circle(M_2, R_1)"],
-                    "stepsText": "Select the Circle with Center tool and draw a Circle with center M<sub>2</sub> and radius M<sub>2</sub>R<sub>1</sub>."
-                }],
+
+                    {
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point N, Intersect(d, p, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point N at the upper intersection of Circles H and M.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point O, Intersect(e, p, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point O at the left intersection of Circles C and H.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point P, Intersect(f, q, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point P at the left intersection of Circles D and j.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point Q, Intersect(g, r, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point Q at the lower intersection of Circles J and K.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point R, Intersect(h, s, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point R at the right intersection of Circles F and K.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point S, Intersect(k, t, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point S at the left intersection of Circles M and G.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle d_1, Circle(N, B)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center N and radius NB.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle e_1, Circle(O, C)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center O and radius OC.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle f_1, Circle(P, D)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center P and radius PD.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle g_1, Circle(Q, E)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center Q and radius QE.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle h_1, Circle(R, F)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center R and radius RF.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle k_1, Circle(S, G)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center S and radius SG.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point T, Intersect(p, d_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point T at the upper intersection of Circles H and N.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point U, Intersect(p, e_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point U at the upper intersection of Circles O and H.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point V, Intersect(q, e_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point V at the left intersection of Circles O and I.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point W, Intersect(q, f_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point W at the left intersection of Circles I and P.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point Z, Intersect(r, f_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point Z at the lower intersection of Circles P and J.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point A_1, Intersect(r, g_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point A<sub>1</sub> at the lower intersection of Circles J and Q.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point B_1, Intersect(s, g_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point B<sub>1</sub> at the lower intersection of Circles Q and K.",
+
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point C_1, Intersect(s, h_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point C<sub>1</sub> at the lower intersection of Circles K and R.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point D_1, Intersect(t, h_1, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point D<sub>1</sub> at the right intersection of Circles L and R.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point E_1, Intersect(t, k_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point E<sub>1</sub> at the right intersection of Circles S and L.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point F_1, Intersect(c_1, k_1, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point F<sub>1</sub> at the upper intersection of Circles M and S.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point G_1, Intersect(c_1, d_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point G<sub>1</sub> at the upper intersection of Circles N and M.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle p_1, Circle(T, N)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center T and radius TN.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle q_1, Circle(U, H)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center U and radius UH.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle r_1, Circle(V, O)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center V and radius VO.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle s_1, Circle(W, I)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center W and radius WI.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle t_1, Circle(Z, J)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center Z and radius ZJ.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle c_2, Circle(A_1, Q)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center A<sub>1</sub> and radius A<sub>1</sub>Q.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle d_2, Circle(B_1, Q)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center B<sub>1</sub> and radius B<sub>1</sub>Q.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle e_2, Circle(C_1, K)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center C<sub>1</sub> and radius C<sub>1</sub>K.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle f_2, Circle(D_1, L)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center D<sub>1</sub> and radius D<sub>1</sub>L.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle g_2, Circle(E_1, S)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center E<sub>1</sub> and radius E<sub>1</sub>S.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle h_2, Circle(F_1, M)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center F<sub>1</sub> and radius F<sub>1</sub>M.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle k_2, Circle(G_1, N)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center G<sub>1</sub> and radius G<sub>1</sub>N.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point H_1, Intersect(d_1, p_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point H<sub>1</sub> at the upper intersection of Circles G<sub>1</sub> and T.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point I_1, Intersect(p_1, q_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point I<sub>1</sub> at the upper intersection of Circles U and T.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point J_1, Intersect(e_1, q_1, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point J<sub>1</sub> at the left intersection of Circles U and O.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point K_1, Intersect(r_1, s_1, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point K<sub>1</sub> at the left intersection of Circles V and W.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point L_1, Intersect(f_1, s_1, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point L<sub>1</sub> at the left intersection of Circles P and Z.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point M_1, Intersect(t_1, c_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point M<sub>1</sub> at the lower intersection of Circles Z and A<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point N_1, Intersect(g_1, c_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point N<sub>1</sub> at the lower intersection of Circles A<sub>1</sub> and B<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point O_1, Intersect(d_2, e_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point O<sub>1</sub> at the lower intersection of Circles B<sub>1</sub> and C<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point P_1, Intersect(h_1, e_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point P<sub>1</sub> at the lower intersection of Circles C<sub>1</sub> and D<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point Q_1, Intersect(f_2, g_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point Q<sub>1</sub> at the right intersection of Circles D<sub>1</sub> and E<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point R_1, Intersect(k_1, g_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point R<sub>1</sub> at the upper intersection of Circles E<sub>1</sub> and F<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point S_1, Intersect(h_2, k_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point S<sub>1</sub> at the upper intersection of Circles F<sub>1</sub> and G<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle p_2, Circle(H_1, N)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center H<sub>1</sub> and radius H<sub>1</sub>N.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle q_2, Circle(I_1, T)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>1</sub> and radius I<sub>1</sub>T.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle r_2, Circle(J_1, U)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center J<sub>1</sub> and radius J<sub>1</sub>U.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle s_2, Circle(K_1, V)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center K<sub>1</sub> and radius K<sub>1</sub>V.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle t_2, Circle(L_1, P)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center L<sub>1</sub> and radius L<sub>1</sub>P.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle c_3, Circle(M_1, A_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center M<sub>1</sub> and radius M<sub>1</sub>A<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle d_3, Circle(N_1, Q)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center N<sub>1</sub> and radius N<sub>1</sub>Q.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle e_3, Circle(O_1, B_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center O<sub>1</sub> and radius O<sub>1</sub>B<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle f_3, Circle(P_1, R)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center P<sub>1</sub> and radius P<sub>1</sub>R.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle g_3, Circle(Q_1, E_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center Q<sub>1</sub> and radius Q<sub>1</sub>E<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle h_3, Circle(R_1, S)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center R<sub>1</sub> and radius R<sub>1</sub>S.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle k_3, Circle(S_1, G_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center S<sub>1</sub> and radius S<sub>1</sub>G<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point T_1, Intersect(p_1, p_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point T<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and H<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point U_1, Intersect(q_1, q_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point U<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and J<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point V_1, Intersect(r_1, r_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point V<sub>1</sub> at the upper intersection of Circles K<sub>1</sub> and J<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point W_1, Intersect(s_1, s_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point W<sub>1</sub> at the lower intersection of Circles K<sub>1</sub> and L<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point Z_1, Intersect(t_1, t_2, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point Z<sub>1</sub> at the lower intersection of Circles L<sub>1</sub> and M<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point A_2, Intersect(c_2, c_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point A<sub>2</sub> at the lower intersection of Circles M<sub>1</sub> and N<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point B_2, Intersect(d_2, d_3, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point B<sub>2</sub> at the lower intersection of Circles N<sub>1</sub> and O<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point C_2, Intersect(e_2, e_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point C<sub>2</sub> at the lower intersection of Circles O<sub>1</sub> and P<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point D_2, Intersect(f_2, f_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point D<sub>2</sub> at the lower intersection of Circles P<sub>1</sub> and Q<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point E_2, Intersect(g_2, g_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point E<sub>2</sub> at the upper intersection of Circles R<sub>1</sub> and Q<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point F_2, Intersect(h_2, h_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point F<sub>2</sub> at the upper intersection of Circles S<sub>1</sub> and R<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point G_2, Intersect(k_2, p_2, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point G<sub>2</sub> at the upper intersection of Circles H<sub>1</sub> and S<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle p_3, Circle(T_1, H_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center T<sub>1</sub> and radius T<sub>1</sub>H<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle q_3, Circle(U_1, U)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center U<sub>1</sub> and radius U<sub>1</sub>U.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle r_3, Circle(V_1, V)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center V<sub>1</sub> and radius V<sub>1</sub>V.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle s_3, Circle(W_1, W)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center W<sub>1</sub> and radius W<sub>1</sub>W.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle t_3, Circle(Z_1, Z)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center Z<sub>1</sub> and radius Z<sub>1</sub>Z.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle c_4, Circle(A_2, N_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center A<sub>2</sub> and radius A<sub>2</sub>N<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle d_4, Circle(B_2, N_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center B<sub>2</sub> and radius B<sub>2</sub>N<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle e_4, Circle(C_2, C_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center C<sub>2</sub> and radius C<sub>2</sub>C<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle f_4, Circle(D_2, D_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center D<sub>2</sub> and radius D<sub>2</sub>D<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle g_4, Circle(E_2, E_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center E<sub>2</sub> and radius E<sub>2</sub>E<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle h_4, Circle(F_2, F_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center F<sub>2</sub> and radius F<sub>2</sub>F<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle k_4, Circle(G_2, H_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center G<sub>2</sub> and radius G<sub>2</sub>H<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point H_2, Intersect(p_2, p_3, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point H<sub>2</sub> at the upper intersection of Circles T<sub>1</sub> and G<sub>2</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point I_2, Intersect(r_2, q_3, 2)"],
+                        "stepsText": "Select the Intersect tool and create Point I<sub>2</sub> at the upper intersection of Circles V<sub>1</sub> and U<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point J_2, Intersect(t_2, s_3, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point J<sub>2</sub> at the lower intersection of Circles W<sub>1</sub> and Z<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point K_2, Intersect(d_3, c_4, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point K<sub>2</sub> at the lower intersection of Circles A<sub>2</sub> and B<sub>2</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point L_2, Intersect(f_3, e_4, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point L<sub>2</sub> at the lower intersection of Circles C<sub>2</sub> and D<sub>2</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["point M_2, Intersect(h_3, g_4, 1)"],
+                        "stepsText": "Select the Intersect tool and create Point M<sub>2</sub> at the upper intersection of Circles F<sub>2</sub> and E<sub>2</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle p_4, Circle(H_2, H_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center H<sub>2</sub> and radius H<sub>2</sub>H<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle q_4, Circle(I_2, J_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>2</sub> and radius I<sub>2</sub>J<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle r_4, Circle(J_2, L_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center J<sub>2</sub> and radius J<sub>2</sub>L<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle s_4, Circle(K_2, N_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center K<sub>2</sub> and radius K<sub>2</sub>N<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle t_4, Circle(L_2, P_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center L<sub>2</sub> and radius L<sub>2</sub>P<sub>1</sub>.",
+                    }, {
+
+                        "type": "construction",
+                        "styleObjects": [],
+                        "zoomScale": 4.8,
+                        "correctStep": ["circle c_5, Circle(M_2, R_1)"],
+                        "stepsText": "Select the Circle with Center tool and draw a Circle with center M<sub>2</sub> and radius M<sub>2</sub>R<sub>1</sub>."
+                    }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/thumbCompletedFOL.svg",
                 "stepsImage": "src/assets/images/skills/details/detailCompletedFOL5.svg",
@@ -1755,9 +2402,101 @@
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                </div>`
             }, {
                 "name": "Fruit of Life",
+                "formattedName": `                    
+                <span class="A_decor">T</span>
+                <span class="A_reg">he </span>
+                <span class="A_decor">F</span>
+                <span class="A_reg">fruit </span>
+                <span class="A_decor">O</span>
+                <span class="A_reg">f </span>
+                <span class="A_decor">L</span>
+                <span class="A_reg">ife</span>`,
                 "id": 15,
                 "d3Data": "#hexHoverFruitA",
                 "status": "locked",
@@ -1789,7 +2528,90 @@
                 "overview": "A circle is a set of points on a plane that are equidistant from it's central point.",
                 "quote": '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 "quotee": "Proclus",
-                "geoDetailBody": `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
+                "geoDetailBody": `<div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum blanditiis incidunt, odit
+                quia beatae facilis assumenda ea voluptate quasi at recusandae quas rerum doloribus harum
+                necessitatibus vel! Porro accusantium rerum sed quaerat numquam sapiente molestias? Nam pariatur
+                expedita molestias officia sed ipsum animi. Ad saepe alias reiciendis ducimus quo perferendis
+                fugiat vel vero sunt laborum molestias rem reprehenderit suscipit quibusdam dicta voluptatibus
+                distinctio quia, recusandae amet velit, consectetur omnis iure aliquid! Deleniti doloremque
+                fugit nisi, minus iste dicta, ut totam mollitia tempora eius soluta voluptatem accusantium
+                veniam ullam facilis enim molestias in, voluptate officia aliquid consequatur facere?<br><br>Est
+                dicta placeat cum consequuntur cupiditate dolores, sapiente minima voluptates exercitationem et
+                nulla odio magni in sit aliquam nihil! Vero perspiciatis eos dolore ullam necessitatibus
+                pariatur quaerat facere obcaecati. Eum dicta corporis voluptas quia harum in facere tenetur
+                explicabo fuga eaque, rerum magnam omnis vitae tempore? Animi inventore aspernatur voluptas?
+                Tenetur exercitationem, velit hic eos obcaecati quidem, repudiandae nulla corporis nesciunt
+                porro ipsam? <br><br>Ab cum reprehenderit, ipsum pariatur illum officiis doloribus cumque
+                excepturi consequatur sunt maxime veniam deleniti totam earum quisquam ipsa voluptatibus culpa
+                vitae! Incidunt debitis suscipit quos impedit doloremque odit! Explicabo voluptas, ipsa numquam
+                illum voluptatem quam necessitatibus amet deleniti ratione quos recusandae iure quasi doloremque
+                impedit dolor id odit obcaecati nostrum vero pariatur tempora dignissimos eligendi! Id
+                laudantium recusandae neque quasi vitae! Magni possimus doloremque deleniti, quis, itaque
+                tempora optio placeat, repellat vero eligendi modi soluta nobis iusto voluptatibus excepturi non
+                aliquam pariatur! <br><br>Alias dolores hic, tempore, facilis nobis dolorum optio a pariatur
+                laboriosam ratione dignissimos voluptates rerum neque debitis fugit corporis doloremque vel eius
+                voluptatem veniam minus veritatis delectus iste molestias? Vero, assumenda. Necessitatibus
+                delectus sequi autem similique sint ipsam deleniti fugit ex repellendus explicabo consequatur,
+                suscipit quod possimus nulla quam veniam incidunt perspiciatis. Laboriosam nisi eius, asperiores
+                consectetur, reiciendis sunt a cum autem sapiente doloribus quos laudantium quaerat neque
+                aspernatur earum velit expedita tempore beatae quam ullam animi cumque? <br><br>Porro, aperiam
+                officiis ullam similique repudiandae exercitationem quis, suscipit quam laborum, tempore sunt
+                corrupti itaque facere hic sequi! Libero placeat sequi reprehenderit, provident veritatis
+                repellendus dolorum eaque neque quidem nemo est quaerat voluptatum numquam perferendis dolorem
+                ea distinctio earum ipsa voluptates itaque assumenda quia deleniti rem temporibus. Quo
+                repellendus veritatis voluptas amet, dicta quae quis facere corrupti ipsam accusamus reiciendis
+                natus, cumque quia eos, distinctio quas esse autem maxime? Voluptas quaerat animi eius similique
+                ea ad illo tenetur maxime sequi rem adipisci soluta obcaecati excepturi voluptates quos dolores
+                sit, labore, deserunt error! Eos ullam nemo aliquid est, impedit voluptatem harum vitae eaque
+                nesciunt iure facere perferendis maiores, quasi error nam incidunt corrupti neque enim
+                consequatur eius amet, deserunt nostrum ipsum id? Maiores, neque. <br><br>Nam aliquid quaerat
+                modi ducimus ad. Impedit ea, sit sunt debitis atque sapiente. Inventore ut tempora illum at
+                alias similique voluptatibus sint ad delectus amet, optio dolores, eaque tenetur dignissimos
+                voluptatum dolore accusamus animi unde praesentium aspernatur? Quasi numquam, cumque obcaecati
+                saepe dignissimos quis voluptas atque aliquam porro temporibus id est quisquam vero et officia
+                ad a voluptate aut. Delectus, harum maiores alias ipsum est placeat veniam distinctio aliquid
+                culpa. Dolorum laudantium fugit ea qui quidem magnam aperiam est hic vero, autem incidunt
+                voluptates modi totam et tempore sapiente blanditiis praesentium laborum nobis fuga numquam ad.
+                Soluta expedita nesciunt sed porro alias nobis, commodi a. Sapiente ea nulla inventore vel
+                officiis odit saepe dignissimos rem ipsum minima possimus voluptatem provident, est deleniti?
+                <br><br>Aliquid dolores ea dolor consequuntur hic, debitis dignissimos distinctio nam tempora
+                laborum, tempore, non quae et voluptas natus id dicta corrupti. Unde blanditiis quibusdam quasi
+                doloremque dignissimos corporis, ut nobis veritatis sapiente, nemo hic? Perferendis optio
+                consectetur modi, eveniet placeat magni provident, nam in id odit nihil dolorum cum iusto
+                quaerat dolore molestias non, ratione expedita libero. Perspiciatis quos mollitia vel
+                dignissimos, exercitationem, animi necessitatibus temporibus omnis consequuntur distinctio,
+                repudiandae itaque dolorem aut asperiores at. Beatae, cumque? Odio nam laboriosam iure natus
+                consequatur. Incidunt quaerat doloribus illum repudiandae veniam suscipit cumque alias
+                laudantium animi quia! Nam explicabo nostrum dignissimos amet libero. Provident dolor
+                praesentium perspiciatis nihil voluptatem error deserunt blanditiis saepe, expedita quibusdam
+                possimus omnis dolorum, illo at eius dignissimos reiciendis hic aperiam cumque ut dolore odit
+                molestias numquam. Ipsam soluta explicabo alias molestias repellendus quo odit modi esse
+                voluptatibus tempora consequatur ipsa temporibus ipsum sit eligendi assumenda et, ex commodi
+                voluptate incidunt facilis veritatis magni delectus veniam. <br><br>Eligendi rerum quasi eum
+                laudantium, a fugit minima nemo unde mollitia voluptate tenetur! Fugit neque, explicabo nemo,
+                sed, minus totam odit earum rem natus quo facilis. Minima magnam nostrum asperiores debitis
+                culpa commodi voluptas perspiciatis minus! Non dicta cum dolore praesentium esse excepturi nulla
+                suscipit quo temporibus vel nisi, tempora aliquid iste? Veritatis ab asperiores perferendis sed
+                omnis voluptate, neque minus maxime numquam praesentium iusto eum tenetur architecto similique
+                tempora labore soluta. Aut commodi, voluptates itaque tempore cupiditate suscipit odio eveniet
+                fugit. Unde totam suscipit dolor perspiciatis ab! Assumenda quae tempore voluptatibus deserunt
+                maxime debitis non repellat nemo reiciendis at? Minus tempore animi pariatur molestiae
+                consequatur culpa ipsum. Commodi possimus iste saepe veritatis dolorem itaque, deleniti
+                quibusdam eos impedit omnis veniam tenetur. Saepe eos ullam totam, corporis nostrum voluptatum
+                doloremque nihil iure ea aut, excepturi sapiente neque debitis error repellat, enim culpa
+                dolorum sint ipsum esse? Corrupti impedit necessitatibus aperiam maxime provident dolore ab
+                deleniti nostrum blanditiis quo ratione in illum commodi incidunt dicta nobis similique hic
+                assumenda, officiis quibusdam expedita? <br><br>Voluptatum, delectus quam accusamus similique in
+                qui. Ipsam vero, a maiores fugit fugiat aspernatur, vitae necessitatibus unde maxime laborum in
+                iusto quos cum numquam, illum repudiandae omnis. Rem in sequi delectus officiis temporibus
+                tenetur quas dicta repudiandae aperiam quis neque sed deserunt, nesciunt, cum quos commodi
+                aliquid illum non repellendus voluptatum quae, debitis expedita distinctio. Quibusdam, dolore.
+                Dolor, neque incidunt officia amet nisi velit necessitatibus provident rem expedita ipsum vero
+                assumenda debitis consequatur aliquid fugiat asperiores sapiente explicabo! Repellendus ullam
+                beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
+                temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
+                </div>`
             }, {
                 "name": "Fruit of Life 2",
                 "id": 16,

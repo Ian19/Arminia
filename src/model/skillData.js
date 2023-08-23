@@ -272,49 +272,7 @@
                     "correctStep": ["numeric distanceCD, Distance(C, D)", "text TextCD, CD = 1.732"],
                     "stepsText": "Select the Distance Tool and Click point C and point D. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3} = 1.732."),
 
-                }
-                
-                
-                
-                // {
-
-                //     "type": "construction",
-                //     "styleObjects": [],
-                //     "zoomScale": 1.5,
-                //     "correctStep": ['text text1, AB=BD=1'],
-                //     "stepsText": "AB=BD=1. Select the Text tool and enter 'AB=BD=1'",
-
-                // }, {
-
-                //     "type": "construction",
-                //     "styleObjects": [],
-                //     "zoomScale": 1.5,
-                //     "correctStep": ['text text2, BE=\\frac{1}{2}'],
-                //     "stepsText": katex.renderToString("BE=\\frac{1}{2}") + ". Select the Text tool and enter 'BE=\\frac{1}{2}'",
-
-                // }, {
-
-                //     "type": "construction",
-                //     "styleObjects": [],
-                //     "zoomScale": 1.5,
-                //     "correctStep": ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
-                //     "stepsText": "Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") + " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'",
-
-                // }, {
-
-                //     "type": "construction",
-                //     "styleObjects": [],
-                //     "zoomScale": 1.5,
-                //     "correctStep": ['text text4, CD=2×ED=\\sqrt{3}=1.732'],
-                //     "stepsText": "Select the 'Move' tool and select segment CD and press CTRL + SHIFT + G to show the label 'g'. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}='. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.) Click 'Advanced->Geogebra Objects' and click on the lowercase 'g' so that the complete text reads 'CD=2×ED=\\sqrt{3}=g'. This should calculate 1.732 and provide our proof."
-
-                // }
-            
-            
-            
-            
-            
-            ],
+                }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis4.svg",
@@ -1635,7 +1593,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point N_2, Intersect(d_5, j, 2)"],
                     "stepsText": "Select the Intersect tool and select the left intersection of line IL and Circle AH<sub>1</sub>. This will create point N<sub>2</sub>.",
@@ -1643,7 +1601,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point O_2, Intersect(d_5, j, 1)"],
                     "stepsText": "Select the Intersect tool and select the right intersection of line IL and Circle AH<sub>1</sub>. This will create point O<sub>2</sub>.",
@@ -1683,7 +1641,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point P_2, Intersect(d_8, f_8, 2)"],
                     "stepsText": "Select the Intersect tool and select the top intersection of Circle N<sub>2</sub>A and Circle H<sub>1</sub>A. This will create point P<sub>2</sub>.",
@@ -1691,7 +1649,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point Q_2, Intersect(f_8, i, 1)"],
                     "stepsText": "Select the Intersect tool and select the top intersection of line H<sub>1</sub>N<sub>1</sub> and circle H<sub>1</sub>A. This will create point Q<sub>2</sub>.",
@@ -1699,7 +1657,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point R_2, Intersect(e_8, f_8, 2)"],
                     "stepsText": "Select the Intersect tool and select the right intersection of circle O<sub>2</sub>A and circle H<sub>1</sub>A. This will create point R<sub>2</sub>.",
@@ -1707,7 +1665,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point S_2, Intersect(e_8, g_8, 2)"],
                     "stepsText": "Select the Intersect tool and select the bottom intersection of circle O<sub>2</sub>A and circle N<sub>1</sub>A. This will create point S<sub>2</sub>.",
@@ -1715,7 +1673,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point T_2, Intersect(g_8, i, 2)"],
                     "stepsText": "Select the Intersect tool and select the bottom intersection of circle N<sub>1</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point T<sub>2</sub>.",
@@ -1723,7 +1681,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point U_2, Intersect(d_8, g_8, 2)"],
                     "stepsText": "Select the Intersect tool and select the bottom intersection of circle N<sub>2</sub>A and circle N<sub>1</sub>A. This will create point U<sub>2</sub>.",
@@ -1731,7 +1689,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 1.5,
                     "styleObjects": [],
                     "correctStep": ["circle h_8, Circle(A, P_2)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center A and radius P<sub>2</sub>.",
@@ -1739,7 +1697,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point V_2, Intersect(h_8, j, 2)"],
                     "stepsText": "Select the Intersect tool and select the left intersection of circle P<sub>2</sub>A and line IL. This will create point V<sub>2</sub>.",
@@ -1747,7 +1705,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point W_2, Intersect(h_8, i, 1)"],
                     "stepsText": "Select the Intersect tool and select the top intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point W<sub>2</sub>.",
@@ -1755,7 +1713,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point Z_2, Intersect(h_8, j, 1)"],
                     "stepsText": "Select the Intersect tool and select the right intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point Z<sub>2</sub>.",
@@ -1763,7 +1721,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point A_3, Intersect(h_8, i, 2)"],
                     "stepsText": "Select the Intersect tool and select the bottom intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point A<sub>3</sub>.",
@@ -1787,7 +1745,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point B_3, Intersect(d_5, l, 1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line P<sub>2</sub>A and circle H<sub>1</sub>A. This will create pointB<sub>3</sub>.",
@@ -1795,7 +1753,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point C_3, Intersect(d_5, m, 1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line R<sub>2</sub>A and circle H<sub>1</sub>A. This will create point C<sub>3</sub>.",
@@ -1803,7 +1761,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point D_3, Intersect(d_5, l, 2)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line S<sub>2</sub>A and circle H<sub>1</sub>A. This will create point D<sub>3</sub>.",
@@ -1811,7 +1769,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point E_3, Intersect(d_5, m, 2)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line U<sub>2</sub>A and circle H<sub>1</sub>A. This will create point E<sub>3</sub>.",
@@ -1851,7 +1809,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point F_3, Intersect(l, n)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line V<sub>2</sub>R<sub>2</sub> and line P<sub>2</sub>S<sub>2</sub>. This will create point F<sub>3</sub>.",
@@ -1859,7 +1817,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point G_3, Intersect(m, a)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line P<sub>2</sub>Z<sub>2</sub>. This will create point G<sub>3</sub>.",
@@ -1867,7 +1825,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point H_3, Intersect(l, i_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line P<sub>2</sub>S<sub>2</sub> and line Z<sub>2</sub>T<sub>2</sub>. This will create point H<sub>3</sub>.",
@@ -1875,7 +1833,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point I_3, Intersect(m, b)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line V<sub>2</sub>S<sub>2</sub>. This will create point I<sub>3</sub>.",
@@ -1883,7 +1841,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["circle k_8, Circle(F_3, B_3)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center F<sub>3</sub> and radius B<sub>3</sub>.",
@@ -1891,7 +1849,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["circle p_8, Circle(G_3, C_3)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center G<sub>3</sub> and radius C<sub>3</sub>.",
@@ -1899,7 +1857,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["circle q_8, Circle(H_3, D_3)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center H<sub>3</sub> and radius D<sub>3</sub>.",
@@ -1907,7 +1865,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["circle r_8, Circle(I_3, E_3)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>3</sub> and radius E<sub>3</sub>.",
@@ -1915,7 +1873,7 @@
                 }, {
 
                     "type": "style",
-                    "zoomScale": 1.7,
+                    "zoomScale": 2,
                     "styleObjects": ["k_8", "p_8", "q_8", "r_8"],
                     "color" : "#F40099",
                     "requiredLineThickness" : 5,
@@ -1925,7 +1883,7 @@
                 }, {
 
                     "type": "style",
-                    "zoomScale": 1.7,
+                    "zoomScale": 2,
                     "styleObjects": ["d_5"],
                     "color" : "#F40099",
                     "requiredLineThickness" : 5,
@@ -1967,7 +1925,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point J_3, Intersect(l, j_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line V<sub>2</sub>Q<sub>2</sub> and line P<sub>2</sub>B<sub>3</sub>. This will create point J<sub>3</sub>.",
@@ -1975,7 +1933,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point K_3, Intersect(m, l_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line Q<sub>2</sub>Z<sub>2</sub> and line R<sub>2</sub>C<sub>3</sub>. This will create point K<sub>3</sub>.",
@@ -1983,7 +1941,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point L_3, Intersect(l, m_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line Z<sub>2</sub>T<sub>2</sub> and line S<sub>2</sub>D<sub>3</sub>. This will create point L<sub>3</sub>.",
@@ -1991,7 +1949,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point M_3, Intersect(m, n_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line T<sub>2</sub>V<sub>2</sub> and line U<sub>2</sub>E<sub>3</sub>. This will create point M<sub>3</sub>.",
@@ -2031,7 +1989,7 @@
                 }, {
 
                     "type": "style",
-                    "zoomScale": 1.7,
+                    "zoomScale": 2,
                     "styleObjects": ["a_1", "b_1", "i_2", "j_2"],
                     "color" : "#F40099",
                     "requiredLineThickness" : 5,
@@ -2041,7 +1999,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["segment l_2, Segment(G_3, F_3)"],
                     "stepsText": "The following steps will find the point on the grid that will be the center of a circle. This circle will give the width of the seal. Select the Segment tool and create a segment from point G<sub>3</sub> to point F<sub>3</sub>.",
@@ -2049,7 +2007,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["segment m_2, Segment(F_3, N_3)"],
                     "stepsText": "Zoom in to circle with centre F<sub>3</sub>. Select the Segment tool and select point F<sub>3</sub>. While holding down the ALT key, extend the line so that it intersects line J<sub>3</sub>M<sub>3</sub>. This will create a segment and point N<sub>3</sub>.",
@@ -2057,7 +2015,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["segment n_2, Segment(G_3, O_3)"],
                     "stepsText": "Zoom in to circle with centre G<sub>3</sub>. Select the Segment tool and select point G<sub>3</sub>. While holding down the ALT key, extend the line so that it intersects line K<sub>3</sub>L<sub>3</sub>. This will create a segment and point O<sub>3</sub>.",
@@ -2065,7 +2023,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 3,
                     "styleObjects": [],
                     "correctStep": ["segment a_2, Segment(N_3, K_3)"],
                     "stepsText": "Select the Segment tool and create a segment from N<sub>3</sub> to K<sub>3</sub>.",
@@ -2073,7 +2031,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point P_3, Intersect(i, a_2)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line N<sub>3</sub>K<sub>3</sub> and line O<sub>3</sub>J<sub>3</sub>. This will create point P<sub>3</sub>.",
@@ -2081,7 +2039,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point Q_3, Intersect(i, a_1)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line J<sub>3</sub>K<sub>3</sub> and line H<sub>1</sub>A. This will create point Q<sub>3</sub>.",
@@ -2089,7 +2047,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["circle s_8, Circle(Q_3, P_3)"],
                     "stepsText": "Select the Circle with Center tool and draw a Circle with center I<sub>3</sub> and radius E<sub>3</sub>.",
@@ -2097,7 +2055,7 @@
                 }, {
 
                     "type": "construction",
-                    "zoomScale": 2,
+                    "zoomScale": 4,
                     "styleObjects": [],
                     "correctStep": ["point R_3, Intersect(s_8, i, 2)"],
                     "stepsText": "Select the Intersect tool and select the intersection of line W<sub>2</sub>H<sub>1</sub> and circle with center Q<sub>3</sub>. This will create point R<sub>3</sub>.",
@@ -2123,7 +2081,7 @@
                 }, {
 
                     "type": "style",
-                    "zoomScale": 1.7,
+                    "zoomScale": 3,
                     "styleObjects": ["s_8", "a_2", "l_2", "m_2", "n_2"],
                     "color" : "#F40099",
                     "requiredLineThickness" : 5,

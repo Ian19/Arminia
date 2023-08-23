@@ -190,7 +190,7 @@
                     "styleObjects": [],
                     "zoomScale": 1.5,
                     "correctStep": ["point B, Point(c)", "segment f, Segment(A, B)"],
-                    "stepsText": "Select the Segment tool and draw a Segment from point A to any point on the circumference of the circle, creating point B",
+                    "stepsText": "Select the Segment tool. Hint: holding down the ALT key while drawing a segment, makes the segment snap vertically. Draw a Segment from point A to any point on the circumference of the circle, creating point B",
 
                 }, {
 
@@ -245,34 +245,76 @@
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 1.5,
-                    "correctStep": ['text text1, AB=BD=1'],
-                    "stepsText": "AB=BD=1. Select the Text tool and enter 'AB=BD=1'",
+                    "correctStep": ["numeric distanceBD, Distance(B, D)", "text TextBD, BD = 1"],
+                    "stepsText": "Select the Distance Tool and Click point B and point D. Optional: Select the Move Tool and the Pin button in the Style Menu to change the position of the text. To change its background color to black, select the color button in the Style Menu. Do this for all the following text labels.",
 
                 }, {
 
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 1.5,
-                    "correctStep": ['text text2, BE=\\frac{1}{2}'],
-                    "stepsText": katex.renderToString("BE=\\frac{1}{2}") + ". Select the Text tool and enter 'BE=\\frac{1}{2}'",
+                    "correctStep": ["numeric distanceBE, Distance(B, E)", "text TextBE, BE = 0.5"],
+                    "stepsText": "Select the Distance Tool and Click point B and point E.",
 
                 }, {
 
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 1.5,
-                    "correctStep": ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
-                    "stepsText": "Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") + " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'",
+                    "correctStep": ["numeric distanceED, Distance(E, D)", "text TextED, ED = 0.866"],
+                    "stepsText": "Select the Distance Tool and Click point E and point D. Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2} = 0.866."),
 
                 }, {
 
                     "type": "construction",
                     "styleObjects": [],
                     "zoomScale": 1.5,
-                    "correctStep": ['text text4, CD=2×ED=\\sqrt{3}=1.732'],
-                    "stepsText": "Select the 'Move' tool and select segment CD and press CTRL + SHIFT + G to show the label 'g'. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}='. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.) Click 'Advanced->Geogebra Objects' and click on the lowercase 'g' so that the complete text reads 'CD=2×ED=\\sqrt{3}=g'. This should calculate 1.732 and provide our proof."
+                    "correctStep": ["numeric distanceCD, Distance(C, D)", "text TextCD, CD = 1.732"],
+                    "stepsText": "Select the Distance Tool and Click point C and point D. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3} = 1.732."),
 
-                }],
+                }
+                
+                
+                
+                // {
+
+                //     "type": "construction",
+                //     "styleObjects": [],
+                //     "zoomScale": 1.5,
+                //     "correctStep": ['text text1, AB=BD=1'],
+                //     "stepsText": "AB=BD=1. Select the Text tool and enter 'AB=BD=1'",
+
+                // }, {
+
+                //     "type": "construction",
+                //     "styleObjects": [],
+                //     "zoomScale": 1.5,
+                //     "correctStep": ['text text2, BE=\\frac{1}{2}'],
+                //     "stepsText": katex.renderToString("BE=\\frac{1}{2}") + ". Select the Text tool and enter 'BE=\\frac{1}{2}'",
+
+                // }, {
+
+                //     "type": "construction",
+                //     "styleObjects": [],
+                //     "zoomScale": 1.5,
+                //     "correctStep": ['text text3, ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'],
+                //     "stepsText": "Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2}.") + " Select the Text tool and enter 'ED=\\sqrt{BD^{2}-BE^{2}}=\\frac{\\sqrt{3}}{2}'",
+
+                // }, {
+
+                //     "type": "construction",
+                //     "styleObjects": [],
+                //     "zoomScale": 1.5,
+                //     "correctStep": ['text text4, CD=2×ED=\\sqrt{3}=1.732'],
+                //     "stepsText": "Select the 'Move' tool and select segment CD and press CTRL + SHIFT + G to show the label 'g'. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3}") + ". Select the Text tool and enter 'CD=2×ED=\\sqrt{3}='. (Don't forget to use the multiplication symbol in the Text Tool->Advanced->Special Characters.) Click 'Advanced->Geogebra Objects' and click on the lowercase 'g' so that the complete text reads 'CD=2×ED=\\sqrt{3}=g'. This should calculate 1.732 and provide our proof."
+
+                // }
+            
+            
+            
+            
+            
+            ],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
                 "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis4.svg",

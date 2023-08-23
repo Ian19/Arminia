@@ -51,6 +51,7 @@
             let newStart = true;
             cheatNum = 0;
             const requiredLineThickness = 3;
+            const requiredColor = "#F40099";
 
             $("#A_cheatBtnID").text("DEBUG STEP 1");
             $("#A_cheatBtnID").hide();
@@ -93,17 +94,15 @@
                 svg.style("width", "100%").style("height", "100%").style("display", "block");
 
                 // the completed geometry is displayed at start so set all svg elements to color white
-                d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                    // d3.selectAll("[id *= 'A-SVGStep']")
-                    .attr("fill", "white");
+                // d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                // d3.selectAll("[id *= 'A-SVGStep']")
+                // .attr("fill", "white");
 
                 // the completed geometry is displayed at start so set geo stroke to color white
-                d3.selectAll("[id *= 'geo']")
-                    .attr("stroke", "white");
+                // d3.selectAll("[id *= 'geo']")
+                //     .attr("stroke", "white");
 
                 if (game.skills.selectedSkill.type == "paper") {
-
-                    console.log("section 1");
 
                     d3.select("#A_SVGGroupSteps")
                         .attr("fill", "white");
@@ -155,19 +154,8 @@
             // Position and size Geogebra and flex steps image box 
             $(".scaleContainerClass").css("display", "inline-block");
 
-            // console.log("window.innerWidth: ", window.innerWidth);
-            // console.log("window.innerHeight: ", window.innerHeight);
-
-            let sharedContainerRect = document.getElementById("A_sharedContainer").getBoundingClientRect();
-            // console.log("sharedContainerRect: ", sharedContainerRect);
-
-            let rect = document.querySelector(".scaleContainerClass").getBoundingClientRect();
-            let h = rect.bottom - rect.top;
-
-            // console.log("scaleContainerClass: ", rect);
-
             // Steps Image title, difficulty and definition
-            $("#A_stepsImageTitle").text(game.skills.selectedSkill.name);
+            $("#A_stepsImageTitle").html(game.skills.selectedSkill.formattedName);
             $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
             $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
 
@@ -176,12 +164,8 @@
             $("#A_geogebraDetailQuote").text(game.skills.selectedSkill.quote);
             $("#A_geogebraDetailQuotee").text(game.skills.selectedSkill.quotee);
 
-
-
-
             // Updates html elements on Overview page with new skill data if the applet has been reinjected
             // $("#A_geogebraDetailImage").attr("src", game.skills.selectedSkill.thumbnailURL);
-
 
             ////////////////////////////////////////////////////////////////////////////////////////////
             // The reason why object content doesn't refresh is that removing value from data attribute 
@@ -202,14 +186,9 @@
             //////////////////////////////  END OLD CLASSIC CODE  ////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////
 
-            
             $("#A_geogebraThumbName").text(game.skills.selectedSkill.name);
-
-
             $("#A_geogebraDifficulty").text(game.skills.selectedSkill.difficulty);
             $("#A_geogebraDetailRequirement").text(game.skills.selectedSkill.requirement);
-
-
             $("#A_geogebraDetailDefinition").text(game.skills.selectedSkill.overview);
 
             document.getElementById("A_geoDetailBody2").innerHTML = game.skills.selectedSkill.geoDetailBody;
@@ -421,8 +400,6 @@
                     // Is step incomplete?
                     if (stepsArray[j] == 0) {
 
-                        console.log("ENTERED INCOMPLETE STEP");
-
                         // Step is incomplete
                         removeAllAnimateTags();
 
@@ -431,13 +408,14 @@
 
                         // set current step to yellow for undo functionality
                         let s = j + 1;
+
                         d3.select("#A-SVGStep" + s.toString())
                             .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                            .attr("fill", currentStepColor);
+                            .attr("visibility", "visible");
 
                         d3.select("#A-SVGStep" + s.toString())
                             .selectAll("[id *= 'geo']")
-                            .attr("stroke", currentStepColor);
+                            .attr("visibility", "visible");
 
                         // if step1, zooms and pans to step1. Needed for undo functionality
                         if (j == 0) {
@@ -456,26 +434,17 @@
                         // Test if final step has been reached
                         if (j == stepsLength - 1) {
 
-                            console.log("FINAL STEP REACHED");
-
                             // final step has been reached
+
+                            console.log("final step has been reached");
+
+                            d3.selectAll("[id *= 'geo'], [id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                                .attr("visibility", "visible");
 
                             removeAllAnimateTags();
 
-                            console.log("SECTION 1");
-
                             // get total dimensions and pan and zoom out
                             panAndZoom("A-SVGGroupSteps", 1);
-
-                            console.log("SECTION 2");
-
-                            d3.selectAll("[id *= 'A-SVGStep']")
-                                .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                                .attr("fill", "white");
-
-                            d3.selectAll("[id *= 'A-SVGStep']")
-                                .selectAll("[id *= 'geo']")
-                                .attr("stroke", "white");
 
                             // update the steps container text and progress bar
                             updateStepsContainer(j, 1, 0, n, true);
@@ -485,9 +454,9 @@
 
                         } else {
 
-                            // step complete, but final step NOT reached     
+                            // step complete, but final step NOT reached    
 
-                            console.log("STEP COMPLETE BUT FINAL STEP NOT REACHED YET");
+                            console.log("step complete, but final step NOT reached");
 
                             removeAllAnimateTags();
                             addAnimateTags(j, 2);
@@ -500,27 +469,27 @@
                             // set previous step to white
                             d3.select("#A-SVGStep" + t.toString())
                                 .selectAll("[id *= 'mathText']")
-                                .attr("fill", "white");
+                                .attr("visibility", "visible")
 
                             // set previous step point label to fade Color    
                             d3.select("#A-SVGStep" + t.toString())
                                 .selectAll("[id *= 'A-point'], [id *= 'A-text']")
-                                .attr("fill", fadeColor);
+                                .attr("visibility", "visible");
 
                             d3.select("#A-SVGStep" + t.toString())
                                 .selectAll("[id *= 'geo']")
-                                .attr("stroke", "white");
+                                .attr("visibility", "visible");
 
                             ///////////////////////////////////////////////
 
                             // set current step to yellow
                             d3.select("#A-SVGStep" + s.toString())
                                 .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                                .attr("fill", currentStepColor);
+                                .attr("visibility", "visible");
 
                             d3.select("#A-SVGStep" + s.toString())
                                 .selectAll("[id *= 'geo']")
-                                .attr("stroke", currentStepColor);
+                                .attr("visibility", "visible");
 
                             ///////////////////////////////////////////////
 
@@ -532,12 +501,12 @@
                                     if (element.type == "divider") {
 
                                         d3.select("#divider" + s.toString())
-                                            .attr("fill", "white");
+                                            .attr("visibility", "visible");
 
                                     } else {
 
                                         d3.select("#paperText" + s.toString())
-                                            .attr("fill", "white");
+                                            .attr("visibility", "visible");
 
                                     }
                                 }
@@ -546,7 +515,7 @@
                             // get element dimensions and then pan and zoom
                             let elementStr = "A-SVGStep" + s.toString();
 
-                            panAndZoom(elementStr, game.skills.selectedSkill.steps[t].zoomScale);
+                            panAndZoom(elementStr, game.skills.selectedSkill.steps[j + 1].zoomScale);
 
                             // update the steps container text and progress bar
                             updateStepsContainer(j, 2, 1, n, false);
@@ -610,14 +579,14 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        // console.log(strState);
+                        console.log(strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {
 
                             if (steps[j].type == "style") {
 
-                                test[j][0] = 1
+                                test[j][0] = 1;
 
                             } else {
 
@@ -629,8 +598,11 @@
 
                                         if (steps[j].type == "construction") test[j][k] = 1;
 
-                                        if (api.getLineThickness(strName) == requiredLineThickness && steps[j].type == "combo")
+                                        if (steps[j].type == "combo" && api.getLineThickness(strName) == requiredLineThickness) {
+
                                             test[j][k] = 1;
+
+                                        }
 
                                     }
                                 }
@@ -658,12 +630,29 @@
 
                                 objStrName = steps[i].styleObjects[j];
 
-                                if (api.getLineThickness(objStrName) !== requiredLineThickness) {
+                                // check if object has a color key
+                                if (steps[i].color !== undefined) {                                    
 
-                                    stepsArray[i] = 0;
-                                    break;
+                                    if (api.getColor(objStrName) !== steps[i].color) {   
+
+                                        stepsArray[i] = 0;
+                                        break;
+
+                                    }
 
                                 }
+
+                                // check if object has a requiredLineThickness key
+                                if (steps[i].requiredLineThickness !== undefined) {
+
+                                    if (api.getLineThickness(objStrName) !== steps[i].requiredLineThickness) {
+
+                                        stepsArray[i] = 0;
+                                        break;
+    
+                                    }
+
+                                 }
                             }
                         }
                     }
@@ -705,31 +694,24 @@
                     // prevent access to buildStepsView if same result state or if blink checkbox checked 
                     if (!sameResultState) {
 
-                        console.log("DIFFERENT RESULTS");
+                        // console.log("DIFFERENT RESULTS");
 
                         // result state has changed! Set oldStepsArray to stepsArray
                         for (let i = 0; i < stepsArray.length; i++) {
                             oldStepsArray[i] = stepsArray[i];
                         }
 
-                        d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                            // d3.selectAll("[id *= 'A-SVGStep']")
-                            .attr("fill", fadeColor);
+                        console.log("ALL STEPS SET HIDDEN");
 
-                        d3.selectAll("[id *= 'A-SVGStep']")
-                            .selectAll("[id *= 'geo']")
-                            .attr("stroke", fadeColor);
-
-                        d3.select("#A-SVGStep1")
-                            .selectAll("[id *= 'A-text']")
-                            .attr("fill", fadeColor);
+                        d3.selectAll("[id *= 'geo'], [id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
+                            .attr("visibility", "hidden");
 
                         // update the stepper and stepsImage
                         buildStepsView();
 
                     } else {
 
-                        console.log("SAME RESULTS");
+                        // console.log("SAME RESULTS");
 
                     }
                 }
@@ -777,8 +759,6 @@
                 g.attr("transform", transform);
             }
 
-            // console.log(element);
-
             let stepBox = document.getElementById(element).getBBox();
             let midX = stepBox.x + (stepBox.width / 2);
             let midY = stepBox.y + (stepBox.height / 2);
@@ -824,19 +804,19 @@
 
             d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
                 // d3.selectAll("[id *= 'A-SVGStep']")
-                .attr("fill", fadeColor);
+                .attr("visibility", "hidden");
 
             d3.selectAll("[id *= 'A-SVGStep']")
                 .selectAll("[id *= 'geo']")
-                .attr("stroke", fadeColor);
+                .attr("visibility", "hidden");
 
             d3.select("#A-SVGStep1")
                 .selectAll("[id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
-                .attr("fill", currentStepColor);
+                .attr("visibility", "visible");
 
             d3.select("#A-SVGStep1")
                 .selectAll("[id *= 'geo']")
-                .attr("stroke", currentStepColor);
+                .attr("visibility", "visible");
 
             removeAllAnimateTags();
             addAnimateTags(0, 1);
@@ -952,15 +932,6 @@
             if (cheatNum < cheatSteps.length) {
 
                 var c = document.getElementsByClassName("canvasDef")[0];
-
-                // console.log(c);
-
-                // var ctx = c.getContext("2d");
-
-                // console.log(ctx);
-
-                // ctx.fillStyle = "red";
-                // ctx.strokeStyle = "red";
 
                 ggbApplet.evalCommand(cheatSteps[cheatNum]);
 

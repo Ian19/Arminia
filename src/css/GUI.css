@@ -8,7 +8,7 @@
 }
 
 .A_title {
-    width: 15vw;
+    width: 13vw;
     cursor: pointer;
     /* font-family: cinzel; */
 }
@@ -31,12 +31,12 @@
 
 .A_reg {
     font-family: 'Cinzel';    
-    letter-spacing: 0.1em;
+    letter-spacing: 0.11em;
 }
 
 .A_decor {
     font-family: 'Cinzel Decorative';
-    letter-spacing: -0.3em;
+    letter-spacing: -0.25em;
 }
 
 #A_64TetraViewSwish {

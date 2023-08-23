@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Arminia](https://arminia.com.au/) is a 3D educational game and website that explores the geometry of the unified field and the 13 information systems of the Fruit of Life. The construction of geometry is done with [Geogebra](https://www.geogebra.org/), which is used as an online straight edge and compass. The straight edge and compass is a tool that can reveal the powerful relationships of geometry, line and number. When a construction is built, the user will gain diagrams, art and instructions to build the construction with a real straight edge and compass.
+[Arminia](https://arminia.com.au/) is aN interactive 3D website and educational game that explores the geometry of the unified field and the 13 information systems of the Fruit of Life. The construction of geometry is done with [Geogebra](https://www.geogebra.org/), which is used as an online straight edge and compass. The straight edge and compass is a tool that can reveal the powerful relationships of geometry, line and number. When a construction is built, the user will gain diagrams, art and instructions to build the construction with a real straight edge and compass.
 
 To help users better understand new and cutting edge math papers, Arminia integrates the Computation Algebra System (CAS) of Geogebra to step through each mathematical equation.
 

@@ -27,6 +27,7 @@
         const currentStepColor = "#ffe86d"; // yellow
         let ready = false;
         let svg;
+        let svgNode;
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
@@ -81,17 +82,23 @@
 
             }
 
+
+
             // load stepsImage svg file with d3.xml() and setup
             d3.xml(game.skills.selectedSkill.stepsImage).then(data => {
 
                 ready = false;
 
-                const svgNode = data.documentElement;
+                svgNode = data.documentElement;
                 const obj = $('#A_stepsBackgroundImage')[0];
                 obj.appendChild(svgNode);
 
                 svg = d3.select("#" + game.skills.selectedSkill.elementID);
                 svg.style("width", "100%").style("height", "100%").style("display", "block");
+
+                console.log(svgNode);
+                console.log(obj);
+                console.log(svg);
 
                 // the completed geometry is displayed at start so set all svg elements to color white
                 // d3.selectAll("[id *= 'divider'], [id *= 'paperText'], [id *= 'A-text'], [id *= 'A-point'], [id *= 'mathText']")
@@ -631,9 +638,9 @@
                                 objStrName = steps[i].styleObjects[j];
 
                                 // check if object has a color key
-                                if (steps[i].color !== undefined) {                                    
+                                if (steps[i].color !== undefined) {
 
-                                    if (api.getColor(objStrName) !== steps[i].color) {   
+                                    if (api.getColor(objStrName) !== steps[i].color) {
 
                                         stepsArray[i] = 0;
                                         break;
@@ -649,10 +656,10 @@
 
                                         stepsArray[i] = 0;
                                         break;
-    
+
                                     }
 
-                                 }
+                                }
                             }
                         }
                     }
@@ -724,7 +731,16 @@
 
         function removeAllAnimateTags() {
 
-            d3.selectAll("[id *= 'A-SVGStep']")
+            // temporary not efficient
+
+            if (game.skills.selectedSkill.type == "paper") {
+
+                d3.selectAll("[id *= 'A-SVGStep']")
+                    .selectAll(["path", "rect"])
+                    .attr("fill", "white");
+
+
+            } else d3.selectAll("[id *= 'A-SVGStep']")
                 .style("animation", "inherit");
 
         };
@@ -733,7 +749,13 @@
 
             let s = j + n;
 
-            d3.select("#A-SVGStep" + s.toString())
+            if (game.skills.selectedSkill.type == "paper") {
+
+                d3.selectAll("#A-SVGStep" + s.toString())
+                    .selectAll(["path", "rect"])
+                    .attr("fill", "#ffe86d");
+
+            } else d3.select("#A-SVGStep" + s.toString())
                 .style("animation", "transcolor 0.75s infinite alternate");
 
         };

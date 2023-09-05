@@ -428,7 +428,7 @@
 
                 game.geogebra.parameters.appName = "classic";
                 game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
-                // game.geogebra.parameters.showAlgebraInput = true;
+                game.geogebra.parameters.showAlgebraInput = false;
                 game.geogebra.parameters.showToolBar = true;
                 game.geogebra.parameters.showToolBarHelp = true;
                 game.geogebra.parameters.allowStyleBar = true;

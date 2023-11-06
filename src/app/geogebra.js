@@ -223,7 +223,8 @@
                 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
                 // The workerSrc property shall be specified.
-                pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+                // pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+                pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
                 let pdfDoc = null,
                     pageNum = 1,

@@ -19,6 +19,8 @@
 
     var modal = function () {
 
+        console.log("MODAL LOADED");
+
         $(".A_closeModal").click(function() {
             $("#A_simpleModal").hide();
         });
@@ -34,8 +36,9 @@
 
 
         $("#A_titleClick").click(function() {  
+        // $("#A_mainSwish").click(function() {  
             
-            // console.log("A_title click");
+            console.log("A_title click");
 
             $("#A_profilePage").hide();
             $("#A_info").show();

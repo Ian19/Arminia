@@ -11,6 +11,16 @@
     width: 13vw;
     cursor: pointer;
     /* font-family: cinzel; */
+    pointer-events: none;
+}
+
+#A_titleModal {
+    width: 13vw;
+    margin-bottom: 6px;
+}
+
+#A_titleClick {
+    cursor: pointer;
 }
 
 .A_swish {

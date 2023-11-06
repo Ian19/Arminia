@@ -92,7 +92,8 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <!-- <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script> -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <!-- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <link type="text/css" href="src/css/OverlayScrollbars.min.css" rel="stylesheet">
     <link rel='stylesheet' href='src/css/geogebra.css'>
@@ -415,13 +416,13 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
             <span class="A_closeModal" style="position: relative;">&times;</span>
 
             <div class="A_titleContainer" style="margin-top: 1vw;">
-                <img src="src/assets/images/misc/title.svg" alt="" id="A_titleModal">
+                <img src="src/assets/images/misc/title2.svg" alt="" id="A_titleModal">
                 <img src="src/assets/images/misc/swish1.svg" alt="" id="A_swish2">
             </div>
 
-            <div id="A_titleText">
+            <!-- <div id="A_titleText">
                 Arminia is best viewed in Firefox<br>for its clear SVG rendering
-            </div>
+            </div> -->
 
             <div id="A_licenseText">
                 <br>
@@ -451,8 +452,9 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
         <div class="A_titleContainer">
 
-            <object data="src/assets/images/misc/title2.svg" type="image/svg+xml" alt="" class="A_title"
-                id="A_titleClick"></object>
+            <div id="A_titleClick">
+                <object data="src/assets/images/misc/title2.svg" type="image/svg+xml" alt="" class="A_title"></object>
+            </div>
 
             <img src="src/assets/images/misc/swish1.svg" alt="" class="A_swish" id="A_mainSwish">
 
@@ -530,7 +532,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
         <div id="A_pageBody">
 
             <div>
-                
+
                 <br><br>
 
                 <div class="A_header1">
@@ -543,13 +545,13 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     <span class="A_reg">rid</span>
 
                 </div>
-                
+
                 <br>
 
                 <div id="A_64TetraViewSwish">
                     <img src="src/assets/images/misc/swish1.svg" alt="" class="A_swish">
                 </div>
-                
+
                 <br>
 
                 <div class="A_featureQuote">
@@ -570,9 +572,9 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                     <object class="A_64Tetra3D A_featureSize" type="image/svg+xml"
                         data="src/assets/images/skills/64TetraPage/64-tetra-grid3DView1A.svg">
                     </object>
-                    
+
                     <div>
-                        
+
                         <br>
 
                         <div class="A_64TetraNodeTitle">
@@ -582,7 +584,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                         <div class="A_64TetraNodeSteps">
                             HARD | 66 STEPS
                         </div>
-                        
+
                         <br><br>
 
                     </div>
@@ -1337,7 +1339,7 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
             <div id="A_overviewContainer" class="A_overviewScroll">
 
                 <div>
-                    
+
                     <!-- <div id="A_geogebraDetailTitle" class="A_geoDetailTitle"></div> -->
                     <div id="A_geogebraDetailTitle" class="A_header1"></div>
 
@@ -1363,28 +1365,28 @@ along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
                             <div>
                                 <object id="A_geogebraDetailImage" class="A_featureSize2"></object>
                             </div>
-                            
+
                             <div>
 
                                 <br>
-        
+
                                 <div id="A_geogebraThumbName" class="A_64TetraNodeTitle"></div>
-        
+
                                 <div id="A_geogebraDifficulty" class="A_64TetraNodeSteps"></div>
 
                                 <div id="A_geogebraDetailRequirement" class="A_geoDetailRequirement"></div>
-                                
+
                                 <br><br>
-        
+
                             </div>
-        
+
                         </div>
-        
+
                     </div>
 
                     <!-- <img id="A_geogebraDetailImage" class="A_geoDetailImage" src="" alt=""></img>
                     <span id="A_geogebraDifficulty" class="A_geoDifficulty"></span> -->
-                    
+
                     <div id="A_geogebraDetailDefinition" class="A_geoDetailDefinition"></div>
 
                     <br><br>

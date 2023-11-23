@@ -32,7 +32,7 @@
                 "selected": false,
                 "status": "unlocked",
                 "type": "construction",
-                "elementID": "A-detailCircle",
+                "elementID": "#A-detailCircle",
                 "tools": "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
                 "startingZoomScale": "ZoomOut(1)",
                 "elements": [],
@@ -64,7 +64,7 @@
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/circle2.svg",
-                "stepsImage": "src/assets/images/skills/details/detailCircle2.svg",
+                "stepsImage": "src/assets/images/skills/details/detailCircle3.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  3 STEPS",
                 "unlocksSkills": ["The Vesica Piscis"],
@@ -171,7 +171,7 @@
                 "selected": false,
                 "status": "locked",
                 "type": "construction",
-                "elementID": "A-detailVesicaPiscis",
+                "elementID": "#A-detailVesicaPiscis",
                 "elements": [],
                 "tools": "0 | 34 | 10 | 15 | 17 | 5 | 38", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "startingZoomScale": "ZoomOut(1)",
@@ -264,18 +264,34 @@
                     "correctStep": ["numeric distanceED, Distance(E, D)", "text TextED, ED = 0.866"],
                     "stepsText": "Select the Distance Tool and Click point E and point D. Using the Pythagorean Theorem we know that " + katex.renderToString("ED=\\sqrt{BD^{2}-BE^{2}} = \\frac{\\sqrt{3}}{2} = 0.866."),
 
+                },  {
+
+                    "type": "construction",
+                    "styleObjects": [],
+                    "zoomScale": 1.5, 
+                    "correctStep": ["text text1, =\\frac{\\sqrt{3}}{2}"],
+                    "stepsText": "Select the Text Tool and enter <i>=\\frac{\\sqrt{3}}{2}</i>. Select the Move tool and position the text to the right of ED."
+
                 }, {
 
                     "type": "construction",
                     "styleObjects": [],
-                    "zoomScale": 1.5,
+                    "zoomScale": 1.5, 
                     "correctStep": ["numeric distanceCD, Distance(C, D)", "text TextCD, CD = 1.732"],
                     "stepsText": "Select the Distance Tool and Click point C and point D. " + katex.renderToString("CD=2 \\times ED = \\sqrt{3} = 1.732."),
+
+                }, {
+
+                    "type": "construction",
+                    "styleObjects": [],
+                    "zoomScale": 1.5, 
+                    "correctStep": ["text text2, =\\sqrt{3}"],
+                    "stepsText": "Select the Text Tool and enter <i>=\\sqrt{3}</i>. Select the Move tool and position the text to the right of CD."
 
                 }],
 
                 "thumbnailURL": "src/assets/images/skills/thumbnails/vesica_piscis.svg",
-                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis4.svg",
+                "stepsImage": "src/assets/images/skills/details/detailVesicaPiscis6.svg",
                 "geogebraFile": "/src/assets/geogebra/file_900x1000.ggb",
                 "difficulty": "EASY  |  12 STEPS",
                 "unlocksSkills": ["The Triquetra"],
@@ -490,7 +506,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A-detailTriquetra",
+                "elementID": "#A-detailTriquetra",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 "tools": "0 | 34 | 10 | 15 | 17 | 5",
                 "startingZoomScale": "ZoomOut(1)",
@@ -711,7 +727,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A-detailGenesis",
+                "elementID": "#A-detailGenesis",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "tools": "0 | 34 | 10 | 5",
                 "zoomScale": 2.4,
@@ -925,7 +941,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A-detailEgg",
+                "elementID": "#A-detailEgg",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "tools": "0 | 34 | 10 | 5",
                 "zoomScale": 2.4,
@@ -1141,8 +1157,8 @@
                 "d3Data": "#hexHoverFOLUnseal",
                 "status": "locked",
                 "selected": false,
-                "type": "combo",
-                "elementID": "A-detailUnsealedFOL",
+                "type": "construction",
+                "elementID": "#A-detailUnsealedFOL",
                 "tools": "0 | 10 | 20", // MOVE, CIRCLE_TWO_POINTS, CIRCLE_ARC_THREE_POINTS
                 "zoomScale": 2.4,
                 "startingZoomScale": "ZoomOut(1.55)",
@@ -1566,7 +1582,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A-detailSealedFOL",
+                "elementID": "#A-detailSealedFOL",
 
                 // "tools": "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
 
@@ -2211,7 +2227,7 @@
                 "status": "locked",
                 "selected": false,
                 "type": "construction",
-                "elementID": "A-detailCompletedFOL",
+                "elementID": "#A-detailCompletedFOL",
                 "tools": "0 | 34 | 10 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 "startingZoomScale": "ZoomOut(2)",
                 "elements": [],
@@ -3009,7 +3025,7 @@
                     <span class="A_decor">T</span>
                     <span class="A_reg">he </span>
                     <span class="A_decor">F</span>
-                    <span class="A_reg">fruit </span>
+                    <span class="A_reg">ruit </span>
                     <span class="A_decor">O</span>
                     <span class="A_reg">f </span>
                     <span class="A_decor">L</span>
@@ -3018,10 +3034,10 @@
                 "d3Data": "#hexHoverFruitA",
                 "status": "locked",
                 "selected": false,
-                "type": "styled construction",
+                "type": "construction",
                 "elements": [],
                 "objects": ["c", "d_1", "e_1", "f_1", "g_1", "h_1", "k_1", "p_4", "q_4", "r_4", "s_4", "t_4", "c_5"],                
-                "elementID": "A-detailFruitOfLife",
+                "elementID": "#A-detailFruitOfLife",
                 "tools": "0", // MOVE
                 "zoomScale": 1,
                 "startingZoomScale": "ZoomOut(1.6)",
@@ -3030,7 +3046,7 @@
 
                     "type": "style",
                     "zoomScale": 1,
-                    "color" : "#F40099",
+                    // "color" : "#F40099",
                     "requiredLineThickness" : 3,
                     "styleObjects": ["c", "d_1", "e_1", "f_1", "g_1", "h_1", "k_1", "p_4", "q_4", "r_4", "s_4", "t_4", "c_5"],
                     "correctStep": [["dummy container"]],

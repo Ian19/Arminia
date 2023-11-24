@@ -78,6 +78,8 @@
                 filename = game.skills.selectedSkill.stepsImage;
                 currentID = game.skills.selectedSkill.elementID;
 
+                console.log(filename);
+
             } else {
 
                 game.animatePageOut("A_64TetraView");
@@ -787,35 +789,30 @@
             $("#A_startGeogebraBtnID").removeClass('A_geogebraButton');
             $("#A_startGeogebraBtnID").addClass('A_startGeogebraBtn');
 
+            removeAllAnimateTags();
+
+            d3.select(currentID).remove();
+
             if (parameters.appName == "classic") {
 
-                game.nav = "home";
-
-                removeAllAnimateTags();
-
-                d3.select(game.skills.selectedSkill.elementID).remove();
+                game.nav = "home";                
 
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");
 
             } else {
 
-                removeAllAnimateTags();
-
-                d3.select(game.skills.selectedSkill.elementID).remove();
-
                 $("#A_startGeogebraBtnID").hide();
-                $(".A_mouseIconPaper").hide();
-
-                // tmp fix because only 1 paper available
-                d3.select("#A-schwarzsPPaper").remove();
+                $(".A_mouseIconPaper").hide();                
 
                 game.nav = "A_64TetraView";
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_64TetraView");
 
             }
+
             game.main.setEnabled(true);
+            
         });
 
         const cheatSteps = [

@@ -30,7 +30,7 @@
                 id: 0,
                 d3Data: "#hexHoverCircle",
                 selected: false,
-                status: unlocked,
+                status: "unlocked",
                 type: "construction",
                 elementID: "#A-detailCircle",
                 tools: "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 

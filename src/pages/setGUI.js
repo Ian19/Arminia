@@ -23,8 +23,6 @@
         switch (game.nav) {
             case "home":
 
-                console.log("setGUI called");
-
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
                 

@@ -78,8 +78,6 @@
                 filename = game.skills.selectedSkill.stepsImage;
                 currentID = game.skills.selectedSkill.elementID;
 
-                console.log(filename);
-
             } else {
 
                 game.animatePageOut("A_64TetraView");
@@ -812,7 +810,7 @@
             }
 
             game.main.setEnabled(true);
-            
+
         });
 
         const cheatSteps = [

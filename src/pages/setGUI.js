@@ -54,6 +54,7 @@
                 $("#A_sysHintContainer").hide();
                 $("#A_sidebarGroupHologram").show();
                 $('#A_protonBtnID').text("The Schwarzschild Proton");
+                $('#A_holographicMassBtnID').text("Quantum Gravity and the Hologarphic Mass");
                 break;
             case "skill":
 

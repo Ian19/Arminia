@@ -20,6 +20,7 @@
     function skillData(game) {
 
         game.skills.skillData = [
+            // The Circle
             {
                 name: "The Circle",
                 formattedName: `                    
@@ -157,7 +158,10 @@
                         beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                         temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                     </div>`
-            }, {
+            },
+
+            // The Vesica Piscis 
+            {
                 name: "The Vesica Piscis",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -173,7 +177,7 @@
                 type: "construction",
                 elementID: "#A-detailVesicaPiscis",
                 elements: [],
-                tools: "0 | 34 | 10 | 15 | 17 | 5 | 38", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
+                tools: "0 | 34 | 10 | 15 | 17 | 1 | 38", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 startingZoomScale: "ZoomOut(1)",
 
                 steps: [{
@@ -206,7 +210,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point C, Intersect(c, d, 1)"],
-                    stepsText: "Select the Intersect tool and create Point C at the left-most intersection of the 2 circles.",
+                    stepsText: "Select the Point tool and create Point C at the left-most intersection of the 2 circles.",
 
                 }, {
 
@@ -214,7 +218,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point D, Intersect(c, d, 2)"],
-                    stepsText: "Select the Intersect tool and create Point D at the right-most intersection of the 2 circles.",
+                    stepsText: "Select the Point tool and create Point D at the right-most intersection of the 2 circles.",
 
                 }, {
 
@@ -230,7 +234,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point E, Intersect(f, g)"],
-                    stepsText: "Select the Intersect tool and create Point E at the intersection of BA and CD.",
+                    stepsText: "Select the Point tool and create Point E at the intersection of BA and CD.",
 
                 }, {
 
@@ -384,6 +388,8 @@
                         temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                     </div>`
             },
+
+            // Three Universal Roots 1
             {
                 name: "Three Universal Roots 1",
                 id: 2,
@@ -402,6 +408,8 @@
                 quotee: "Robert Lawlor",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             },
+
+            // Three Universal Roots 2
             {
                 name: "Three Universal Roots 2",
                 id: 3,
@@ -420,6 +428,8 @@
                 quotee: "Robert Lawlor",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
             },
+
+            // Three Universal Roots 3
             {
                 name: "Three Universal Roots 3",
                 id: 4,
@@ -437,7 +447,10 @@
                 quote: '"...the simple, incommensurable root powers as geometric metaphors for the supra-rational moment of transformation..."',
                 quotee: "Robert Lawlor",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            }, {
+            },
+
+            // Duality Pattern 1 
+            {
                 name: "Duality Pattern 1",
                 id: 5,
                 d3Data: "#hexHoverDualityA",
@@ -452,7 +465,10 @@
                 quote: '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 quotee: "Proclus",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            }, {
+            }, 
+
+            // Duality Pattern 2
+            {
                 name: "Duality Pattern 2",
                 id: 6,
                 d3Data: "#hexHoverDualityB",
@@ -466,7 +482,10 @@
                 quote: '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 quotee: "Proclus",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            }, {
+            }, 
+
+            // The Tetractys
+            {
                 name: "The Tetractys",
                 id: 7,
                 status: "locked",
@@ -480,7 +499,10 @@
                 quote: '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 quotee: "Proclus",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            }, {
+            }, 
+
+            // Da Vinci's Key
+            {
                 name: "Da Vinci's Key",
                 id: 8,
                 d3Data: "#hexHoverLeo",
@@ -494,7 +516,10 @@
                 quote: '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 quotee: "Proclus",
                 geoDetailBody: `<span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>`
-            }, {
+            }, 
+
+            // The Triquetra
+            {
                 name: "The Triquetra",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -508,7 +533,7 @@
                 type: "construction",
                 elementID: "#A-detailTriquetra",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
-                tools: "0 | 34 | 10 | 15 | 17 | 5",
+                tools: "0 | 34 | 10 | 15 | 17 | 1",
                 startingZoomScale: "ZoomOut(1)",
                 elements: [],
 
@@ -542,7 +567,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point C, Intersect(c, d, 1)"],
-                    stepsText: "Select the Intersect tool and create Point C at the left intersection of the 2 circles.",
+                    stepsText: "Select the Point tool and create Point C at the left intersection of the 2 circles.",
 
                 }, {
 
@@ -550,7 +575,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point D, Intersect(c, d, 2)"],
-                    stepsText: "Select the Intersect tool and create Point D at the right intersection of the 2 circles.",
+                    stepsText: "Select the Point tool and create Point D at the right intersection of the 2 circles.",
 
                 }, {
 
@@ -582,7 +607,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point E, Intersect(d, e, 2)"],
-                    stepsText: "Select the Intersect tool and create Point E at the intersection of Circle with Center B and with Circle with Center C.",
+                    stepsText: "Select the Point tool and create Point E at the intersection of Circle with Center B and with Circle with Center C.",
 
                 }, {
 
@@ -590,7 +615,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point F, Intersect(c, e, 2)"],
-                    stepsText: "Select the Intersect tool and create Point F at the intersection of Circle with Center C and with Circle with Center A.",
+                    stepsText: "Select the Point tool and create Point F at the intersection of Circle with Center C and with Circle with Center A.",
 
                 }, {
 
@@ -713,7 +738,10 @@
                         beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                         temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                     </div>`
-            }, {
+            }, 
+
+            // The Genesis Pattern
+            {
                 name: "The Genesis Pattern",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -729,7 +757,7 @@
                 type: "construction",
                 elementID: "#A-detailGenesis",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
-                tools: "0 | 34 | 10 | 5",
+                tools: "0 | 34 | 10 | 1",
                 zoomScale: 2.4,
                 startingZoomScale: "ZoomOut(1)",
                 elements: [],
@@ -756,7 +784,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point C, Intersect(c, d, 1)"],
-                    stepsText: "Select the Intersect tool and create Point C at the left intersection of Circles A and B.",
+                    stepsText: "Select the Point tool and create Point C at the left intersection of Circles A and B.",
 
                 }, {
 
@@ -772,7 +800,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point D, Intersect(c, e, 1)"],
-                    stepsText: "Select the Intersect tool and create Point D at the lower intersection of Circles A and C.",
+                    stepsText: "Select the Point tool and create Point D at the lower intersection of Circles A and C.",
 
                 }, {
 
@@ -788,7 +816,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point E, Intersect(c, f, 1)"],
-                    stepsText: "Select the Intersect tool and create Point E at the lower intersection of Circles A and D.",
+                    stepsText: "Select the Point tool and create Point E at the lower intersection of Circles A and D.",
 
                 }, {
 
@@ -804,7 +832,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point F, Intersect(c, g, 1)"],
-                    stepsText: "Select the Intersect tool and create Point F at the lower intersection of Circles A and E.",
+                    stepsText: "Select the Point tool and create Point F at the lower intersection of Circles A and E.",
 
                 }, {
 
@@ -820,7 +848,7 @@
                     styleObjects: [],
                     zoomScale: 1.5,
                     correctStep: ["point G, Intersect(c, d, 2)"],
-                    stepsText: "Select the Intersect tool and create Point G at the intersection of Circles A, B and F.",
+                    stepsText: "Select the Point tool and create Point G at the intersection of Circles A, B and F.",
 
                 }, {
 
@@ -925,7 +953,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
             </div>`
-            }, {
+            }, 
+
+            // The Egg of Life
+            {
                 name: "The Egg of Life",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -943,7 +974,7 @@
                 type: "construction",
                 elementID: "#A-detailEgg",
                 // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
-                tools: "0 | 34 | 10 | 5",
+                tools: "0 | 34 | 10 | 1",
                 zoomScale: 2.4,
                 startingZoomScale: "ZoomOut(2)",
                 elements: [],
@@ -955,7 +986,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point H, Intersect(d, e, 2)"],
-                        stepsText: "Select the Intersect tool and create Point H at the upper intersection of Circles B and C.",
+                        stepsText: "Select the Point tool and create Point H at the upper intersection of Circles B and C.",
 
                     }, {
 
@@ -963,7 +994,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point I, Intersect(e, f, 2)"],
-                        stepsText: "Select the Intersect tool and create Point I at the left intersection of Circles C and D.",
+                        stepsText: "Select the Point tool and create Point I at the left intersection of Circles C and D.",
 
                     }, {
 
@@ -971,7 +1002,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point J, Intersect(f, g, 2)"],
-                        stepsText: "Select the Intersect tool and create Point J at the lower intersection of Circles D and E.",
+                        stepsText: "Select the Point tool and create Point J at the lower intersection of Circles D and E.",
 
                     }, {
 
@@ -979,7 +1010,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point K, Intersect(g, h, 2)"],
-                        stepsText: "Select the Intersect tool and create Point K at the lower intersection of Circles E and F.",
+                        stepsText: "Select the Point tool and create Point K at the lower intersection of Circles E and F.",
 
                     }, {
 
@@ -987,7 +1018,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point L, Intersect(h, k, 2)"],
-                        stepsText: "Select the Intersect tool and create Point L at the right intersection of Circles G and F.",
+                        stepsText: "Select the Point tool and create Point L at the right intersection of Circles G and F.",
 
                     }, {
 
@@ -995,7 +1026,7 @@
                         styleObjects: [],
                         zoomScale: 2.4,
                         correctStep: ["point M, Intersect(d, k, 2)"],
-                        stepsText: "Select the Intersect tool and create Point M at the UPPER intersection of Circles B and G.",
+                        stepsText: "Select the Point tool and create Point M at the UPPER intersection of Circles B and G.",
 
                     }, {
 
@@ -1140,7 +1171,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
             </div>`
-            }, {
+            }, 
+
+            // Unsealed Flower Of Life
+            {
                 name: "Unsealed Flower Of Life",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -1564,7 +1598,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                 </div>`
-            }, {
+            },
+
+            // Sealed Flower Of Life
+            {
                 name: "Sealed Flower Of Life",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -1586,7 +1623,7 @@
 
                 // tools: "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
 
-                tools: "0 | 10 | 5 | 15 | 18 | 2",   // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
+                tools: "0 | 10 | 1 | 15 | 18 | 2",   // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 startingZoomScale: "ZoomOut(1.2)",
                 elements: [],
 
@@ -1612,7 +1649,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point N_2, Intersect(d_5, j, 2)"],
-                    stepsText: "Select the Intersect tool and select the left intersection of line IL and Circle AH<sub>1</sub>. This will create point N<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the left intersection of line IL and Circle AH<sub>1</sub>. This will create point N<sub>2</sub>.",
 
                 }, {
 
@@ -1620,7 +1657,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point O_2, Intersect(d_5, j, 1)"],
-                    stepsText: "Select the Intersect tool and select the right intersection of line IL and Circle AH<sub>1</sub>. This will create point O<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the right intersection of line IL and Circle AH<sub>1</sub>. This will create point O<sub>2</sub>.",
 
                 }, {
 
@@ -1660,7 +1697,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point P_2, Intersect(d_8, f_8, 2)"],
-                    stepsText: "Select the Intersect tool and select the top intersection of Circle N<sub>2</sub>A and Circle H<sub>1</sub>A. This will create point P<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the top intersection of Circle N<sub>2</sub>A and Circle H<sub>1</sub>A. This will create point P<sub>2</sub>.",
 
                 }, {
 
@@ -1668,7 +1705,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point Q_2, Intersect(f_8, i, 1)"],
-                    stepsText: "Select the Intersect tool and select the top intersection of line H<sub>1</sub>N<sub>1</sub> and circle H<sub>1</sub>A. This will create point Q<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the top intersection of line H<sub>1</sub>N<sub>1</sub> and circle H<sub>1</sub>A. This will create point Q<sub>2</sub>.",
 
                 }, {
 
@@ -1676,7 +1713,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point R_2, Intersect(e_8, f_8, 2)"],
-                    stepsText: "Select the Intersect tool and select the right intersection of circle O<sub>2</sub>A and circle H<sub>1</sub>A. This will create point R<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the right intersection of circle O<sub>2</sub>A and circle H<sub>1</sub>A. This will create point R<sub>2</sub>.",
 
                 }, {
 
@@ -1684,7 +1721,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point S_2, Intersect(e_8, g_8, 2)"],
-                    stepsText: "Select the Intersect tool and select the bottom intersection of circle O<sub>2</sub>A and circle N<sub>1</sub>A. This will create point S<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the bottom intersection of circle O<sub>2</sub>A and circle N<sub>1</sub>A. This will create point S<sub>2</sub>.",
 
                 }, {
 
@@ -1692,7 +1729,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point T_2, Intersect(g_8, i, 2)"],
-                    stepsText: "Select the Intersect tool and select the bottom intersection of circle N<sub>1</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point T<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the bottom intersection of circle N<sub>1</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point T<sub>2</sub>.",
 
                 }, {
 
@@ -1700,7 +1737,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point U_2, Intersect(d_8, g_8, 2)"],
-                    stepsText: "Select the Intersect tool and select the bottom intersection of circle N<sub>2</sub>A and circle N<sub>1</sub>A. This will create point U<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the bottom intersection of circle N<sub>2</sub>A and circle N<sub>1</sub>A. This will create point U<sub>2</sub>.",
 
                 }, {
 
@@ -1716,7 +1753,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point V_2, Intersect(h_8, j, 2)"],
-                    stepsText: "Select the Intersect tool and select the left intersection of circle P<sub>2</sub>A and line IL. This will create point V<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the left intersection of circle P<sub>2</sub>A and line IL. This will create point V<sub>2</sub>.",
 
                 }, {
 
@@ -1724,7 +1761,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point W_2, Intersect(h_8, i, 1)"],
-                    stepsText: "Select the Intersect tool and select the top intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point W<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the top intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point W<sub>2</sub>.",
 
                 }, {
 
@@ -1732,7 +1769,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point Z_2, Intersect(h_8, j, 1)"],
-                    stepsText: "Select the Intersect tool and select the right intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point Z<sub>2</sub>.",
+                    stepsText: "Select the Point tool and select the right intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point Z<sub>2</sub>.",
 
                 }, {
 
@@ -1740,7 +1777,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point A_3, Intersect(h_8, i, 2)"],
-                    stepsText: "Select the Intersect tool and select the bottom intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point A<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the bottom intersection of circle P<sub>2</sub>A and line H<sub>1</sub>N<sub>1</sub>. This will create point A<sub>3</sub>.",
 
                 } , {
 
@@ -1764,7 +1801,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point B_3, Intersect(d_5, l, 1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line P<sub>2</sub>A and circle H<sub>1</sub>A. This will create pointB<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line P<sub>2</sub>A and circle H<sub>1</sub>A. This will create pointB<sub>3</sub>.",
 
                 }, {
 
@@ -1772,7 +1809,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point C_3, Intersect(d_5, m, 1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line R<sub>2</sub>A and circle H<sub>1</sub>A. This will create point C<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line R<sub>2</sub>A and circle H<sub>1</sub>A. This will create point C<sub>3</sub>.",
 
                 }, {
 
@@ -1780,7 +1817,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point D_3, Intersect(d_5, l, 2)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line S<sub>2</sub>A and circle H<sub>1</sub>A. This will create point D<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line S<sub>2</sub>A and circle H<sub>1</sub>A. This will create point D<sub>3</sub>.",
 
                 }, {
 
@@ -1788,7 +1825,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point E_3, Intersect(d_5, m, 2)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line U<sub>2</sub>A and circle H<sub>1</sub>A. This will create point E<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line U<sub>2</sub>A and circle H<sub>1</sub>A. This will create point E<sub>3</sub>.",
 
                 }, {
 
@@ -1828,7 +1865,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point F_3, Intersect(l, n)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line V<sub>2</sub>R<sub>2</sub> and line P<sub>2</sub>S<sub>2</sub>. This will create point F<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line V<sub>2</sub>R<sub>2</sub> and line P<sub>2</sub>S<sub>2</sub>. This will create point F<sub>3</sub>.",
 
                 }, {
 
@@ -1836,7 +1873,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point G_3, Intersect(m, a)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line P<sub>2</sub>Z<sub>2</sub>. This will create point G<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line P<sub>2</sub>Z<sub>2</sub>. This will create point G<sub>3</sub>.",
 
                 }, {
 
@@ -1844,7 +1881,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point H_3, Intersect(l, i_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line P<sub>2</sub>S<sub>2</sub> and line Z<sub>2</sub>T<sub>2</sub>. This will create point H<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line P<sub>2</sub>S<sub>2</sub> and line Z<sub>2</sub>T<sub>2</sub>. This will create point H<sub>3</sub>.",
 
                 }, {
 
@@ -1852,7 +1889,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point I_3, Intersect(m, b)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line V<sub>2</sub>S<sub>2</sub>. This will create point I<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line R<sub>2</sub>U<sub>2</sub> and line V<sub>2</sub>S<sub>2</sub>. This will create point I<sub>3</sub>.",
 
                 }, {
 
@@ -1944,7 +1981,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point J_3, Intersect(l, j_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line V<sub>2</sub>Q<sub>2</sub> and line P<sub>2</sub>B<sub>3</sub>. This will create point J<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line V<sub>2</sub>Q<sub>2</sub> and line P<sub>2</sub>B<sub>3</sub>. This will create point J<sub>3</sub>.",
 
                 }, {
 
@@ -1952,7 +1989,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point K_3, Intersect(m, l_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line Q<sub>2</sub>Z<sub>2</sub> and line R<sub>2</sub>C<sub>3</sub>. This will create point K<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line Q<sub>2</sub>Z<sub>2</sub> and line R<sub>2</sub>C<sub>3</sub>. This will create point K<sub>3</sub>.",
 
                 }, {
 
@@ -1960,7 +1997,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point L_3, Intersect(l, m_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line Z<sub>2</sub>T<sub>2</sub> and line S<sub>2</sub>D<sub>3</sub>. This will create point L<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line Z<sub>2</sub>T<sub>2</sub> and line S<sub>2</sub>D<sub>3</sub>. This will create point L<sub>3</sub>.",
 
                 }, {
 
@@ -1968,7 +2005,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point M_3, Intersect(m, n_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line T<sub>2</sub>V<sub>2</sub> and line U<sub>2</sub>E<sub>3</sub>. This will create point M<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line T<sub>2</sub>V<sub>2</sub> and line U<sub>2</sub>E<sub>3</sub>. This will create point M<sub>3</sub>.",
 
                 }, {
 
@@ -2050,7 +2087,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point P_3, Intersect(i, a_2)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line N<sub>3</sub>K<sub>3</sub> and line O<sub>3</sub>J<sub>3</sub>. This will create point P<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line N<sub>3</sub>K<sub>3</sub> and line O<sub>3</sub>J<sub>3</sub>. This will create point P<sub>3</sub>.",
 
                 }, {
 
@@ -2058,7 +2095,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point Q_3, Intersect(i, a_1)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line J<sub>3</sub>K<sub>3</sub> and line H<sub>1</sub>A. This will create point Q<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line J<sub>3</sub>K<sub>3</sub> and line H<sub>1</sub>A. This will create point Q<sub>3</sub>.",
 
                 }, {
 
@@ -2074,7 +2111,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["point R_3, Intersect(s_8, i, 2)"],
-                    stepsText: "Select the Intersect tool and select the intersection of line W<sub>2</sub>H<sub>1</sub> and circle with center Q<sub>3</sub>. This will create point R<sub>3</sub>.",
+                    stepsText: "Select the Point tool and select the intersection of line W<sub>2</sub>H<sub>1</sub> and circle with center Q<sub>3</sub>. This will create point R<sub>3</sub>.",
 
                 }, {
 
@@ -2209,7 +2246,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                 </div>`
-            }, {
+            }, 
+
+            // Completed Flower of Life
+            {
                 name: "Completed Flower of Life",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -2228,7 +2268,7 @@
                 selected: false,
                 type: "construction",
                 elementID: "#A-detailCompletedFOL",
-                tools: "0 | 34 | 10 | 5", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
+                tools: "0 | 34 | 10 | 1", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, INTERSECT
                 startingZoomScale: "ZoomOut(2)",
                 elements: [],
 
@@ -2239,7 +2279,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point N, Intersect(d, p, 2)"],
-                        stepsText: "Select the Intersect tool and create Point N at the upper intersection of Circles H and M.",
+                        stepsText: "Select the Point tool and create Point N at the upper intersection of Circles H and M.",
 
                     }, {
 
@@ -2247,7 +2287,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point O, Intersect(e, p, 1)"],
-                        stepsText: "Select the Intersect tool and create Point O at the left intersection of Circles C and H.",
+                        stepsText: "Select the Point tool and create Point O at the left intersection of Circles C and H.",
 
                     }, {
 
@@ -2255,7 +2295,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point P, Intersect(f, q, 1)"],
-                        stepsText: "Select the Intersect tool and create Point P at the left intersection of Circles D and j.",
+                        stepsText: "Select the Point tool and create Point P at the left intersection of Circles D and j.",
 
                     }, {
 
@@ -2263,7 +2303,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point Q, Intersect(g, r, 1)"],
-                        stepsText: "Select the Intersect tool and create Point Q at the lower intersection of Circles J and K.",
+                        stepsText: "Select the Point tool and create Point Q at the lower intersection of Circles J and K.",
 
                     }, {
 
@@ -2271,7 +2311,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point R, Intersect(h, s, 1)"],
-                        stepsText: "Select the Intersect tool and create Point R at the right intersection of Circles F and K.",
+                        stepsText: "Select the Point tool and create Point R at the right intersection of Circles F and K.",
 
                     }, {
 
@@ -2279,7 +2319,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point S, Intersect(k, t, 1)"],
-                        stepsText: "Select the Intersect tool and create Point S at the left intersection of Circles M and G.",
+                        stepsText: "Select the Point tool and create Point S at the left intersection of Circles M and G.",
 
                     }, {
 
@@ -2335,7 +2375,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point T, Intersect(p, d_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point T at the upper intersection of Circles H and N.",
+                        stepsText: "Select the Point tool and create Point T at the upper intersection of Circles H and N.",
 
                     }, {
 
@@ -2343,7 +2383,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point U, Intersect(p, e_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point U at the upper intersection of Circles O and H.",
+                        stepsText: "Select the Point tool and create Point U at the upper intersection of Circles O and H.",
 
                     }, {
 
@@ -2351,7 +2391,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point V, Intersect(q, e_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point V at the left intersection of Circles O and I.",
+                        stepsText: "Select the Point tool and create Point V at the left intersection of Circles O and I.",
 
                     }, {
 
@@ -2359,7 +2399,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point W, Intersect(q, f_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point W at the left intersection of Circles I and P.",
+                        stepsText: "Select the Point tool and create Point W at the left intersection of Circles I and P.",
 
                     }, {
 
@@ -2367,7 +2407,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point Z, Intersect(r, f_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point Z at the lower intersection of Circles P and J.",
+                        stepsText: "Select the Point tool and create Point Z at the lower intersection of Circles P and J.",
 
                     }, {
 
@@ -2375,7 +2415,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point A_1, Intersect(r, g_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point A<sub>1</sub> at the lower intersection of Circles J and Q.",
+                        stepsText: "Select the Point tool and create Point A<sub>1</sub> at the lower intersection of Circles J and Q.",
 
                     }, {
 
@@ -2383,7 +2423,7 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point B_1, Intersect(s, g_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point B<sub>1</sub> at the lower intersection of Circles Q and K.",
+                        stepsText: "Select the Point tool and create Point B<sub>1</sub> at the lower intersection of Circles Q and K.",
 
                     }, {
 
@@ -2391,35 +2431,35 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point C_1, Intersect(s, h_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point C<sub>1</sub> at the lower intersection of Circles K and R.",
+                        stepsText: "Select the Point tool and create Point C<sub>1</sub> at the lower intersection of Circles K and R.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point D_1, Intersect(t, h_1, 1)"],
-                        stepsText: "Select the Intersect tool and create Point D<sub>1</sub> at the right intersection of Circles L and R.",
+                        stepsText: "Select the Point tool and create Point D<sub>1</sub> at the right intersection of Circles L and R.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point E_1, Intersect(t, k_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point E<sub>1</sub> at the right intersection of Circles S and L.",
+                        stepsText: "Select the Point tool and create Point E<sub>1</sub> at the right intersection of Circles S and L.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point F_1, Intersect(c_1, k_1, 1)"],
-                        stepsText: "Select the Intersect tool and create Point F<sub>1</sub> at the upper intersection of Circles M and S.",
+                        stepsText: "Select the Point tool and create Point F<sub>1</sub> at the upper intersection of Circles M and S.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point G_1, Intersect(c_1, d_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point G<sub>1</sub> at the upper intersection of Circles N and M.",
+                        stepsText: "Select the Point tool and create Point G<sub>1</sub> at the upper intersection of Circles N and M.",
                     }, {
 
                         type: "construction",
@@ -2510,84 +2550,84 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point H_1, Intersect(d_1, p_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point H<sub>1</sub> at the upper intersection of Circles G<sub>1</sub> and T.",
+                        stepsText: "Select the Point tool and create Point H<sub>1</sub> at the upper intersection of Circles G<sub>1</sub> and T.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point I_1, Intersect(p_1, q_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point I<sub>1</sub> at the upper intersection of Circles U and T.",
+                        stepsText: "Select the Point tool and create Point I<sub>1</sub> at the upper intersection of Circles U and T.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point J_1, Intersect(e_1, q_1, 1)"],
-                        stepsText: "Select the Intersect tool and create Point J<sub>1</sub> at the left intersection of Circles U and O.",
+                        stepsText: "Select the Point tool and create Point J<sub>1</sub> at the left intersection of Circles U and O.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point K_1, Intersect(r_1, s_1, 2)"],
-                        stepsText: "Select the Intersect tool and create Point K<sub>1</sub> at the left intersection of Circles V and W.",
+                        stepsText: "Select the Point tool and create Point K<sub>1</sub> at the left intersection of Circles V and W.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point L_1, Intersect(f_1, s_1, 1)"],
-                        stepsText: "Select the Intersect tool and create Point L<sub>1</sub> at the left intersection of Circles P and Z.",
+                        stepsText: "Select the Point tool and create Point L<sub>1</sub> at the left intersection of Circles P and Z.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point M_1, Intersect(t_1, c_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point M<sub>1</sub> at the lower intersection of Circles Z and A<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point M<sub>1</sub> at the lower intersection of Circles Z and A<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point N_1, Intersect(g_1, c_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point N<sub>1</sub> at the lower intersection of Circles A<sub>1</sub> and B<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point N<sub>1</sub> at the lower intersection of Circles A<sub>1</sub> and B<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point O_1, Intersect(d_2, e_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point O<sub>1</sub> at the lower intersection of Circles B<sub>1</sub> and C<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point O<sub>1</sub> at the lower intersection of Circles B<sub>1</sub> and C<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point P_1, Intersect(h_1, e_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point P<sub>1</sub> at the lower intersection of Circles C<sub>1</sub> and D<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point P<sub>1</sub> at the lower intersection of Circles C<sub>1</sub> and D<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point Q_1, Intersect(f_2, g_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point Q<sub>1</sub> at the right intersection of Circles D<sub>1</sub> and E<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point Q<sub>1</sub> at the right intersection of Circles D<sub>1</sub> and E<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point R_1, Intersect(k_1, g_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point R<sub>1</sub> at the upper intersection of Circles E<sub>1</sub> and F<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point R<sub>1</sub> at the upper intersection of Circles E<sub>1</sub> and F<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point S_1, Intersect(h_2, k_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point S<sub>1</sub> at the upper intersection of Circles F<sub>1</sub> and G<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point S<sub>1</sub> at the upper intersection of Circles F<sub>1</sub> and G<sub>1</sub>.",
                     }, {
 
                         type: "construction",
@@ -2678,84 +2718,84 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point T_1, Intersect(p_1, p_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point T<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and H<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point T<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and H<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point U_1, Intersect(q_1, q_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point U<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and J<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point U<sub>1</sub> at the upper intersection of Circles I<sub>1</sub> and J<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point V_1, Intersect(r_1, r_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point V<sub>1</sub> at the upper intersection of Circles K<sub>1</sub> and J<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point V<sub>1</sub> at the upper intersection of Circles K<sub>1</sub> and J<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point W_1, Intersect(s_1, s_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point W<sub>1</sub> at the lower intersection of Circles K<sub>1</sub> and L<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point W<sub>1</sub> at the lower intersection of Circles K<sub>1</sub> and L<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point Z_1, Intersect(t_1, t_2, 1)"],
-                        stepsText: "Select the Intersect tool and create Point Z<sub>1</sub> at the lower intersection of Circles L<sub>1</sub> and M<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point Z<sub>1</sub> at the lower intersection of Circles L<sub>1</sub> and M<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point A_2, Intersect(c_2, c_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point A<sub>2</sub> at the lower intersection of Circles M<sub>1</sub> and N<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point A<sub>2</sub> at the lower intersection of Circles M<sub>1</sub> and N<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point B_2, Intersect(d_2, d_3, 2)"],
-                        stepsText: "Select the Intersect tool and create Point B<sub>2</sub> at the lower intersection of Circles N<sub>1</sub> and O<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point B<sub>2</sub> at the lower intersection of Circles N<sub>1</sub> and O<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point C_2, Intersect(e_2, e_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point C<sub>2</sub> at the lower intersection of Circles O<sub>1</sub> and P<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point C<sub>2</sub> at the lower intersection of Circles O<sub>1</sub> and P<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point D_2, Intersect(f_2, f_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point D<sub>2</sub> at the lower intersection of Circles P<sub>1</sub> and Q<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point D<sub>2</sub> at the lower intersection of Circles P<sub>1</sub> and Q<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point E_2, Intersect(g_2, g_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point E<sub>2</sub> at the upper intersection of Circles R<sub>1</sub> and Q<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point E<sub>2</sub> at the upper intersection of Circles R<sub>1</sub> and Q<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point F_2, Intersect(h_2, h_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point F<sub>2</sub> at the upper intersection of Circles S<sub>1</sub> and R<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point F<sub>2</sub> at the upper intersection of Circles S<sub>1</sub> and R<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point G_2, Intersect(k_2, p_2, 2)"],
-                        stepsText: "Select the Intersect tool and create Point G<sub>2</sub> at the upper intersection of Circles H<sub>1</sub> and S<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point G<sub>2</sub> at the upper intersection of Circles H<sub>1</sub> and S<sub>1</sub>.",
                     }, {
 
                         type: "construction",
@@ -2846,42 +2886,42 @@
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point H_2, Intersect(p_2, p_3, 2)"],
-                        stepsText: "Select the Intersect tool and create Point H<sub>2</sub> at the upper intersection of Circles T<sub>1</sub> and G<sub>2</sub>.",
+                        stepsText: "Select the Point tool and create Point H<sub>2</sub> at the upper intersection of Circles T<sub>1</sub> and G<sub>2</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point I_2, Intersect(r_2, q_3, 2)"],
-                        stepsText: "Select the Intersect tool and create Point I<sub>2</sub> at the upper intersection of Circles V<sub>1</sub> and U<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point I<sub>2</sub> at the upper intersection of Circles V<sub>1</sub> and U<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point J_2, Intersect(t_2, s_3, 1)"],
-                        stepsText: "Select the Intersect tool and create Point J<sub>2</sub> at the lower intersection of Circles W<sub>1</sub> and Z<sub>1</sub>.",
+                        stepsText: "Select the Point tool and create Point J<sub>2</sub> at the lower intersection of Circles W<sub>1</sub> and Z<sub>1</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point K_2, Intersect(d_3, c_4, 1)"],
-                        stepsText: "Select the Intersect tool and create Point K<sub>2</sub> at the lower intersection of Circles A<sub>2</sub> and B<sub>2</sub>.",
+                        stepsText: "Select the Point tool and create Point K<sub>2</sub> at the lower intersection of Circles A<sub>2</sub> and B<sub>2</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point L_2, Intersect(f_3, e_4, 1)"],
-                        stepsText: "Select the Intersect tool and create Point L<sub>2</sub> at the lower intersection of Circles C<sub>2</sub> and D<sub>2</sub>.",
+                        stepsText: "Select the Point tool and create Point L<sub>2</sub> at the lower intersection of Circles C<sub>2</sub> and D<sub>2</sub>.",
                     }, {
 
                         type: "construction",
                         styleObjects: [],
                         zoomScale: 4.8,
                         correctStep: ["point M_2, Intersect(h_3, g_4, 1)"],
-                        stepsText: "Select the Intersect tool and create Point M<sub>2</sub> at the upper intersection of Circles F<sub>2</sub> and E<sub>2</sub>.",
+                        stepsText: "Select the Point tool and create Point M<sub>2</sub> at the upper intersection of Circles F<sub>2</sub> and E<sub>2</sub>.",
                     }, {
 
                         type: "construction",
@@ -3019,7 +3059,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                 </div>`
-            }, {
+            }, 
+            
+            // Fruit of Life"
+            {
                 name: "Fruit of Life",
                 formattedName: `                    
                     <span class="A_decor">T</span>
@@ -3147,7 +3190,10 @@
                 beatae illo ipsum quia cumque voluptatem exercitationem mollitia libero, minus omnis unde
                 temporibus odio nostrum, incidunt, tenetur illum vero ad quibusdam deserunt. Illo, sed.
                 </div>`
-            }, {
+            }, 
+
+            // Fruit of Life 2
+            {
                 name: "Fruit of Life 2",
                 id: 16,
                 d3Data: "#hexHoverFruitB",
@@ -3163,7 +3209,10 @@
                 overview: "A circle is a set of points on a plane that are equidistant from it's central point.",
                 quote: '"...[a circle] regulates all things for us down to the humblest bounty, as it dispenses beauty, homogeneity, shapeliness and perfection."',
                 quotee: "Proclus"
-            }, {
+            },
+            
+            // Flower Of Life Information System
+            {
                 name: "Flower Of Life Information System",
                 id: 17,
                 d3Data: "#hexHoverISOne",

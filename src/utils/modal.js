@@ -19,7 +19,7 @@
 
     var modal = function () {
 
-        console.log("MODAL LOADED");
+        // console.log("MODAL LOADED");
 
         $(".A_closeModal").click(function() {
             $("#A_simpleModal").hide();

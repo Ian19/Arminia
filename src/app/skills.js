@@ -378,7 +378,7 @@
 
             // initialise the game.skills.skillData.id as its index in the skillData array
 
-            // localStorage.setItem('ArminiaSkills', "0,1,9,10,11,12,14,15");
+            localStorage.setItem('ArminiaSkills', "0,1,9,10,11,12,14,15");
 
             for (let i = 0; i < game.skills.skillData.length; i++) {
                 game.skills.skillData[i].id = i;

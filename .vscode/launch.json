@@ -10,13 +10,21 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch Firefox against localhost",
-            "url": "http://127.0.0.1:5502/index.html",
+            "url": "http://127.0.0.1:5503/index.html",
             "webRoot": "${workspaceFolder}"
         },
         {
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Launch Edge against localhost",
+            "name": "Launch Edge against localhost 5503",
+            // "url": "http://localhost/arminia/index.html",
+            "url": "http://127.0.0.1:5503/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Launch Edge against localhost 5502",
             // "url": "http://localhost/arminia/index.html",
             "url": "http://127.0.0.1:5502/index.html",
             "webRoot": "${workspaceFolder}"
@@ -26,7 +34,7 @@
             "request": "launch",
             "type": "vscode-edge-devtools.debug",
             // "url": "http://localhost/arminia/index.html"
-            "url": "http://127.0.0.1:5502/index.html"
+            "url": "http://127.0.0.1:5503/index.html"
         }
     ]
 }

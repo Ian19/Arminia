@@ -66,23 +66,29 @@
 
         $(document).on('click', '#A_protonBtnID', function () {
 
-            // temporary until more papers are added
-            // game.skills.lastSkill = game.skills.selectedSkill;
             game.skills.selectedSkill = game.skills.equationData[0];
 
-            // game.skills.lastSkill = game.skills.selectedSkill;
-
-            // console.log("A_protonBtnID click");
-
             game.geogebra.parameters.appName = "suite";
-            // game.geogebra.parameters.appName = "classic";
-            game.geogebra.parameters.filename = "src/assets/geogebra/testCAS3.ggb";
-            // game.geogebra.parameters.filename = "src/assets/geogebra/testingColors.ggb";
+            game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
             game.geogebra.parameters.showAlgebraInput = true;
             game.geogebra.parameters.showToolBar = false;
             game.geogebra.parameters.allowStyleBar = false;
 
             Arminia.geogebraBtnClick(game, "A_64TetraView", "#A_protonBtnID");
+
+        });
+
+        $(document).on('click', '#A_holographicMassBtnID', function () {
+
+            game.skills.selectedSkill = game.skills.equationData[1];
+
+            game.geogebra.parameters.appName = "suite";
+            game.geogebra.parameters.filename = game.skills.selectedSkill.geogebraFile;
+            game.geogebra.parameters.showAlgebraInput = true;
+            game.geogebra.parameters.showToolBar = false;
+            game.geogebra.parameters.allowStyleBar = false;
+            
+            Arminia.geogebraBtnClick(game, "A_64TetraView", "#A_holographicMassBtnID");
 
         });
 

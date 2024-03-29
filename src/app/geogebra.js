@@ -85,6 +85,7 @@
 
                 currentID = game.skills.selectedSkill.steps[0].elementID();
                 filename = game.skills.selectedSkill.steps[0].stepFilename();
+
             }
 
             // load stepsImage svg file with d3.xml() and setup
@@ -132,9 +133,30 @@
             game.main.setEnabled(false);
 
             // Setup Steps System
-            // let steps = game.skills.selectedSkill.steps;
             let steps = game.skills.selectedSkill.steps;
             let stepsLength = game.skills.selectedSkill.steps.length;
+
+            // ISSUE: The pre-built Beginning geo can be deleted, which breaks geogebra editor
+            // listeners to prevent deletion of beginning geo - unfinished code
+            // document.addEventListener('keyup', function(event) {
+
+            //     if (event.key === 'Delete') {
+
+            //         // Your code here (e.g., alert or perform an action)
+            //         console.log('Delete key released');
+
+            //     }
+
+            // });
+
+            // api.registerRemoveListener(myRemoveListenerFunction);
+
+            // function myRemoveListenerFunction(n) {
+
+            //     console.log("entered myRemoveListenerFunction");
+            //     console.log(n);
+
+            // }
 
             // Init stepper values
             $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
@@ -200,7 +222,8 @@
                     showNextPage();
                 });
 
-                const url = "src/assets/docs/The_Schwarzschild_Proton.pdf";
+                // const url = "src/assets/docs/The_Schwarzschild_Proton.pdf";
+                const url = game.skills.selectedSkill.paperPDFFile;
 
                 // Loaded via <script> tag, create shortcut to access PDF.js exports.
                 var pdfjsLib = window['pdfjs-dist/build/pdf'];
@@ -318,23 +341,23 @@
             let stepsArray = [];
             let oldStepsArray = [];
 
-            function updateStepsContainer2(j) {
+            function updateStepsContainer(j) {
 
                 const stepsProgress = $("#A_stepsProgress")[0];
 
-                $("#A_stepsCount").html("Steps " + (j + 1).toString() + " of " + stepsArray.length.toString());
+                $("#A_stepsCount").html("Steps " + (j + 1).toString() + " of " + stepsLength.toString());
 
-                if (j === stepsArray.length) {
+                if (j === stepsLength) {
 
-                    $("#A_stepsCount").html("Steps " + stepsArray.length.toString() + " of " + stepsArray.length.toString() + " complete");
+                    $("#A_stepsCount").html("Steps " + stepsLength.toString() + " of " + stepsLength.toString() + " complete");
                     $("#A_stepsBody").html("<i>" + game.skills.selectedSkill.name + " has been completed!</i>");
                     $("#A_stepsProgress").css("width", "100%");
 
                 } else {
 
-                    $("#A_stepsCount").html("Steps " + (j + 1).toString() + " of " + stepsArray.length.toString());
+                    $("#A_stepsCount").html("Steps " + (j + 1).toString() + " of " + stepsLength.toString());
                     $("#A_stepsBody").html(game.skills.selectedSkill.steps[j].stepsText);
-                    let stepsPercentage = Math.round(100 / stepsArray.length);
+                    let stepsPercentage = Math.round(100 / stepsLength);
                     let stepsProgressNum = stepsPercentage * (j);
                     $("#A_stepsProgress").css("width", stepsProgressNum.toString() + "%");
 
@@ -380,7 +403,8 @@
 
             }
 
-            function buildStepsView2() {
+
+            function buildStepsView() {
 
                 let j;
 
@@ -412,7 +436,7 @@
                 if (j >= 0 && j < stepsArray.length) {
                     // steps complete, but not all.
 
-                    updateStepsContainer2(j);
+                    updateStepsContainer(j);
 
                     // next step to pan and zoom to
                     let elementStr = "A-SVGStep" + (j + 1).toString();
@@ -448,7 +472,7 @@
                 } else {
                     // all steps correct
 
-                    updateStepsContainer2(j);
+                    updateStepsContainer(j);
                     panAndZoomAndAnimate(j, "A-SVGGroupSteps", 1, true);
                     setLocalStorage();
 
@@ -509,7 +533,7 @@
                         }
 
                         strState = strType + " " + strName + ", " + strCommand;
-                        // console.log(strState);
+                        // console.log("strState:", strState);
 
                         // Check if geogebra object exists in model skillData steps by building multidimension test array
                         for (let j = 0; j < stepsLength; j++) {
@@ -522,11 +546,13 @@
 
                                 for (let k = 0; k < steps[j].correctStep.length; k++) {
 
+                                    // console.log("correctStep:", steps[j].correctStep[k]);
+
                                     if (strState == steps[j].correctStep[k]) {
 
-                                        // console.log("Correct Step!");
-
-                                        if (steps[j].type == "construction") test[j][k] = 1;
+                                        console.log("Correct Step!");
+                                        
+                                        if (steps[j].type == "construction" || steps[j].type == "paper") test[j][k] = 1;
 
                                         if (steps[j].type == "combo" && api.getLineThickness(strName) == requiredLineThickness) {
 
@@ -541,6 +567,7 @@
                     }
 
                     // Check if a step was completed and simplify down into the one dimensional array, 'stepsArray'
+
                     for (let i = 0; i < test.length; i++) {
                         for (let j = 0; j < test[i].length; j++) {
                             if (test[i][j] == 0) {
@@ -569,7 +596,6 @@
                                         break;
 
                                     }
-
                                 }
 
                                 // check if object has a requiredLineThickness key
@@ -581,10 +607,8 @@
                                         break;
 
                                     }
-
                                 }
                             }
-
                         }
                     }
 
@@ -593,6 +617,7 @@
 
                     // Beginning of sameResultState check, to prevent looping unnecessarily through machine intensive buildStepsView function
                     // if new start, make oldStepsArray a duplicate of stepsArray
+
                     if (newStart) {
 
                         // give access to buildStepsView if newStart
@@ -607,7 +632,6 @@
                         }
 
                     } else sameResultState = true;
-
 
                     // check if same Result State and set accordingly
                     for (let i = 0; i < stepsArray.length; i++) {
@@ -633,7 +657,7 @@
                         }
 
                         // update the stepper and stepsImage
-                        buildStepsView2();
+                        buildStepsView();
 
                     } else {
 
@@ -666,12 +690,20 @@
 
                     if (!complete) {
 
-                        if (game.skills.selectedSkill.steps[j].multiPartEquation !== null) {
+                        if (skillType === "paper" && game.skills.selectedSkill.steps[j].multiPartEquation !== null) {
 
-                            let secondVariable = "A-SVGStep" + game.skills.selectedSkill.steps[j].multiPartEquation;
+                            // let secondVariable = "A-SVGStep" + game.skills.selectedSkill.steps[j].multiPartEquation;
 
-                            d3.select("#" + secondVariable)
-                                .style("animation", "transcolor 0.75s infinite alternate");
+                            for (let i = 0; i < game.skills.selectedSkill.steps[j].multiPartEquation.length; i++) {
+
+                                d3.select("#A-SVGStep" + game.skills.selectedSkill.steps[j].multiPartEquation[i])
+                                    .style("animation", "transcolor 0.75s infinite alternate");
+
+
+                            }
+
+                            // d3.select("#" + secondVariable)
+                            //     .style("animation", "transcolor 0.75s infinite alternate");
 
 
                             d3.select("#" + s)
@@ -793,7 +825,7 @@
 
             if (parameters.appName == "classic") {
 
-                game.nav = "home";                
+                game.nav = "home";
 
                 game.animatePageOut("A_geobebraView");
                 game.animatePageIn("A_homePage");
@@ -801,7 +833,7 @@
             } else {
 
                 $("#A_startGeogebraBtnID").hide();
-                $(".A_mouseIconPaper").hide();                
+                $(".A_mouseIconPaper").hide();
 
                 game.nav = "A_64TetraView";
                 game.animatePageOut("A_geobebraView");
@@ -813,54 +845,13 @@
 
         });
 
-        const cheatSteps = [
-
-            // page 1
-            ["p_{v} = 5.1660 * 10.000^93.000"],
-            ["r_{p} = 1.3210 * 10.000^-13.000"],
-            ["V_{p} = 4.0000 / 3.0000 r_{p}^3.0000 π"],
-            ["R_{p} = p_{v} V_{p}"],
-
-            // page 2
-            ["l = 1.6200 * 10.000^-33.000"],
-            ["v_{pl} = l^3.0000"],
-            ["n = V_{p} / v_{pl}"],
-            ["m_{p} = 2.1800 * 10.000^-5.0000"],
-            ["R_{p2} = m_{p} n"],
-            ["R_{s} = r_{p}"],
-            ["G = 6.6700 * 10.000^-8.0000"],
-            ["c = 2.9900 * 10.000^10.000"],
-            ["M = (R_{s} * c^2.0000) / (2.0000G)"],
-            ["R_{m} = (M / R_{p})"],
-            ["R_{m2} = M / R_{p} * 100.00"],
-            ["F = (G M^2.0000) / (2.0000r_{p})^2.0000"],
-            ["a = F / M"],
-            ["v = 2.0000sqrt(2.0000a r_{p})"],
-
-            // page 3
-            ["r = 2.0000 * r_{p}"],
-            ["t = (2.0000π * 2.0000 * r_{p}) / v"],
-            ["f = 1.0000 / t"],
-            ["m = (M * M) / (M + M)"],
-            ["V_{r} = (m * c^2.0000) / 2.0000"],
-            ["V_{c} = V_{r} / r"],
-            ["r_{m} = r / 100.000"],
-            ["Kc = 8.9880 * 10.000^9.0000"],
-            ["q_{1} = 1.602 * 10.000^-19.0000"],
-            ["q_{2} = 1.602 * 10.000^-19.0000"],
-            ["F_{c} = (Kc q_{1} q_{2}) / r_{m}^2.0000"],
-            ["F_{d} = F_{c} * 10.000^5.0000"],
-            ["F_{t} = V_{c} + F_{d}"]
-
-        ];
-
         $("#A_cheatBtnID").click(function () {
 
-            if (cheatNum < cheatSteps.length) {
+            if (cheatNum < game.skills.selectedSkill.cheatSteps.length) {
 
                 var c = document.getElementsByClassName("canvasDef")[0];
 
-                ggbApplet.evalCommand(cheatSteps[cheatNum]);
+                ggbApplet.evalCommand(game.skills.selectedSkill.cheatSteps[cheatNum]);
 
                 let i = cheatNum + 2;
 

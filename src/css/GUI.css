@@ -19,7 +19,7 @@
     margin-bottom: 6px;
 }
 
-#A_titleClick {
+.A_titleClick {
     cursor: pointer;
 }
 
@@ -27,7 +27,7 @@
     width: 15vw;
 }
 
-#A_mainSwish {
+.A_mainSwish {
     margin-top: -1.4vh;
 }
 
@@ -36,7 +36,7 @@
     font-size: 1.7vw;
     font-variant-caps: normal;
     color: gold;
-    margin-bottom: calc(var(--vh, 1vh) * 1);
+    /* margin-bottom: calc(var(--vh, 1vh) * 1); */
 }
 
 .A_reg {
@@ -49,7 +49,7 @@
     letter-spacing: -0.25em;
 }
 
-#A_64TetraViewSwish {
+.A_64TetraViewSwish {
     display: flex;
     justify-content: center;
     margin-bottom: calc(var(--vh, 1vh) * 1);
@@ -79,7 +79,7 @@
     margin-bottom: -1vw;
 } 
 
-#A_pageBody {
+.A_pageBody {
     font-size: 0.7vw;
     color: #acb0de;
     text-align: justify;

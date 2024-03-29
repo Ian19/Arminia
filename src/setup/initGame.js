@@ -184,8 +184,21 @@
 
         })();
 
-        if (!isIOS) document.getElementById("A_mainSwish").style.marginTop = "0px";
+        // if (!isIOS) document.getElementById("A_mainSwish").style.marginTop = "0px";
+
+
+        if (!isIOS) {
+
+            const collection = document.getElementsByClassName("A_mainSwish");
+
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].style.marginTop = "0px";
+            }        
         
+        }
+
+
+
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////

@@ -20,6 +20,9 @@
     function equationData(game) {
 
         game.skills.equationData = [
+
+            // The Schwarzschild Proton
+
             {
 
                 name: "The Schwarzschild Proton",
@@ -395,6 +398,9 @@
                 ]
 
             },
+
+            
+            // Quantum Gravity and the Holographic Mass
             {
 
                 name: "Quantum Gravity and the Holographic Mass",
@@ -545,7 +551,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic l, 1.616199000 * 10.00000000^-33.00000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33}") + ". (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33}") + ". (Hint: Enter 'l = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
                 },
                 {
                     type: "paper",

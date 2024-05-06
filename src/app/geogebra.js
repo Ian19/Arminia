@@ -47,6 +47,8 @@
         $("#A_constructionBtn").css("color", "white");
         $("#A_constructionBtn").css("border", "1px solid #8064cc");
 
+        $("#A_cheatBtnID").hide();
+
         parameters.appletOnLoad = function (api) {
 
             Arminia.setGUI(game);
@@ -61,9 +63,11 @@
             skillType = game.skills.selectedSkill.type;
 
             $("#A_cheatBtnID").text("DEBUG STEP 1");
-            $("#A_cheatBtnID").hide();
+            // $("#A_cheatBtnID").hide();
             $("#A_stepsBackgroundImage").css("display", "inline-block");
             $("#A_StepsImageCenter").css("display", "none");
+
+
             $("#A_startGeogebraBtnID").show();
 
             // settings for CAS or graphing             
@@ -89,31 +93,35 @@
             }
 
             // load stepsImage svg file with d3.xml() and setup
-            d3.xml(filename).then(data => {
+            let imageElement = document.getElementById("A_stepsBackgroundImage");
 
-                ready = false;
-                currentPage = 1;
+            if (!imageElement.hasChildNodes()) {
 
-                svgNode = data.documentElement;
-                obj = $('#A_stepsBackgroundImage')[0];
-                obj.appendChild(svgNode);
+                d3.xml(filename).then(data => {
 
-                svg = d3.select(currentID);
-                svg.style("width", "100%").style("height", "100%").style("display", "block");
-
-                zoom = d3.zoom()
-                    // .scaleExtent([1, 10])
-                    .on("zoom", zoomed);
-
-                globalG = svg.select('g');
-
-                function zoomed({ transform }) {
-                    globalG.attr("transform", transform);
-                }
-
-                svg.call(zoom);
-
-            });
+                    currentPage = 1;
+    
+                    svgNode = data.documentElement;
+                    obj = $('#A_stepsBackgroundImage')[0];
+                    obj.appendChild(svgNode);
+    
+                    svg = d3.select(currentID);
+                    svg.style("width", "100%").style("height", "100%").style("display", "block");
+    
+                    zoom = d3.zoom()
+                        // .scaleExtent([1, 10])
+                        .on("zoom", zoomed);
+    
+                    globalG = svg.select('g');
+    
+                    function zoomed({ transform }) {
+                        globalG.attr("transform", transform);
+                    }
+    
+                    svg.call(zoom);
+    
+                });
+            }
 
 
             const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
@@ -159,7 +167,7 @@
             // }
 
             // Init stepper values
-            $("#A_stepsCount").html("Steps 1 of " + stepsLength.toString());
+            $("#A_stepsCount").html("Introduction");
             $("#A_stepsValue").text("0%");
             $("#A_stepsProgress").css("width", "0%");
 
@@ -169,9 +177,7 @@
             // Steps Image title, difficulty and definition
             $("#A_stepsImageTitle").html(game.skills.selectedSkill.formattedName);
             $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
-            $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
-
-            // $("#A_geogebraDetailTitle").text(game.skills.selectedSkill.name);
+            $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);            
             $("#A_geogebraDetailTitle").html(game.skills.selectedSkill.formattedName);
             $("#A_geogebraDetailQuote").text(game.skills.selectedSkill.quote);
             $("#A_geogebraDetailQuotee").text(game.skills.selectedSkill.quotee);
@@ -211,7 +217,6 @@
             $("#A_mouseIconBorder").css("bottom", mybottom.toString() + "px");
 
             // PDF.js temporary for schwarzschild paper demo
-            // if (parameters.appName == "suite") {
             if (skillType == "paper") {
 
                 $("#A_prevPage").click(function () {
@@ -257,15 +262,6 @@
                     // Get page
                     pdfDoc.getPage(num).then(function (page) {
 
-                        // Scaled Viewport
-                        // var desiredWidth = w - 20;
-
-                        // var viewport = page.getViewport({ scale: 1, });
-                        // var scale = w / viewport.width;
-                        // var scaledViewport = page.getViewport({ scale: scale, });
-                        // canvas.height = viewport.height;
-                        // canvas.width = viewport.width;
-
                         const viewport = page.getViewport({ scale: scale });
                         canvas.height = viewport.height;
                         canvas.width = viewport.width;
@@ -274,7 +270,6 @@
                         const renderContext = {
                             canvasContext: ctx,
                             viewport: viewport
-                            // viewport: scaledViewport
                         }
 
                         let renderTask = page.render(renderContext);
@@ -448,7 +443,7 @@
                         currentID = game.skills.selectedSkill.steps[j].elementID();
 
                         // load correct page
-                        d3.xml(game.skills.selectedSkill.steps[j].stepFilename()).then(data => {
+                        const doc1 = d3.xml(game.skills.selectedSkill.steps[j].stepFilename()).then(data => {
 
                             svgNode = data.documentElement;
                             obj = $('#A_stepsBackgroundImage')[0];
@@ -466,6 +461,7 @@
 
                     } else {
                         // page is not different, stay on page
+
                         panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
                     }
 
@@ -550,8 +546,8 @@
 
                                     if (strState == steps[j].correctStep[k]) {
 
-                                        console.log("Correct Step!");
-                                        
+                                        // console.log("Correct Step!");
+
                                         if (steps[j].type == "construction" || steps[j].type == "paper") test[j][k] = 1;
 
                                         if (steps[j].type == "combo" && api.getLineThickness(strName) == requiredLineThickness) {
@@ -692,19 +688,12 @@
 
                         if (skillType === "paper" && game.skills.selectedSkill.steps[j].multiPartEquation !== null) {
 
-                            // let secondVariable = "A-SVGStep" + game.skills.selectedSkill.steps[j].multiPartEquation;
-
                             for (let i = 0; i < game.skills.selectedSkill.steps[j].multiPartEquation.length; i++) {
 
                                 d3.select("#A-SVGStep" + game.skills.selectedSkill.steps[j].multiPartEquation[i])
                                     .style("animation", "transcolor 0.75s infinite alternate");
 
-
                             }
-
-                            // d3.select("#" + secondVariable)
-                            //     .style("animation", "transcolor 0.75s infinite alternate");
-
 
                             d3.select("#" + s)
                                 .style("animation", "transcolor 0.75s infinite alternate");
@@ -747,10 +736,22 @@
 
         $("#A_startGeogebraBtnID").click(function () {
 
-            // if (parameters.appName == "suite") $("#A_cheatBtnID").show();
-            if (skillType == "paper") {
-                $("#A_cheatBtnID").show();
+            if (this.innerText == "START") {
+
+                this.innerText = "RESET";
+
             }
+
+            if (skillType == "paper") {
+
+                $("#A_cheatBtnID").show();
+
+            } else {
+
+                $("#A_cheatBtnID").hide();
+
+            }
+
 
             if (ready) {
 
@@ -761,7 +762,16 @@
                     ggbApplet.evalCommand("CenterView((0, 0))");
                     ggbApplet.evalCommand(game.skills.selectedSkill.startingZoomScale);
 
-                } else $("#A_cheatBtnID").text("DEBUG STEP 1");
+                    currentID = game.skills.selectedSkill.elementID;
+
+                } else {
+
+                    $("#A_cheatBtnID").text("DEBUG STEP 1");
+
+                    currentID = game.skills.selectedSkill.steps[0].elementID();
+                    filename = game.skills.selectedSkill.steps[0].stepFilename();
+
+                }
 
             }
 
@@ -779,6 +789,11 @@
 
             clearAndSetupConstructionSteps();
             removeAllAnimateTags();
+
+            // if (skillType !== "paper") {
+            //     panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+            // }
+
             panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
 
         });
@@ -816,8 +831,10 @@
             ready = false;
             cheatNum = 0;
 
+            $("#A_startGeogebraBtnID").text("START");
             $("#A_startGeogebraBtnID").removeClass('A_geogebraButton');
             $("#A_startGeogebraBtnID").addClass('A_startGeogebraBtn');
+            $("#A_cheatBtnID").hide();
 
             removeAllAnimateTags();
 

@@ -2103,7 +2103,7 @@
                     zoomScale: 4,
                     styleObjects: [],
                     correctStep: ["circle s_8, Circle(Q_3, P_3)"],
-                    stepsText: "Select the Circle with Center tool and draw a Circle with center I<sub>3</sub> and radius E<sub>3</sub>.",
+                    stepsText: "Select the Circle with Center tool and draw a Circle with center Q<sub>3</sub> and radius P<sub>3</sub>.",
 
                 }, {
 

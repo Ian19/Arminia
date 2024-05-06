@@ -27,8 +27,9 @@ The following geometry constructions are complete:
 - The Unsealed Flower of Life
 - The Sealed Flower of Life
 
-The following peer reviewed scientiffic papers are complete in the CAS:
-- The Schwarzschild Proton Paper by Nassim Harramein
+The following scientiffic papers are available:
+- The Schwarzschild Proton by Nassim Harramein (complete)
+- Quantum Gravity and the Holographic Mass by Nassim Harramein (approx. %50 incomplete)
 
 The following features are either not functioning or incomplete:
 - persistent achievements

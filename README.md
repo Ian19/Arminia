@@ -28,8 +28,8 @@ The following geometry constructions are complete:
 - The Sealed Flower of Life
 
 The following scientiffic papers are available:
-- The Schwarzschild Proton by Nassim Harramein (complete)
-- Quantum Gravity and the Holographic Mass by Nassim Harramein (37 steps completed)
+- The Schwarzschild Proton by Nassim Haramein (complete)
+- Quantum Gravity and the Holographic Mass by Nassim Haramein (37 steps completed)
 
 The following features are either not functioning or incomplete:
 - persistent achievements

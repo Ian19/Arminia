@@ -29,7 +29,7 @@ The following geometry constructions are complete:
 
 The following scientiffic papers are available:
 - The Schwarzschild Proton by Nassim Harramein (complete)
-- Quantum Gravity and the Holographic Mass by Nassim Harramein (approx. %50 incomplete)
+- Quantum Gravity and the Holographic Mass by Nassim Harramein (37 steps completed)
 
 The following features are either not functioning or incomplete:
 - persistent achievements

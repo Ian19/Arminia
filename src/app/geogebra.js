@@ -436,12 +436,8 @@
                     // next step to pan and zoom to
                     let elementStr = "A-SVGStep" + (j + 1).toString();
 
-                    console.log("1");
-
                     // if page is different, load correct page
                     if (skillType === "paper" && currentID !== game.skills.selectedSkill.steps[j].elementID()) {
-
-                        console.log("2");
 
                         d3.select(currentID).remove();
                         currentID = game.skills.selectedSkill.steps[j].elementID();
@@ -449,16 +445,12 @@
                         // load correct page
                         d3.xml(game.skills.selectedSkill.steps[j].stepFilename()).then(data => {
 
-                            console.log("3");
-
                             svgNode = data.documentElement;
                             obj = $('#A_stepsBackgroundImage')[0];
 
                             let imageElement2 = document.getElementById("A_stepsBackgroundImage");
 
                             if (!imageElement2.hasChildNodes()) {
-
-                                console.log("4");
 
                                 obj.appendChild(svgNode);
 
@@ -504,11 +496,7 @@
 
                 // stop CAS access until start button clicked
 
-                console.log("updateWorkbook 1");
-
                 if (ready) {
-
-                    console.log("updateWorkbook 2");
 
                     let objNumber = api.getObjectNumber();
                     let strName, strType, strState, strCommand;
@@ -799,12 +787,10 @@
                 panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
                 newStart = false;
 
-            }  
-            
+            }              
             
             cheatNum = 0;
             ready = true;
-
 
         });
 

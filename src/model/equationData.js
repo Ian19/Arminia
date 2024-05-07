@@ -408,7 +408,7 @@
                     <span class="A_decor">Q</span>
                     <span class="A_reg">uantum </span>
                     <span class="A_decor">G</span>
-                    <span class="A_reg">ravity and the </span>
+                    <span class="A_reg">ravity and the<br></span>
                     <span class="A_decor">H</span>
                     <span class="A_reg">olographic </span>
                     <span class="A_decor">M</span>

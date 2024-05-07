@@ -34,6 +34,7 @@
         let obj;
         let zoom;
         let globalG;
+        let newStart = true;
 
         let parameters = {
             "scaleContainerClass": "scaleContainerClass",
@@ -93,36 +94,35 @@
             }
 
             // load stepsImage svg file with d3.xml() and setup
-            let imageElement = document.getElementById("A_stepsBackgroundImage");
+            d3.xml(filename).then(data => {
 
-            if (!imageElement.hasChildNodes()) {
+                currentPage = 1;
+                svgNode = data.documentElement;
+                obj = $('#A_stepsBackgroundImage')[0];
 
-                d3.xml(filename).then(data => {
+                let imageElement = document.getElementById("A_stepsBackgroundImage");
 
-                    currentPage = 1;
-    
-                    svgNode = data.documentElement;
-                    obj = $('#A_stepsBackgroundImage')[0];
+                if (!imageElement.hasChildNodes()) {
+
                     obj.appendChild(svgNode);
-    
+
                     svg = d3.select(currentID);
                     svg.style("width", "100%").style("height", "100%").style("display", "block");
-    
+
                     zoom = d3.zoom()
                         // .scaleExtent([1, 10])
                         .on("zoom", zoomed);
-    
+
                     globalG = svg.select('g');
-    
+
                     function zoomed({ transform }) {
                         globalG.attr("transform", transform);
                     }
-    
-                    svg.call(zoom);
-    
-                });
-            }
 
+                    svg.call(zoom);
+                }
+
+            });
 
             const osInstance2 = OverlayScrollbars(document.querySelector('.A_scroll2'), {
                 className: "os-theme-dark custom-class",
@@ -177,7 +177,7 @@
             // Steps Image title, difficulty and definition
             $("#A_stepsImageTitle").html(game.skills.selectedSkill.formattedName);
             $("#A_stepsImageDifficulty").text(game.skills.selectedSkill.difficulty);
-            $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);            
+            $("#A_stepsImageDefinition").text(game.skills.selectedSkill.overview);
             $("#A_geogebraDetailTitle").html(game.skills.selectedSkill.formattedName);
             $("#A_geogebraDetailQuote").text(game.skills.selectedSkill.quote);
             $("#A_geogebraDetailQuotee").text(game.skills.selectedSkill.quotee);
@@ -436,26 +436,41 @@
                     // next step to pan and zoom to
                     let elementStr = "A-SVGStep" + (j + 1).toString();
 
+                    console.log("1");
+
                     // if page is different, load correct page
                     if (skillType === "paper" && currentID !== game.skills.selectedSkill.steps[j].elementID()) {
+
+                        console.log("2");
 
                         d3.select(currentID).remove();
                         currentID = game.skills.selectedSkill.steps[j].elementID();
 
                         // load correct page
-                        const doc1 = d3.xml(game.skills.selectedSkill.steps[j].stepFilename()).then(data => {
+                        d3.xml(game.skills.selectedSkill.steps[j].stepFilename()).then(data => {
+
+                            console.log("3");
 
                             svgNode = data.documentElement;
                             obj = $('#A_stepsBackgroundImage')[0];
-                            obj.appendChild(svgNode);
 
-                            svg = d3.select(currentID);
-                            svg.style("width", "100%").style("height", "100%").style("display", "block");
-                            svg.call(zoom);
+                            let imageElement2 = document.getElementById("A_stepsBackgroundImage");
 
-                            globalG = svg.select('g');
+                            if (!imageElement2.hasChildNodes()) {
 
-                            panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                                console.log("4");
+
+                                obj.appendChild(svgNode);
+
+                                svg = d3.select(currentID);
+                                svg.style("width", "100%").style("height", "100%").style("display", "block");
+                                svg.call(zoom);
+
+                                globalG = svg.select('g');
+
+                                panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+
+                            }
 
                         });
 
@@ -489,7 +504,11 @@
 
                 // stop CAS access until start button clicked
 
+                console.log("updateWorkbook 1");
+
                 if (ready) {
+
+                    console.log("updateWorkbook 2");
 
                     let objNumber = api.getObjectNumber();
                     let strName, strType, strState, strCommand;
@@ -736,22 +755,10 @@
 
         $("#A_startGeogebraBtnID").click(function () {
 
-            if (this.innerText == "START") {
+            if (this.innerText == "START") this.innerText = "RESET";
 
-                this.innerText = "RESET";
-
-            }
-
-            if (skillType == "paper") {
-
-                $("#A_cheatBtnID").show();
-
-            } else {
-
-                $("#A_cheatBtnID").hide();
-
-            }
-
+            if (skillType == "paper") $("#A_cheatBtnID").show();
+            else $("#A_cheatBtnID").hide();
 
             if (ready) {
 
@@ -772,11 +779,7 @@
                     filename = game.skills.selectedSkill.steps[0].stepFilename();
 
                 }
-
             }
-
-            cheatNum = 0;
-            ready = true;
 
             $("#A_startGeogebraBtnID").removeClass('A_startGeogebraBtn');
             $("#A_startGeogebraBtnID").addClass('A_geogebraButton');
@@ -790,11 +793,18 @@
             clearAndSetupConstructionSteps();
             removeAllAnimateTags();
 
-            // if (skillType !== "paper") {
-            //     panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
-            // }
+            if (skillType !== "paper") panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false); 
+            else if (newStart) {
 
-            panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+                newStart = false;
+
+            }  
+            
+            
+            cheatNum = 0;
+            ready = true;
+
 
         });
 
@@ -829,6 +839,7 @@
         $("#A_backToSkillsBtn").click(function () {
 
             ready = false;
+            newStart = true;
             cheatNum = 0;
 
             $("#A_startGeogebraBtnID").text("START");

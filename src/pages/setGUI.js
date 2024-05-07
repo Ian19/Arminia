@@ -19,15 +19,14 @@
 
     var setGUI = function (game) {
 
-
         switch (game.nav) {
             case "home":
 
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
-                
                 $("#A_stepsBackgroundImage").css("display", "none");
-                $("#A_sysHintContainer").show();
+                $('#A_infoSysMenuTitle').text("3D Viewer - The 13 Information Systems of The Fruit Of Life");
+                $('#A_InfoSysHintBullets').html("<p>• click an Information System for more details<br></p><p>• click and hold to rotate the 3D menu</p>");
                 $("#A_sidebarGroupHologram").hide();
                 $("#checkbox9").prop("checked", true);
                 $("#checkbox0").prop("checked", true);
@@ -36,38 +35,51 @@
                 $("#checkbox3").prop("checked", false);
                 $("#checkbox11").prop("checked", false);
                 $("#checkbox12").prop("checked", false);
-
                 $("#A_metatronView").hide();
                 $("#A_musicView").hide();
                 $("#A_64TetraView").hide();
 
                 break;
+                
             case "A_metatronView":
+
+                $('#A_infoSysMenuTitle').text("3D Viewer - Metatron's Cube");
+                $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
+                
+                break;
+
             case "A_musicView":
+
+                $('#A_infoSysMenuTitle').text("3D Viewer - Music - Star Tetrahedron inside a Sphere");
+                $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
+
+                break;
+
             case "A_64TetraView":
 
                 $("#A_homePage").hide();
-
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
-
-                $("#A_sysHintContainer").hide();
+                $('#A_infoSysMenuTitle').text("3D Viewer - The 64 Tetrahedron Grid");
+                $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
                 $("#A_sidebarGroupHologram").show();
                 $('#A_protonBtnID').text("The Schwarzschild Proton");
                 $('#A_holographicMassBtnID').text("Quantum Gravity and the Hologarphic Mass");
+
                 break;
+
             case "skill":
 
                 $("#A_metatronView").hide();
                 $("#A_musicView").hide();
                 $("#A_64TetraView").hide();
-
                 $("#A_sysHintContainer").hide();
                 $("#A_sidebarGroupHologram").hide();
                 $("#A_detailButton").text("START");
-                break;
-        }
 
+                break;
+
+        }
 
     };
 

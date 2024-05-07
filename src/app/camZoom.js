@@ -297,6 +297,7 @@
                                 _this.game.camZoomManager.isZoomed = true;
                                 _this.game.camZoomManager.isZooming = false;
                                 _this.game.snowFlake.setEnabled(false);
+                                
                                 Arminia.setGUI(_this.game);
 
                                 disabledInfoSystems.forEach(function (element) {

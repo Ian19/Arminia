@@ -37,7 +37,8 @@
             const selectedStrokeColor = "#ECDB7A";
             const lockedStrokeColor = "#4e4b8d";
             const completedStrokeColor = "#cc66ff";
-            const unlockedStrokeColor = "#acb0de";
+            // const unlockedStrokeColor = "#acb0de";
+            const unlockedStrokeColor = "white";
 
             let svgNode = data.documentElement;
             const obj = $('#A_svgContainer')[0];
@@ -124,7 +125,7 @@
 
                 // console.log("mouseover1: " + t, d, i);
 
-                d3.select(t).attr("stroke", "white");
+                d3.select(t).attr("stroke", selectedStrokeColor);
                 updateSkillsDetail(i);
             }
 

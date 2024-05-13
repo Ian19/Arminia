@@ -855,6 +855,8 @@
 
             }
 
+            Arminia.setGUI(game);
+
             game.main.setEnabled(true);
 
         });

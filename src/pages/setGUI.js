@@ -25,6 +25,7 @@
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
                 $("#A_stepsBackgroundImage").css("display", "none");
+                $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - The 13 Information Systems of The Fruit Of Life");
                 $('#A_InfoSysHintBullets').html("<p>• click an Information System for more details<br></p><p>• click and hold to rotate the 3D menu</p>");
                 $("#A_sidebarGroupHologram").hide();
@@ -43,6 +44,7 @@
                 
             case "A_metatronView":
 
+                $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - Metatron's Cube");
                 $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
                 
@@ -50,6 +52,7 @@
 
             case "A_musicView":
 
+                $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - Music - Star Tetrahedron inside a Sphere");
                 $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
 
@@ -60,6 +63,7 @@
                 $("#A_homePage").hide();
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
+                $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - The 64 Tetrahedron Grid");
                 $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
                 $("#A_sidebarGroupHologram").show();

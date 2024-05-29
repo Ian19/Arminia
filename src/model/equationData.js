@@ -329,7 +329,7 @@
                     stepFilename: function () { return game.skills.equationData[0].page3Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic V_{r}, (m c^2.0000) / 2.0000"],
-                    stepsText: "Enter " + katex.renderToString("V_r = \\frac {m s c^{2}} {2}"),
+                    stepsText: "Enter " + katex.renderToString("V_r = \\frac {m c^{2}} {2}"),
                 }, {
                     type: "paper",
                     zoomScale: 6,
@@ -559,8 +559,8 @@
                     elementID: function () { return game.skills.equationData[1].page1ID },
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
-                    correctStep: ["symbolic l_{r}, l / 2.000000000"], // V_p = \\frac 4 3 \\pi r_p^{3}
-                    stepsText: "Enter  " + katex.renderToString("l_r = \\frac l 2") + " . (Hint: Enter 'l_r = l / 2'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    correctStep: ["symbolic l_{r}, l / 2.000000000"], 
+                    stepsText: "Enter  " + katex.renderToString("l_r = \\frac l 2 ") + "  . (Hint: Enter 'l_r = l / 2'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
                 },
                 {
                     type: "paper",
@@ -569,7 +569,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic V_{ls}, 4.000000000 / 3.000000000 π l_{r}^3.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("V_{ls} = \\frac 4 3 \\times pi \\times l_r^{3}"),
                 },
                 {
                     type: "paper",
@@ -578,7 +578,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic A_{lc}, π l_{r}^2.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("A_{lc} = pi \\times l_r^{2}"),
                 },
                 {
                     type: "paper",
@@ -587,7 +587,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic r, 2.500000000 * 10.00000000^6.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("r = 2.5 \\times 10^{6}"),
                 },
                 {
                     type: "paper",
@@ -596,7 +596,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic A, 4.000000000π r^2.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("A = 4 \\times pi \\times r^{2}"),
                 },
                 {
                     type: "paper",
@@ -605,7 +605,8 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η, A / A_{lc}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η = \\large \\frac A {A_{lc}}"),
+                    // stepsText: "Enter  " + katex.renderToString("η = \\frac A {A_{lc}}"),
                 },
                 {
                     type: "paper",
@@ -614,7 +615,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic V, 4.000000000 / 3.000000000 π r^3.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("V = \\frac 4 3 \\times pi \\times r^{3}"),
                 },
                 {
                     type: "paper",
@@ -623,7 +624,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic R, V / V_{ls}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("R = \\large \\frac V {V_{ls}}"),
                 },
                 {
                     type: "paper",
@@ -632,7 +633,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{l}, 2.176508000 * 10.00000000^-5.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_l = 2.176508 \\times 10^{-5}"),
                 },
                 {
                     type: "paper",
@@ -641,7 +642,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{h1}, R / η m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{h1} = \\frac R η \\times m_l"),
                 },
                 {
                     type: "paper",
@@ -650,7 +651,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{h2}, (R m_{l}) / (η m_{l}) m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{h2} = \\large \\frac {R {m_{l}}} {η {m_{l}}} \\times m_l"),
                 },
                 {
                     type: "paper",
@@ -659,7 +660,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic R_{p}, R m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("R_{p} = \\large \\frac R {m_{l}}"),
                 },
                 {
                     type: "paper",
@@ -668,7 +669,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η_{p}, η m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η_{p} = \\large \\frac η {m_{l}}"),
                 },
                 {
                     type: "paper",
@@ -677,7 +678,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: ["13", "14"],
                     correctStep: ["symbolic m_{h3}, R_{p} / η_{p} m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{h3} = \\large \\frac {R_{p}} {η_{p}} \\times m_{l}"),
                 },
                 {
                     type: "paper",
@@ -686,7 +687,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{h4}, R_{p} / η"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{h4} = \\large \\frac {R_{p}} η"),
                 },
                 {
                     type: "paper",
@@ -695,7 +696,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic c, 2.997924580 * 10.00000000^10.00000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("c = 2.99792458 \\times 10^{10}"),
                 },
                 {
                     type: "paper",
@@ -704,7 +705,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic G, 6.674300000 * 10.00000000^-8.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("G = 6.6743 \\times 10^{-8}"),
                 },
                 {
                     type: "paper",
@@ -713,7 +714,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page2Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{s}, (r c^2.000000000) / (2.000000000G)"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{s} = \\large \\frac {r {c^{2}}} {2G}"),
                 },
                 {
                     type: "paper",
@@ -722,7 +723,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page3Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{h5}, r m_{l} / (2.000000000l)"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{h5} = \\large \\frac {r {m_{l}}} {2l}"),
                 },
                 {
                     type: "paper",
@@ -731,7 +732,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page4Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic r_{p}, 0.8775000000 * 10.00000000^-13.00000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("r_{p} = 0.8775 \\times 10^{-13}"),
                 },
                 {
                     type: "paper",
@@ -740,7 +741,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page4Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic A_{p}, 4.000000000π r_{p}^2.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("A_{p} = 4 \\times pi \\times r_{p}^{2}"),
                 },
                 {
                     type: "paper",
@@ -749,7 +750,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page4Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η_{2}, A_{p} / A_{lc}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η_{2} = \\large \\frac {A_{p}} {A_{lc}}"),
                 },
                 {
                     type: "paper",
@@ -758,7 +759,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page5Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η_{p2}, η_{2} m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η_{p2} = η_{2} \\times m_{l}"),
                 },
                 {
                     type: "paper",
@@ -767,7 +768,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page5Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic V_{p}, 4.000000000 / 3.000000000 π r_{p}^3.000000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("V_{p} = \\large \\frac 4 3 \\times pi \\times r_{p}^{3}"),
                 },
                 {
                     type: "paper",
@@ -776,7 +777,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page5Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic R_{2}, V_{p} / V_{ls}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("R_{2} = \\large \\frac {V_{p}} {V_{ls}}"),
                 },
                 {
                     type: "paper",
@@ -785,7 +786,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page5Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{p1}, 2.000000000η_{p2} / R_{2}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{p1} = \\large \\frac {{2}{η_{p2}}} {R_{2}}"),
                 },
                 {
                     type: "paper",
@@ -794,7 +795,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic r_{p2}, 0.8418400000 * 10.00000000^-13.00000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("r_{p2} = 0.84184 \\times 10^{-13}"),
                 },
                 {
                     type: "paper",
@@ -803,7 +804,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η_{3}, (4.000000000π r_{p2}^2.000000000) / A_{lc}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η_{3} = \\large \\frac {4 π {r_{p2}^2}} {A_{lc}}"),
                 },
                 {
                     type: "paper",
@@ -812,7 +813,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic η_{p3}, η_{3} m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("η_{p3} = η_{3} \\times m_{l}"),
                 },
                 {
                     type: "paper",
@@ -821,7 +822,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic R_{3}, (4.000000000 / 3.000000000 π r_{p2}^3.000000000) / V_{ls}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("R_{3} = \\large  \\frac {\\frac 4 3 {π {r_{p2}^3} } } {V_{ls} }"),
                 },
                 {
                     type: "paper",

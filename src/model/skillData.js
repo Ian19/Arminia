@@ -34,7 +34,8 @@
                 status: "unlocked",
                 type: "construction",
                 elementID: "#A-detailCircle",
-                tools: "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
+                // tools: "0 | 34 | 15 | 17", // MOVE, CIRCLE_POINT_RADIUS, SEGMENT, TEXT 
+                tools: "0 | 34 | 10 | 15 | 17 | 1 | 38", // MOVE, CIRCLE_POINT_RADIUS, CIRCLE_TWO_POINTS, SEGMENT, TEXT, INTERSECT 
                 startingZoomScale: "ZoomOut(1)",
                 elements: [],
 
@@ -57,12 +58,13 @@
                 }, {
 
                     type: "construction",
-                    zoomScale: 1,
                     styleObjects: [],
-                    correctStep: ['text text1, AB=1'],
-                    stepsText: "Select the Text tool and enter 'AB=1'",
+                    zoomScale: 1.5,
+                    correctStep: ["numeric distanceAB, Distance(A, B)", "text TextAB, AB = 1"],
+                    stepsText: "Select the Distance Tool and Click point A and point B. Optional: Select the Move Tool and the Pin button in the Style Menu to change the position of the text. To change its background color to black, select the color button in the Style Menu.",
 
-                }],
+                }            
+            ],
 
                 thumbnailURL: "src/assets/images/skills/thumbnails/circle2.svg",
                 stepsImage: "src/assets/images/skills/details/detailCircle3.svg",

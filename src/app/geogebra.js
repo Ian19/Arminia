@@ -60,10 +60,9 @@
             let filename;
 
             ready = false;
-            cheatNum = 0;
             skillType = game.skills.selectedSkill.type;
 
-            $("#A_cheatBtnID").text("DEBUG STEP 1");
+            $("#A_cheatBtnID").text("CHEAT STEP 1");
             // $("#A_cheatBtnID").hide();
             $("#A_stepsBackgroundImage").css("display", "inline-block");
             $("#A_StepsImageCenter").css("display", "none");
@@ -416,7 +415,8 @@
                     } else {
 
                         if (skillType === "construction") {
-                            // j is non zero based and the next incompleted step 1 more again
+
+                            // j starts at 1 (not zero) and the next incompleted step is 1 more again, making + 2
                             let s = j + 2;
 
                             d3.select("#A-SVGStep" + s.toString())
@@ -426,6 +426,9 @@
                     }
 
                 }
+
+                cheatNum = j + 1;
+                $("#A_cheatBtnID").text("CHEAT STEP " + cheatNum.toString());
 
                 // page control, step animations and pan and zoom
                 if (j >= 0 && j < stepsArray.length) {
@@ -761,7 +764,7 @@
 
                 } else {
 
-                    $("#A_cheatBtnID").text("DEBUG STEP 1");
+                    $("#A_cheatBtnID").text("CHEAT STEP 1");
 
                     currentID = game.skills.selectedSkill.steps[0].elementID();
                     filename = game.skills.selectedSkill.steps[0].stepFilename();
@@ -781,15 +784,14 @@
             clearAndSetupConstructionSteps();
             removeAllAnimateTags();
 
-            if (skillType !== "paper") panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false); 
+            if (skillType !== "paper") panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
             else if (newStart) {
 
                 panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
                 newStart = false;
 
-            }              
-            
-            cheatNum = 0;
+            }
+
             ready = true;
 
         });
@@ -826,7 +828,6 @@
 
             ready = false;
             newStart = true;
-            cheatNum = 0;
 
             $("#A_startGeogebraBtnID").text("START");
             $("#A_startGeogebraBtnID").removeClass('A_geogebraButton');
@@ -863,17 +864,20 @@
 
         $("#A_cheatBtnID").click(function () {
 
-            if (cheatNum < game.skills.selectedSkill.cheatSteps.length) {
+            if (cheatNum == 0) {
 
-                var c = document.getElementsByClassName("canvasDef")[0];
+                ggbApplet.evalCommand(game.skills.selectedSkill.cheatSteps[0]);
+                $("#A_cheatBtnID").text("CHEAT STEP 2");
 
-                ggbApplet.evalCommand(game.skills.selectedSkill.cheatSteps[cheatNum]);
+            } else {
 
-                let i = cheatNum + 2;
+                if (cheatNum < game.skills.selectedSkill.cheatSteps.length) {
 
-                $("#A_cheatBtnID").text("DEBUG STEP " + i.toString());
+                    ggbApplet.evalCommand(game.skills.selectedSkill.cheatSteps[cheatNum - 1]);
+                    let i = cheatNum;
+                    $("#A_cheatBtnID").text("CHEAT STEP " + i.toString());
 
-                cheatNum++;
+                }
 
             }
 

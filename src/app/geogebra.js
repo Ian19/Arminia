@@ -786,6 +786,8 @@
 
         $("#A_startGeogebraBtnID").click(function () {
 
+            cheatNum = 0;
+
             if (this.innerText == "START") this.innerText = "RESET";
 
             if (skillType == "paper") $("#A_cheatBtnID").show();

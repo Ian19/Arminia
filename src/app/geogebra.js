@@ -480,8 +480,20 @@
                     } else {
                         // page is not different, stay on page
 
-                        panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.equationScale, false);
-                        // panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                        if (skillType === "paper") {
+
+                            console.log("1");
+
+                            panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.equationScale, false);
+
+                        } else {
+
+                            console.log("2");
+
+                            panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                        }
+                        
+ 
                     }
 
                 } else {
@@ -689,16 +701,29 @@
 
         function panAndZoomAndAnimate(j, s, z, complete) {
 
-            let testBox = document.getElementById("A-SVGGroupSteps").getBBox();
-            let midX = testBox.x + (testBox.width / 2);
-            // let midY = testBox.y + (testBox.height / 2);
-            console.log("------ testMidX: ", midX);
-
-            // next step to pan and zoom to
             let stepBox = document.getElementById(s).getBBox();
-            // let midX = stepBox.x + (stepBox.width / 2);
-            let midY = stepBox.y + (stepBox.height / 2);
-            console.log("------ testMidY: ", midY);
+            let midX;
+            let midY;
+
+            if (skillType === "paper") {
+
+                let testBox = document.getElementById("A-SVGGroupSteps").getBBox();
+
+                midX = testBox.x + (testBox.width / 2);
+                midY = stepBox.y + (stepBox.height / 2);
+
+
+            } else {
+
+                midX = stepBox.x + (stepBox.width / 2);
+                midY = stepBox.y + (stepBox.height / 2);
+
+                // console.log("midX: ", midX);
+                // console.log("midY: ", midY);
+
+            }
+
+
 
             // Zoom and pan to the next incomplete step
             svg.transition()
@@ -799,10 +824,9 @@
             clearAndSetupConstructionSteps();
             removeAllAnimateTags();
 
-            if (skillType !== "paper") 
+            if (skillType !== "paper")
 
-                // panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
-                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.equationScale, false);
+                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
 
             else if (newStart) {
 

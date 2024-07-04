@@ -457,13 +457,21 @@
 
                                 obj.appendChild(svgNode);
 
+                                let testMidX = svgNode.x + (svgNode.width / 2);
+                                let testMidY = svgNode.y + (svgNode.height / 2);
+
+                                console.log("buildStepsView");
+                                console.log(testMidX);
+                                console.log(testMidY);
+
                                 svg = d3.select(currentID);
                                 svg.style("width", "100%").style("height", "100%").style("display", "block");
                                 svg.call(zoom);
 
                                 globalG = svg.select('g');
 
-                                panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                                // panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                                panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.equationScale, false);
 
                             }
 
@@ -472,7 +480,8 @@
                     } else {
                         // page is not different, stay on page
 
-                        panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
+                        panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.equationScale, false);
+                        // panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
                     }
 
                 } else {
@@ -680,10 +689,16 @@
 
         function panAndZoomAndAnimate(j, s, z, complete) {
 
+            let testBox = document.getElementById("A-SVGGroupSteps").getBBox();
+            let midX = testBox.x + (testBox.width / 2);
+            // let midY = testBox.y + (testBox.height / 2);
+            console.log("------ testMidX: ", midX);
+
             // next step to pan and zoom to
             let stepBox = document.getElementById(s).getBBox();
-            let midX = stepBox.x + (stepBox.width / 2);
+            // let midX = stepBox.x + (stepBox.width / 2);
             let midY = stepBox.y + (stepBox.height / 2);
+            console.log("------ testMidY: ", midY);
 
             // Zoom and pan to the next incomplete step
             svg.transition()
@@ -784,10 +799,14 @@
             clearAndSetupConstructionSteps();
             removeAllAnimateTags();
 
-            if (skillType !== "paper") panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+            if (skillType !== "paper") 
+
+                // panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.equationScale, false);
+
             else if (newStart) {
 
-                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.steps[0].zoomScale, false);
+                panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.equationScale, false);
                 newStart = false;
 
             }

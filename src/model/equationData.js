@@ -40,6 +40,7 @@
                 // elementID: "A-schwarzsPPaper",
                 status: "unlocked",
                 zoomScale: 6,
+                equationScale: 2.5,
                 selected: false,
                 thumbnailURL: "src/assets/images/papers/thumbnails/thumbSchwarzschildProton2.svg",
                 geogebraFile: "src/assets/geogebra/testCAS3.ggb",
@@ -141,7 +142,8 @@
                     ["q_{2} = 1.602 * 10.000^-19.0000"],
                     ["F_{c} = (Kc q_{1} q_{2}) / r_{m}^2.0000"],
                     ["F_{d} = F_{c} * 10.000^5.0000"],
-                    ["F_{t} = V_{c} + F_{d}"]
+                    ["F_{t} = V_{c} + F_{d}"],
+                    ["PLACEHOLDER"]
 
                 ],
 
@@ -419,6 +421,8 @@
                 elementID: "A-holographicMass",
                 status: "unlocked",
                 zoomScale: 6,
+                equationScale: 2.5,
+                // equationScale: 1,
                 selected: false,
                 thumbnailURL: "src/assets/images/papers/thumbnails/thumbSchwarzschildProton2.svg",
                 geogebraFile: "src/assets/geogebra/testCASRounding10.ggb",
@@ -503,7 +507,7 @@
                     ["V = 4.000000000 / 3.000000000 π r^3.000000000"],
                     ["R = V / V_{ls}"],
                     ["m_{l} = 2.176508000 * 10.00000000^-5.000000000"],
-                    ["m_{h1} = R / η m_{l}"],
+                    ["m_{h} = R / η m_{l}"],
 
                     // page 2
                     ["m_{h2} = (R m_{l}) / (η m_{l}) m_{l}"],
@@ -527,7 +531,7 @@
                     ["η_{p2} = η_{2} m_{l}"],
                     ["V_{p} = 4.000000000 / 3.000000000 π r_{p}^3.000000000"],
                     ["R_{2} = V_{p} / V_{ls}"],
-                    ["m_{p1} = 2.000000000 η_{p2} / R_{2}"],
+                    ["m_{p} = 2.000000000 η_{p2} / R_{2}"],
 
                     // page 6
                     ["r_{p2} = 0.8418400000 * 10.00000000^-13.00000000"],
@@ -540,13 +544,12 @@
                     ["r_{p3} = 4.000000000l m_{l} / m_{p4}"],
                     // ["m_{p5} = 2 * ((m_{l}^(2)) / (((r_{p3} m_{l}) / (2 l))))"],
                     ["PLACEHOLDER"]
-                    ["PLACEHOLDER"]
 
                 ],
 
                 steps: [{
                     type: "paper",
-                    zoomScale: 6,
+                    zoomScale: 2.5,
                     elementID: function () { return game.skills.equationData[1].page1ID },
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
@@ -555,7 +558,7 @@
                 },
                 {
                     type: "paper",
-                    zoomScale: 6,
+                    zoomScale: 2.5,
                     elementID: function () { return game.skills.equationData[1].page1ID },
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
@@ -564,7 +567,7 @@
                 },
                 {
                     type: "paper",
-                    zoomScale: 6,
+                    zoomScale: 2.5,
                     elementID: function () { return game.skills.equationData[1].page1ID },
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
@@ -606,7 +609,6 @@
                     multiPartEquation: null,
                     correctStep: ["symbolic η, A / A_{lc}"],
                     stepsText: "Enter  " + katex.renderToString("η = \\large \\frac A {A_{lc}}"),
-                    // stepsText: "Enter  " + katex.renderToString("η = \\frac A {A_{lc}}"),
                 },
                 {
                     type: "paper",
@@ -641,8 +643,8 @@
                     elementID: function () { return game.skills.equationData[1].page1ID },
                     stepFilename: function () { return game.skills.equationData[1].page1Filename },
                     multiPartEquation: null,
-                    correctStep: ["symbolic m_{h1}, R / η m_{l}"],
-                    stepsText: "Enter  " + katex.renderToString("m_{h1} = \\frac R η \\times m_l"),
+                    correctStep: ["symbolic m_{h}, R / η m_{l}"],
+                    stepsText: "Enter  " + katex.renderToString("m_{h} = \\frac R η \\times {m_l}"),
                 },
                 {
                     type: "paper",
@@ -785,8 +787,8 @@
                     elementID: function () { return game.skills.equationData[1].page5ID },
                     stepFilename: function () { return game.skills.equationData[1].page5Filename },
                     multiPartEquation: null,
-                    correctStep: ["symbolic m_{p1}, 2.000000000η_{p2} / R_{2}"],
-                    stepsText: "Enter  " + katex.renderToString("m_{p1} = \\large \\frac {{2}{η_{p2}}} {R_{2}}"),
+                    correctStep: ["symbolic m_{p}, 2.000000000η_{p2} / R_{2}"],
+                    stepsText: "Enter  " + katex.renderToString("m_{p} = \\large \\frac {{2}{η_{p2}}} {R_{2}}"),
                 },
                 {
                     type: "paper",
@@ -831,7 +833,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{p2}, 2.000000000η_{p3} / R_{3}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{p2} =  2 \\times \\large \\frac {η_{p3}} {R_{3}}"),
                 },
                 {
                     type: "paper",
@@ -840,7 +842,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{p3}, 4.000000000l m_{l} / r_{p2}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{p3} = 4 \\times l \\times \\large \\frac {m_{l}} {r_{p2}}"),
                 },
                 {
                     type: "paper",
@@ -849,7 +851,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page6Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic m_{p4}, 1.672622000 * 10.00000000^-24.00000000"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("m_{p4} = 1.672622 \\times 10^{-24}"),
                 },
                 {
                     type: "paper",
@@ -858,25 +860,7 @@
                     stepFilename: function () { return game.skills.equationData[1].page7Filename },
                     multiPartEquation: null,
                     correctStep: ["symbolic r_{p3}, 4.000000000l m_{l} / m_{p4}"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
-                },
-                {
-                    type: "paper",
-                    zoomScale: 6,
-                    elementID: function () { return game.skills.equationData[1].page7ID },
-                    stepFilename: function () { return game.skills.equationData[1].page7Filename },
-                    multiPartEquation: null,
-                    correctStep: ["PLACEHOLDER"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
-                },
-                {
-                    type: "paper",
-                    zoomScale: 6,
-                    elementID: function () { return game.skills.equationData[1].page7ID },
-                    stepFilename: function () { return game.skills.equationData[1].page7Filename },
-                    multiPartEquation: null,
-                    correctStep: ["PLACEHOLDER"],
-                    stepsText: "Enter  " + katex.renderToString("l = 1.616199 \\times 10^{-33} gm/cm^{3}.") + " (Hint: Enter 'p_v = 1.616199 * 10^-33'. Press the " + katex.renderToString("\\approx") + " button after each step.)",
+                    stepsText: "Enter  " + katex.renderToString("r_{p3} = 4 \\times l \\times \\large \\frac {m_{l}} {m_{p4}}"),
                 }
                 ],
 

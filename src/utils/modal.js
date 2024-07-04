@@ -35,16 +35,16 @@
         // });
 
 
-        $("#A_titleClick").click(function() {  
-        // $("#A_mainSwish").click(function() {  
-            
-            console.log("A_title click");
+        const imageElement = document.getElementById('A-titleClick');
+        imageElement.addEventListener('click', () => {
+            // Your custom logic here
+            console.log('Image clicked!');
 
             $("#A_profilePage").hide();
             $("#A_info").show();
             $("#A_simpleModal").show();
-
         });
+
 
         // If mouse is clicked and mouseup happens over a different element, then ignore click event
         let from = {};

@@ -22,6 +22,8 @@
         switch (game.nav) {
             case "home":
 
+                console.log("setGUI");
+
                 $("#A_overviewContainer").css("display", "none");
                 $("#A_overviewBtn").text("OVERVIEW");
                 $("#A_stepsBackgroundImage").css("display", "none");
@@ -39,18 +41,23 @@
                 $("#A_metatronView").hide();
                 $("#A_musicView").hide();
                 $("#A_64TetraView").hide();
+                $("#A_backToHomeBtn").hide();
 
                 break;
-                
+
             case "A_metatronView":
+
+                $("#A_backToHomeBtn").show();
 
                 $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - Metatron's Cube");
                 $('#A_InfoSysHintBullets').html("<p>• click the Information System to go back to the Main Menu<br></p><p>• click and hold to rotate</p>");
-                
+
                 break;
 
             case "A_musicView":
+
+                $("#A_backToHomeBtn").show();
 
                 $("#A_sysHintContainer").show();
                 $('#A_infoSysMenuTitle').text("3D Viewer - Music - Star Tetrahedron inside a Sphere");
@@ -69,6 +76,7 @@
                 $("#A_sidebarGroupHologram").show();
                 $('#A_protonBtnID').text("The Schwarzschild Proton");
                 $('#A_holographicMassBtnID').text("Quantum Gravity and the Hologarphic Mass");
+                $("#A_backToHomeBtn").show();
 
                 break;
 
@@ -80,6 +88,7 @@
                 $("#A_sysHintContainer").hide();
                 $("#A_sidebarGroupHologram").hide();
                 $("#A_detailButton").text("START");
+                $("#A_backToHomeBtn").hide();
 
                 break;
 

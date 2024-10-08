@@ -39,6 +39,9 @@
 
             this.box1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOverTrigger,
                 function() {
+
+                    console.log("box1 OnPointerOverTrigger");
+
                     fruit.fruitSpheresGlow(game);
 
                     $("#A_InfoSysHintText").hide();
@@ -50,6 +53,9 @@
 
             this.box1.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPointerOutTrigger,
                 function() {
+
+                    console.log("box1 OnPointerOutTrigger");
+
                     fruit.fruitSpheresFade(game);
 
                     $("#A_infoSysInfo").hide();

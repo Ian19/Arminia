@@ -38,6 +38,17 @@
     border: 1px solid #563a99a1 !important;
 }
 
+#A_backToHomeBtn {
+    top: 31px;
+    left: 80%;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+#A_backToHomeBtn:hover {
+    border: 1px solid #563a99a1 !important;
+}
+
 #A_startGeogebraBtnID {
     display: none;
 }
@@ -92,7 +103,7 @@
     color: #acb0dee3;
     font-family: 'Verdana';
     font-variant-caps: normal;
-    width: 7.4vw;
+    width: 7.4vw;    
     padding: 0.4vw;
     border-radius: 4px;
     font-size: 0.55vw;

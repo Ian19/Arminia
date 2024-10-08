@@ -36,6 +36,8 @@
         game.skills = {};
         game.nav = "home";
 
+        Arminia.setGUI(game);
+
         // game.camera2.useAutoRotationBehavior = true;
         // game.camera.useAutoRotationBehavior = true;
 
@@ -91,9 +93,9 @@
 
 
         // Hitboxes
-        const hitBox1 = new Arminia.HitBox(game, game.infoSystem1, game.infoSystem1.FruitOfLife, "hitBox1");
-        const hitBox2 = new Arminia.HitBox(game, game.infoSystem2, game.infoSystem2.FruitOfLife, "hitBox2");
-        const hitBox3 = new Arminia.HitBox(game, game.infoSystem3, game.infoSystem3.FruitOfLife, "hitBox3");
+        new Arminia.HitBox(game, game.infoSystem1, game.infoSystem1.FruitOfLife, "hitBox1");
+        new Arminia.HitBox(game, game.infoSystem2, game.infoSystem2.FruitOfLife, "hitBox2");
+        new Arminia.HitBox(game, game.infoSystem3, game.infoSystem3.FruitOfLife, "hitBox3");
 
         ////////////////////////////////////////////  EFFECTS  ////////////////////////////////////////////
 

@@ -119,334 +119,694 @@
                 ];
             };
 
+            function doZoom(value) {
+
+                if (!_this.game.camZoomManager.isZooming) {
+
+                    _this.game.camZoomManager.isZooming = true;
+
+                    // let x1 = 0.0;
+                    let fruitFadeObj = {};
+                    let disabledInfoSystems, meshArrayFaders, meshArrayDetails = [];
+                    let selectedInfoSystem = {};
+                    let edgesRenderingMeshes = [];
+
+                    // _this.game.animatePageIn("A_64TetraView");
+                    // _this.game.animatePageOut("A_homePage");
+
+                    switch (value) {
+
+                        case "hitBox1":
+
+                            // x1 = 0.0;
+                            fruitFadeObj = _this.game.infoSystem1.FruitOfLife;
+                            disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem3];
+                            _this.game.selectedInfoSystem = _this.game.infoSystem1;
+
+                            /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
+
+                            _this.game.nav = "A_64TetraView";
+                            _this.game.animatePageIn(_this.game.nav);
+                            _this.game.animatePageOut("A_homePage");
+
+                            /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
+
+                            meshArrayFaders = [
+                                //  2D LINES FADE OUT INIT
+                                _this.game.infoSystem2.metaCubeLines2D.line1,
+                                //  MATERIALS FADE OUT INIT
+                                _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
+                                _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
+                                _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+                                _this.game.infoSystem3.starTetra.mesh1,
+                                _this.game.infoSystem3.starTetra.mesh2,
+                                //  WIREFRAME MATERIALS FADE OUT INIT   
+                                _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+                                _this.game.infoSystem2.metatronsCube.metaStar.wireMesh,
+                                _this.game.infoSystem3.starTetra.wireMesh
+                            ];
+
+                            /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
+
+                            meshArrayDetails = [
+                                _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+                                _this.game.infoSystem1.tetrahedronGrid1.wireMesh
+                            ];
+
+                            //////////////////////////////  EDGES RENDERING FADE  IN  //////////////////////////////
+
+                            _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem1.tetrahedronGrid1.mesh1];
+                            _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem1.tetrahedronGrid1.wireMesh];
+                            break;
+
+                        case "hitBox2":
+
+                            // x1 = -8.0;
+                            fruitFadeObj = _this.game.infoSystem2.FruitOfLife;
+                            disabledInfoSystems = [_this.game.infoSystem1, _this.game.infoSystem3];
+                            _this.game.selectedInfoSystem = _this.game.infoSystem2;
+
+                            /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
+
+                            _this.game.nav = "A_metatronView";
+                            _this.game.animatePageIn(_this.game.nav);
+                            _this.game.animatePageOut("A_homePage");
+                            // Arminia.loadMetatronPage();
+
+                            /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
+
+                            meshArrayFaders = [
+                                //  2D LINES FADE OUT INIT
+                                _this.game.infoSystem1.THGLines2D.line1,
+                                //  MATERIALS FADE OUT INIT
+                                _this.game.infoSystem1.tetrahedronGrid1.mesh1,
+                                _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+                                _this.game.infoSystem3.starTetra.mesh1,
+                                _this.game.infoSystem3.starTetra.mesh2,
+                                //  WIREFRAME MATERIALS FADE OUT INIT   
+                                _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
+                                _this.game.infoSystem3.starTetra.wireMesh
+                            ];
+
+                            /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
+
+                            meshArrayDetails = [
+                                _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+                                _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+                                _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
+                            ];
+
+                            //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
+
+                            _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.mesh1, _this.game.infoSystem2.metatronsCube.metaStar.mesh1];
+                            _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.wireMesh, _this.game.infoSystem2.metatronsCube.metaStar.wireMesh];
+                            break;
+
+                        case "hitBox3":
+
+                            // x1 = -8.0;
+                            fruitFadeObj = _this.game.infoSystem3.FruitOfLife;
+                            disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem1];
+                            _this.game.selectedInfoSystem = _this.game.infoSystem3;
+
+                            /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
+
+                            _this.game.nav = "A_musicView";
+                            _this.game.animatePageIn(_this.game.nav);
+                            _this.game.animatePageOut("A_homePage");
+                            // Arminia.loadMusicPage();
+
+                            ////////////////////////////////  MATERIALS FADE OUT INIT  /////////////////////////////////
+
+                            meshArrayFaders = [
+                                //  2D LINES FADE OUT INIT
+                                _this.game.infoSystem1.THGLines2D.line1,
+                                _this.game.infoSystem2.metaCubeLines2D.line1,
+                                //  MATERIALS FADE OUT INIT
+                                _this.game.infoSystem1.tetrahedronGrid1.mesh1,
+                                _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+                                _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
+                                _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
+                                _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+
+                                //  WIREFRAME MATERIALS FADE OUT INIT   
+                                _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
+                                _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+                                _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
+                            ];
+
+                            /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
+
+                            meshArrayDetails = [
+                                _this.game.infoSystem3.starTetra.mesh2,
+                                _this.game.infoSystem3.starTetra.wireMesh
+                            ];
+
+                            //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
+
+                            _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem3.starTetra.mesh1];
+                            _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem3.starTetra.wireMesh];
+                            break;
+
+                    }
+
+                    if (!_this.game.camZoomManager.isZoomed) {
+
+                        ///////////////////////////////////////////////////////////////////////////////////////////////
+                        /////////////////////////////////////////   ZOOM IN  /////////////////////////////////////////
+                        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+                        initCamZoom(
+                            _this.game.camera.zoomInScale,
+                            new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
+                            new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
+                            BABYLON.Vector3.Zero(),
+                            _this.game.selectedInfoSystem.position
+                        );
+
+                        // camera animations
+                        _this.camera.flyToPosition(
+                            new BABYLON.Vector3(0, 0, 12.9),
+                            new BABYLON.Vector3(0, 0, 0),
+                            _this.game.scene
+                        );
+
+                        _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
+
+                            _this.game.camZoomManager.selectedHitBox.setEnabled(false);
+
+                            _this.game.camZoomManager.isZoomed = true;
+                            _this.game.camZoomManager.isZooming = false;
+                            _this.game.snowFlake.setEnabled(false);
+
+                            Arminia.setGUI(_this.game);
+
+                            disabledInfoSystems.forEach(function (element) {
+                                element.setEnabled(false);
+                            });
+
+                            // Arminia.initEmbla();
+
+                            //////////////////////////////////  FASTER NO ANIMATION EDGES RENDERING ENABLING
+                            _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+                                element.enableEdgesRendering();
+                                element.edgesWidth = 6.0;
+                            });
+
+                        });
+
+                        /////////////////////////////////////////   AUDIO SLIDE SOFT
+                        // _this.game.audio.slideSoft.play();
+
+                        //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
+
+                        //////////////////////////////////  MATERIALS FADE OUT                           
+
+                        BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
+                            new BABYLON.Color3(0.451, 0.333, 0.8), new BABYLON.Color3(0, 0, 0), 0, _this.ease);
+
+                        meshArrayFaders.forEach(function (element) {
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease);
+                        });
+
+                        meshArrayDetails.forEach(function (element) {
+                            element.isVisible = true;
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+                        });
+
+                    } else {
+                        ///////////////////////////////////////////////////////////////////////////////////////////////
+                        /////////////////////////////////////////   ZOOM OUT  /////////////////////////////////////////
+                        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+                        //////////////////////////////////  PAGE MANAGEMENT
+
+
+                        _this.game.animatePageIn("A_homePage");
+                        _this.game.animatePageOut(_this.game.nav);
+
+                        _this.game.nav = "home";
+
+                        // document.getElementById('A_homePage').style.opacity = "0";
+                        // document.getElementById('A_homePage').style.display = "block";
+                        // document.getElementById('A_homePage').classList.remove("A_pageOut");
+                        // document.getElementById('A_homePage').classList.add("A_pageIn");
+
+
+                        //////////////////////////////  FASTER NO ANIMATION DISABLE EDGES RENDERING                            
+
+                        _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+                            element.disableEdgesRendering();
+                        });
+
+                        //////////////////////////// reset selected infosystem to zoomed out state
+
+                        _this.game.infoSystem1.THGLines2D.line1.isVisible = true;
+                        _this.game.infoSystem2.metaCubeLines2D.line1.isVisible = true;
+                        _this.game.selectedInfoSystem.FruitOfLife.setEnabled(true);
+
+                        _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+                            element.isVisible = true;
+                            element.material.alpha = element.material.alpha1;
+                        });
+
+                        _this.game.snowFlake.setEnabled(true);
+
+                        disabledInfoSystems.forEach(function (element) {
+                            element.setEnabled(true);
+                        });
+
+                        ////////////////////////////
+
+                        initCamZoom(
+                            _this.game.camera.zoomOutScale,
+                            new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
+                            new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
+                            _this.camera.target,
+                            BABYLON.Vector3.Zero()
+                        );
+
+                        //////////////////////////////////  CAMERA ANIMATIONS
+
+                        _this.camera.flyToPosition(
+                            new BABYLON.Vector3(0, 0, 30),
+                            new BABYLON.Vector3(0, 0, 0),
+                            _this.game.scene
+                        );
+
+                        _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
+
+                            console.log("zoom out complete");   
+                            
+                            _this.game.camZoomManager.selectedHitBox.setEnabled(true);
+
+                            _this.game.camZoomManager.isZoomed = false;
+                            _this.game.camZoomManager.isZooming = false;
+                            _this.game.infoSystem1.FruitOfLife.fruitSpheresFade(_this.game);
+                            _this.game.infoSystem2.FruitOfLife.fruitSpheresFade(_this.game);
+                            _this.game.infoSystem3.FruitOfLife.fruitSpheresFade(_this.game);
+                            Arminia.setGUI(_this.game);
+
+                            _this.game.infoSystem1.tree1.setEnabled(false);
+                            _this.game.infoSystem1.doubleTorus.setEnabled(false);
+
+                            if (_this.game.scene.meshUnderPointer != null) {
+
+                                switch (_this.game.scene.meshUnderPointer.name) {
+
+                                    case "hitBox1":
+                                        _this.game.infoSystem1.FruitOfLife.fruitSpheresGlow(_this.game);
+                                        break;
+
+                                    case "hitBox2":
+                                        _this.game.infoSystem2.FruitOfLife.fruitSpheresGlow(_this.game);
+                                        break;
+
+                                    case "hitBox3":
+                                        _this.game.infoSystem3.FruitOfLife.fruitSpheresGlow(_this.game);
+                                        break;
+                                    default: break
+                                }
+
+                            } else fruitFadeObj.fruitSpheresFade(_this.game);
+                        });
+
+                        // _this.game.audio.slideSoft.play();
+
+                        //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
+
+                        /////////////////////////////////  MATERIALS FADE IN
+
+                        BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
+                            new BABYLON.Color3(0, 0, 0), new BABYLON.Color3(0.451, 0.333, 0.8), 0, _this.ease);
+
+                        meshArrayFaders.forEach(function (element) {
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+                        });
+
+                        meshArrayDetails.forEach(function (element) {
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease, () => {
+                                element.isVisible = false;
+                            });
+                        });
+                    }
+                }
+            }
+
+            $("#A_backToHomeBtn").click(function () {
+
+                doZoom(_this.game.camZoomManager.selectedHitBox.name);
+
+            });
+
             mesh.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger,
                 function (value) {
 
-                    if (!_this.game.camZoomManager.isZooming) {
-
-                        _this.game.camZoomManager.isZooming = true;
+                    // A button is being used to zoom out, so the button's click event needs to access the hitbox name through a global scoped variable on the _this.game object 
 
-                        // let x1 = 0.0;
-                        let fruitFadeObj = {};
-                        let disabledInfoSystems, meshArrayFaders, meshArrayDetails = [];
-                        let selectedInfoSystem = {};
-                        let edgesRenderingMeshes = [];
-
-                        // _this.game.animatePageIn("A_64TetraView");
-                        // _this.game.animatePageOut("A_homePage");
+                    _this.game.camZoomManager.selectedHitBox = _this.game.scene.getMeshesByID(value.source.name)[0];
 
-                        switch (value.source.name) {
-
-                            case "hitBox1":
+                    doZoom(_this.game.camZoomManager.selectedHitBox.name);
 
-                                // x1 = 0.0;
-                                fruitFadeObj = _this.game.infoSystem1.FruitOfLife;
-                                disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem3];
-                                _this.game.selectedInfoSystem = _this.game.infoSystem1;
-
-                                /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
-
-                                _this.game.nav = "A_64TetraView";
-                                _this.game.animatePageIn(_this.game.nav);
-                                _this.game.animatePageOut("A_homePage");
-
-                                /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
-
-                                meshArrayFaders = [
-                                    //  2D LINES FADE OUT INIT
-                                    _this.game.infoSystem2.metaCubeLines2D.line1,
-                                    //  MATERIALS FADE OUT INIT
-                                    _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
-                                    _this.game.infoSystem3.starTetra.mesh1,
-                                    _this.game.infoSystem3.starTetra.mesh2,
-                                    //  WIREFRAME MATERIALS FADE OUT INIT   
-                                    _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.wireMesh,
-                                    _this.game.infoSystem3.starTetra.wireMesh
-                                ];
-
-                                /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
-
-                                meshArrayDetails = [
-                                    _this.game.infoSystem1.tetrahedronGrid1.mesh2,
-                                    _this.game.infoSystem1.tetrahedronGrid1.wireMesh
-                                ];
+                }
 
-                                //////////////////////////////  EDGES RENDERING FADE  IN  //////////////////////////////
-
-                                _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem1.tetrahedronGrid1.mesh1];
-                                _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem1.tetrahedronGrid1.wireMesh];
-                                break;
-
-                            case "hitBox2":
-
-                                // x1 = -8.0;
-                                fruitFadeObj = _this.game.infoSystem2.FruitOfLife;
-                                disabledInfoSystems = [_this.game.infoSystem1, _this.game.infoSystem3];
-                                _this.game.selectedInfoSystem = _this.game.infoSystem2;
-
-                                /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
-
-                                _this.game.nav = "A_metatronView";
-                                _this.game.animatePageIn(_this.game.nav);
-                                _this.game.animatePageOut("A_homePage");
-                                // Arminia.loadMetatronPage();
-
-                                /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
-
-                                meshArrayFaders = [
-                                    //  2D LINES FADE OUT INIT
-                                    _this.game.infoSystem1.THGLines2D.line1,
-                                    //  MATERIALS FADE OUT INIT
-                                    _this.game.infoSystem1.tetrahedronGrid1.mesh1,
-                                    _this.game.infoSystem1.tetrahedronGrid1.mesh2,
-                                    _this.game.infoSystem3.starTetra.mesh1,
-                                    _this.game.infoSystem3.starTetra.mesh2,
-                                    //  WIREFRAME MATERIALS FADE OUT INIT   
-                                    _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
-                                    _this.game.infoSystem3.starTetra.wireMesh
-                                ];
-
-                                /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
-
-                                meshArrayDetails = [
-                                    _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
-                                ];
-
-                                //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
-
-                                _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.mesh1, _this.game.infoSystem2.metatronsCube.metaStar.mesh1];
-                                _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.wireMesh, _this.game.infoSystem2.metatronsCube.metaStar.wireMesh];
-                                break;
+            ));
 
-                            case "hitBox3":
+            // old non-zoom out button function
+            // mesh.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger,
+            //     function (value) {
 
-                                // x1 = -8.0;
-                                fruitFadeObj = _this.game.infoSystem3.FruitOfLife;
-                                disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem1];
-                                _this.game.selectedInfoSystem = _this.game.infoSystem3;
+            //         if (!_this.game.camZoomManager.isZooming) {
 
-                                /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
+            //             _this.game.camZoomManager.isZooming = true;
 
-                                _this.game.nav = "A_musicView";
-                                _this.game.animatePageIn(_this.game.nav);
-                                _this.game.animatePageOut("A_homePage");
-                                // Arminia.loadMusicPage();
+            //             // let x1 = 0.0;
+            //             let fruitFadeObj = {};
+            //             let disabledInfoSystems, meshArrayFaders, meshArrayDetails = [];
+            //             let selectedInfoSystem = {};
+            //             let edgesRenderingMeshes = [];
 
-                                ////////////////////////////////  MATERIALS FADE OUT INIT  /////////////////////////////////
+            //             // _this.game.animatePageIn("A_64TetraView");
+            //             // _this.game.animatePageOut("A_homePage");
 
-                                meshArrayFaders = [
-                                    //  2D LINES FADE OUT INIT
-                                    _this.game.infoSystem1.THGLines2D.line1,
-                                    _this.game.infoSystem2.metaCubeLines2D.line1,
-                                    //  MATERIALS FADE OUT INIT
-                                    _this.game.infoSystem1.tetrahedronGrid1.mesh1,
-                                    _this.game.infoSystem1.tetrahedronGrid1.mesh2,
-                                    _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+            //             _this.game.selectedInfoSystem.name = value.source.name;
 
-                                    //  WIREFRAME MATERIALS FADE OUT INIT   
-                                    _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
-                                    _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
-                                    _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
-                                ];
+            //             switch ( _this.game.selectedInfoSystem.name) {
 
-                                /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
+            //                 case "hitBox1":
 
-                                meshArrayDetails = [
-                                    _this.game.infoSystem3.starTetra.mesh2,
-                                    _this.game.infoSystem3.starTetra.wireMesh
-                                ];
+            //                     // x1 = 0.0;
+            //                     fruitFadeObj = _this.game.infoSystem1.FruitOfLife;
+            //                     disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem3];
+            //                     _this.game.selectedInfoSystem = _this.game.infoSystem1;
 
-                                //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
+            //                     /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
 
-                                _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem3.starTetra.mesh1];
-                                _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem3.starTetra.wireMesh];
-                                break;
+            //                     _this.game.nav = "A_64TetraView";
+            //                     _this.game.animatePageIn(_this.game.nav);
+            //                     _this.game.animatePageOut("A_homePage");
 
-                        }
+            //                     /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
 
-                        if (!_this.game.camZoomManager.isZoomed) {
+            //                     meshArrayFaders = [
+            //                         //  2D LINES FADE OUT INIT
+            //                         _this.game.infoSystem2.metaCubeLines2D.line1,
+            //                         //  MATERIALS FADE OUT INIT
+            //                         _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+            //                         _this.game.infoSystem3.starTetra.mesh1,
+            //                         _this.game.infoSystem3.starTetra.mesh2,
+            //                         //  WIREFRAME MATERIALS FADE OUT INIT   
+            //                         _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.wireMesh,
+            //                         _this.game.infoSystem3.starTetra.wireMesh
+            //                     ];
 
-                            ///////////////////////////////////////////////////////////////////////////////////////////////
-                            /////////////////////////////////////////   ZOOM IN  /////////////////////////////////////////
-                            ///////////////////////////////////////////////////////////////////////////////////////////////
+            //                     /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
 
-                            initCamZoom(
-                                _this.game.camera.zoomInScale,
-                                new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
-                                new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
-                                BABYLON.Vector3.Zero(),
-                                _this.game.selectedInfoSystem.position
-                            );
+            //                     meshArrayDetails = [
+            //                         _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+            //                         _this.game.infoSystem1.tetrahedronGrid1.wireMesh
+            //                     ];
 
-                            // camera animations
-                            _this.camera.flyToPosition(
-                                new BABYLON.Vector3(0, 0, 12.9),
-                                new BABYLON.Vector3(0, 0, 0),
-                                _this.game.scene
-                            );
+            //                     //////////////////////////////  EDGES RENDERING FADE  IN  //////////////////////////////
 
-                            _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
+            //                     _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem1.tetrahedronGrid1.mesh1];
+            //                     _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem1.tetrahedronGrid1.wireMesh];
+            //                     break;
 
-                                _this.game.camZoomManager.isZoomed = true;
-                                _this.game.camZoomManager.isZooming = false;
-                                _this.game.snowFlake.setEnabled(false);
-                                
-                                Arminia.setGUI(_this.game);
+            //                 case "hitBox2":
 
-                                disabledInfoSystems.forEach(function (element) {
-                                    element.setEnabled(false);
-                                });
+            //                     // x1 = -8.0;
+            //                     fruitFadeObj = _this.game.infoSystem2.FruitOfLife;
+            //                     disabledInfoSystems = [_this.game.infoSystem1, _this.game.infoSystem3];
+            //                     _this.game.selectedInfoSystem = _this.game.infoSystem2;
 
-                                // Arminia.initEmbla();
+            //                     /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
 
-                                //////////////////////////////////  FASTER NO ANIMATION EDGES RENDERING ENABLING
-                                _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
-                                    element.enableEdgesRendering();
-                                    element.edgesWidth = 6.0;
-                                });
+            //                     _this.game.nav = "A_metatronView";
+            //                     _this.game.animatePageIn(_this.game.nav);
+            //                     _this.game.animatePageOut("A_homePage");
+            //                     // Arminia.loadMetatronPage();
 
-                            });
+            //                     /////////////////////////////////  MATERIALS FADE OUT INIT /////////////////////////////////
 
-                            /////////////////////////////////////////   AUDIO SLIDE SOFT
-                            // _this.game.audio.slideSoft.play();
+            //                     meshArrayFaders = [
+            //                         //  2D LINES FADE OUT INIT
+            //                         _this.game.infoSystem1.THGLines2D.line1,
+            //                         //  MATERIALS FADE OUT INIT
+            //                         _this.game.infoSystem1.tetrahedronGrid1.mesh1,
+            //                         _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+            //                         _this.game.infoSystem3.starTetra.mesh1,
+            //                         _this.game.infoSystem3.starTetra.mesh2,
+            //                         //  WIREFRAME MATERIALS FADE OUT INIT   
+            //                         _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
+            //                         _this.game.infoSystem3.starTetra.wireMesh
+            //                     ];
 
-                            //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
+            //                     /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
 
-                            //////////////////////////////////  MATERIALS FADE OUT                           
+            //                     meshArrayDetails = [
+            //                         _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
+            //                     ];
 
-                            BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
-                                new BABYLON.Color3(0.451, 0.333, 0.8), new BABYLON.Color3(0, 0, 0), 0, _this.ease);
+            //                     //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
 
-                            meshArrayFaders.forEach(function (element) {
-                                BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease);
-                            });
+            //                     _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.mesh1, _this.game.infoSystem2.metatronsCube.metaStar.mesh1];
+            //                     _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem2.metatronsCube.metaCube.wireMesh, _this.game.infoSystem2.metatronsCube.metaStar.wireMesh];
+            //                     break;
 
-                            meshArrayDetails.forEach(function (element) {
-                                element.isVisible = true;
-                                BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
-                            });
+            //                 case "hitBox3":
 
-                        } else {
-                            ///////////////////////////////////////////////////////////////////////////////////////////////
-                            /////////////////////////////////////////   ZOOM OUT  /////////////////////////////////////////
-                            ///////////////////////////////////////////////////////////////////////////////////////////////
+            //                     // x1 = -8.0;
+            //                     fruitFadeObj = _this.game.infoSystem3.FruitOfLife;
+            //                     disabledInfoSystems = [_this.game.infoSystem2, _this.game.infoSystem1];
+            //                     _this.game.selectedInfoSystem = _this.game.infoSystem3;
 
-                            //////////////////////////////////  PAGE MANAGEMENT
+            //                     /////////////////////////////////  PAGE MANAGEMENT  /////////////////////////////////
 
+            //                     _this.game.nav = "A_musicView";
+            //                     _this.game.animatePageIn(_this.game.nav);
+            //                     _this.game.animatePageOut("A_homePage");
+            //                     // Arminia.loadMusicPage();
 
-                            _this.game.animatePageIn("A_homePage");
-                            _this.game.animatePageOut(_this.game.nav);
+            //                     ////////////////////////////////  MATERIALS FADE OUT INIT  /////////////////////////////////
 
-                            _this.game.nav = "home";
+            //                     meshArrayFaders = [
+            //                         //  2D LINES FADE OUT INIT
+            //                         _this.game.infoSystem1.THGLines2D.line1,
+            //                         _this.game.infoSystem2.metaCubeLines2D.line1,
+            //                         //  MATERIALS FADE OUT INIT
+            //                         _this.game.infoSystem1.tetrahedronGrid1.mesh1,
+            //                         _this.game.infoSystem1.tetrahedronGrid1.mesh2,
+            //                         _this.game.infoSystem2.metatronsCube.metaCube.mesh1,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.mesh1,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.mesh2,
 
-                            // document.getElementById('A_homePage').style.opacity = "0";
-                            // document.getElementById('A_homePage').style.display = "block";
-                            // document.getElementById('A_homePage').classList.remove("A_pageOut");
-                            // document.getElementById('A_homePage').classList.add("A_pageIn");
+            //                         //  WIREFRAME MATERIALS FADE OUT INIT   
+            //                         _this.game.infoSystem1.tetrahedronGrid1.wireMesh,
+            //                         _this.game.infoSystem2.metatronsCube.metaCube.wireMesh,
+            //                         _this.game.infoSystem2.metatronsCube.metaStar.wireMesh
+            //                     ];
 
+            //                     /////////////////////////////////  MATERIALS FADE IN INIT /////////////////////////////////
 
-                            //////////////////////////////  FASTER NO ANIMATION DISABLE EDGES RENDERING                            
+            //                     meshArrayDetails = [
+            //                         _this.game.infoSystem3.starTetra.mesh2,
+            //                         _this.game.infoSystem3.starTetra.wireMesh
+            //                     ];
 
-                            _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
-                                element.disableEdgesRendering();
-                            });
+            //                     //////////////////////////////  EDGES RENDERING FADE IN INIT  //////////////////////////////
 
-                            //////////////////////////// reset selected infosystem to zoomed out state
+            //                     _this.game.selectedInfoSystem.edgesRenderingMeshes = [_this.game.infoSystem3.starTetra.mesh1];
+            //                     _this.game.selectedInfoSystem.wireMeshes = [_this.game.infoSystem3.starTetra.wireMesh];
+            //                     break;
 
-                            _this.game.infoSystem1.THGLines2D.line1.isVisible = true;
-                            _this.game.infoSystem2.metaCubeLines2D.line1.isVisible = true;
-                            _this.game.selectedInfoSystem.FruitOfLife.setEnabled(true);
+            //             }
 
-                            _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
-                                element.isVisible = true;
-                                element.material.alpha = element.material.alpha1;
-                            });
+            //             if (!_this.game.camZoomManager.isZoomed) {
 
-                            _this.game.snowFlake.setEnabled(true);
+            //                 ///////////////////////////////////////////////////////////////////////////////////////////////
+            //                 /////////////////////////////////////////   ZOOM IN  /////////////////////////////////////////
+            //                 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-                            disabledInfoSystems.forEach(function (element) {
-                                element.setEnabled(true);
-                            });
+            //                 initCamZoom(
+            //                     _this.game.camera.zoomInScale,
+            //                     new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
+            //                     new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
+            //                     BABYLON.Vector3.Zero(),
+            //                     _this.game.selectedInfoSystem.position
+            //                 );
 
-                            ////////////////////////////
+            //                 // camera animations
+            //                 _this.camera.flyToPosition(
+            //                     new BABYLON.Vector3(0, 0, 12.9),
+            //                     new BABYLON.Vector3(0, 0, 0),
+            //                     _this.game.scene
+            //                 );
 
-                            initCamZoom(
-                                _this.game.camera.zoomOutScale,
-                                new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
-                                new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
-                                _this.camera.target,
-                                BABYLON.Vector3.Zero()
-                            );
+            //                 _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
 
-                            //////////////////////////////////  CAMERA ANIMATIONS
+            //                     _this.game.camZoomManager.isZoomed = true;
+            //                     _this.game.camZoomManager.isZooming = false;
+            //                     _this.game.snowFlake.setEnabled(false);
 
-                            _this.camera.flyToPosition(
-                                new BABYLON.Vector3(0, 0, 30),
-                                new BABYLON.Vector3(0, 0, 0),
-                                _this.game.scene
-                            );
+            //                     Arminia.setGUI(_this.game);
 
-                            _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
+            //                     disabledInfoSystems.forEach(function (element) {
+            //                         element.setEnabled(false);
+            //                     });
 
-                                _this.game.camZoomManager.isZoomed = false;
-                                _this.game.camZoomManager.isZooming = false;
-                                _this.game.infoSystem1.FruitOfLife.fruitSpheresFade(_this.game);
-                                _this.game.infoSystem2.FruitOfLife.fruitSpheresFade(_this.game);
-                                _this.game.infoSystem3.FruitOfLife.fruitSpheresFade(_this.game);
-                                Arminia.setGUI(_this.game);
+            //                     // Arminia.initEmbla();
 
-                                _this.game.infoSystem1.tree1.setEnabled(false);
-                                _this.game.infoSystem1.doubleTorus.setEnabled(false);
+            //                     //////////////////////////////////  FASTER NO ANIMATION EDGES RENDERING ENABLING
+            //                     _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+            //                         element.enableEdgesRendering();
+            //                         element.edgesWidth = 6.0;
+            //                     });
 
-                                if (_this.game.scene.meshUnderPointer != null) {
+            //                 });
 
-                                    switch (_this.game.scene.meshUnderPointer.name) {
+            //                 /////////////////////////////////////////   AUDIO SLIDE SOFT
+            //                 // _this.game.audio.slideSoft.play();
 
-                                        case "hitBox1":
-                                            _this.game.infoSystem1.FruitOfLife.fruitSpheresGlow(_this.game);
-                                            break;
+            //                 //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
 
-                                        case "hitBox2":
-                                            _this.game.infoSystem2.FruitOfLife.fruitSpheresGlow(_this.game);
-                                            break;
+            //                 //////////////////////////////////  MATERIALS FADE OUT                           
 
-                                        case "hitBox3":
-                                            _this.game.infoSystem3.FruitOfLife.fruitSpheresGlow(_this.game);
-                                            break;
-                                        default: break
-                                    }
+            //                 BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
+            //                     new BABYLON.Color3(0.451, 0.333, 0.8), new BABYLON.Color3(0, 0, 0), 0, _this.ease);
 
-                                } else fruitFadeObj.fruitSpheresFade(_this.game);
-                            });
+            //                 meshArrayFaders.forEach(function (element) {
+            //                     BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease);
+            //                 });
 
-                            // _this.game.audio.slideSoft.play();
+            //                 meshArrayDetails.forEach(function (element) {
+            //                     element.isVisible = true;
+            //                     BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+            //                 });
 
-                            //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
+            //             } else {
+            //                 ///////////////////////////////////////////////////////////////////////////////////////////////
+            //                 /////////////////////////////////////////   ZOOM OUT  /////////////////////////////////////////
+            //                 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-                            /////////////////////////////////  MATERIALS FADE IN
+            //                 //////////////////////////////////  PAGE MANAGEMENT
 
-                            BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
-                                new BABYLON.Color3(0, 0, 0), new BABYLON.Color3(0.451, 0.333, 0.8), 0, _this.ease);
 
-                            meshArrayFaders.forEach(function (element) {
-                                BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
-                            });
+            //                 _this.game.animatePageIn("A_homePage");
+            //                 _this.game.animatePageOut(_this.game.nav);
 
-                            meshArrayDetails.forEach(function (element) {
-                                BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease, () => {
-                                    element.isVisible = false;
-                                });
-                            });
-                        }
-                    }
-                }));
+            //                 _this.game.nav = "home";
+
+            //                 // document.getElementById('A_homePage').style.opacity = "0";
+            //                 // document.getElementById('A_homePage').style.display = "block";
+            //                 // document.getElementById('A_homePage').classList.remove("A_pageOut");
+            //                 // document.getElementById('A_homePage').classList.add("A_pageIn");
+
+
+            //                 //////////////////////////////  FASTER NO ANIMATION DISABLE EDGES RENDERING                            
+
+            //                 _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+            //                     element.disableEdgesRendering();
+            //                 });
+
+            //                 //////////////////////////// reset selected infosystem to zoomed out state
+
+            //                 _this.game.infoSystem1.THGLines2D.line1.isVisible = true;
+            //                 _this.game.infoSystem2.metaCubeLines2D.line1.isVisible = true;
+            //                 _this.game.selectedInfoSystem.FruitOfLife.setEnabled(true);
+
+            //                 _this.game.selectedInfoSystem.edgesRenderingMeshes.forEach(function (element) {
+            //                     element.isVisible = true;
+            //                     element.material.alpha = element.material.alpha1;
+            //                 });
+
+            //                 _this.game.snowFlake.setEnabled(true);
+
+            //                 disabledInfoSystems.forEach(function (element) {
+            //                     element.setEnabled(true);
+            //                 });
+
+            //                 ////////////////////////////
+
+            //                 initCamZoom(
+            //                     _this.game.camera.zoomOutScale,
+            //                     new BABYLON.Vector2(_this.game.camera.zoomedTargetScreenOffset, 0),
+            //                     new BABYLON.Vector2(_this.game.camera.initialTargetScreenOffset, 0),
+            //                     _this.camera.target,
+            //                     BABYLON.Vector3.Zero()
+            //                 );
+
+            //                 //////////////////////////////////  CAMERA ANIMATIONS
+
+            //                 _this.camera.flyToPosition(
+            //                     new BABYLON.Vector3(0, 0, 30),
+            //                     new BABYLON.Vector3(0, 0, 0),
+            //                     _this.game.scene
+            //                 );
+
+            //                 _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
+
+            //                     _this.game.camZoomManager.isZoomed = false;
+            //                     _this.game.camZoomManager.isZooming = false;
+            //                     _this.game.infoSystem1.FruitOfLife.fruitSpheresFade(_this.game);
+            //                     _this.game.infoSystem2.FruitOfLife.fruitSpheresFade(_this.game);
+            //                     _this.game.infoSystem3.FruitOfLife.fruitSpheresFade(_this.game);
+            //                     Arminia.setGUI(_this.game);
+
+            //                     _this.game.infoSystem1.tree1.setEnabled(false);
+            //                     _this.game.infoSystem1.doubleTorus.setEnabled(false);
+
+            //                     if (_this.game.scene.meshUnderPointer != null) {
+
+            //                         switch (_this.game.scene.meshUnderPointer.name) {
+
+            //                             case "hitBox1":
+            //                                 _this.game.infoSystem1.FruitOfLife.fruitSpheresGlow(_this.game);
+            //                                 break;
+
+            //                             case "hitBox2":
+            //                                 _this.game.infoSystem2.FruitOfLife.fruitSpheresGlow(_this.game);
+            //                                 break;
+
+            //                             case "hitBox3":
+            //                                 _this.game.infoSystem3.FruitOfLife.fruitSpheresGlow(_this.game);
+            //                                 break;
+            //                             default: break
+            //                         }
+
+            //                     } else fruitFadeObj.fruitSpheresFade(_this.game);
+            //                 });
+
+            //                 // _this.game.audio.slideSoft.play();
+
+            //                 //////////////////////////////////  INFORMATION SYSTEMS ANIMATIONS //////////////////////////////////
+
+            //                 /////////////////////////////////  MATERIALS FADE IN
+
+            //                 BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
+            //                     new BABYLON.Color3(0, 0, 0), new BABYLON.Color3(0.451, 0.333, 0.8), 0, _this.ease);
+
+            //                 meshArrayFaders.forEach(function (element) {
+            //                     BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+            //                 });
+
+            //                 meshArrayDetails.forEach(function (element) {
+            //                     BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease, () => {
+            //                         element.isVisible = false;
+            //                     });
+            //                 });
+            //             }
+            //         }
+
+            //     }
+
+            // ));
+
         }
     };
     if (window.Arminia === undefined) {

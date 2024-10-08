@@ -162,7 +162,7 @@
             if (checkbox11.checked == true) {
                 game.infoSystem1.tree1.setEnabled(true);
 
-                game.infoSystem1.tetrahedronGrid1.mesh1.material.alpha = 0.2;
+                game.infoSystem1.tetrahedronGrid1.mesh1.material.alpha = 0.1;
 
             } else {
                 game.infoSystem1.tree1.setEnabled(false);

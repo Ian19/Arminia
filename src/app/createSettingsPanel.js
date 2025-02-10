@@ -55,7 +55,7 @@
                 mesh2Alpha = 0.02;
 
                 if ($("#checkbox3").prop("checked") == true) mesh1Alpha = 0.99;
-                else mesh1Alpha = 0.75;
+                else mesh1Alpha = 0.6;
 
             } else {
                 mesh1Alpha = mesh2Alpha = 0;

@@ -323,15 +323,15 @@
                         //////////////////////////////////  MATERIALS FADE OUT                           
 
                         BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
-                            new BABYLON.Color3(0.451, 0.333, 0.8), new BABYLON.Color3(0, 0, 0), 0, _this.ease);
+                            new BABYLON.Color3(0.451, 0.333, 0.8), new BABYLON.Color3(0, 0, 0), BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease);
 
                         meshArrayFaders.forEach(function (element) {
-                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease);
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease);
                         });
 
                         meshArrayDetails.forEach(function (element) {
                             element.isVisible = true;
-                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease);
                         });
 
                     } else {
@@ -396,8 +396,8 @@
 
                         _this.game.scene.beginAnimation(_this.camera, 0, 100, false, 2, () => {
 
-                            console.log("zoom out complete");   
-                            
+                            console.log("zoom out complete");
+
                             _this.game.camZoomManager.selectedHitBox.setEnabled(true);
 
                             _this.game.camZoomManager.isZoomed = false;
@@ -438,14 +438,15 @@
                         /////////////////////////////////  MATERIALS FADE IN
 
                         BABYLON.Animation.CreateAndStartAnimation('', _this.snowFlakeMat, 'emissiveFresnelParameters.leftColor', 30, 50,
-                            new BABYLON.Color3(0, 0, 0), new BABYLON.Color3(0.451, 0.333, 0.8), 0, _this.ease);
+                            new BABYLON.Color3(0, 0, 0), new BABYLON.Color3(0.451, 0.333, 0.8), BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease);
+
 
                         meshArrayFaders.forEach(function (element) {
-                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, 0, _this.ease);
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, 0.0, element.material.alpha1, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease);
                         });
 
                         meshArrayDetails.forEach(function (element) {
-                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, 0, _this.ease, () => {
+                            BABYLON.Animation.CreateAndStartAnimation('', element.material, 'alpha', 30, 50, element.material.alpha1, 0.0, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, _this.ease, () => {
                                 element.isVisible = false;
                             });
                         });

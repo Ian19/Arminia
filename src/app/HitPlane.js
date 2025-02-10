@@ -65,7 +65,7 @@
                     console.log(ev.meshUnderPointer.id);
 
 
-                    // fruit.fruitSpheresFade(game);
+                    fruit.fruitSpheresFade(game);
 
                 })
             );

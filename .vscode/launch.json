@@ -13,7 +13,9 @@
             "webRoot": "${workspaceFolder}"
         },
         {
+            // "version": "0.2.0",
             "type": "pwa-msedge",
+            // "type": "msedge",
             "request": "launch",
             // "runtimeArgs": [
             //     "--remote-debugging-port=5503"
@@ -39,10 +41,23 @@
             "url": "http://127.0.0.1:5503/index.html"
         },
         {
-            "type": "edge",
+            "type": "msedge",
             "request": "attach",
             "name": "Attach to Edge",
-            "port": 9222,
+            "port": 5503,
+
+            "runtimeArgs": [
+                "--remote-debugging-port=5503"
+            ],
+            
+            "url": "http://127.0.0.1:5503",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch browser",
+            "type": "pwa-msedge",
+            "request": "launch",
+            "url": "https://www.google.com",
             "webRoot": "${workspaceFolder}"
         }
     ]

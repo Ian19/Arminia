@@ -52,6 +52,8 @@
 
         parameters.appletOnLoad = function (api) {
 
+            console.log("appletOnLoad");
+
             Arminia.setGUI(game);
 
             let newStart = true;
@@ -492,8 +494,8 @@
 
                             panAndZoomAndAnimate(j, elementStr, game.skills.selectedSkill.steps[j].zoomScale, false);
                         }
-                        
- 
+
+
                     }
 
                 } else {
@@ -553,6 +555,11 @@
                         strType = api.getObjectType(strName);
                         strCommand = api.getCommandString(strName);
 
+                        console.log("strName: ", strName);  
+                        console.log("strType: ", strType);  
+                        console.log("strCommand: ", strCommand);
+
+
                         if (strType == "text") {
                             strCommand = api.getValueString(strName);
                         } else {
@@ -573,11 +580,14 @@
 
                                 for (let k = 0; k < steps[j].correctStep.length; k++) {
 
-                                    // console.log("correctStep:", steps[j].correctStep[k]);
+                                    // console.log("correctStep: ", steps[j].correctStep[k]);
+                                    // console.log("strState: ", strState);
+
+
 
                                     if (strState == steps[j].correctStep[k]) {
 
-                                        // console.log("Correct Step!");
+                                        console.log("Correct Step!");
 
                                         if (steps[j].type == "construction" || steps[j].type == "paper") test[j][k] = 1;
 
@@ -723,8 +733,6 @@
 
             }
 
-
-
             // Zoom and pan to the next incomplete step
             svg.transition()
                 .duration(750)
@@ -832,6 +840,9 @@
 
             else if (newStart) {
 
+                console.log("newStart");
+                console.log(game.skills.selectedSkill.equationScale);
+
                 panAndZoomAndAnimate(0, "A-SVGStep1", game.skills.selectedSkill.equationScale, false);
                 newStart = false;
 
@@ -910,6 +921,12 @@
         $("#A_cheatBtnID").click(function () {
 
             if (cheatNum == 0) {
+
+                // getcommandstring is returning superscript indices as of 15/15/2025. This means that the first evalCommand wasn't read properly by the applet and wouldn't move onto the next equation.
+                // resetting the applet fixed this problem. 
+                ggbApplet.reset();
+
+                ready = true;
 
                 ggbApplet.evalCommand(game.skills.selectedSkill.cheatSteps[0]);
                 $("#A_cheatBtnID").text("CHEAT STEP 2");

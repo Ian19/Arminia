@@ -54,7 +54,7 @@
 
             this.mesh1.material.alpha = 0.7;
             this.mesh1.material.alpha1 = 0.7;
-            this.mesh1.material.transparencyMode = 3;
+            // this.mesh1.material.transparencyMode = 3;
             // this.mesh1.material.alphaMode = BABYLON.Engine.ALPHA_COMBINE;
             // this.mesh1.material.alphaMode = BABYLON.Engine.ALPHA_ADD; 
             this.mesh1.material.alphaMode = BABYLON.Engine.ALPHA_MAXIMIZED; 

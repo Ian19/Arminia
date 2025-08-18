@@ -1,0 +1,658 @@
+Exporter version: 3.3.2, Blender version: 4.3.2
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  C:\xampp\htdocs\arminia\src\assets\meshes\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently enabled collection
+	processing begun of mesh:  Icosphere
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.001
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.002
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.003
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.004
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.005
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.006
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.007
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.008
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.009
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.010
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.011
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.012
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.013
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.014
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.015
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.016
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.017
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.018
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.019
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.020
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.021
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.022
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.023
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.024
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.025
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.026
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.027
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.028
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.029
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.030
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.031
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.032
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.033
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.034
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.035
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.036
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.037
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.038
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.039
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.040
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.041
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.042
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.043
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.044
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.045
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.046
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.047
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.048
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.049
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.050
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.051
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.052
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.053
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.054
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.055
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.056
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.057
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.058
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.059
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.060
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.061
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.062
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+	processing begun of mesh:  Icosphere.063
+		WARNING: No materials have been assigned: 
+		num positions      :  3840
+		num normals        :  3840
+		num tangents       :  0
+		num uvs            :  7680
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1280
+========= Writing of JSON file started =========
+	writing mesh:  Icosphere
+	writing mesh:  Icosphere.001
+	writing mesh:  Icosphere.002
+	writing mesh:  Icosphere.003
+	writing mesh:  Icosphere.004
+	writing mesh:  Icosphere.005
+	writing mesh:  Icosphere.006
+	writing mesh:  Icosphere.007
+	writing mesh:  Icosphere.008
+	writing mesh:  Icosphere.009
+	writing mesh:  Icosphere.010
+	writing mesh:  Icosphere.011
+	writing mesh:  Icosphere.012
+	writing mesh:  Icosphere.013
+	writing mesh:  Icosphere.014
+	writing mesh:  Icosphere.015
+	writing mesh:  Icosphere.016
+	writing mesh:  Icosphere.017
+	writing mesh:  Icosphere.018
+	writing mesh:  Icosphere.019
+	writing mesh:  Icosphere.020
+	writing mesh:  Icosphere.021
+	writing mesh:  Icosphere.022
+	writing mesh:  Icosphere.023
+	writing mesh:  Icosphere.024
+	writing mesh:  Icosphere.025
+	writing mesh:  Icosphere.026
+	writing mesh:  Icosphere.027
+	writing mesh:  Icosphere.028
+	writing mesh:  Icosphere.029
+	writing mesh:  Icosphere.030
+	writing mesh:  Icosphere.031
+	writing mesh:  Icosphere.032
+	writing mesh:  Icosphere.033
+	writing mesh:  Icosphere.034
+	writing mesh:  Icosphere.035
+	writing mesh:  Icosphere.036
+	writing mesh:  Icosphere.037
+	writing mesh:  Icosphere.038
+	writing mesh:  Icosphere.039
+	writing mesh:  Icosphere.040
+	writing mesh:  Icosphere.041
+	writing mesh:  Icosphere.042
+	writing mesh:  Icosphere.043
+	writing mesh:  Icosphere.044
+	writing mesh:  Icosphere.045
+	writing mesh:  Icosphere.046
+	writing mesh:  Icosphere.047
+	writing mesh:  Icosphere.048
+	writing mesh:  Icosphere.049
+	writing mesh:  Icosphere.050
+	writing mesh:  Icosphere.051
+	writing mesh:  Icosphere.052
+	writing mesh:  Icosphere.053
+	writing mesh:  Icosphere.054
+	writing mesh:  Icosphere.055
+	writing mesh:  Icosphere.056
+	writing mesh:  Icosphere.057
+	writing mesh:  Icosphere.058
+	writing mesh:  Icosphere.059
+	writing mesh:  Icosphere.060
+	writing mesh:  Icosphere.061
+	writing mesh:  Icosphere.062
+	writing mesh:  Icosphere.063
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 6.1389 secs

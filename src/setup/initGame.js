@@ -144,6 +144,87 @@
         var elem = document.getElementById("A_gameCanvas")
         elem.setAttribute("style", "touch-action: auto;");
 
+        // const emissiveMaterial = new BABYLON.StandardMaterial("emissiveMat", game.scene);
+        // emissiveMaterial.emissiveColor = new BABYLON.Color3(1, 1, 1); // White glow
+        // emissiveMaterial.disableLighting = true; // Ignore scene lights
+
+        // const tetrahedron = BABYLON.MeshBuilder.CreatePolyhedron("CreatePolyhedron", {
+        //     size: 2, faceColors: [
+        //         new BABYLON.Color4(0.9, 0.9, 0.9, 1), // Red
+        //         new BABYLON.Color4(0.5, 0.5, 0.5, 1), // Green
+        //         new BABYLON.Color4(0.2, 0.2, 0.2, 1), // Blue
+        //         new BABYLON.Color4(0.1, 0.1, 0.1, 1) // Yellow
+        //     ]
+        // }, game.scene);
+
+        // tetrahedron.material = emissiveMaterial;
+        // tetrahedron.material.vertexColors = true; // Enable face colors
+
+
+        // const tetrahedron = BABYLON.MeshBuilder.CreatePolyhedron("CreatePolyhedron", { type: 0, size: 2 }, game.scene);
+
+        // tetrahedron.layerMask = 1;
+
+
+        // console.log("game.assets: ", game.assets);
+
+        // let testSpheres = game.assets.meshes["64THGSpheres"].clone("64THGSpheres1");
+
+        // console.log("testSpheres: ", testSpheres);
+
+
+        // console.log(game.assets.meshes["64THGSpheres"]);
+
+        // testSpheres.material = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
+
+        // testSpheres.alphaIndex = 0;
+
+        // testSpheres.layerMask = 1;
+
+        // // myMat = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
+
+
+        // game.loader2 = new BABYLON.AssetsManager(game.scene);
+
+        // const task2 = game.loader2.addMeshTask("4x4x4work", "", "src/assets/meshes/", "4x4x4work.babylon");
+
+        // task2.onSuccess = function (task) {
+
+        //     console.log("Total meshes loaded:", task.loadedMeshes.length);
+
+        //     task.loadedMeshes.forEach((mesh, index) => {
+
+        //         console.log(`Mesh ${index}:`, mesh.name);
+
+        //         mesh.material = myMat; // Apply the shared material
+
+        //         mesh.layerMask = 1;
+
+        //     });
+
+        //     // task.loadedMeshes.forEach(function (mesh) {
+
+        //     //     mesh.isVisible = false;
+
+        //     //     if (mesh.material != null) {
+        //     //         mesh.material.dispose();
+        //     //     }
+
+        //     // });
+
+        //     // game.assets.meshes[task.name] = task.loadedMeshes[0];
+        //     // game.assets.meshes[task.name].parent = game.assets;
+
+        // };
+
+        // task2.onError = function (t, message, exception) {
+        //     console.log(message, exception);
+        // }
+
+        // game.loader2.load();
+
+
+
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////  IOS HACKS  //////////////////////////////////////////
@@ -195,8 +276,8 @@
 
             for (let i = 0; i < collection.length; i++) {
                 collection[i].style.marginTop = "0px";
-            }        
-        
+            }
+
         }
 
 
@@ -212,11 +293,11 @@
         //Arminia.fresnelGUI(game);
         //Arminia.fresnelGUI2(game);
 
-        // game.scene.debugLayer.show({
-        //     overlay: true,
-        //     handleResize: true,
-        //     embedMode: true
-        // });
+        game.scene.debugLayer.show({
+            overlay: true,
+            handleResize: true,
+            embedMode: true
+        });
 
     };
 

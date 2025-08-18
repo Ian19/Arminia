@@ -97,6 +97,12 @@
                 folder: "src/assets/meshes/",
                 filename: "hexagon.obj"
             }
+            // ,
+            // {
+            //     name: "64THGSpheres",
+            //     folder: "src/assets/meshes/",
+            //     filename: "4x4x4.babylon"
+            // }
         ];
        
         game.loader = new BABYLON.AssetsManager(game.scene);

@@ -26,51 +26,41 @@
 
             this.parent = game.infoSystem1;
 
-            const mat = game.scene.getMaterialByName("standardMatTHG").clone("THGMesh1Mat");
-            const mesh2Mat = mat.clone("THGMesh2Mat");
-
             this.mesh1 = game.assets.meshes["THG641"].clone("THGMesh1");
             this.mesh1.parent = this;
-            this.mesh1.alphaIndex = super.getAlphaIndex(this.mesh1.name);
-            this.mesh1.material = mat;
-            //setTimeout(function() { _this.mesh1.material.needDepthPrePass = true }, 1000);
+            this.mesh1.alphaIndex = super.getAlphaIndex(this.mesh1.name);            
             this.mesh1.layerMask = 1;
             this.mesh1.isPickable = false;
-            // this.mesh1.material.alpha = 0.75;
-            // this.mesh1.material.alpha1 = 0.75;
-            
-            this.mesh1.material.alpha = 0.6;
-            this.mesh1.material.alpha1 = 0.6;
-
-            // this.mesh1.material.alpha = 0.2;
-            // this.mesh1.material.alpha1 = 0.2;
-
-            // this.mesh1.material.lightmapTexture.level = 1;
             this.mesh1.isVisible = true;
             this.mesh1.edgesColor = new BABYLON.Color4(1, 1, 1, 1);
             this.mesh1.edgesWidth = 6;
-            this.mesh1.material.transparencyMode = 3;
-            this.mesh1.material.alphaMode = BABYLON.Engine.ALPHA_COMBINE;
+
+            const mat = new BABYLON.StandardMaterial("THGMat1", game.scene);
+            this.mesh1.material = mat;
+            this.mesh1.material.emissiveColor = new BABYLON.Color3(0.271, 0.129, 0.694);
+            this.mesh1.material.needDepthPrePass = true;
+            this.mesh1.material.lightmapTexture = new BABYLON.Texture("src/assets/textures/64Tetra9.jpg", game.scene);
+            this.mesh1.material.lightmapTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
+            this.mesh1.material.lightmapTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
+            this.mesh1.material.alpha = 0.6;
+            this.mesh1.material.alpha1 = 0.6;
+            this.mesh1.material.alphaMode = BABYLON.Constants.ALPHA_COMBINE;
 
             this.mesh2 = this.mesh1.clone("THGMesh2");
-            // this.mesh2.parent = this.mesh1;
             this.mesh2.parent = this;
             this.mesh2.layerMask = 1;
             this.mesh2.alphaIndex = super.getAlphaIndex(this.mesh2.name);
+            this.mesh2.isPickable = false;
+            this.mesh2.isVisible = false;
+
+            const mesh2Mat = mat.clone("THGMat2");  
             this.mesh2.material = mesh2Mat;
             this.mesh2.material.alpha = 0.1;
             this.mesh2.material.alpha1 = 0.1;
             this.mesh2.material.needDepthPrePass = false;
-            // this.mesh2.material.lightmapTexture.level = 0.27;
-            this.mesh2.isPickable = false;
-            this.mesh2.isVisible = false;
-
-            // this.mesh2.material.alphaMode = BABYLON.Engine.ALPHA_ADD; 
-            this.mesh2.material.alphaMode = BABYLON.Engine.ALPHA_COMBINE;
-            this.mesh2.material.transparencyMode = 3;
+            this.mesh2.material.alphaMode = 2;
             this.mesh2.material.backFaceCulling = false;
             this.mesh2.material.separateCullingPass = true;
-            // this.mesh2.material.depthFunction = 2;
 
             this.wireMesh = game.scene.getMeshByName("THG641").clone("THGWireMesh");
             // this.wireMesh.parent = this.mesh1;

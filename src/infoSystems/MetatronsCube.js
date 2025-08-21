@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Arminia.  If not, see <http://www.gnu.org/licenses/>.
 
-(function() {
+(function () {
     class MetatronsCube extends Arminia.GameObject {
 
         constructor(game) {
@@ -29,34 +29,40 @@
 
             this.metaCube.mesh1 = game.scene.getMeshByName("Cube2").clone("metaCubeMesh1");
             this.metaCube.mesh1.parent = this.metaCube;
-            this.metaCube.mesh1.material = game.scene.getMaterialByName("standardMatTHG").clone("metaCubeMesh1Mat");
-            this.metaCube.mesh1.material.needDepthPrePass = false;
             this.metaCube.mesh1.isPickable = false;
             this.metaCube.mesh1.alphaIndex = 9;
             this.metaCube.mesh1.edgesWidth = 0.0;
             this.metaCube.mesh1.edgesColor = new BABYLON.Color4(1, 1, 1, 1);
             this.metaCube.mesh1.layerMask = 1;
             this.metaCube.mesh1.isVisible = true;
+
+            this.metaCube.mesh1.material = new BABYLON.StandardMaterial("metaCubeMesh1Mat", game.scene);
+            this.metaCube.mesh1.material.emissiveColor = new BABYLON.Color3(0.271, 0.129, 0.694);
+            this.metaCube.mesh1.material.lightmapTexture = new BABYLON.Texture("src/assets/textures/64Tetra9.jpg", game.scene);
+            this.metaCube.mesh1.material.lightmapTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
+            this.metaCube.mesh1.material.lightmapTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
+            this.metaCube.mesh1.material.needDepthPrePass = false;
             this.metaCube.mesh1.material.alpha = 0.7;
             this.metaCube.mesh1.material.alpha1 = 0.7;
             this.metaCube.mesh1.material.lightmapTexture.level = 1;
+            this.metaCube.mesh1.material.alphaMode = BABYLON.Constants.ALPHA_COMBINE;
+
 
             this.metaCube.wireMesh = game.scene.getMeshByName("Cube2").clone("metaCubeWire");
-            this.metaCube.wireMesh.material = game.scene.getMaterialByName("standardMatTHG").clone("MetaCubeWireMat");
             this.metaCube.wireMesh.alphaIndex = 8;
             this.metaCube.wireMesh.isPickable = false;
-            this.metaCube.wireMesh.material.wireframe = true;
-            this.metaCube.wireMesh.material.needDepthPrePass = false;
-            this.metaCube.wireMesh.material.lightmapTexture = null;
             this.metaCube.wireMesh.isVisible = true;
             this.metaCube.wireMesh.parent = this.metaCube;
             this.metaCube.wireMesh.layerMask = 1;
+            this.metaCube.wireMesh.isVisible = false;
+            this.metaCube.wireMesh.material = new BABYLON.StandardMaterial("MetaCubeWireMat", game.scene);
+            this.metaCube.wireMesh.material.wireframe = true;
+            this.metaCube.wireMesh.material.needDepthPrePass = false;
             this.metaCube.wireMesh.material.alpha = 0.0;
             this.metaCube.wireMesh.material.alpha1 = 0.4;
             this.metaCube.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
-            this.metaCube.wireMesh.isVisible = false;
-
             this.metaCube.wireMesh.material.zOffset = 2.0;
+            this.metaCube.wireMesh.material.alphaMode = BABYLON.Constants.ALPHA_COMBINE;
 
             /////////////////
 

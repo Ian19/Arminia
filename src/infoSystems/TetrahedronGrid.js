@@ -63,21 +63,23 @@
             this.mesh2.material.separateCullingPass = true;
 
             this.wireMesh = game.scene.getMeshByName("THG641").clone("THGWireMesh");
-            // this.wireMesh.parent = this.mesh1;
             this.wireMesh.parent = this;
             this.wireMesh.layerMask = 1;
             this.wireMesh.alphaIndex = 6;
-            this.wireMesh.material = game.scene.getMaterialByName("standardMatTHG").clone("THGWireMeshMat");
+            this.wireMesh.isPickable = false;
+            this.wireMesh.isVisible = false;
+
+            this.wireMesh.material  = new BABYLON.StandardMaterial("THGWireMeshMat", game.scene);
+            this.wireMesh.material.lightmapTexture = new BABYLON.Texture("src/assets/textures/64Tetra9.jpg", game.scene);
+            this.wireMesh.material.lightmapTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
+            this.wireMesh.material.lightmapTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
             this.wireMesh.material.wireframe = true;
             this.wireMesh.material.alpha = 0.1;
             this.wireMesh.material.alpha1 = 0.1;
-            // this.wireMesh.material.alpha1 = 0.07;
-            // this.wireMesh.material.emissiveColor = new BABYLON.Color3.White; // 10F0EAFF
             this.wireMesh.emissiveColor = new BABYLON.Color4.FromHexString("#10F0EAFF");
             this.wireMesh.material.needDepthPrePass = false;
             this.wireMesh.material.zOffset = 2.0;
-            this.wireMesh.isPickable = false;
-            this.wireMesh.isVisible = false;
+
 
             resetTransform(this.wireMesh);
 

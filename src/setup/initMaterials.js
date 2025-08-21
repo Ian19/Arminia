@@ -100,26 +100,7 @@
             sphereMat1.emissiveFresnelParameters = f_params1;
             sphereMat1.opacityFresnelParameters = f_params2;
         }
-
-        function getStandardMatTHG() {
-
-            const standardMat = new BABYLON.StandardMaterial("standardMatTHG", game.scene);
-            standardMat.emissiveColor = new BABYLON.Color3(0.271, 0.129, 0.694);
-            standardMat.alpha = 0.94;
-            // standardMat.backFaceCulling = true;
-            standardMat.needDepthPrePass = true;
-            standardMat.lightmapTexture = new BABYLON.Texture("src/assets/textures/64Tetra9.jpg", game.scene);
-            // standardMat.lightmapTexture.level = 0.9;
-            standardMat.lightmapTexture.wrapU = BABYLON.Texture.CLAMP_ADDRESSMODE;
-            standardMat.lightmapTexture.wrapV = BABYLON.Texture.CLAMP_ADDRESSMODE;
-
-            // standardMat.alphaMode = BABYLON.Constants.ALPHA_COMBINE;
-            // standardMat.alphaMode = BABYLON.Engine.ALPHA_COMBINE;
-            // standardMat.alphaMode = 2;
-
-            // standardMat.transparencyMode = 3;
-        }
-        
+       
         function getTreeMat() {
 
             const standardMat = new BABYLON.StandardMaterial("standardMatTree", game.scene);
@@ -135,7 +116,6 @@
         }
 
         getholoSphereMat();
-        getStandardMatTHG();
         getlightRayMat();
         getTreeMat();
     };

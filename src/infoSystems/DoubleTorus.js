@@ -30,15 +30,12 @@
             this.topTorus.parent = this;
             this.topTorus.isVisible = true;
             this.topTorus.layerMask = 1;
-            // this.topTorus.visibility = 0.25;
             this.topTorus.visibility = 1;
             this.topTorus.alphaIndex = 7;
-            this.topTorus.material = game.scene.getMaterialByName("standardMatTHG").clone("torusMat");
+
+            this.topTorus.material = new BABYLON.StandardMaterial("torusMat", game.scene);
             this.topTorus.material.emissiveColor = new BABYLON.Color4.FromHexString("#675797FF");
-            // this.topTorus.material.emissiveColor = new BABYLON.Color4.FromHexString("#4521B1FF");
-            // this.topTorus.material.wireframe = true;
             this.topTorus.material.wireframe = false;
-            // this.topTorus.material.alpha = 0.2;
             this.topTorus.material.alpha = 0.43;
             this.topTorus.material.alpha1 = 0.1;
             this.topTorus.material.lightmapTexture = null;

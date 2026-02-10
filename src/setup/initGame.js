@@ -293,11 +293,11 @@
         //Arminia.fresnelGUI(game);
         //Arminia.fresnelGUI2(game);
 
-        game.scene.debugLayer.show({
-            overlay: true,
-            handleResize: true,
-            embedMode: true
-        });
+        // game.scene.debugLayer.show({
+        //     overlay: true,
+        //     handleResize: true,
+        //     embedMode: true
+        // });
 
     };
 

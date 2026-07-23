@@ -144,102 +144,46 @@
         var elem = document.getElementById("A_gameCanvas")
         elem.setAttribute("style", "touch-action: auto;");
 
-        // const emissiveMaterial = new BABYLON.StandardMaterial("emissiveMat", game.scene);
-        // emissiveMaterial.emissiveColor = new BABYLON.Color3(1, 1, 1); // White glow
-        // emissiveMaterial.disableLighting = true; // Ignore scene lights
-
-        // const tetrahedron = BABYLON.MeshBuilder.CreatePolyhedron("CreatePolyhedron", {
-        //     size: 2, faceColors: [
-        //         new BABYLON.Color4(0.9, 0.9, 0.9, 1), // Red
-        //         new BABYLON.Color4(0.5, 0.5, 0.5, 1), // Green
-        //         new BABYLON.Color4(0.2, 0.2, 0.2, 1), // Blue
-        //         new BABYLON.Color4(0.1, 0.1, 0.1, 1) // Yellow
-        //     ]
-        // }, game.scene);
-
-        // tetrahedron.material = emissiveMaterial;
-        // tetrahedron.material.vertexColors = true; // Enable face colors
+        /////////////////////////  NEW SPHERES 64  /////////////////////////////
 
 
-        // const tetrahedron = BABYLON.MeshBuilder.CreatePolyhedron("CreatePolyhedron", { type: 0, size: 2 }, game.scene);
+        // const Spheres64 = new BABYLON.TransformNode("Spheres64", game.scene);
 
-        // tetrahedron.layerMask = 1;
+        // const myMat = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
 
+        // myMat.alphaMode = BABYLON.Engine.ALPHA_ADD;
+        // myMat.backFaceCulling = true;
+        // myMat.depthFunction = BABYLON.Engine.ALWAYS;
 
-        // console.log("game.assets: ", game.assets);
+        // game.loader2 = new BABYLON.AssetsManager(game.scene);
 
-        // let testSpheres = game.assets.meshes["64THGSpheres"].clone("64THGSpheres1");
+        // const task2 = game.loader2.addMeshTask("4x4x4work2", "", "src/assets/meshes/", "4x4x4orientTest.babylon");
 
-        // console.log("testSpheres: ", testSpheres);
+        // task2.onSuccess = function (task) {
 
+        //     console.log("Total meshes loaded:", task.loadedMeshes.length);
 
-        // console.log(game.assets.meshes["64THGSpheres"]);
+        //     task.loadedMeshes.forEach((mesh, index) => {
 
-        // testSpheres.material = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
+        //         console.log(`Mesh ${index}:`, mesh.name);
 
-        // testSpheres.alphaIndex = 0;
+        //         mesh.material = myMat; // Apply the shared material
 
-        // testSpheres.layerMask = 1;
+        //         mesh.layerMask = 1;
 
-        const Spheres64 = new BABYLON.TransformNode("Spheres64", game.scene);
+        //         if (index !== 0) {
+        //             mesh.parent = Spheres64;
+        //         }
 
+        //     });
 
-        const myMat = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
+        // };
 
-        myMat.alphaMode = BABYLON.Engine.ALPHA_ADD;
-        myMat.backFaceCulling = true;
-        myMat.depthFunction = BABYLON.Engine.ALWAYS;
+        // task2.onError = function (t, message, exception) {
+        //     console.log(message, exception);
+        // }
 
-
-        game.loader2 = new BABYLON.AssetsManager(game.scene);
-
-        const task2 = game.loader2.addMeshTask("4x4x4work2", "", "src/assets/meshes/", "4x4x4orientTest.babylon");
-
-        task2.onSuccess = function (task) {
-
-            console.log("Total meshes loaded:", task.loadedMeshes.length);
-
-            task.loadedMeshes.forEach((mesh, index) => {
-
-                console.log(`Mesh ${index}:`, mesh.name);
-
-                mesh.material = myMat; // Apply the shared material
-
-                mesh.layerMask = 1;
-
-                if (index !== 0) {
-                    mesh.parent = Spheres64;
-                }
-
-            });
-
-            // task.loadedMeshes.forEach(function (mesh, index) {
-
-            //     if (index !== 0) {
-            //         mesh.isVisible = false;
-            //     }
-
-
-            //     if (mesh.material != null) {
-            //         mesh.material.dispose();
-            //     }
-
-            // });
-
-            // console.log("task.name: ", task.name);
-
-            // game.assets.meshes[task.name] = task.loadedMeshes[0];
-            // game.assets.meshes[task.name].parent = game.assets;
-
-            // console.log("game.assets.meshes: ", game.assets.meshes);
-
-        };
-
-        task2.onError = function (t, message, exception) {
-            console.log(message, exception);
-        }
-
-        game.loader2.load();
+        // game.loader2.load();
 
 
 

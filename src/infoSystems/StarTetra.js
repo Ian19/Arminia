@@ -72,7 +72,7 @@
             this.wireMesh.material.wireframe = true;
             this.wireMesh.material.alpha = 0.0;
             this.wireMesh.material.alpha1 = 0.4;
-            this.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
+            this.wireMesh.material.emissiveColor = BABYLON.Color3.White;
             this.wireMesh.material.needDepthPrePass = false;
             this.wireMesh.material.zOffset = 2.0;
 
@@ -131,7 +131,7 @@
                 }
 
                 _this.lineSystem = BABYLON.MeshBuilder.CreateLineSystem(name1 + "Wire2", { lines: path1 }, game.scene); // MetaStarTetraWire2 
-                _this.lineSystem.color = new BABYLON.Color3.White;
+                _this.lineSystem.color = BABYLON.Color3.White;
                 _this.lineSystem.material.needDepthPrePass = true;
                 _this.lineSystem.material.name = name1 + "WireMat2";
                 _this.lineSystem.material.alphaMode = BABYLON.Engine.ALPHA_ADD;

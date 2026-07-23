@@ -181,47 +181,65 @@
 
         // testSpheres.layerMask = 1;
 
-        // // myMat = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
+        const Spheres64 = new BABYLON.TransformNode("Spheres64", game.scene);
 
 
-        // game.loader2 = new BABYLON.AssetsManager(game.scene);
+        const myMat = game.scene.getMaterialByName("holoSphereMat").clone("spheresMat");
 
-        // const task2 = game.loader2.addMeshTask("4x4x4work", "", "src/assets/meshes/", "4x4x4work.babylon");
+        myMat.alphaMode = BABYLON.Engine.ALPHA_ADD;
+        myMat.backFaceCulling = true;
+        myMat.depthFunction = BABYLON.Engine.ALWAYS;
 
-        // task2.onSuccess = function (task) {
 
-        //     console.log("Total meshes loaded:", task.loadedMeshes.length);
+        game.loader2 = new BABYLON.AssetsManager(game.scene);
 
-        //     task.loadedMeshes.forEach((mesh, index) => {
+        const task2 = game.loader2.addMeshTask("4x4x4work2", "", "src/assets/meshes/", "4x4x4orientTest.babylon");
 
-        //         console.log(`Mesh ${index}:`, mesh.name);
+        task2.onSuccess = function (task) {
 
-        //         mesh.material = myMat; // Apply the shared material
+            console.log("Total meshes loaded:", task.loadedMeshes.length);
 
-        //         mesh.layerMask = 1;
+            task.loadedMeshes.forEach((mesh, index) => {
 
-        //     });
+                console.log(`Mesh ${index}:`, mesh.name);
 
-        //     // task.loadedMeshes.forEach(function (mesh) {
+                mesh.material = myMat; // Apply the shared material
 
-        //     //     mesh.isVisible = false;
+                mesh.layerMask = 1;
 
-        //     //     if (mesh.material != null) {
-        //     //         mesh.material.dispose();
-        //     //     }
+                if (index !== 0) {
+                    mesh.parent = Spheres64;
+                }
 
-        //     // });
+            });
 
-        //     // game.assets.meshes[task.name] = task.loadedMeshes[0];
-        //     // game.assets.meshes[task.name].parent = game.assets;
+            // task.loadedMeshes.forEach(function (mesh, index) {
 
-        // };
+            //     if (index !== 0) {
+            //         mesh.isVisible = false;
+            //     }
 
-        // task2.onError = function (t, message, exception) {
-        //     console.log(message, exception);
-        // }
 
-        // game.loader2.load();
+            //     if (mesh.material != null) {
+            //         mesh.material.dispose();
+            //     }
+
+            // });
+
+            // console.log("task.name: ", task.name);
+
+            // game.assets.meshes[task.name] = task.loadedMeshes[0];
+            // game.assets.meshes[task.name].parent = game.assets;
+
+            // console.log("game.assets.meshes: ", game.assets.meshes);
+
+        };
+
+        task2.onError = function (t, message, exception) {
+            console.log(message, exception);
+        }
+
+        game.loader2.load();
 
 
 
@@ -293,11 +311,11 @@
         //Arminia.fresnelGUI(game);
         //Arminia.fresnelGUI2(game);
 
-        // game.scene.debugLayer.show({
-        //     overlay: true,
-        //     handleResize: true,
-        //     embedMode: true
-        // });
+        game.scene.debugLayer.show({
+            overlay: true,
+            handleResize: true,
+            embedMode: true
+        });
 
     };
 

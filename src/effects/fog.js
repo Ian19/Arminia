@@ -46,8 +46,8 @@
         game.particleSystem.manualEmitCount = game.particleSystem.activeParticleCount;
         game.particleSystem.particleTexture = fogTexture.clone();
         game.particleSystem.emitter = new BABYLON.Vector3(0, y, 0);
-        game.particleSystem.color1 = new BABYLON.Color4.FromColor3(c1, alpha1);
-        game.particleSystem.color2 = new BABYLON.Color4.FromColor3(c2, alpha2);
+        game.particleSystem.color1 = BABYLON.Color4.FromColor3(c1, alpha1);
+        game.particleSystem.color2 = BABYLON.Color4.FromColor3(c2, alpha2);
         game.particleSystem.minSize = minSize;
         game.particleSystem.maxSize = maxSize;
         game.particleSystem.minLifeTime = Number.MAX_SAFE_INTEGER;

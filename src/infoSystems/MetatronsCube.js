@@ -60,7 +60,7 @@
             this.metaCube.wireMesh.material.needDepthPrePass = false;
             this.metaCube.wireMesh.material.alpha = 0.0;
             this.metaCube.wireMesh.material.alpha1 = 0.4;
-            this.metaCube.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
+            this.metaCube.wireMesh.material.emissiveColor = BABYLON.Color3.White;
             this.metaCube.wireMesh.material.zOffset = 2.0;
             this.metaCube.wireMesh.material.alphaMode = BABYLON.Constants.ALPHA_COMBINE;
 
@@ -69,7 +69,7 @@
             /* this.wireMesh.material.wireframe = true;
              this.wireMesh.material.alpha = 0.0;
              this.wireMesh.material.alpha1 = 0.1;
-             this.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
+             this.wireMesh.material.emissiveColor = BABYLON.Color3.White;
              this.wireMesh.material.needDepthPrePass = false;
              this.wireMesh.material.zOffset = 2.0;
              this.wireMesh.isPickable = false;
@@ -142,7 +142,7 @@
                 }
 
                 _this.lineSystem = BABYLON.MeshBuilder.CreateLineSystem("MetaCubeWireMesh2", { lines: path1 }, game.scene);
-                _this.lineSystem.color = new BABYLON.Color3.White;
+                _this.lineSystem.color = BABYLON.Color3.White;
                 _this.lineSystem.material.needDepthPrePass = true;
                 _this.lineSystem.material.name = "metaCubeWireMat2";
                 _this.lineSystem.parent = _this.metaCube;

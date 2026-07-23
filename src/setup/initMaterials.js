@@ -71,7 +71,7 @@
 
             shaderMaterial.setFloat("time", 0);
             shaderMaterial.alphaMode = BABYLON.Engine.ALPHA_ADD;
-            shaderMaterial.emissiveColor = new BABYLON.Color3.FromHexString("#DDC4FF");
+            shaderMaterial.emissiveColor = BABYLON.Color3.FromHexString("#DDC4FF");
             shaderMaterial.alpha = 0.99;
         }
 
@@ -105,7 +105,7 @@
 
             const standardMat = new BABYLON.StandardMaterial("standardMatTree", game.scene);
             // standardMat.emissiveColor = new BABYLON.Color3(0.271, 0.129, 0.694);
-            standardMat.emissiveColor = new BABYLON.Color4.FromHexString("#6425FFFF");
+            standardMat.emissiveColor = BABYLON.Color4.FromHexString("#6425FFFF");
             // standardMat.alpha = 0.94;
             // standardMat.backFaceCulling = true;
             standardMat.needDepthPrePass = true;

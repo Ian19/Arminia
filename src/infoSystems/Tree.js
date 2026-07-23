@@ -88,7 +88,7 @@
             this.mesh2.material.transparencyMode = 3;
             this.mesh2.material.backFaceCulling = false;
             this.mesh2.material.separateCullingPass = true;
-            this.mesh2.material.emissiveColor = new BABYLON.Color4.FromHexString("#685B3DFF");
+            this.mesh2.material.emissiveColor = BABYLON.Color4.FromHexString("#685B3DFF");
             
 
             // WireMesh
@@ -104,11 +104,11 @@
             this.wireMesh.material.wireframe = true;
             this.wireMesh.material.alpha = 0.99;
             this.wireMesh.material.alpha1 = 0.07;
-            this.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
+            this.wireMesh.material.emissiveColor = BABYLON.Color3.White;
             this.wireMesh.material.needDepthPrePass = false;
             this.wireMesh.material.transparencyMode = 3;
             this.wireMesh.material.zOffset = 2.0;
-            this.wireMesh.material.emissiveColor = new BABYLON.Color4.FromHexString("#00FFB5FF");
+            this.wireMesh.material.emissiveColor = BABYLON.Color4.FromHexString("#00FFB5FF");
             
             
             
@@ -125,11 +125,11 @@
             this.mesh2.wireMesh.material.wireframe = true;
             this.mesh2.wireMesh.material.alpha = 0.99;
             this.mesh2.wireMesh.material.alpha1 = 0.07;
-            this.mesh2.wireMesh.material.emissiveColor = new BABYLON.Color3.White;
+            this.mesh2.wireMesh.material.emissiveColor = BABYLON.Color3.White;
             this.mesh2.wireMesh.material.needDepthPrePass = false;
             this.mesh2.wireMesh.material.transparencyMode = 3;
             this.mesh2.wireMesh.material.zOffset = 2.0;
-            this.mesh2.wireMesh.material.emissiveColor = new BABYLON.Color4.FromHexString("#FFBC00FF"); //FFBC00FF
+            this.mesh2.wireMesh.material.emissiveColor = BABYLON.Color4.FromHexString("#FFBC00FF"); //FFBC00FF
 
             this.mesh2.wireMesh.rotation.x = Math.PI;
 
@@ -192,7 +192,7 @@
                 }
 
                 _this.lineSystem = BABYLON.MeshBuilder.CreateLineSystem("TreeLinesMesh", { lines: path1 }, game.scene);
-                _this.lineSystem.color = new BABYLON.Color3.White;
+                _this.lineSystem.color = BABYLON.Color3.White;
                 _this.lineSystem.material.needDepthPrePass = false;
                 _this.lineSystem.material.name = "TreeLinesMeshMat";
                 _this.lineSystem.parent = _this.mesh1;

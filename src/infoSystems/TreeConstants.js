@@ -148,12 +148,12 @@
             //             $("#A_infoSysDifficulty").text("fruit.parent.infoSystemData.difficulty");
             //             $("#A_infoSysOverview").text("fruit.parent.infoSystemData.overview");
 
-            //             // frontWheel.outlineColor = new BABYLON.Color3.FromHexString("#2ecc71");
+            //             // frontWheel.outlineColor = BABYLON.Color3.FromHexString("#2ecc71");
             //             break;
             //         case "Cube":
             //             // scene.beginAnimation(rect2, 0, 10, false);
             //             // block.renderOutline = true;
-            //             // block.outlineColor = new BABYLON.Color3.FromHexString("#2ecc71");
+            //             // block.outlineColor = BABYLON.Color3.FromHexString("#2ecc71");
             //             break
             //     }
 
@@ -195,7 +195,7 @@
             // game.scene.getBoundingBoxRenderer().frontColor.set(1, 0, 0.);
             // game.scene.getBoundingBoxRenderer().backColor.set(1, 0, 0);
 
-            // new BABYLON.Color4.FromHexString("#00FFB5FF");
+            // ABYLON.Color4.FromHexString("#00FFB5FF");
 
             // planeA.showBoundingBox = true;
 

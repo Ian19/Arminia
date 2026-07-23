@@ -76,7 +76,7 @@
             this.wireMesh.material.wireframe = true;
             this.wireMesh.material.alpha = 0.1;
             this.wireMesh.material.alpha1 = 0.1;
-            this.wireMesh.emissiveColor = new BABYLON.Color4.FromHexString("#10F0EAFF");
+            this.wireMesh.emissiveColor = BABYLON.Color4.FromHexString("#10F0EAFF");
             this.wireMesh.material.needDepthPrePass = false;
             this.wireMesh.material.zOffset = 2.0;
 
@@ -140,7 +140,7 @@
                 }
 
                 _this.lineSystem = BABYLON.MeshBuilder.CreateLineSystem("THGLinesMesh", { lines: path1 }, game.scene);
-                _this.lineSystem.color = new BABYLON.Color3.White;
+                _this.lineSystem.color = BABYLON.Color3.White;
                 _this.lineSystem.material.needDepthPrePass = false;
                 _this.lineSystem.material.name = "THGLinesMeshMat";
                 _this.lineSystem.parent = _this.mesh1;

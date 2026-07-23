@@ -34,7 +34,7 @@
             this.topTorus.alphaIndex = 7;
 
             this.topTorus.material = new BABYLON.StandardMaterial("torusMat", game.scene);
-            this.topTorus.material.emissiveColor = new BABYLON.Color4.FromHexString("#675797FF");
+            this.topTorus.material.emissiveColor = BABYLON.Color4.FromHexString("#675797FF");
             this.topTorus.material.wireframe = false;
             this.topTorus.material.alpha = 0.43;
             this.topTorus.material.alpha1 = 0.1;

@@ -23,7 +23,7 @@
         game.engine = new BABYLON.Engine(game.canvas, true);
 
         game.scene = new BABYLON.Scene(game.engine);
-        game.scene.clearColor = new BABYLON.Color3.Black;
+        game.scene.clearColor = BABYLON.Color3.Black;
 
         game.camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, BABYLON.Vector3.Zero(), game.scene);
         game.camera.setTarget(BABYLON.Vector3.Zero());
